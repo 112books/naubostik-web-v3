@@ -1131,10 +1131,12 @@ main.container {
   .footer-social-text { display: none; }
   .footer-section--legal ul { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
   .footer-section--legal li { margin-bottom: 0; }
-  .footer-about { display: flex; flex-direction: row; align-items: center; gap: 1.5rem; }
+  .footer-about { display: flex; flex-direction: row; align-items: flex-start; gap: 1rem; flex-wrap: nowrap; }
+  .footer-about .footer-logo { order: 1; flex-shrink: 0; }
+  .footer-about .footer-logo img { width: 60px; }
   .footer-about .footer-title { display: none; }
   .footer-tagline { display: none; }
-  .footer-about address { margin-top: 0; line-height: 1.6; }
+  .footer-about address { order: 2; flex: 1; margin-top: 0; line-height: 1.8; }
 }
 
 .search-form {
