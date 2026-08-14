@@ -90,21 +90,15 @@
          data-location="{{ $location | htmlEscape }}"
          data-desc="{{ .Params.descripcio | default .Summary | htmlEscape }}"
          data-slug="{{ .File.ContentBaseName }}">
-      <p class="event-calendar__label">{{ i18n "event_add_calendar" | default "Afegeix al calendari" }}</p>
-      <div class="event-calendar__btns">
-        <a href="{{ $gcalURL }}" class="cal-btn cal-btn--google" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M21.805 10.023h-9.78v3.955h5.618c-.242 1.237-.978 2.286-2.082 2.988v2.486h3.372c1.973-1.817 3.11-4.49 3.11-7.674 0-.51-.047-1.003-.138-1.355z" fill="#4285F4"/><path d="M12.025 22c2.7 0 4.963-.895 6.618-2.428l-3.372-2.487c-.895.6-2.04.955-3.246.955-2.496 0-4.607-1.686-5.362-3.953H3.18v2.567A9.994 9.994 0 0 0 12.025 22z" fill="#34A853"/><path d="M6.663 14.087a5.997 5.997 0 0 1 0-3.828V7.692H3.18a9.994 9.994 0 0 0 0 8.962l3.483-2.567z" fill="#FBBC05"/><path d="M12.025 6.306c1.408 0 2.67.484 3.664 1.434l2.748-2.748C16.983 3.396 14.72 2.5 12.025 2.5A9.993 9.993 0 0 0 3.18 7.692l3.483 2.567c.755-2.267 2.866-3.953 5.362-3.953z" fill="#EA4335"/></svg>
-          Google Calendar
-        </a>
-        <button class="cal-btn cal-btn--ical js-cal-ical" type="button">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Apple / iCal
-        </button>
-        <button class="cal-btn cal-btn--outlook js-cal-ical" type="button">
-          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zm-7.5 3a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></svg>
-          Outlook
-        </button>
-      </div>
+      <details class="cal-dropdown">
+        <summary class="cal-dropdown__btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          {{ i18n "event_add_calendar" | default "Afegeix al calendari" }}
+        </summary>
+        <ul class="cal-dropdown__menu">
+          <li><button class="cal-dropdown__item js-cal-ics" type="button">Descarrega fitxer .ics</button></li>
+        </ul>
+      </details>
     </div>
   </footer>
 

@@ -1,12 +1,13 @@
 +++
 title = "Ressona"
 date = 2026-08-14
+ubicacio = "Tercera planta"
+cedible = false
 draft = false
+collectiu = "ressona"
 logo = "/img/collectius/ressona.png"
-ambit = ["musica", "tecnologia"]
 web = "https://ressona.eu"
 email = "hola@ressona.eu"
-descripcio = "Acompanyament a creadors i artistes de Barcelona per construir la seva identitat digital."
 +++
 
 Ressona acompanya creadors i artistes de Barcelona a construir la seva identitat digital.

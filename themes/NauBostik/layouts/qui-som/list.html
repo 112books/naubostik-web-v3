@@ -11,6 +11,7 @@
     <button class="tab-btn is-active" data-tab="resum" role="tab" aria-selected="true" aria-controls="tab-resum" type="button">Resum</button>
     <button class="tab-btn" data-tab="equip" role="tab" aria-selected="false" aria-controls="tab-equip" type="button">Equip gestor</button>
     <button class="tab-btn" data-tab="colaboradors" role="tab" aria-selected="false" aria-controls="tab-colaboradors" type="button">Col·laboradors</button>
+    <button class="tab-btn" data-tab="comissions" role="tab" aria-selected="false" aria-controls="tab-comissions" type="button">Comissions</button>
     <button class="tab-btn" data-tab="historia" role="tab" aria-selected="false" aria-controls="tab-historia" type="button">Història</button>
     <button class="tab-btn" data-tab="transparencia" role="tab" aria-selected="false" aria-controls="tab-transparencia" type="button">Transparència</button>
     <button class="tab-btn" data-tab="identitat" role="tab" aria-selected="false" aria-controls="tab-identitat" type="button">Identitat visual</button>
@@ -78,6 +79,28 @@
     </div>
     {{ end }}
     {{ end }}
+  </div>
+
+  {{/* TAB: Comissions */}}
+  {{ $comissions := index hugo.Data "comissions" }}
+  <div class="tab-panel tab-panel--hidden" id="tab-comissions" role="tabpanel">
+    <p class="comissions-intro">Les comissions són grups de treball oberts on els col·lectius residents i el veïnat participen en la gestió de la Nau Bostik. Cada comissió s'ocupa d'un àmbit concret i pren decisions de forma assembleària.</p>
+    {{ if $comissions }}
+    <div class="comissions-grid">
+      {{ range $comissions.comissions }}
+      <div class="comissio-card">
+        <h3 class="comissio-card__title">{{ .nom }}</h3>
+        {{ with .descripcio }}<p class="comissio-card__desc">{{ . }}</p>{{ end }}
+        {{ with .email }}<a class="comissio-card__email" href="mailto:{{ . }}">Contactar &rarr;</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="comissions-pendent"><em>Llista de comissions pendent d'incorporar.</em></p>
+    {{ end }}
+    <div class="comissions-cta">
+      <a href="{{ "contacte/?consulta=comissio" | relLangURL }}" class="btn btn-outline">Contacta una comissió &rarr;</a>
+    </div>
   </div>
 
   {{/* TAB: Història */}}

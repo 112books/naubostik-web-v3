@@ -11,6 +11,47 @@
 
 <div id="search-results"></div>
 
+{{/* ── Sitemap ── */}}
+{{ $sections := dict
+  "collectius" "Col·lectius"
+  "espais"     "Espais"
+  "noticies"   "Notícies"
+}}
+<div class="sitemap-cerca" id="sitemap-cerca">
+  <h2 class="sitemap-cerca__title">Tot el web</h2>
+  <div class="sitemap-cerca__grid">
+
+    <div class="sitemap-cerca__bloc">
+      <h3 class="sitemap-cerca__bloc-title">Seccions principals</h3>
+      <ul>
+        <li><a href="{{ "activitats/" | relLangURL }}">Activitats</a></li>
+        <li><a href="{{ "visita/" | relLangURL }}">Visita la Nau</a></li>
+        <li><a href="{{ "collectius/" | relLangURL }}">Col·lectius</a></li>
+        <li><a href="{{ "espais/" | relLangURL }}">Espais</a></li>
+        <li><a href="{{ "qui-som/" | relLangURL }}">Qui som</a></li>
+        <li><a href="{{ "noticies/" | relLangURL }}">Notícies</a></li>
+        <li><a href="{{ "contacte/" | relLangURL }}">Contacte</a></li>
+        <li><a href="{{ "cessio-despais/" | relLangURL }}">Cessió d'espais</a></li>
+      </ul>
+    </div>
+
+    {{ range $slug, $label := $sections }}
+    {{ $pages := where site.RegularPages "Section" $slug }}
+    {{ if $pages }}
+    <div class="sitemap-cerca__bloc">
+      <h3 class="sitemap-cerca__bloc-title">{{ $label }}</h3>
+      <ul>
+        {{ range $pages.ByTitle }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    {{ end }}
+
+  </div>
+</div>
+
 <script>
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
@@ -23,10 +64,13 @@ const pages = [
 {{ end }}
 ];
 
+const sitemapCerca = document.getElementById('sitemap-cerca');
+
 searchInput.addEventListener('input', function(e) {
   const query = e.target.value.toLowerCase().trim();
   searchResults.innerHTML = '';
-  
+  if (sitemapCerca) sitemapCerca.style.display = query.length >= 2 ? 'none' : '';
+
   if (query.length < 2) return;
   
   const results = pages.filter(page => 

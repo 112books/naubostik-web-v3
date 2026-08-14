@@ -28,6 +28,12 @@ La Nau ocupa un edifici industrial de principis del segle XX distribuït en quat
 - **Tercera planta** — Oficines, editorial, espais de creació
 - **Coberta** — Horstik (hort urbà comunitari)
 
+<!-- TODO: substituir per mapa general de la Nau Bostik quan estigui disponible -->
+<figure class="visita-planol">
+  <img src="/img/espais/oficines-bostik-plano.jpg" alt="Plànol orientatiu de la Nau Bostik" loading="lazy">
+  <figcaption>Plànol orientatiu (provisional — pendent de mapa general de la Nau)</figcaption>
+</figure>
+
 ## Horaris
 
 | | Horari |

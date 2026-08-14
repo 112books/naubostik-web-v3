@@ -8,7 +8,8 @@
 <a href="{{ "cessio-despais/" | relURL }}" class="espai-cesible-badge">{{ i18n "espai_cedible_badge" }}</a>
 {{ end }}
 
-<div class="espai-single">
+{{ $hasAside := or .Params.logo (or .Params.collectiu .Params.mail .Params.web .Params.xarxes) }}
+<div class="espai-single{{ if not $hasAside }} espai-single--full{{ end }}">
   {{/* TODO→MULTII18N: alt text amb interpolació de .Title, pendent de decidir sintaxi i18n amb dades */}}
   {{ if .Params.logo }}
   <div class="espai-single-logo">
@@ -45,7 +46,8 @@
   {{ $mail := .Params.mail }}
   {{ $web := .Params.web }}
   {{ $xarxes := .Params.xarxes }}
-  {{ if or $collectiu $mail $web $xarxes }}
+  {{ $hasContact := or $collectiu $mail $web $xarxes }}
+  {{ if $hasContact }}
   <aside class="espai-contact">
     {{ with $collectiu }}
     <a class="espai-contact-collectiu" href="{{ printf "/collectius/%s/" . | relURL }}">Col·lectiu a la Nau Bostik &rarr;</a>

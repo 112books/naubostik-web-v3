@@ -12,12 +12,13 @@
   <h2 class="planta-title">{{ i18n "espais_destacats_title" }}</h2>
   <div class="planta-grid">
     {{ range $destacats }}
-    <a href="{{ .RelPermalink }}" class="espai-card">
+    <a href="{{ .RelPermalink }}" class="espai-card{{ if .Params.cedible }} espai-card--cedible{{ end }}">
+      {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
       <div class="espai-card-image">
         {{ if .Params.logo }}
         <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}">
         {{ else }}
-          <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
+        <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
         {{ end }}
       </div>
       <h3 class="espai-card-title">{{ .Title }}</h3>
@@ -36,12 +37,13 @@
     <h2 class="planta-title">{{ $ubicacio }}</h2>
     <div class="planta-grid">
       {{ range $pages }}
-      <a href="{{ .RelPermalink }}" class="espai-card">
+      <a href="{{ .RelPermalink }}" class="espai-card{{ if .Params.cedible }} espai-card--cedible{{ end }}">
+        {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
         <div class="espai-card-image">
           {{ if .Params.logo }}
           <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}">
           {{ else }}
-        <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
+          <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
           {{ end }}
         </div>
         <h3 class="espai-card-title">{{ .Title }}</h3>

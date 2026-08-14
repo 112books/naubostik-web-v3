@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="page-header">
   <h1>{{ .Title }}</h1>
+  <a class="col-single__back" href="{{ "collectius/" | relLangURL }}">&larr; Tots els col·lectius</a>
 </div>
 
 <div class="col-single">
@@ -24,6 +25,12 @@
   </div>
 
   <aside class="col-single__info">
+
+    {{ $slug := .File.ContentBaseName }}
+    {{ $espaisCol := where (where site.RegularPages "Section" "espais") "Params.collectiu" $slug }}
+    {{ range $espaisCol }}
+    <a class="col-single__espai-link" href="{{ .RelPermalink }}">Espai: {{ .Title }} &rarr;</a>
+    {{ end }}
 
     {{ with .Params.web }}
     <div class="col-single__info-item">
@@ -53,9 +60,6 @@
     </div>
     {{ end }}
 
-    <div class="col-single__back">
-      <a href="{{ "collectius/" | relLangURL }}">&larr; Tots els col·lectius</a>
-    </div>
 
   </aside>
 

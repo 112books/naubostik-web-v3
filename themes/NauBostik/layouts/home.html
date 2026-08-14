@@ -35,18 +35,7 @@
         {{ end }}
       </div>
       <h1 class="hero-v3-claim">Conviure,<br>crear<br>i cuidar</h1>
-      <p class="hero-sub">Fàbrica Bostik des dels anys 60. Ecosistema cultural autogestionat al barri de La Sagrera.</p>
-      {{ with $recinte }}{{ with .avisos }}
-      <ul class="hero-avisos">
-        {{ range . }}
-        <li class="hero-avis hero-avis--{{ .tipus }}">
-          {{ if .url }}<a href="{{ .url }}">{{ end }}
-          {{ .text }}
-          {{ if .url }}</a>{{ end }}
-        </li>
-        {{ end }}
-      </ul>
-      {{ end }}{{ end }}
+      <p class="hero-sub">Fàbrica Bostik des dels anys 60.<br>Des de fa més de 10 anys ecosistema cultural autogestionat<br>al barri de La Sagrera.</p>
       <div class="hero-actions hero-actions--v3">
         <a class="btn btn-primary" href="{{ "espais/" | relLangURL }}">Visita la Nau</a>
         <a class="btn btn-secondary" href="{{ "activitats/" | relLangURL }}">Agenda</a>
@@ -87,12 +76,18 @@
   <div class="home-setmana__filtres" role="group" aria-label="Filtra activitats">
     <button class="filtre-btn is-active" data-filtre="tots" type="button">Tots</button>
     <button class="filtre-btn" data-filtre="nb" type="button">Nau Bostik</button>
-    <button class="filtre-btn" data-filtre="entitat" type="button">Entitats</button>
+    <button class="filtre-btn" data-filtre="entitats" type="button">Entitats</button>
+    <button class="filtre-btn" data-filtre="assemblea" type="button">Assemblees</button>
+    <button class="filtre-btn" data-filtre="comissio" type="button">Comissions</button>
   </div>
   <ul class="home-setmana__grid">
     {{ range $thisWeekAll }}
-    {{ $isEnt := "" }}{{ if .Params.entitat }}{{ $isEnt = "entitat" }}{{ else }}{{ $isEnt = "nb" }}{{ end }}
-    <li class="home-act-card" data-grup="{{ $isEnt }}">
+    {{ $grup := "nb" }}
+    {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
+    {{ else if .Params.comissio }}{{ $grup = "comissio" }}
+    {{ else if .Params.entitat }}{{ $grup = "entitats" }}
+    {{ end }}
+    <li class="home-act-card" data-grup="{{ $grup }}">
       {{ if .Params.avis }}
       <div class="home-act-card__body">
         <p class="home-act-card__badge">{{ if eq .Params.avis "tancament" }}Tancat{{ else }}Avís{{ end }}</p>
@@ -199,6 +194,28 @@
 {{/* ══════════════════════════════════════════════════
      NOTÍCIES
 ══════════════════════════════════════════════════ */}}
+{{/* ══════════════════════════════════════════════════
+     COMISSIONS
+══════════════════════════════════════════════════ */}}
+{{ $comissions := index hugo.Data "comissions" }}
+{{ with $comissions }}{{ with .comissions }}
+<section class="home-comissions section">
+  <div class="section-header">
+    <h2 class="section-title">Comissions de treball</h2>
+    <a href="{{ "qui-som/" | relLangURL }}#tab-comissions" class="section-link">Com ens organitzem &rarr;</a>
+  </div>
+  <ul class="home-comissions__list">
+    {{ range . }}
+    <li class="home-comissio">
+      <a href="{{ "contacte/?consulta=comissio" | relLangURL }}">
+        <span class="home-comissio__nom">{{ .nom }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}{{ end }}
+
 {{ $noticiesAll := where site.RegularPages "Section" "noticies" }}
 {{ if $noticiesAll }}
 {{ $noticiesDescat := where $noticiesAll "Params.destacada" true }}

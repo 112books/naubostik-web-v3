@@ -13,16 +13,19 @@
 </head>
 <body>
   <div class="wrapper">
-    {{ if and .IsHome (default true site.Params.showTicker) }}
-    <div class="ticker-bar" role="banner" aria-label="{{ i18n "ticker_aria" }}">
-      <div class="container">
-        {{ with index .Site.Data "slogans" }}
-        <div class="ticker-track{{ if gt (len .slogans) 1 }} ticker-track-multi{{ end }}">
-          {{ range .slogans }}
-          <span class="ticker-item"><span class="ticker-fist" aria-hidden="true">&#9994;</span>{{ . }}</span>
-          <span class="ticker-item ticker-item-clone" aria-hidden="true"><span class="ticker-fist" aria-hidden="true">&#9994;</span>{{ . }}</span>
-          {{ end }}
-        </div>
+    {{ $recinte := index hugo.Data "recinte" }}
+    {{ $avisos := slice }}{{ with $recinte }}{{ with .avisos }}{{ $avisos = . }}{{ end }}{{ end }}
+    {{ $slogans := slice }}{{ with index hugo.Data "slogans" }}{{ $slogans = .slogans }}{{ end }}
+    {{ $hasAvisos := gt (len $avisos) 0 }}
+    {{ if and .IsHome (or $hasAvisos (gt (len $slogans) 0)) }}
+    <div class="ticker-bar{{ if $hasAvisos }} ticker-bar--avis{{ end }}" role="banner" aria-label="{{ i18n "ticker_aria" }}">
+      <div class="ticker-track">
+        {{ if $hasAvisos }}
+          {{ range $avisos }}{{ if .url }}<a class="ticker-item ticker-item--{{ .tipus }}" href="{{ .url }}">{{ .text }}</a>{{ else }}<span class="ticker-item ticker-item--{{ .tipus }}">{{ .text }}</span>{{ end }}{{ end }}
+          {{ range $avisos }}{{ if .url }}<a class="ticker-item ticker-item--{{ .tipus }}" href="{{ .url }}" aria-hidden="true">{{ .text }}</a>{{ else }}<span class="ticker-item ticker-item--{{ .tipus }}" aria-hidden="true">{{ .text }}</span>{{ end }}{{ end }}
+        {{ else }}
+          {{ range $slogans }}<span class="ticker-item"><span class="ticker-fist" aria-hidden="true">&#9994;</span>{{ . }}</span>{{ end }}
+          {{ range $slogans }}<span class="ticker-item" aria-hidden="true"><span class="ticker-fist" aria-hidden="true">&#9994;</span>{{ . }}</span>{{ end }}
         {{ end }}
       </div>
     </div>

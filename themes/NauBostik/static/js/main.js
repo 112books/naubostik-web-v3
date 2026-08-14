@@ -565,7 +565,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initCollectiusFiltres();
   initContacteForm();
   initMapScrollGuard();
+  initCalendarDropdown();
 });
+
+function initCalendarDropdown() {
+  const cal = document.querySelector('.event-calendar');
+  if (!cal) return;
+  cal.addEventListener('click', e => {
+    const btn = e.target.closest('.js-cal-ics');
+    if (!btn) return;
+    const t = cal.dataset.title || '';
+    const start = cal.dataset.start || '';
+    const end = cal.dataset.end || start;
+    const loc = cal.dataset.location || '';
+    const desc = cal.dataset.desc || '';
+    const slug = cal.dataset.slug || 'event';
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Nau Bostik//CA',
+      'BEGIN:VEVENT',
+      'DTSTART:' + start,
+      'DTEND:' + end,
+      'SUMMARY:' + t.replace(/,/g, '\\,'),
+      'LOCATION:' + loc.replace(/,/g, '\\,'),
+      'DESCRIPTION:' + desc.replace(/,/g, '\\,'),
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    const a = document.createElement('a');
+    a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+    a.download = slug + '.ics';
+    a.click();
+    cal.querySelector('.cal-dropdown').removeAttribute('open');
+  });
+}
 
 function initCollectiusFiltres() {
   const wrap = document.getElementById('col-logo-grid');
@@ -589,24 +623,31 @@ function initContacteForm() {
   if (!selector) return;
   const hiddenInput = document.getElementById('form-consulta-hidden');
 
-  selector.addEventListener('click', e => {
-    const btn = e.target.closest('.consulta-btn');
-    if (!btn) return;
-    selector.querySelectorAll('.consulta-btn').forEach(b => b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-    const consulta = btn.dataset.consulta;
+  function activaConsulta(consulta) {
+    selector.querySelectorAll('.consulta-btn').forEach(b => {
+      b.classList.toggle('is-active', b.dataset.consulta === consulta);
+    });
     if (hiddenInput) hiddenInput.value = consulta;
-
     document.querySelectorAll('.faq-group').forEach(g => {
       g.style.display = g.dataset.faq === consulta ? '' : 'none';
     });
-
     document.querySelectorAll('.form-group--cessio').forEach(g => {
       g.style.display = consulta === 'cessio' ? '' : 'none';
     });
     document.querySelectorAll('.form-group--participar').forEach(g => {
       g.style.display = consulta === 'participar' ? '' : 'none';
     });
+  }
+
+  const urlConsulta = new URLSearchParams(window.location.search).get('consulta');
+  if (urlConsulta && selector.querySelector('[data-consulta="' + urlConsulta + '"]')) {
+    activaConsulta(urlConsulta);
+  }
+
+  selector.addEventListener('click', e => {
+    const btn = e.target.closest('.consulta-btn');
+    if (!btn) return;
+    activaConsulta(btn.dataset.consulta);
   });
 }
 
