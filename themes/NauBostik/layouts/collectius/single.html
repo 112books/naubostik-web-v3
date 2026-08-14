@@ -27,28 +27,28 @@
 
     {{ with .Params.web }}
     <div class="col-single__info-item">
-      <svg class="col-single__info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="col-single__label">Web</span>
       <a href="{{ . }}" target="_blank" rel="noopener">{{ . | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" | strings.TrimSuffix "/" }}</a>
     </div>
     {{ end }}
 
     {{ with .Params.email }}
     <div class="col-single__info-item">
-      <svg class="col-single__info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="col-single__label">Mail</span>
       <a href="mailto:{{ . }}">{{ . }}</a>
     </div>
     {{ end }}
 
     {{ with .Params.instagram }}
     <div class="col-single__info-item">
-      <svg class="col-single__info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <span class="col-single__label">Instagram</span>
       <a href="https://instagram.com/{{ . | strings.TrimPrefix "@" }}" target="_blank" rel="noopener">{{ . }}</a>
     </div>
     {{ end }}
 
     {{ with .Params.telegram }}
     <div class="col-single__info-item">
-      <svg class="col-single__info-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+      <span class="col-single__label">Telegram</span>
       <a href="https://t.me/{{ . | strings.TrimPrefix "@" }}" target="_blank" rel="noopener">{{ . }}</a>
     </div>
     {{ end }}

@@ -4070,7 +4070,6 @@ main.container {
   border-radius: var(--radius-sharp);
   padding: 2rem;
   margin-bottom: 1.5rem;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
