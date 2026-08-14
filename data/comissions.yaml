@@ -1,5 +1,9 @@
 comissions:
   - nom: Economia
+    slug: economia
   - nom: Festejos
+    slug: festejos
   - nom: Comunicació
+    slug: comunicacio
   - nom: Cures
+    slug: cures

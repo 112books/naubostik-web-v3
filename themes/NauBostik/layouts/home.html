@@ -199,20 +199,22 @@
 ══════════════════════════════════════════════════ */}}
 {{ $comissions := index hugo.Data "comissions" }}
 {{ with $comissions }}{{ with .comissions }}
-<section class="home-comissions section">
-  <div class="section-header">
-    <h2 class="section-title">Comissions de treball</h2>
-    <a href="{{ "qui-som/" | relLangURL }}#tab-comissions" class="section-link">Com ens organitzem &rarr;</a>
-  </div>
-  <ul class="home-comissions__list">
-    {{ range . }}
-    <li class="home-comissio">
-      <a href="{{ "contacte/?consulta=comissio" | relLangURL }}">
-        <span class="home-comissio__nom">{{ .nom }}</span>
+<section class="home-comissions">
+  <div class="home-comissions__inner">
+    <div class="section-header">
+      <h2 class="section-title">Comissions de treball</h2>
+      <a href="{{ "qui-som/" | relLangURL }}#tab-comissions" class="section-link">Com funcionem &rarr;</a>
+    </div>
+    <div class="home-comissions-grid">
+      {{ range . }}
+      <a href="{{ "contacte/?consulta=comissio" | relLangURL }}" class="home-comissio-card">
+        <div class="home-comissio-card__icon">{{ partial "comissio-icon.html" .slug }}</div>
+        <span class="home-comissio-card__nom">{{ .nom }}</span>
       </a>
-    </li>
-    {{ end }}
-  </ul>
+      {{ end }}
+    </div>
+    <p class="home-comissions__desc">Grups de treball oberts on col·lectius residents i veïnat participen en la gestió de la Nau Bostik.</p>
+  </div>
 </section>
 {{ end }}{{ end }}
 
@@ -223,7 +225,7 @@
 {{ $noticiesHero   := index ($noticiesDescat.ByDate.Reverse) 0 }}
 {{ if not $noticiesHero }}{{ $noticiesHero = index ($noticiesNorm.ByDate.Reverse) 0 }}{{ end }}
 {{ $noticiesRecents := first 5 ($noticiesNorm.ByDate.Reverse) }}
-<section class="section">
+<section class="home-noticies section">
   <div class="section-header">
     <h2 class="section-title">{{ i18n "home_section_noticies" }}</h2>
     <a href="{{ "noticies/" | relLangURL }}" class="section-link">{{ i18n "home_link_veure_totes" }} &rarr;</a>

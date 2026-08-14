@@ -89,6 +89,7 @@
     <div class="comissions-grid">
       {{ range $comissions.comissions }}
       <div class="comissio-card">
+        <div class="comissio-card__icon">{{ partial "comissio-icon.html" .slug }}</div>
         <h3 class="comissio-card__title">{{ .nom }}</h3>
         {{ with .descripcio }}<p class="comissio-card__desc">{{ . }}</p>{{ end }}
         {{ with .email }}<a class="comissio-card__email" href="mailto:{{ . }}">Contactar &rarr;</a>{{ end }}
