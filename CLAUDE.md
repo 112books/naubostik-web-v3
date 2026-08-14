@@ -169,6 +169,19 @@ Idèntic a la Web 2 com a base. Cap canvi de stack sense validació explícita.
 - **Staging Web 3:** GH Pages públic → `https://112books.github.io/naubostik-web-v3/`
 - **Producció (futur):** Netlify → `naubostik.com`
 
+### 5.1 Backend i arquitectura de dades (JAMstack)
+
+No hi ha servidor d'aplicació ni base de dades en runtime. La base de dades és **el repositori Git** i la web és 100% estàtica a l'edge. Les quatre capes:
+
+1. **Contingut editorial** — frontmatter TOML + markdown a `content/` (notícies, activitats, espais, col·lectius), gestionat pel CMS.
+2. **Dades estructurades** — `data/*.yaml` (`recinte`, `assemblees`, `equip`, `comissions`, `entitats-logos`, `slogans`, `hero-slideshow`, `portada`, `noticies-territori`). Continguts que no són "posts" es modelen com a dades i es renderitzen des de les plantilles.
+3. **Automatització / ingesta** — GitHub Actions. `hugo.yml` construeix i desplega a GH Pages a cada push a `main`. `fetch-territori.yml` és el primer agent d'ingesta: cada dilluns `scripts/fetch-territori.py` consulta RSS externs (La Sagrerina, AVV La Sagrera, Betevé), escriu `data/noticies-territori.yaml`, commiteja i redeploya.
+4. **Servei** — CDN estàtic (GH Pages staging / Netlify producció), autenticació i edició via Decap CMS (git-gateway + Netlify Identity).
+
+**Incoherències detectades (agost 2026), pendents de resoldre:**
+- Versions de Hugo divergents: `netlify.toml` (0.147.0) vs `.github/workflows/hugo.yml` (0.159.0). Unificar.
+- `fetch-territori.yml` desplega a `https://112books.github.io/naubostik-web/` (baseURL Web 2), no al de Web 3 (`/naubostik-web-v3/`). Corregir perquè el cron no sobrescrigui el staging correcte.
+
 ---
 
 ## 6. Adreça i dades canòniques

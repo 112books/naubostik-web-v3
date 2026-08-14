@@ -1,7 +1,66 @@
 {{ define "main" }}
-<div class="page-header">
-  <h1>{{ i18n "error_404_title" }}</h1>
-  <p class="lead">{{ i18n "error_404_lead" }}</p>
-  <p><a href="{{ site.Home.RelPermalink }}">{{ i18n "error_404_back" }}</a></p>
-</div>
+<section class="qc" data-404>
+  <h1 class="sr-only">Error 404 — Pàgina no trobada</h1>
+
+  <div class="qc-stage">
+    <p class="qc-label" aria-hidden="true">Inspecció · Control de qualitat</p>
+    <div class="qc-digits" role="img" aria-label="Error 404">
+      <span class="qc-digits__ghost" aria-hidden="true">404</span>
+      <span class="qc-digits__fill" aria-hidden="true">404</span>
+      <span class="qc-beam" aria-hidden="true"></span>
+    </div>
+    <div class="qc-stamp" data-stamp aria-hidden="true">No trobada</div>
+  </div>
+
+  <p class="qc-copy" data-copy aria-live="polite"></p>
+  <noscript><p class="qc-copy">Aquesta pàgina ha sortit de la fàbrica i no ha tornat.</p></noscript>
+
+  <p class="qc-fitxa">
+    <span>Expedient: 404</span>
+    <span>Ubicació: <code data-path>—</code></span>
+    <span>Estat: fora d'inventari</span>
+  </p>
+
+  <div class="qc-actions">
+    <a class="btn btn-primary" href="{{ site.Home.RelPermalink }}">{{ i18n "error_404_back" }}</a>
+    <a class="btn btn-secondary" href="{{ "cercar/" | relLangURL }}">{{ i18n "cercar_button" }}</a>
+    <button class="qc-replay" type="button" data-replay>Tornar a inspeccionar</button>
+  </div>
+
+  <p class="qc-report">Si creus que és una errada nostra, escriu-nos a <a href="mailto:info@naubostik.com">info@naubostik.com</a></p>
+</section>
+
+<script>
+(function () {
+  var copys = [
+    "Aquesta pàgina ha sortit de la fàbrica i no ha tornat.",
+    "Hem revisat les naus, les sales i els racons. Res.",
+    "La peça 404 no ha passat el control de qualitat.",
+    "Ni la Bostik dels anys seixanta l'hauria enganxat.",
+    "El número de sèrie no consta a cap inventari del recinte."
+  ];
+  var el = document.querySelector("[data-404]");
+  if (!el) return;
+  var copyEl = el.querySelector("[data-copy]");
+  if (copyEl) copyEl.textContent = copys[Math.floor(Math.random() * copys.length)];
+  var pathEl = el.querySelector("[data-path]");
+  if (pathEl) pathEl.textContent = window.location.pathname || "—";
+
+  var stamp = el.querySelector("[data-stamp]");
+  var fill = el.querySelector(".qc-digits__fill");
+  var replay = el.querySelector("[data-replay]");
+
+  function slam() {
+    if (!stamp || !fill) return;
+    stamp.classList.remove("is-slam");
+    fill.classList.remove("is-filled");
+    void stamp.offsetWidth;
+    void fill.offsetWidth;
+    stamp.classList.add("is-slam");
+    fill.classList.add("is-filled");
+  }
+  setTimeout(slam, 400);
+  if (replay) replay.addEventListener("click", slam);
+})();
+</script>
 {{ end }}
