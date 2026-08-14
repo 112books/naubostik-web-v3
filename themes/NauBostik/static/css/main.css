@@ -940,6 +940,8 @@ main.container {
   color: var(--color-accent);
 }
 
+.footer-social-icon { display: none; }
+
 .footer-logos {
   background: var(--color-surface);
   padding: 0.875rem 0;
@@ -1106,6 +1108,14 @@ main.container {
   .hero h1 { font-size: 2rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-about { grid-column: 1 / -1; }
+  .footer-section--nav { display: none; }
+  .footer-section--social ul { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .footer-section--social li { margin-bottom: 0; }
+  .footer-section--social a { display: inline-flex; align-items: center; }
+  .footer-social-icon { display: block; }
+  .footer-social-text { display: none; }
+  .footer-section--legal ul { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
+  .footer-section--legal li { margin-bottom: 0; }
 }
 
 .search-form {
