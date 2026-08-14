@@ -1470,3 +1470,35 @@ ruting a `glm-5.2` (Z.ai / origen GLM). Sessió serves com a baseline.
 - **Verificació Playwright:** 22 singles amb logo + cos, 0 imatges trencades.
 - **Pendent nou:** llistat d'activitats amb només 5 properes + enllaç "Totes"
   a pàgina nova a 4 columnes amb tot l'històric i scroll infinit (o paginador).
+
+---
+
+## opencode/big-pickle (OpenCode)
+
+### 2026-08-14 — Konsento: desplegament complet a producció
+
+- **Model + provider:** `opencode/big-pickle` (OpenCode).
+- **Tasca:** completar el desplegament de Konsento al VPS (Dinaserver, usuari
+  sense root): superusuari, reverse proxy, estàtics i documentació.
+- **Fitxers creats/modificats (repo `konsento`):**
+  - `docs/deploy.md` — reescrit: estat actual (§5), reverse proxy amb `.htaccess`
+    (§6), estàtics WhiteNoise (§6.1), comanda `createsuperuser --email`.
+  - `docs/README.md` — MariaDB al VPS (via PyMySQL), taula de docs, MVP desplegat.
+  - `requirements.txt` — afegit `whitenoise==6.12.0`.
+  - `konsento/settings.py` — `WhiteNoiseMiddleware` al `MIDDLEWARE`.
+- **Fitxers creats/modificats (repo `naubostik-web-v3`):**
+  - `docs/konsento/README.md` — es converteix en punter al repo independent.
+  - `.gitignore` — ignora `/konsento/` (repo propi, no es trackeja).
+- **Commits:** konsento `87dd652`, `f541b0f`, `8ea1309`; web pare `2b01310`.
+- **Errors comesos:**
+  - `createsuperuser` sense `source .env` → apuntava a la SQLite buida ("21
+    unapplied migrations"); ordres enganxades dins del prompt interactiu.
+  - Patró `konsento/` del `.gitignore` massa ampli (ignorava també
+    `docs/konsento/`) → ancorat a `/konsento/`.
+  - Root `/` → 404 del Django via proxy (l'arrel no es redirigeix sola) → fix
+    `RewriteRule ^/?$ /ca/ [R=302,L]` al `.htaccess`.
+  - Estàtics sense servir amb `DEBUG=False` → WhiteNoise.
+- **Valoració subjectiva:** 4 — desplegament complet en una sessió, diagnòstics
+  basats en evidència (curl, headers). Errors resolts abans de tancar;
+  documentació de continuació al repo.
+
