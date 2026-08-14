@@ -5,6 +5,142 @@
     <h1>{{ .Title }}</h1>
   </div>
 
+  {{/* ── Formulari induït + FAQ ── */}}
+  <div class="contacte-form-faq">
+
+    <div class="contacte-form-col">
+      <h2 class="contacte-form__title">Com et podem ajudar?</h2>
+      <div class="consulta-selector" role="group" aria-label="Tipus de consulta">
+        <button class="consulta-btn is-active" data-consulta="general" type="button">Informació general</button>
+        <button class="consulta-btn" data-consulta="cessio" type="button">Cessió d'espai</button>
+        <button class="consulta-btn" data-consulta="participar" type="button">Vull participar</button>
+        <button class="consulta-btn" data-consulta="incidencia" type="button">Incidència</button>
+      </div>
+
+      <form class="contacte-form" id="contacte-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+        <input type="hidden" name="consulta" id="form-consulta-hidden" value="general">
+        <div class="form-group">
+          <label for="form-nom">Nom</label>
+          <input type="text" id="form-nom" name="nom" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="form-email">Correu electrònic</label>
+          <input type="email" id="form-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-group form-group--cessio" style="display:none">
+          <label for="form-espai">Espai d'interès</label>
+          <select id="form-espai" name="espai">
+            <option value="">Selecciona un espai…</option>
+            <option>Nau Andy Warhol</option>
+            <option>Nau 53</option>
+            <option>Nau Pilar Vers</option>
+            <option>Sala Gandul</option>
+            <option>Sala d'audiovisuals</option>
+            <option>Coworking</option>
+            <option>Altres / No ho sé</option>
+          </select>
+        </div>
+        <div class="form-group form-group--cessio" style="display:none">
+          <label for="form-dates">Dates previstes</label>
+          <input type="text" id="form-dates" name="dates" placeholder="Ex: 15/09/2026, 19h–23h">
+        </div>
+        <div class="form-group form-group--participar" style="display:none">
+          <label for="form-tipuspart">Com vols participar?</label>
+          <select id="form-tipuspart" name="tipus_participacio">
+            <option value="">Selecciona…</option>
+            <option>Proposta d'activitat puntual</option>
+            <option>Residència com a col·lectiu</option>
+            <option>Voluntariat</option>
+            <option>Altres</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-missatge">Missatge</label>
+          <textarea id="form-missatge" name="missatge" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envia el missatge</button>
+      </form>
+    </div>
+
+    <aside class="contacte-faq-col">
+      <h2 class="contacte-faq__title">FAQ · Preguntes freqüents</h2>
+
+      <div class="faq-group" data-faq="general">
+        <details class="faq-item" open>
+          <summary>Quins són els horaris del recinte?</summary>
+          <p>De dilluns a divendres, de 9h a 21h. Els caps de setmana l'horari varia segons la programació. Consulta l'agenda per saber si hi ha activitats obertes al públic.</p>
+        </details>
+        <details class="faq-item">
+          <summary>L'entrada és gratuïta?</summary>
+          <p>Sí, l'accés al recinte és gratuït i obert. Algunes activitats poden tenir preu d'entrada propi — consulta cada activitat a l'agenda.</p>
+        </details>
+        <details class="faq-item">
+          <summary>On puc aparcar la bicicleta?</summary>
+          <p>Hi ha aparcament de bicicletes a l'entrada de la Nau Bostik. Les estacions de Bicing més properes són la 250 (Carrer Portugal, 3) i la 391 (Gran de la Sagrera, 74).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hi ha aparcament per a cotxes?</summary>
+          <p>La Nau Bostik no disposa d'aparcament propi per a vehicles. Als voltants hi ha aparcaments públics. Per càrrega i descàrrega, escriu-nos a info@naubostik.com.</p>
+        </details>
+      </div>
+
+      <div class="faq-group" data-faq="cessio" style="display:none">
+        <details class="faq-item" open>
+          <summary>Què ofereix la Nau Bostik per a produccions i esdeveniments?</summary>
+          <p>Disposem de 6.000 m² de naus amb ambient artístic i industrial al cor de Barcelona. Oferim espais exteriors per a rodatge i shooting, i sales per a producció amb característiques específiques per a cada necessitat.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quins espais estan disponibles per a cessió?</summary>
+          <p>La Nau Andy Warhol, la Nau 53, la Nau Pilar Vers, la Sala Gandul i la sala d'audiovisuals, a més d'espais exteriors. Consulta la pàgina d'<a href="/espais/">Espais</a> per veure capacitats i condicions.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Qui pot sol·licitar la cessió?</summary>
+          <p>Projectes culturals, socials, comunitaris i produccions audiovisuals o fotogràfiques alineats amb els valors de la Nau Bostik. <strong>No cedim espais per a festes privades de particulars</strong> (bodes, aniversaris, celebracions d'amics ni similars).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quant costa cedir un espai?</summary>
+          <p>Les condicions de cessió depenen del tipus d'activitat i de l'espai. Escriu-nos i t'enviem les tarifes vigents.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quin és l'horari màxim d'ús?</summary>
+          <p>El tancament màxim és a les 22 h tots els dies, sense excepcions.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Amb quanta antelació cal reservar?</summary>
+          <p>Recomanem contactar-nos amb un mínim de 3 setmanes d'antelació per a activitats puntuals, i amb més temps per a produccions o esdeveniments de gran format.</p>
+        </details>
+      </div>
+
+      <div class="faq-group" data-faq="participar" style="display:none">
+        <details class="faq-item" open>
+          <summary>Com puc proposar una activitat?</summary>
+          <p>Utilitza el formulari de <a href="/proposa-activitat/">Proposa una activitat</a>. Rebrem la teva proposta i et respondrem en un termini de 2 setmanes.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Podeu ser residents a la Nau?</summary>
+          <p>Les residències es gestionen per convocatòria o per acord assembleari. Escriu-nos explicant el vostre projecte i et donarem informació sobre el procés.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hi ha voluntariat?</summary>
+          <p>De vegades sí. Escriu-nos indicant les teves disponibilitats i àmbits d'interès i t'avisarem quan hi hagi oportunitats.</p>
+        </details>
+      </div>
+
+      <div class="faq-group" data-faq="incidencia" style="display:none">
+        <details class="faq-item" open>
+          <summary>Com reporto una incidència tècnica o de manteniment?</summary>
+          <p>Descriu l'incidència al formulari i l'equip de gestió la rebrà directament. Per a urgències, truca'ns al +34 933 408 350.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Tinc un problema amb una reserva o activitat</summary>
+          <p>Indica el nom de l'activitat i la data al missatge. Si és urgent, contacta directament amb l'entitat o col·lectiu organitzador.</p>
+        </details>
+      </div>
+    </aside>
+
+  </div>
+  <div class="contacte-separator"></div>
+
   {{/* ── Bloc superior: dades + mapa ── */}}
   <div class="contacte-top">
 
@@ -65,12 +201,15 @@
 
     </div>
 
-    <div class="contacte-map">
+    <div class="contacte-map" id="contacte-map">
+      <div class="contacte-map__scroll-guard" aria-hidden="true">
+        <span>Ctrl + scroll per fer zoom</span>
+      </div>
       <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=2.181%2C41.419%2C2.202%2C41.430&amp;layer=transportmap&amp;marker={{ .Params.map_lat }}%2C{{ .Params.map_lon }}"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=2.187%2C41.421%2C2.200%2C41.428&amp;layer=transportmap&amp;marker={{ .Params.map_lat }}%2C{{ .Params.map_lon }}"
         width="100%"
         height="100%"
-        style="border:none;min-height:280px;"
+        style="border:1px solid var(--color-border);border-radius:2px;min-height:280px;"
         loading="lazy"
         title="Mapa de la Nau Bostik">
       </iframe>
@@ -80,6 +219,7 @@
   </div>
 
   {{/* ── Com arribar ── */}}
+  <div class="contacte-separator"></div>
   <div class="page-header page-header--sub">
     <h1>Com arribar</h1>
   </div>

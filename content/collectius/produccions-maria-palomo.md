@@ -3,6 +3,7 @@ title = "Produccions Maria Palomo"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/produccions-maria-palomo.jpg"
+ambit = "arts-esceniques"
 web = "https://sites.google.com/view/produccions-maria-palomo/"
 instagram = "@la_guiteras"
 descripcio = "Paraigua artístic que acull projectes com lasjosephines, Bostikianes i BeWater, dirigit per l'artista multidisciplinària Laura Guiteras."

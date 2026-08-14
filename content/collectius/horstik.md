@@ -3,6 +3,7 @@ title = "Horstik"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/horstik.jpg"
+ambit = "ecologia"
 email = "horstik@naubostik.com"
 instagram = "@horstik_naubostik"
 descripcio = "Hort urbà comunitari ubicat a la terrassa de la Nau Bostik, gestionat per voluntaris i membre de la xarxa Barcelona+Sostenible."

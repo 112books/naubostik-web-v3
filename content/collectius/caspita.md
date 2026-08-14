@@ -3,6 +3,7 @@ title = "Associació Càspita · Sala Basiana"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/caspita.jpg"
+ambit = "cultura"
 web = "https://sites.google.com/view/asociacioncaspita/inicio"
 email = "asoccaspita@gmail.com"
 instagram = "@assoc_caspita.sala_basiana"

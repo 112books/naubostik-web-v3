@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Segona planta"
 cedible = false
 draft = false
+collectiu = "fronteres-invisibles"
 logo = "/img/espais/fronteres-invisibles-logo.png"
 fotografies = [
   "/img/espais/fronteres-invisibles-1.jpg",

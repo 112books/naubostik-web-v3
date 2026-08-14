@@ -5,6 +5,7 @@ date = 2026-08-11
 ubicacio = "Primera planta"
 cedible = false
 draft = false
+collectiu = "madisound"
 logo = "/img/espais/madisound-studios-academy-logo.jpg"
 fotografies = [
   "/img/espais/madisound-studios-academy-1.jpg",

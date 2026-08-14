@@ -12,6 +12,7 @@ xarxes = [
   { nom = "Instagram", url = "https://www.instagram.com/b.murals/" },
 ]
 draft = false
+collectiu = "b-murals"
 +++
 
 

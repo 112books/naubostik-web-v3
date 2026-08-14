@@ -3,6 +3,7 @@ title = "Azimut 360"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/azimut-360.jpg"
+ambit = "ecologia"
 web = "https://azimut360.coop"
 descripcio = "Cooperativa especialitzada en energia solar que desenvolupa projectes d'energies renovables i promou l'autogestió energètica."
 +++

@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $recinte := index site.Data "recinte" }}
+<div class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with $recinte }}
+  <span class="recinte-estat recinte-estat--{{ .estat }}">
+    <span class="recinte-estat__dot" aria-hidden="true"></span>{{ .nota }}
+  </span>
+  {{ end }}
+</div>
+
+<div class="visita-layout">
+  <div class="visita-content content">
+    {{ .Content }}
+  </div>
+  <aside class="visita-aside">
+    <div class="visita-info-card">
+      <h2 class="visita-info-card__title">Informació pràctica</h2>
+      <dl class="visita-info-list">
+        <dt>Adreça</dt>
+        <dd>{{ .Params.adreca }}<br><span class="visita-info-sub">{{ .Params.barri }}</span></dd>
+        <dt>Recinte</dt>
+        <dd>{{ .Params.horari_recinte }}</dd>
+        <dt>Oficines</dt>
+        <dd>{{ .Params.horari_oficines }}</dd>
+        <dt>Entrada</dt>
+        <dd>{{ if .Params.acces_gratuit }}Gratuïta i oberta{{ else }}Consulta l'activitat{{ end }}</dd>
+      </dl>
+      <div class="visita-info-card__ctas">
+        <a class="btn btn-primary" href="{{ "activitats/" | relLangURL }}">Agenda d'activitats</a>
+        <a class="btn btn-secondary" href="{{ "espais/" | relLangURL }}">Espais</a>
+        <a class="btn btn-outline" href="{{ "contacte/" | relLangURL }}">Com arribar</a>
+      </div>
+    </div>
+  </aside>
+</div>
+{{ end }}

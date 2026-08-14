@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Segona planta"
 cedible = false
 draft = false
+collectiu = "azimut-360"
 logo = "/img/espais/azimut-360-logo.jpg"
 fotografies = [
   "/img/espais/azimut-360-1.jpg",

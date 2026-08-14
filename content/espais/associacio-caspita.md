@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "caspita"
 logo = "/img/espais/associacio-caspita-logo.jpg"
 fotografies = [
   "/img/espais/associacio-caspita-1.jpg",

@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "mescladis"
 logo = "/img/espais/mescladis-logo.jpg"
 fotografies = [
   "/img/espais/mescladis-1.jpg",

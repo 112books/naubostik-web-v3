@@ -3,6 +3,7 @@ title = "L'Anòmala"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/anomala.jpg"
+ambit = "arts-esceniques"
 email = "lanomalacirc@gmail.com"
 instagram = "@lanomalacirc"
 descripcio = "Associació cultural dedicada a la promoció, formació i difusió de les arts del circ a Barcelona."

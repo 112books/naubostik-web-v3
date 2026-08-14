@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Segona planta"
 cedible = false
 draft = false
+collectiu = "prollema"
 logo = "/img/espais/prollema-logo.png"
 fotografies = [
   "/img/espais/prollema-1.jpg",

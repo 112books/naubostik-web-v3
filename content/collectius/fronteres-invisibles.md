@@ -3,6 +3,7 @@ title = "Fronteres Invisibles"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/fronteres-invisibles.png"
+ambit = ["educacio", "economia-social"]
 web = "https://fronteresinvisible.wixsite.com/frinvisibles"
 email = "fronteresinvisibles@naubostik.com"
 instagram = "@frinvisibles"

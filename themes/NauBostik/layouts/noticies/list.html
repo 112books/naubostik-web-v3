@@ -1,46 +1,66 @@
 {{ define "main" }}
+{{ $territori := index site.Data "noticies-territori" }}
 <div class="page-header">
   <h1>{{ i18n "noticies_title" }}</h1>
   {{ with i18n "noticies_lead" }}<p class="lead">{{ . }}</p>{{ end }}
 </div>
 
-<ul class="noticia-list">
-  {{ range .Paginator.Pages }}
-  <li class="noticia-card">
-    <a class="noticia-card__img-wrap" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-      {{ if .Params.imatge }}
-      <img src="{{ .Params.imatge | relURL }}" alt="" loading="lazy">
-      {{ else }}
-      <div class="noticia-card__img-placeholder"></div>
+<div class="noticies-layout">
+
+  <div class="noticies-main">
+    <ul class="noticia-list">
+      {{ range .Paginator.Pages }}
+      <li class="noticia-card">
+        <a class="noticia-card__img-wrap" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+          {{ if .Params.imatge }}
+          <img src="{{ .Params.imatge | relURL }}" alt="" loading="lazy">
+          {{ else }}
+          <div class="noticia-card__img-placeholder"></div>
+          {{ end }}
+        </a>
+        <article class="noticia-card__body">
+          <p class="noticia-card__meta">{{ .Date.Format "02/01/2006" }}{{ if .Params.destacada }} · <span class="noticia-badge">Destacat</span>{{ end }}</p>
+          <h3 class="noticia-card__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          <p class="noticia-card__excerpt">{{ .Summary | truncate 180 }}</p>
+          <a class="noticia-card__more" href="{{ .RelPermalink }}">Llegir més &rarr;</a>
+        </article>
+      </li>
       {{ end }}
-    </a>
-    <article class="noticia-card__body">
-      <p class="noticia-card__meta">{{ .Date.Format "02/01/2006" }}{{ if .Params.destacada }} · <span class="noticia-badge">Destacat</span>{{ end }}</p>
-      <h3 class="noticia-card__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-      <p class="noticia-card__excerpt">{{ .Summary | truncate 180 }}</p>
-      <a class="noticia-card__more" href="{{ .RelPermalink }}">Llegir més &rarr;</a>
-    </article>
-  </li>
+    </ul>
+
+    {{ $p := .Paginator }}
+    {{ if gt $p.TotalPages 1 }}
+    <nav class="paginador" aria-label="Paginació de notícies">
+      {{ if $p.HasPrev }}
+      <a class="paginador__btn" href="{{ $p.Prev.URL }}">&#8592; Anteriors</a>
+      {{ else }}
+      <span class="paginador__btn paginador__btn--disabled">&#8592; Anteriors</span>
+      {{ end }}
+      <span class="paginador__info">Pàgina {{ $p.PageNumber }} de {{ $p.TotalPages }}</span>
+      {{ if $p.HasNext }}
+      <a class="paginador__btn" href="{{ $p.Next.URL }}">Següents &#8594;</a>
+      {{ else }}
+      <span class="paginador__btn paginador__btn--disabled">Següents &#8594;</span>
+      {{ end }}
+    </nav>
+    {{ end }}
+  </div>
+
+  {{ if and $territori $territori.items }}
+  <aside class="noticies-territori">
+    <h2 class="noticies-territori__title">Del territori</h2>
+    <ul class="noticies-territori__list">
+      {{ range $territori.items }}
+      <li class="noticies-territori__item">
+        <a href="{{ .url }}" target="_blank" rel="noopener">
+          <span class="noticies-territori__meta">{{ .date | time.Format "02/01" }}{{ with .source }} · {{ . }}{{ end }}</span>
+          <span class="noticies-territori__text">{{ .title }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </aside>
   {{ end }}
-</ul>
 
-{{ $p := .Paginator }}
-{{ if gt $p.TotalPages 1 }}
-<nav class="paginador" aria-label="Paginació de notícies">
-  {{ if $p.HasPrev }}
-  <a class="paginador__btn" href="{{ $p.Prev.URL }}">&#8592; Anteriors</a>
-  {{ else }}
-  <span class="paginador__btn paginador__btn--disabled">&#8592; Anteriors</span>
-  {{ end }}
-
-  <span class="paginador__info">Pàgina {{ $p.PageNumber }} de {{ $p.TotalPages }}</span>
-
-  {{ if $p.HasNext }}
-  <a class="paginador__btn" href="{{ $p.Next.URL }}">Següents &#8594;</a>
-  {{ else }}
-  <span class="paginador__btn paginador__btn--disabled">Següents &#8594;</span>
-  {{ end }}
-</nav>
-{{ end }}
-
+</div>
 {{ end }}

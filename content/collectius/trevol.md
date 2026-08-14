@@ -3,6 +3,7 @@ title = "Cooperativa Trèvol"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/trevol.jpg"
+ambit = "economia-social"
 web = "https://www.trevol.com"
 descripcio = "Cooperativa pionera en missatgeria en bicicleta des de 1984, especialitzada en serveis de missatgeria i neteja amb compromís ecològic."
 +++

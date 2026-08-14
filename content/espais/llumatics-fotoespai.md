@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Tercera planta"
 cedible = false
 draft = false
+collectiu = "llumatics"
 logo = "/img/espais/llumatics-fotoespai-logo.jpg"
 plano = "/img/espais/llumatics-fotoespai-plano.jpg"
 mail = "hola@llumatics.com"

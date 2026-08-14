@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Tercera planta"
 cedible = false
 draft = false
+collectiu = "linuxbcn"
 logo = "/img/espais/linuxbcn-logo.jpg"
 plano = "/img/espais/linuxbcn-plano.jpg"
 mail = "info@linuxbcn.com"

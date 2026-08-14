@@ -136,14 +136,23 @@ function initRandomEspais() {
 
 function initHeaderScroll() {
   const body = document.body;
-  const ON  = 80;
-  const OFF = 55;
+  const ON  = 90;
+  const OFF = 40;
+  let locked = false;
 
   function update() {
+    if (locked) return;
     const sc = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     const isScrolled = body.classList.contains('is-scrolled');
-    if (!isScrolled && sc > ON)  body.classList.add('is-scrolled');
-    if (isScrolled  && sc < OFF) body.classList.remove('is-scrolled');
+    if (!isScrolled && sc > ON) {
+      body.classList.add('is-scrolled');
+      locked = true;
+      setTimeout(() => { locked = false; }, 150);
+    } else if (isScrolled && sc < OFF) {
+      body.classList.remove('is-scrolled');
+      locked = true;
+      setTimeout(() => { locked = false; }, 150);
+    }
   }
 
   window.addEventListener('scroll', update, { passive: true });
@@ -533,4 +542,86 @@ function initHistoricGrid(gridId, sentinelId, dataId) {
   }, ioOptions);
 
   io.observe(sentinel);
+}
+
+/* ── Filtres agenda setmana (home v3) ── */
+function initSetmanaFiltres() {
+  const filtres = document.querySelector('.home-setmana__filtres');
+  if (!filtres) return;
+  filtres.addEventListener('click', e => {
+    const btn = e.target.closest('.filtre-btn');
+    if (!btn) return;
+    filtres.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const filtre = btn.dataset.filtre;
+    document.querySelectorAll('.home-setmana__grid .home-act-card').forEach(card => {
+      card.classList.toggle('is-hidden', filtre !== 'tots' && card.dataset.grup !== filtre);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSetmanaFiltres();
+  initCollectiusFiltres();
+  initContacteForm();
+  initMapScrollGuard();
+});
+
+function initCollectiusFiltres() {
+  const wrap = document.getElementById('col-logo-grid');
+  const group = document.querySelector('.col-filtres');
+  if (!wrap || !group) return;
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('.filtre-btn');
+    if (!btn) return;
+    group.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const filtre = btn.dataset.filtre;
+    wrap.querySelectorAll('.col-logo-card').forEach(card => {
+      const ambits = (card.dataset.ambit || '').split(' ');
+      card.classList.toggle('is-hidden', filtre !== 'tots' && !ambits.includes(filtre));
+    });
+  });
+}
+
+function initContacteForm() {
+  const selector = document.querySelector('.consulta-selector');
+  if (!selector) return;
+  const hiddenInput = document.getElementById('form-consulta-hidden');
+
+  selector.addEventListener('click', e => {
+    const btn = e.target.closest('.consulta-btn');
+    if (!btn) return;
+    selector.querySelectorAll('.consulta-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const consulta = btn.dataset.consulta;
+    if (hiddenInput) hiddenInput.value = consulta;
+
+    document.querySelectorAll('.faq-group').forEach(g => {
+      g.style.display = g.dataset.faq === consulta ? '' : 'none';
+    });
+
+    document.querySelectorAll('.form-group--cessio').forEach(g => {
+      g.style.display = consulta === 'cessio' ? '' : 'none';
+    });
+    document.querySelectorAll('.form-group--participar').forEach(g => {
+      g.style.display = consulta === 'participar' ? '' : 'none';
+    });
+  });
+}
+
+function initMapScrollGuard() {
+  const mapWrap = document.getElementById('contacte-map');
+  if (!mapWrap) return;
+  const guard = mapWrap.querySelector('.contacte-map__scroll-guard');
+  if (!guard) return;
+  let hideTimer;
+
+  mapWrap.addEventListener('wheel', e => {
+    if (e.ctrlKey || e.metaKey) return;
+    e.preventDefault();
+    guard.classList.add('is-visible');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => guard.classList.remove('is-visible'), 1500);
+  }, { passive: false });
 }

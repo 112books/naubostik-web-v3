@@ -3,6 +3,7 @@ title = "Llumàtics"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/llumatics.jpg"
+ambit = ["fotografia", "educacio"]
 web = "https://www.llumatics.com"
 email = "hola@llumatics.com"
 instagram = "@llumatics"

@@ -1,0 +1,12 @@
+# Darrera i propera assemblea. Actualitzar després de cada assemblea.
+darrera:
+  data: 2026-07-08
+  temes:
+    - "Aprovació del balanç econòmic del primer semestre"
+    - "Planificació de la programació de tardor 2026"
+    - "Nova política de cessió d'espais a tercers"
+
+propera:
+  data: 2026-09-09
+  hora: "19:00"
+  lloc: "Sala Andy Warhol"

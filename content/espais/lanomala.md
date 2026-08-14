@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "anomala"
 logo = "/img/espais/lanomala-logo.jpg"
 plano = "/img/espais/lanomala-plano.jpg"
 mail = "lanomalacirc@gmail.com"

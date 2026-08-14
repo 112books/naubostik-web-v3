@@ -41,26 +41,35 @@
     {{ end }}
   </div>
 
+  {{ $collectiu := .Params.collectiu }}
   {{ $mail := .Params.mail }}
   {{ $web := .Params.web }}
   {{ $xarxes := .Params.xarxes }}
-  {{ if or $mail $web $xarxes }}
+  {{ if or $collectiu $mail $web $xarxes }}
   <aside class="espai-contact">
-    <h2>{{ i18n "footer_contact" }}</h2>
-    {{ with $mail }}
-    <p class="espai-contact-item">{{ i18n "espai_contact_mail_label" }} <strong><a href="mailto:{{ . }}">{{ . }}</a></strong></p>
+    {{ with $collectiu }}
+    <a class="espai-contact-collectiu" href="{{ printf "/collectius/%s/" . | relURL }}">Col·lectiu a la Nau Bostik &rarr;</a>
     {{ end }}
-    {{ with $web }}
-    <p class="espai-contact-item">{{ i18n "espai_contact_web_label" }} <strong><a href="{{ . }}" target="_blank" rel="noopener">{{ . | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" | strings.TrimSuffix "/" }}</a></strong></p>
-    {{ end }}
-    {{ with $xarxes }}
-    <p class="espai-contact-item">{{ i18n "espai_contact_xarxes_label" }}</p>
-    <ul class="espai-contact-xarxes">
-      {{ range . }}
-      <li><strong><a href="{{ .url }}" target="_blank" rel="noopener">{{ .nom }}</a></strong></li>
+    <ul class="espai-contact-list">
+      {{ with $web }}
+      <li>
+        <span class="espai-contact-label">Web</span>
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ . | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" | strings.TrimSuffix "/" }}</a>
+      </li>
+      {{ end }}
+      {{ with $mail }}
+      <li>
+        <span class="espai-contact-label">Mail</span>
+        <a href="mailto:{{ . }}">{{ . }}</a>
+      </li>
+      {{ end }}
+      {{ range $xarxes }}
+      <li>
+        <span class="espai-contact-label">{{ .nom }}</span>
+        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .url | strings.TrimPrefix "https://" | strings.TrimPrefix "http://" | strings.TrimSuffix "/" | strings.TrimPrefix "www." }}</a>
+      </li>
       {{ end }}
     </ul>
-    {{ end }}
   </aside>
   {{ end }}
 </div>

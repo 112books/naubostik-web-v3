@@ -3,6 +3,7 @@ title = "Prollema"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/prollema.png"
+ambit = ["educacio", "economia-social"]
 web = "https://www.prollema.org"
 email = "prollema@prollema.org"
 instagram = "@prollema"

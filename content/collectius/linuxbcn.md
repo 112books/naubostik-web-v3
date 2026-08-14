@@ -3,6 +3,7 @@ title = "LinuxBCN"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/linuxbcn.jpg"
+ambit = "tecnologia"
 web = "https://www.linuxbcn.com"
 email = "info@linuxbcn.com"
 descripcio = "Consultoria tecnològica amb més de 20 anys d'experiència en assessorament tecnològic, desenvolupament web i programari lliure."

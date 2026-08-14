@@ -3,6 +3,7 @@ title = "La Perversa"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/la-perversa.jpg"
+ambit = ["fotografia", "educacio"]
 web = "https://www.laperversa.com"
 email = "info@laperversa.com"
 instagram = "@la_perversa_fotografia"

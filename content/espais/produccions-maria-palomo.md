@@ -5,6 +5,7 @@ date = 2026-08-11
 ubicacio = "Primera planta"
 cedible = false
 draft = false
+collectiu = "produccions-maria-palomo"
 logo = "/img/espais/produccions-maria-palomo-logo.jpg"
 fotografies = [
   "/img/espais/produccions-maria-palomo-1.jpg",

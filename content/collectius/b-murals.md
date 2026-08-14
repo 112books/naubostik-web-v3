@@ -3,6 +3,7 @@ title = "B-Murals"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/b-murals.jpg"
+ambit = "art"
 web = "https://www.bmurals.com"
 email = "hola@bmurals.com"
 instagram = "@b.murals"

@@ -3,6 +3,7 @@ title = "La Productora Fotogràfica"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/la-productora-fotografica.jpg"
+ambit = "fotografia"
 web = "https://www.laproductorafotografica.com"
 email = "info@laproductorafotografica.com"
 instagram = "@laproductora_fotografica"

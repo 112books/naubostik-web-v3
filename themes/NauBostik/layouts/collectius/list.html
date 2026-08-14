@@ -1,12 +1,25 @@
 {{ define "main" }}
+{{ $collectius := .Pages.ByTitle }}
+{{ $ambits := slice "art" "arts-esceniques" "cultura" "ecologia" "economia-social" "educacio" "fotografia" "gastronomia" "habitatge" "musica" "tecnologia" }}
+{{ $ambitLabels := dict "art" "Art" "arts-esceniques" "Arts escèniques" "cultura" "Cultura" "ecologia" "Ecologia" "economia-social" "Economia social" "educacio" "Educació" "fotografia" "Fotografia" "gastronomia" "Gastronomia" "habitatge" "Habitatge" "musica" "Música" "tecnologia" "Tecnologia" }}
+
 <div class="page-header">
   <h1>{{ i18n "collectius_title" }}</h1>
   {{ with i18n "collectius_lead" }}<p class="lead">{{ . }}</p>{{ end }}
 </div>
 
-<div class="col-logo-grid">
-  {{ range .Pages.ByTitle }}
-  <a href="{{ .RelPermalink }}" class="col-logo-card" title="{{ .Title }}">
+<div class="col-filtres" role="group" aria-label="Filtra per àmbit">
+  <button class="filtre-btn is-active" data-filtre="tots" type="button">Tots</button>
+  {{ range $ambits }}
+  {{ $label := index $ambitLabels . }}
+  <button class="filtre-btn" data-filtre="{{ . }}" type="button">{{ $label }}</button>
+  {{ end }}
+</div>
+
+<div class="col-logo-grid" id="col-logo-grid">
+  {{ range $collectius }}
+  {{ $ambitStr := "" }}{{ if reflect.IsSlice .Params.ambit }}{{ $ambitStr = delimit .Params.ambit " " }}{{ else }}{{ $ambitStr = .Params.ambit }}{{ end }}
+  <a href="{{ .RelPermalink }}" class="col-logo-card" title="{{ .Title }}" data-ambit="{{ $ambitStr }}">
     <div class="col-logo-card__img">
       {{ if .Params.logo }}
       <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">

@@ -5,6 +5,7 @@ date = 2026-08-11
 ubicacio = "Primera planta"
 cedible = false
 draft = false
+collectiu = "photosagrera"
 logo = "/img/espais/photosagrera-logo.jpg"
 mail = "info@photosagrera.com"
 web = "https://www.photosagrera.com/"

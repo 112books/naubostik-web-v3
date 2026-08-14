@@ -3,6 +3,7 @@ title = "AmbTu"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/ambtu.jpg"
+ambit = "economia-social"
 web = "https://www.ambtu.coop"
 descripcio = "Cooperativa de treball associat que ofereix acompanyament i formació en gestió financera a entitats d'economia social i solidària."
 +++

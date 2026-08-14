@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Tercera planta"
 cedible = false
 draft = false
+collectiu = "globus-vermell"
 logo = "/img/espais/globus-vermell-logo.jpg"
 plano = "/img/espais/globus-vermell-plano.jpg"
 mail = "info@elglobusvermell.org"

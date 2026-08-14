@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "b-murals"
 logo = "/img/espais/residencia-b-murals-logo.webp"
 fotografies = [
   "/img/espais/residencia-b-murals-1.jpg",

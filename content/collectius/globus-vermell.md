@@ -3,6 +3,7 @@ title = "El Globus Vermell"
 date = 2026-04-01
 draft = false
 logo = "/img/collectius/globus-vermell.jpg"
+ambit = "cultura"
 web = "https://elglobusvermell.org"
 email = "info@elglobusvermell.org"
 instagram = "@elglobusvermell"

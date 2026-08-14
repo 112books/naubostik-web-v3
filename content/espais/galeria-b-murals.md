@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "b-murals"
 fotografies = [
   "/img/espais/galeria-b-murals-1.jpg",
   "/img/espais/galeria-b-murals-2.jpg",

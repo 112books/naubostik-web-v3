@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Primera planta"
 cedible = false
 draft = false
+collectiu = "horstik"
 logo = "/img/espais/horstik-logo.jpg"
 fotografies = [
   "/img/espais/horstik-1.jpg",

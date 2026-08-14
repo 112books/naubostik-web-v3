@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Tercera planta"
 cedible = false
 draft = false
+collectiu = "editorial-112-books"
 logo = "/img/espais/editorial-112-books-logo.jpg"
 fotografies = [
   "/img/espais/editorial-112-books-1.jpg",

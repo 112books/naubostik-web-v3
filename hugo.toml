@@ -23,37 +23,42 @@ disableKinds = ["sitemap", "RSS"]
     [[languages.ca.menu.main]]
       name = "Activitats"
       url = "/activitats/"
-      weight = 2
+      weight = 10
+
+    [[languages.ca.menu.main]]
+      name = "Visita la Nau"
+      url = "/visita/"
+      weight = 20
 
     [[languages.ca.menu.main]]
       name = "Col·lectius"
       url = "/collectius/"
-      weight = 3
+      weight = 30
 
     [[languages.ca.menu.main]]
       name = "Espais"
       url = "/espais/"
-      weight = 4
+      weight = 40
 
     [[languages.ca.menu.main]]
       name = "Qui som"
       url = "/qui-som/"
-      weight = 5
+      weight = 50
 
     [[languages.ca.menu.main]]
       name = "Notícies"
       url = "/noticies/"
-      weight = 7
+      weight = 60
 
     [[languages.ca.menu.main]]
       name = "Contacte"
       url = "/contacte/"
-      weight = 8
+      weight = 70
 
     [[languages.ca.menu.main]]
       name = "Cercar"
       url = "/cercar/"
-      weight = 9
+      weight = 80
 
 ignoreLogs = ['warning-goldmark-raw-html']
 

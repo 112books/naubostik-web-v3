@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Segona planta"
 cedible = false
 draft = false
+collectiu = "la-productora-fotografica"
 logo = "/img/espais/la-productora-fotografica-logo.jpg"
 plano = "/img/espais/la-productora-fotografica-plano.jpg"
 mail = "info@laproductorafotografica.com"

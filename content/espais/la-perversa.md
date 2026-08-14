@@ -4,6 +4,7 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = false
 draft = false
+collectiu = "la-perversa"
 logo = "/img/espais/la-perversa-logo.jpg"
 fotografies = [
   "/img/espais/la-perversa-1.jpg",

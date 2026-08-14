@@ -2,7 +2,6 @@
 title = "Biblioteca Nova Babilònia"
 date = 2026-08-11
 ubicacio = "Primera planta"
-destacat = true
 cedible = false
 portada = true
 fotografies = [
