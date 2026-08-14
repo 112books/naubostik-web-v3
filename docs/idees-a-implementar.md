@@ -101,3 +101,5 @@ I també cal Revisar les imatges dels logos dels colectius a la pestanya del bli
 
 A història penso qeu caldria posar els videos d'avans // després d'en David Sunyol.
 També veure on posar els vídeos nous que s'han fet, però en trocets promocionals. Tal vegada a entitats.
+
+Cal que a les pàgines finals de cada colectiu, a la columna dreta, al final, es llistin les activitats propies si estan actives encara. 
