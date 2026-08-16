@@ -5617,33 +5617,33 @@ main.container {
   .konsento-bloc { flex-direction: column; gap: 1rem; }
 }
 
-/* Footer — logos marca (Nau Bostik + Konsento) */
-.footer-logos-brand {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-.footer-konsento-link {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
+/* Footer — Konsento bloc (columna footer-about) */
+.footer-konsento-bloc {
+  display: block;
   text-decoration: none;
   color: inherit;
-  padding: 0.25rem 0;
+  margin-top: 1.5rem;
   transition: opacity 0.2s;
 }
-.footer-konsento-link:hover { opacity: 0.75; }
-.footer-konsento-logo { border-radius: 50%; flex-shrink: 0; }
-.footer-konsento-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+.footer-konsento-bloc:hover { opacity: 0.75; }
+.footer-konsento-logo {
+  display: block;
+  border-radius: 50%;
+}
+.footer-konsento-nom {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
   line-height: 1.2;
 }
-.footer-konsento-text strong { font-size: 0.95rem; color: #fff; }
-.footer-konsento-text span { font-size: 0.72rem; color: rgba(255,255,255,0.55); white-space: nowrap; }
+.footer-konsento-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.15rem;
+}
 
 /* Cards especials a "Aquesta setmana" */
 .home-act-card__badge--assemblea { background: #e8f0fe; color: #1a56db; }

@@ -3,26 +3,19 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-section footer-about">
-        <div class="footer-logos-brand">
-          <a href="{{ $home }}" class="site-logo footer-logo" aria-label="{{ i18n "logo_aria" }}">
-            <img src="{{ "img/logos/logo-nau-bostik.png" | relURL }}" alt="Logo Nau Bostik" width="120" height="114">
-          </a>
-          <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="footer-konsento-link" aria-label="Konsento — eina de governança assembleària">
-            <img src="https://konsento.naubostik.com/static/img/konsento-logo-rodo.svg" alt="Konsento" width="56" height="56" class="footer-konsento-logo">
-            <span class="footer-konsento-text">
-              <strong>Konsento</strong>
-              <span>Assemblees&nbsp;| Comissions</span>
-            </span>
-          </a>
-        </div>
-        <h4 class="footer-title">{{ site.Title }}</h4>
-        <p class="footer-tagline"><em>{{ i18n "footer_tagline_line1" }}<br>{{ i18n "footer_tagline_line2" }}<br>{{ i18n "footer_tagline_line3" }}</em></p>
+        <a href="{{ $home }}" class="footer-logo" aria-label="{{ i18n "logo_aria" }}">
+          <img src="{{ "img/logos/logo-nau-bostik.png" | relURL }}" alt="Nau Bostik" width="120" height="114">
+        </a>
         <address>
-          <a href="{{ $home }}contacte/">Carrer Ferran Turné, 1-11<br>
-          08027 Barcelona</a><br>
+          <a href="{{ $home }}contacte/">Carrer Ferran Turné, 1-11<br>08027 Barcelona</a><br>
           <a href="tel:+34933408350">+34 933 408 350</a><br>
-          <a href="{{ $home }}contacte/">info@naubostik.com</a>
+          <a href="mailto:info@naubostik.com">info@naubostik.com</a>
         </address>
+        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="footer-konsento-bloc" aria-label="Konsento — eina de governança assembleària">
+          <img src="https://konsento.naubostik.com/static/img/konsento-logo-rodo.svg" alt="Konsento" width="120" height="120" class="footer-konsento-logo">
+          <span class="footer-konsento-nom">Konsento</span>
+          <span class="footer-konsento-sub">Assemblees&nbsp;| Comissions</span>
+        </a>
       </div>
       <div class="footer-section footer-section--nav">
         <h4>{{ i18n "footer_nav_title" }}</h4>
