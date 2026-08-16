@@ -67,7 +67,8 @@
 {{ end }}
 {{ $thisWeekAll := $thisWeekNB | append $thisWeekEnt }}
 
-{{ if $thisWeekAll }}
+{{ $assemblees := index site.Data "assemblees" }}
+{{ $comissions := index site.Data "comissions" }}
 <section class="home-setmana section">
   <div class="section-header">
     <h2 class="section-title">Aquesta setmana <span class="section-title__dates">{{ $now | time.Format "2" }}–{{ $weekEnd | time.Format "2 de January" }}</span></h2>
@@ -80,7 +81,7 @@
     <button class="filtre-btn" data-filtre="assemblea" type="button">Assemblees</button>
     <button class="filtre-btn" data-filtre="comissio" type="button">Comissions</button>
   </div>
-  <ul class="home-setmana__grid">
+  <ul class="home-setmana__grid" id="setmana-grid">
     {{ range $thisWeekAll }}
     {{ $grup := "nb" }}
     {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
@@ -112,17 +113,55 @@
       {{ end }}
     </li>
     {{ end }}
+
+    {{/* ── Card fixa: propera assemblea de Konsento ── */}}
+    {{ if $assemblees }}{{ with $assemblees.propera }}
+    <li class="home-act-card home-act-card--konsento" data-grup="assemblea">
+      <a href="{{ .url | default "https://konsento.naubostik.com" }}" target="_blank" rel="noopener" class="home-act-card__link">
+        <div class="home-act-card__body">
+          <p class="home-act-card__badge home-act-card__badge--assemblea">Assemblea</p>
+          <p class="home-act-card__date">{{ .data | time.Format "02/01" }}{{ with .hora }} · {{ . }} h{{ end }}</p>
+          <h3 class="home-act-card__title">{{ .titol | default "Assemblea de la Nau Bostik" }}</h3>
+          {{ with .lloc }}<p class="home-act-card__desc">📍 {{ . }}</p>{{ end }}
+          <p class="home-act-card__konsento-link">Confirmar assistència a Konsento →</p>
+        </div>
+      </a>
+    </li>
+    {{ else }}
+    <li class="home-act-card home-act-card--buit" data-grup="assemblea">
+      <div class="home-act-card__body">
+        <p class="home-act-card__badge home-act-card__badge--assemblea">Assemblea</p>
+        <p class="home-act-card__desc">No hi ha cap assemblea convocada de moment.</p>
+        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Consultar a Konsento →</a>
+      </div>
+    </li>
+    {{ end }}{{ end }}
+
+    {{/* ── Card fixa: comissions a Konsento ── */}}
+    <li class="home-act-card home-act-card--buit" data-grup="comissio">
+      <div class="home-act-card__body">
+        <p class="home-act-card__badge home-act-card__badge--comissio">Comissions</p>
+        {{ if $comissions }}{{ with $comissions.comissions }}
+        <p class="home-act-card__desc">{{ len . }} comissions actives. Les reunions es coordinen a Konsento.</p>
+        {{ else }}
+        <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
+        {{ end }}{{ else }}
+        <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
+        {{ end }}
+        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Veure a Konsento →</a>
+      </div>
+    </li>
+
+    {{ if not $thisWeekAll }}
+    <li class="home-act-card home-act-card--buit" data-grup="nb">
+      <div class="home-act-card__body">
+        <p class="home-act-card__desc">No hi ha activitats programades per als propers 7 dies.</p>
+        <a href="{{ "activitats/" | relLangURL }}" class="home-act-card__konsento-link">Consulta l'agenda completa →</a>
+      </div>
+    </li>
+    {{ end }}
   </ul>
 </section>
-{{ else }}
-<section class="home-setmana section">
-  <div class="section-header">
-    <h2 class="section-title">Agenda</h2>
-    <a href="{{ "activitats/" | relLangURL }}" class="section-link">Agenda completa &rarr;</a>
-  </div>
-  <p class="home-setmana__empty">No hi ha activitats programades per als propers 7 dies. <a href="{{ "activitats/" | relLangURL }}">Consulta l'agenda completa</a>.</p>
-</section>
-{{ end }}
 
 {{/* ══════════════════════════════════════════════════
      ECOSISTEMA — col·lectius com a xarxa
@@ -184,6 +223,13 @@
         <p class="home-assemblea__label">Propera assemblea</p>
         <p class="home-assemblea__data">{{ .data | time.Format "02 de January de 2006" }}{{ with .hora }} · {{ . }} h{{ end }}</p>
         {{ with .lloc }}<p class="home-assemblea__lloc">{{ . }}</p>{{ end }}
+        <a href="{{ .url | default "https://konsento.naubostik.com" }}" target="_blank" rel="noopener" class="home-assemblea__konsento-link">Confirmar assistència a Konsento →</a>
+      </div>
+      {{ else }}
+      <div class="home-assemblea__bloc home-assemblea__bloc--propera">
+        <p class="home-assemblea__label">Propera assemblea</p>
+        <p class="home-assemblea__lloc">Sense data convocada de moment.</p>
+        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-assemblea__konsento-link">Consultar a Konsento →</a>
       </div>
       {{ end }}
     </div>

@@ -1,12 +1,14 @@
-# Darrera i propera assemblea. Actualitzar després de cada assemblea.
-darrera:
-  data: 2026-07-08
-  temes:
-    - "Aprovació del balanç econòmic del primer semestre"
-    - "Planificació de la programació de tardor 2026"
-    - "Nova política de cessió d'espais a tercers"
+# Generat automàticament des de Konsento. No editar manualment.
+darrera: ~
 
 propera:
-  data: 2026-09-09
-  hora: "19:00"
-  lloc: "Sala Andy Warhol"
+  data: 2026-09-15
+  hora: "17:00"
+  lloc: "Nau Bostik — sala d'assemblees"
+  titol: "Presentació del nou web i de Konsento, l'àgora digital de la Nau Bostik"
+  url: https://konsento.naubostik.com/ca/assemblea/1/
+  ordre_del_dia:
+    - "Benvinguda i presentació del nou web"
+    - "Què és Konsento i com l'usarem"
+    - "Properes assemblees i comissions"
+    - "Torn obert de paraula"

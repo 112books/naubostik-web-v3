@@ -1,9 +1,34 @@
+# Generat automàticament des de Konsento. No editar manualment.
 comissions:
-  - nom: Economia
+  - nom: Equip gestor
+    slug: equip-gestor
+    descripcio: "El dia a dia de la Nau: coordinació, atenció a les entitats i gestió econòmica, administrativa i de comunicació."
+    url: https://konsento.naubostik.com/ca/comissions/equip-gestor/
+  - nom: Comissió d'economia
     slug: economia
-  - nom: Festejos
-    slug: festejos
-  - nom: Comunicació
+    descripcio: "Gestió econòmica transparent: pressupost, despeses compartides i sostenibilitat."
+    url: https://konsento.naubostik.com/ca/comissions/economia/
+  - nom: Comissió de comunicació
     slug: comunicacio
-  - nom: Cures
+    descripcio: "Difusió de l'activitat de la Nau i cura de la seva imatge pública."
+    url: https://konsento.naubostik.com/ca/comissions/comunicacio/
+  - nom: Comissió de cures
     slug: cures
+    descripcio: "Acompanyament i resolució de conflictes interns entre persones i/o entitats del recinte."
+    url: https://konsento.naubostik.com/ca/comissions/cures/
+  - nom: Comissió de festes i festejos
+    slug: festes-i-festejos
+    descripcio: "Organitza les festes i la programació interna: La Juganera, el Carnestoltes, la Calçotada…"
+    url: https://konsento.naubostik.com/ca/comissions/festes-i-festejos/
+  - nom: Comissió de gestió de residus
+    slug: gestio-residus
+    descripcio: "Gestió dels residus del recinte: separació, recollida i bones pràctiques."
+    url: https://konsento.naubostik.com/ca/comissions/gestio-residus/
+  - nom: Comissió de l'espai exterior
+    slug: espai-exterior
+    descripcio: "Gestiona els usos de l'espai exterior comú."
+    url: https://konsento.naubostik.com/ca/comissions/espai-exterior/
+  - nom: Comissió Horstik
+    slug: horstik
+    descripcio: "Acollida i visites al recinte: hostatgeria, convidats i visites guiades."
+    url: https://konsento.naubostik.com/ca/comissions/horstik/

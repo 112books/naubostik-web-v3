@@ -3,9 +3,18 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-section footer-about">
-        <a href="{{ $home }}" class="site-logo footer-logo" aria-label="{{ i18n "logo_aria" }}">
-          <img src="{{ "img/logos/logo-nau-bostik.png" | relURL }}" alt="Logo Nau Bostik" width="150" height="142">
-        </a>
+        <div class="footer-logos-brand">
+          <a href="{{ $home }}" class="site-logo footer-logo" aria-label="{{ i18n "logo_aria" }}">
+            <img src="{{ "img/logos/logo-nau-bostik.png" | relURL }}" alt="Logo Nau Bostik" width="120" height="114">
+          </a>
+          <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="footer-konsento-link" aria-label="Konsento — eina de governança assembleària">
+            <img src="https://konsento.naubostik.com/static/img/konsento-logo-rodo.svg" alt="Konsento" width="56" height="56" class="footer-konsento-logo">
+            <span class="footer-konsento-text">
+              <strong>Konsento</strong>
+              <span>Assemblees&nbsp;| Comissions</span>
+            </span>
+          </a>
+        </div>
         <h4 class="footer-title">{{ site.Title }}</h4>
         <p class="footer-tagline"><em>{{ i18n "footer_tagline_line1" }}<br>{{ i18n "footer_tagline_line2" }}<br>{{ i18n "footer_tagline_line3" }}</em></p>
         <address>
@@ -57,16 +66,6 @@
           <li><a href="{{ $home }}cookies/">{{ i18n "footer_cookies" }}</a></li>
           <li><a href="{{ $home }}accessibilitat/">{{ i18n "footer_accessibility" }}</a></li>
         </ul>
-      </div>
-      <div class="footer-section footer-section--konsento">
-        <h4>Governança</h4>
-        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="footer-konsento-link" aria-label="Konsento — Eina de governança assembleària">
-          <img src="https://konsento.naubostik.com/static/img/konsento-logo-rodo.svg" alt="Konsento" width="48" height="48" class="footer-konsento-logo">
-          <span class="footer-konsento-text">
-            <strong>Konsento</strong>
-            <span>Assemblees · Actes · Comissions</span>
-          </span>
-        </a>
       </div>
     </div>
     <div class="footer-bottom">
