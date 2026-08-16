@@ -915,7 +915,7 @@ main.container {
   margin-bottom: 1rem;
   color: var(--color-secondary);
 }
-.footer-about .footer-logo img { width: 120px; }
+.footer-about .footer-logo img { width: 88px; }
 
 .footer-about address {
   font-style: normal;
@@ -1138,7 +1138,7 @@ main.container {
   .footer-about .footer-title { display: none; }
   .footer-tagline { display: none; }
   .footer-about address { order: 2; flex: 1; margin-top: 0; line-height: 1.8; }
-  .footer-about .footer-konsento-bloc { order: 3; width: 100%; display: flex; flex-direction: row; align-items: center; gap: 0.75rem; margin-top: 0.25rem; }
+  .footer-about .footer-konsento-bloc { order: 3; width: 100%; margin-top: 0.5rem; }
   .footer-about .footer-konsento-logo { width: 60px; height: 60px; }
 }
 
@@ -5632,21 +5632,21 @@ main.container {
 .footer-konsento-logo {
   display: block;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 88px;
+  height: 88px;
 }
 .footer-konsento-nom {
   display: block;
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   line-height: 1.2;
 }
 .footer-konsento-sub {
   display: block;
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--color-secondary);
   margin-top: 0.15rem;
 }
 
