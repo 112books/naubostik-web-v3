@@ -95,18 +95,17 @@ jobs:
                   titol = propera["titol"].replace('"', "'")
                   lloc = (propera.get("lloc") or "").replace('"', "'")
                   url_konsento = propera["url"]
-                  contingut = f"""+++
-title = "{titol}"
-date = {data_str}
-hora = "{hora_str}"
-assemblea = true
-draft = false
-descripcio = "Assemblea de la Nau Bostik. <a href=\\"{url_konsento}\\">Veure detalls i confirmar assistència →</a>"
-"""
+                  md = ["+++"]
+                  md.append(f'title = "{titol}"')
+                  md.append(f"date = {data_str}")
+                  md.append(f'hora = "{hora_str}"')
+                  md.append("assemblea = true")
+                  md.append("draft = false")
+                  md.append(f'descripcio = "Assemblea de la Nau Bostik. Veure detalls: {url_konsento}"')
                   if lloc:
-                      contingut += f'lloc = "{lloc}"\n'
-                  contingut += "+++\n"
-                  act_file.write_text(contingut, encoding="utf-8")
+                      md.append(f'lloc = "{lloc}"')
+                  md.append("+++")
+                  act_file.write_text("\n".join(md) + "\n", encoding="utf-8")
                   print("content/activitats/assemblea-konsento.md actualitzat")
               else:
                   if act_file.exists():
