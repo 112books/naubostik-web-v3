@@ -2,7 +2,7 @@
 comissions:
   - nom: Equip gestor
     slug: equip-gestor
-    descripcio: "El dia a dia de la Nau: coordinació, atenció a les entitats i gestió econòmica, administrativa i de comunicació."
+    descripcio: "L'equip que cuida el dia a dia de la Nau: coordinació del recinte, atenció a les entitats i gestió econòmica, administrativa i de comunicació. Podeu adreçar-hi propostes i peticions."
     url: https://konsento.naubostik.com/ca/comissions/equip-gestor/
   - nom: Comissió d'economia
     slug: economia
@@ -18,7 +18,7 @@ comissions:
     url: https://konsento.naubostik.com/ca/comissions/cures/
   - nom: Comissió de festes i festejos
     slug: festes-i-festejos
-    descripcio: "Organitza les festes i la programació interna: La Juganera, el Carnestoltes, la Calçotada…"
+    descripcio: "Organitza les festes i la programació interna del recinte: La Juganera, el Carnestoltes, la Calçotada…"
     url: https://konsento.naubostik.com/ca/comissions/festes-i-festejos/
   - nom: Comissió de gestió de residus
     slug: gestio-residus
@@ -26,7 +26,7 @@ comissions:
     url: https://konsento.naubostik.com/ca/comissions/gestio-residus/
   - nom: Comissió de l'espai exterior
     slug: espai-exterior
-    descripcio: "Gestiona els usos de l'espai exterior comú."
+    descripcio: "Gestiona tot el que té a veure amb els usos de l'espai exterior comú."
     url: https://konsento.naubostik.com/ca/comissions/espai-exterior/
   - nom: Comissió Horstik
     slug: horstik
