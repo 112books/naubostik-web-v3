@@ -21,7 +21,7 @@
 
 {{ $cedibles := where (where site.RegularPages "Section" "espais") "Params.cedible" true }}
 {{ if $cedibles }}
-<h2>Espais disponibles per a cessió</h2>
+<h2 style="margin-top: 3rem;">Espais disponibles per a cessió</h2>
 <div class="cessio-grid">
   {{ range sort $cedibles "Title" }}
   <a href="{{ .RelPermalink }}" class="cessio-card">
