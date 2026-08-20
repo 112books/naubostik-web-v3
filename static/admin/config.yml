@@ -5,7 +5,7 @@ backend:
   base_url: https://naubostik-cms-auth.hola-78f.workers.dev
   auth_type: redirect
 
-logo_url: /img/logos/logo-nau-bostik.png
+logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
 media_folder: "static/img"
 public_folder: "/img"
