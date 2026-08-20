@@ -2,7 +2,7 @@ backend:
   name: github
   repo: 112books/naubostik-web-v3
   branch: main
-  base_url: https://decap-oauth.netlify.app
+  base_url: https://naubostik-cms-auth.hola-78f.workers.dev
   auth_type: redirect
 
 media_folder: "static/img"
