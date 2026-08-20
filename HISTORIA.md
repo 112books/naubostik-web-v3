@@ -1576,24 +1576,31 @@ ruting a `glm-5.2` (Z.ai / origen GLM). Sessió serves com a baseline.
    Django/Wagtail — més compatible amb hosting compartit, menys necessitat
    de proxy. Però perd tot el treball fet.
 
-#### Tasques pendents:
+#### Tasques completades (2026-08-20, sessió tarda):
 
 - [x] Mail a Dinahosting demanant mod_proxy + mod_proxy_http (enviat 2026-08-20)
+- [x] Logo Nau Bostik al login de Wagtail (template `wagtailadmin/login.html`)
+- [x] Signatura LinuxBCN al peu de l'admin (template `wagtailadmin/base.html`)
+- [x] `makemigrations` + `migrate` preparats (management command `setup_migrations`)
+- [x] Pàgines inicials preparades (management command `setup_initial_pages`)
+- [x] Importador contingut YAML → Wagtail (management command `import_content`)
+- [x] Deploy script actualitzat amb nous passos
+- [x] Requirements: afegit python-dotenv i pyyaml
+
+#### Tasques pendents:
+
 - [ ] Resposta de Dinahosting: si sí → configurar .htaccess amb [P]; si no → replantejar stack
-- [ ] Afegir logo Nau Bostik al login de Wagtail
-- [ ] Afegir signatura LinuxBCN al peu de l'admin
-- [ ] `makemigrations` + `migrate` dels models propis (home, events, spaces, entities)
-- [ ] Crear pàgines inicials (Home, Qui som, Contacte)
-- [ ] Importar contingut (activitats, espais, col·lectius) al CMS
+- [ ] Executar `setup_migrations` + `setup_initial_pages` al VPS un cop proxy funcioni
+- [ ] Executar `import_content --dry-run` per verificar, després `import_content` per importar
 - [ ] Configurar gunicorn com a servei persistent (systemd no funciona: permisos)
 - [ ] Integració Hugo amb API Wagtail
 
-- **Valoració subjectiva:** 3 — el desplegament tècnic es va fer bé
-  (Wagtail + MariaDB + gunicorn + proxy + deploy script), però el proxy PHP
-  com a reverse proxy per a Django és una solució dolenta que ha consumit
-  ~2 hores d'iteracions sense resoldre's. Cal una decisió arquitectònica
-  abans de continuar.
-- **Lliçó clau**: un PHP proxy no és un reverse proxy adequat per a
-  frameworks amb CSRF/sessions complexes. Quan el panell no suporta proxy
-  directe, caldemar a Dinaserver que habiliti mod_proxy, o canviar de stack.
+- **Valoració subjectiva:** 4 — sessió productiva. S'han preparat totes les
+  eines necessàries per quan el proxy es resolgui: logo, footer, migracions,
+  pàgines inicials i importador de contingut. Implementació neta i preparada
+  per a execució al VPS.
+- **Lliçó clau**: preparar les management commands localment estalvia temps
+  al VPS. L'importador llegeix directament els YAML de Hugo i crea les pàgines
+  a Wagtail, evitant haver de re-entrantar 495 activitats + 20 espais + 15
+  entitats a mà.
 
