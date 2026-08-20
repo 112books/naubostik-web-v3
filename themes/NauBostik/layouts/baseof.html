@@ -9,7 +9,6 @@
   <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, noai, noimageai">
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
@@ -48,16 +47,5 @@
     </svg>
   </button>
   <script src="{{ "js/main.js" | relURL }}"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
 </body>
 </html>

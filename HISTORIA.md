@@ -1665,3 +1665,46 @@ una cerca web ràpida de la llista oficial de Barcelona.
 - Pendents de portada: capítol obert. El calendari amb festius visibles és un
   bon element informatiu per a visitants.
 
+---
+
+## Sessió Canvi estratègic: Wagtail → Decap CMS (2026-08-20, vespre)
+
+### Context
+Dinahosting ha respost a la demanda de mod_proxy: no és possible. Ofereixen
+proxy nginx però requereix un host addicional (4€/mes). L'usuari no vol pagar
+host addicional per un CMS. Decisió: abandonar Wagtail i migrar a Decap CMS
+estàtic.
+
+### Decisió estratègica
+- **Wagtail (Django)** → ABANDONAT. Desplegat al VPS però inutilitzable
+  (proxy PHP trencat, mod_proxy denegat, nginx proxy = host addicional).
+- **Decap CMS** → ADOPTAT. CMS estàtic que commita directament al repo GitHub.
+  Zero backend, zero cost addicional. Ja existia la referència a CLAUDE.md però
+  cap fitxer estava creat.
+
+### Resposta a Dinahosting
+Mail enviat informant que abandonem la idea del CMS dinàmic i optem per CMS
+estàtic. Educadament, mostrant que no necessitem el seu servei de proxy.
+
+### Tasques documentades
+- [x] CLAUDE.md secció 5: CMS canviat a "Decap CMS v3 via GitHub"
+- [x] CLAUDE.md secció 8: reescrita completament (Wagtail → Decap CMS)
+- [x] HISTORIA.md: aquesta entrada
+- [ ] Crear `static/admin/index.html` i `config.yml`
+- [ ] Configurar autenticació GitHub OAuth
+- [ ] Netejar widget Netlify Identity de baseof.html
+- [ ] Mapejar totes les col·leccions al CMS
+- [ ] Build + deploy
+
+### Valoració subjectiva
+4 — Decisió estratègica clara i ràpida. La resposta de Dinahosting era
+esperada (ja intuíem que mod_proxy no seria possible). L'alternativa de
+Decap CMS és millor: zero manteniment de servidor, zero cost, i els usuaris
+ja fan push a GitHub.
+
+### Observacions
+- El web-cms/ (Wagtail) queda com a arxiu al repo. Es pot eliminar en el
+  futur o mantenir com a referència.
+- Cal decidir si el VPS de Dinahosting es dona de baixa o es manté per
+  altres usos (Hugo staging? WordPress?).
+

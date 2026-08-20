@@ -1,0 +1,172 @@
+backend:
+  name: github
+  repo: 112books/naubostik-web-v3
+  branch: main
+  base_url: https://decap-oauth.netlify.app
+  auth_type: redirect
+
+media_folder: "static/img"
+public_folder: "/img"
+
+slug:
+  encoding: "unicode"
+  clean_replacement: "-"
+
+collections:
+  # ── Activitats ──
+  - name: "activitats"
+    label: "Activitats"
+    folder: "content/activitats"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Data fi", name: "data_fi", widget: "datetime", format: "YYYY-MM-DD", required: false }
+      - { label: "Hora", name: "hora", widget: "string", required: false }
+      - { label: "Hora fi", name: "hora_fi", widget: "string", required: false }
+      - { label: "Preu", name: "preu", widget: "string", required: false }
+      - { label: "Imatge", name: "imatge", widget: "image", required: false, media_folder: "/img/activitats" }
+      - { label: "Descripció", name: "descripcio", widget: "text", required: false }
+      - { label: "Entitat", name: "entitat", widget: "string", required: false }
+      - { label: "Planta", name: "planta", widget: "select", required: false, options: ["Planta Baixa", "Primera planta", "Segona planta", "Terrassa"] }
+      - { label: "Enllaç extern", name: "link_extern", widget: "string", required: false }
+      - { label: "Col·lectiu", name: "collectiu", widget: "string", required: false }
+      - { label: "Taller fix", name: "taller_fix", widget: "boolean", default: false }
+      - { label: "Assemblea", name: "assemblea", widget: "boolean", default: false }
+      - { label: "Comissió", name: "comissio", widget: "boolean", default: false }
+      - { label: "Avís", name: "avis", widget: "select", required: false, options: ["tancament", "canvi", "important"] }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Cos", name: "body", widget: "markdown", required: false }
+
+  # ── Col·lectius ──
+  - name: "collectius"
+    label: "Col·lectius"
+    folder: "content/collectius"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Logo", name: "logo", widget: "image", required: false, media_folder: "/img/collectius" }
+      - { label: "Àmbit", name: "ambit", widget: "select", multiple: true, required: false, options: ["tecnologia", "fotografia", "educacio", "musica", "art", "teatre", "dansa", "gastronomia", "economia-social", "habitatge", "activisme", "editorial", "infancia"] }
+      - { label: "Web", name: "web", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Instagram", name: "instagram", widget: "string", required: false }
+      - { label: "Descripció", name: "descripcio", widget: "text" }
+      - { label: "Cos", name: "body", widget: "markdown", required: false }
+
+  # ── Espais ──
+  - name: "espais"
+    label: "Espais"
+    folder: "content/espais"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Ubicació", name: "ubicacio", widget: "select", options: ["Planta baixa", "Primera planta", "Segona planta", "Terrassa", "Exterior"] }
+      - { label: "Cedible", name: "cedible", widget: "boolean", default: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Fotografies", name: "fotografies", widget: "list", required: false, field: { label: "Imatge", widget: "image", media_folder: "/img/espais" } }
+      - { label: "Plànol", name: "plano", widget: "image", required: false, media_folder: "/img/espais" }
+      - { label: "Logo", name: "logo", widget: "image", required: false, media_folder: "/img/espais" }
+      - { label: "Col·lectiu", name: "collectiu", widget: "string", required: false }
+      - { label: "Mail", name: "mail", widget: "string", required: false }
+      - { label: "Web", name: "web", widget: "string", required: false }
+      - { label: "Xarxes", name: "xarxes", widget: "list", required: false, fields: [
+          { label: "Nom", name: "nom", widget: "string" },
+          { label: "URL", name: "url", widget: "string" }
+        ]
+      }
+      - { label: "Cos", name: "body", widget: "markdown", required: false }
+
+  # ── Notícies ──
+  - name: "noticies"
+    label: "Notícies"
+    folder: "content/noticies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Imatge", name: "imatge", widget: "image", required: false, media_folder: "/img/noticies" }
+      - { label: "Destacada", name: "destacada", widget: "boolean", default: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Cos", name: "body", widget: "markdown", required: false }
+
+  # ── Dades: Recinte ──
+  - name: "recinte"
+    label: "Estat del Recinte"
+    folder: "data"
+    files:
+      - name: "recinte"
+        label: "Estat del Recinte"
+        file: "data/recinte.yaml"
+        fields:
+          - { label: "Estat", name: "estat", widget: "select", options: ["obert", "tancat", "parcial"] }
+          - { label: "Avís", name: "avis", widget: "string", required: false }
+          - { label: "Detalls", name: "detalls", widget: "text", required: false }
+
+  # ── Dades: Slogans ──
+  - name: "slogans"
+    label: "Slogans"
+    folder: "data"
+    files:
+      - name: "slogans"
+        label: "Slogans del ticker"
+        file: "data/slogans.yaml"
+        fields:
+          - { label: "Slogans", name: "slogans", widget: "list", fields: [
+              { label: "Frase", name: "frase", widget: "string" }
+            ]
+          }
+
+  # ── Dades: Hero Slideshow ──
+  - name: "hero-slideshow"
+    label: "Hero Slideshow"
+    folder: "data"
+    files:
+      - name: "hero-slideshow"
+        label: "Imatges del Hero"
+        file: "data/hero-slideshow.yaml"
+        fields:
+          - { label: "Imatges", name: "imatges", widget: "list", fields: [
+              { label: "Imatge", name: "imatge", widget: "image", media_folder: "/img/hero" },
+              { label: "Text alternatiu", name: "alt", widget: "string" }
+            ]
+          }
+
+  # ── Dades: Portada ──
+  - name: "portada"
+    label: "Portada"
+    folder: "data"
+    files:
+      - name: "portada"
+        label: "Recursos de portada"
+        file: "data/portada.yaml"
+        fields:
+          - { label: "CTAs", name: "ctas", widget: "list", required: false, fields: [
+              { label: "Text", name: "text", widget: "string" },
+              { label: "URL", name: "url", widget: "string" },
+              { label: "Icona", name: "icona", widget: "string", required: false }
+            ]
+          }
+
+  # ── Dades: Equip ──
+  - name: "equip"
+    label: "Equip"
+    folder: "data"
+    files:
+      - name: "equip"
+        label: "Membres de l'equip"
+        file: "data/equip.yaml"
+        fields:
+          - { label: "Membres", name: "membres", widget: "list", fields: [
+              { label: "Nom", name: "nom", widget: "string" },
+              { label: "Rol", name: "rol", widget: "string" },
+              { label: "Foto", name: "foto", widget: "image", required: false, media_folder: "/img/equip" },
+              { label: "Email", name: "email", widget: "string", required: false }
+            ]
+          }

@@ -165,7 +165,7 @@ Idèntic a la Web 2 com a base. Cap canvi de stack sense validació explícita.
   - `--color-primary: #1a1a1a` · `--color-secondary: #666` · `--color-accent: #c41e3a` · `--color-surface: #f8f8f8`
   - Tipografia: **DM Sans** via Google Fonts
 - **JS:** vanilla. Sense framework.
-- **CMS:** Decap CMS v3 via git-gateway + Netlify Identity.
+- **CMS:** Decap CMS v3 via GitHub (autenticació OAuth). Sense servidor backend.
 - **Staging Web 3:** GH Pages públic → `https://112books.github.io/naubostik-web-v3/`
 - **Producció (futur):** Netlify → `naubostik.com`
 
@@ -176,10 +176,11 @@ No hi ha servidor d'aplicació ni base de dades en runtime. La base de dades és
 1. **Contingut editorial** — frontmatter TOML + markdown a `content/` (notícies, activitats, espais, col·lectius), gestionat pel CMS.
 2. **Dades estructurades** — `data/*.yaml` (`recinte`, `assemblees`, `equip`, `comissions`, `entitats-logos`, `slogans`, `hero-slideshow`, `portada`, `noticies-territori`). Continguts que no són "posts" es modelen com a dades i es renderitzen des de les plantilles.
 3. **Automatització / ingesta** — GitHub Actions. `hugo.yml` construeix i desplega a GH Pages a cada push a `main`. `fetch-territori.yml` és el primer agent d'ingesta: cada dilluns `scripts/fetch-territori.py` consulta RSS externs (La Sagrerina, AVV La Sagrera, Betevé), escriu `data/noticies-territori.yaml`, commiteja i redeploya.
-4. **Servei** — CDN estàtic (GH Pages staging / Netlify producció), autenticació i edició via Decap CMS (git-gateway + Netlify Identity).
+4. **Servei** — CDN estàtic (GH Pages staging / Netlify producció), autenticació i edició via Decap CMS (GitHub OAuth).
+
+**Canvi estratègic (agost 2026):** Wagtail CMS (Django) abandonat. Dinahosting no permet mod_proxy ni proxy nginx sense host addicional (cost 4€/mes). Solució: Decap CMS estàtic, que commita directament al repo GitHub. Zero backend, zero cost addicional.
 
 **Incoherències detectades (agost 2026), pendents de resoldre:**
-- Versions de Hugo divergents: `netlify.toml` (0.147.0) vs `.github/workflows/hugo.yml` (0.159.0). Unificar.
 - `fetch-territori.yml` desplega a `https://112books.github.io/naubostik-web/` (baseURL Web 2), no al de Web 3 (`/naubostik-web-v3/`). Corregir perquè el cron no sobrescrigui el staging correcte.
 
 ---
@@ -244,60 +245,57 @@ hugo --minify --baseURL https://naubostik.com/
 
 ---
 
-## 8. CMS Wagtail (producció, al VPS)
+## 8. CMS Decap (estàtic, via GitHub)
 
-### 8.1 Estat actual (agost 2026)
+### 8.1 Estratègia
 
-**Desplegat i funcionant al VPS:**
-- Wagtail 6.4.2 + Django 5.2 + MariaDB (`naubo_naubostik_web`)
-- Gunicorn a `127.0.0.1:8001` (3 workers sync, timeout 120s)
-- Subdomini `cms.naubostik.com` amb SSL (Let's Encrypt)
-- Superusuari: `naubostik` / `joan@linuxbcn.com`
-- Deploy script: `web-cms/deploy/deploy.sh`
+Decap CMS (abans Netlify CMS) és un CMS estàtic que commita directament al repo GitHub. Cap servidor backend, cap base de dades, zero cost addicional. L'usuari edita via `https://112books.github.io/naubostik-web-v3/admin/`, Decap fa push al branch `main`, GitHub Actions reconstrueix Hugo i desplega.
 
-**Bloqueig: reverse proxy PHP no funciona correctament**
-- `proxy.php` al docroot `~/www/cms-nb3/` fa de proxy amb curl intern
-- El login funciona (GET + POST), però les peticions POST de gestió (desar perfil, crear pàgines) retornen 403 CSRF o timeout
-- Causa: PHP proxy no maneja correctament cookies Django, Content-Length, i CSRF tokens
+### 8.2 Autenticació
 
-**Solució demanada a Dinahosting:**
-- Mail enviat 2026-08-20 demanant `mod_proxy` + `mod_proxy_http` al vhost
-- Amb aquests mòduls, el `.htaccess` pot usar `[P]` directament (proxy natiu Apache)
-- Pendent de resposta
+**Opció primària: GitHub OAuth App**
+- Crear una GitHub OAuth App al repo `112books/naubostik-web-v3`
+- Client ID + Secret emmagatzemats al CMS config
+- Usuaris autoritzats: llista blanca al config.yml (membres de l'equip)
 
-### 8.2 Quan mod_proxy estigui habilitat
+**Opció de fallback: External OAuth (Cloudflare Worker)**
+- Si GitHub OAuth no funciona directament (GH Pages no suporta redirect URI), usar un Cloudflare Worker com a proxy OAuth
+- Worker gratuït (100k requests/dia)
 
-Canviar el `.htaccess` de `cms.naubostik.com`:
+### 8.3 Fitxers
 
-```apache
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
-RewriteRule ^ - [L]
-RewriteRule ^$ /admin/ [R=302,L]
-RewriteCond %{REQUEST_URI} !^/static/
-RewriteRule ^(.*)$ http://127.0.0.1:8001/$1 [P,L]
-```
+- `static/admin/index.html` — entrada del CMS
+- `static/admin/config.yml` — configuració de col·leccions i backend
+- `static/admin/test.html` — test d'autenticació (debug)
 
-IEliminar `proxy.php` del docroot.
+### 8.4 Col·leccions CMS (Mapping content → CMS)
 
-### 8.3 Pendents després del proxy
+| Col·lecció | Path Hugo | Camps principals |
+|------------|-----------|------------------|
+| Activitats | `content/activitats/` | title, date, data_fi, hora, hora_fi, preu, imatge, descripcio, entitat, planta, link_extern, collectiu, draft |
+| Col·lectius | `content/collectius/` | title, date, draft, logo, ambit, web, email, instagram, descripcio |
+| Espais | `content/espais/` | title, date, ubicacio, cedible, draft, fotografies, plano, logo, collectiu, mail, web, xarxes |
+| Notícies | `content/noticies/` | title, date, imatge, destacada, draft |
+| Recinte (data) | `data/recinte.yaml` | estat, avis, detalls |
+| Slogans (data) | `data/slogans.yaml` | llista de frases |
+| Hero slideshow (data) | `data/hero-slideshow.yaml` | imatges amb text |
+| Portada (data) | `data/portada.yaml` | CTAs i recursos |
+| Equip (data) | `data/equip.yaml` | membres de l'equip |
 
-- [ ] Logo Nau Bostik al login de Wagtail
-- [ ] Signatura LinuxBCN al peu de l'admin
-- [ ] `makemigrations` + `migrate` dels models propis
-- [ ] Crear pàgines inicials (Home, Qui som, Contacte)
-- [ ] Importar contingut (activitats, espais, col·lectius, notícies)
-- [ ] Gunicorn com a servei persistent
+### 8.5 Wagtail CMS (ABANDONAT)
 
-### 8.4 Credencials i configuració
+**Estat:** Desplegat al VPS (`cms.naubostik.com`) però inutilitzable.
+**Causa:** Dinahosting no permet mod_proxy ni proxy nginx sense host addicional.
+**Decisió:** Substituït per Decap CMS estàtic (agost 2026).
+**Acció pendent:** Donar de baixa el servei al VPS (Gunicorn, MariaDB, web-cms/).
+
+### 8.6 Credencials Wagtail (per si de cas)
 
 - **Servidor:** `naubostik@vl28359` (sense root/sudo)
 - **BBDD:** MariaDB 11.8.8, DB `naubo_naubostik_web`, user `naubostik_web`, pass `NauBostik2025%`
 - **Gunicorn:** port 8001, config `web-cms/gunicorn_config.py`
 - **Django settings:** `web-cms/webcms/settings.py`
-- **.env al servidor:** `~/web-repo/web-cms/.env` (SECRET_KEY, DB, ALLOWED_HOSTS)
-- **Docroot Apache:** `~/www/cms-nb3/`
-- **Repo GitHub:** `112books/naubostik-web-v3` (branca `main`, carpeta `web-cms/`)
+- **.env al servidor:** `~/web-repo/web-cms/.env`
 
 ---
 
