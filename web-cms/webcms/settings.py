@@ -115,8 +115,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Proxy revers: Django rep requests via HTTP (proxy.php → gunicorn)
 # però l'usuari ve per HTTPS. Cal indicar-ho per CSRF i cookies.
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 CSRF_TRUSTED_ORIGINS = ["https://cms.naubostik.com"]
 
 REST_FRAMEWORK = {
