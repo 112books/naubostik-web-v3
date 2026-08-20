@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Excloure .well-known (Let's Encrypt)
+RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+RewriteRule ^ - [L]
+
+# Tot el demés → proxy.php
+RewriteCond %{REQUEST_URI} !^/proxy\.php$
+RewriteRule ^(.*)$ /proxy.php [L,QSA]
