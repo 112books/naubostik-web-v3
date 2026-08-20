@@ -4,3 +4,5 @@ whitenoise>=6.0
 pymysql>=1.1.0
 gunicorn>=21.0.0
 djangorestframework>=3.14
+python-dotenv>=1.0
+pyyaml>=6.0

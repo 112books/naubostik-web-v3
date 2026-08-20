@@ -1,0 +1,17 @@
+{% extends "wagtailadmin/login.html" %}
+{% load static %}
+
+{% block branding_login %}{% endblock %}
+{% block extra_css %}
+{{ block.super }}
+<style>
+  .w-login__branding img {
+    max-width: 200px;
+    height: auto;
+  }
+</style>
+{% endblock %}
+
+{% block branding %}
+  <img src="{% static 'img/logos/logo-nau-bostik.png' %}" alt="Nau Bostik" style="max-width:200px;height:auto;">
+{% endblock %}

@@ -244,7 +244,64 @@ hugo --minify --baseURL https://naubostik.com/
 
 ---
 
-## 8. Privacitat i indexació
+## 8. CMS Wagtail (producció, al VPS)
+
+### 8.1 Estat actual (agost 2026)
+
+**Desplegat i funcionant al VPS:**
+- Wagtail 6.4.2 + Django 5.2 + MariaDB (`naubo_naubostik_web`)
+- Gunicorn a `127.0.0.1:8001` (3 workers sync, timeout 120s)
+- Subdomini `cms.naubostik.com` amb SSL (Let's Encrypt)
+- Superusuari: `naubostik` / `joan@linuxbcn.com`
+- Deploy script: `web-cms/deploy/deploy.sh`
+
+**Bloqueig: reverse proxy PHP no funciona correctament**
+- `proxy.php` al docroot `~/www/cms-nb3/` fa de proxy amb curl intern
+- El login funciona (GET + POST), però les peticions POST de gestió (desar perfil, crear pàgines) retornen 403 CSRF o timeout
+- Causa: PHP proxy no maneja correctament cookies Django, Content-Length, i CSRF tokens
+
+**Solució demanada a Dinahosting:**
+- Mail enviat 2026-08-20 demanant `mod_proxy` + `mod_proxy_http` al vhost
+- Amb aquests mòduls, el `.htaccess` pot usar `[P]` directament (proxy natiu Apache)
+- Pendent de resposta
+
+### 8.2 Quan mod_proxy estigui habilitat
+
+Canviar el `.htaccess` de `cms.naubostik.com`:
+
+```apache
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+RewriteRule ^ - [L]
+RewriteRule ^$ /admin/ [R=302,L]
+RewriteCond %{REQUEST_URI} !^/static/
+RewriteRule ^(.*)$ http://127.0.0.1:8001/$1 [P,L]
+```
+
+IEliminar `proxy.php` del docroot.
+
+### 8.3 Pendents després del proxy
+
+- [ ] Logo Nau Bostik al login de Wagtail
+- [ ] Signatura LinuxBCN al peu de l'admin
+- [ ] `makemigrations` + `migrate` dels models propis
+- [ ] Crear pàgines inicials (Home, Qui som, Contacte)
+- [ ] Importar contingut (activitats, espais, col·lectius, notícies)
+- [ ] Gunicorn com a servei persistent
+
+### 8.4 Credencials i configuració
+
+- **Servidor:** `naubostik@vl28359` (sense root/sudo)
+- **BBDD:** MariaDB 11.8.8, DB `naubo_naubostik_web`, user `naubostik_web`, pass `NauBostik2025%`
+- **Gunicorn:** port 8001, config `web-cms/gunicorn_config.py`
+- **Django settings:** `web-cms/webcms/settings.py`
+- **.env al servidor:** `~/web-repo/web-cms/.env` (SECRET_KEY, DB, ALLOWED_HOSTS)
+- **Docroot Apache:** `~/www/cms-nb3/`
+- **Repo GitHub:** `112books/naubostik-web-v3` (branca `main`, carpeta `web-cms/`)
+
+---
+
+## 9. Privacitat i indexació
 
 El staging és **públic** però no-indexable:
 - `static/robots.txt` amb `Disallow: /` per a tots els crawlers

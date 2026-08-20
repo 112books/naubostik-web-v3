@@ -15,18 +15,24 @@ cd ~/web-repo && git pull origin main
 echo "[2/4] Dependències..."
 cd $CMS_DIR && uv pip install -q -r requirements.txt python-dotenv
 
-# 3. Migracions + statics
-echo "[3/4] Migracions + statics..."
-cd $CMS_DIR && .venv/bin/python manage.py migrate --no-input
+# 3. Migracions + pàgines inicials + statics
+echo "[3/6] Migracions..."
+cd $CMS_DIR && .venv/bin/python manage.py makemigrations --noinput
+cd $CMS_DIR && .venv/bin/python manage.py migrate --noinput
+
+echo "[4/6] Pàgines inicials..."
+cd $CMS_DIR && .venv/bin/python manage.py setup_initial_pages || true
+
+echo "[5/6] Statics..."
 cd $CMS_DIR && .venv/bin/python manage.py collectstatic --noinput
 
-# 4. Copiar proxy i htaccess al docroot
-echo "[4/4] Proxy..."
+# 6. Copiar proxy i htaccess al docroot
+echo "[6/6] Proxy..."
 cp $CMS_DIR/deploy/proxy.php $DOCROOT/proxy.php
 cp $CMS_DIR/deploy/.htaccess $DOCROOT/.htaccess
 
-# 5. Reiniciar gunicorn
-echo "[5/5] Restart gunicorn..."
+# 7. Reiniciar gunicorn
+echo "[7/7] Restart gunicorn..."
 cd $CMS_DIR
 if [ -f gunicorn.pid ]; then
     OLD_PID=$(cat gunicorn.pid)

@@ -1,0 +1,13 @@
+/* Custom admin styles for Nau Bostik Wagtail CMS */
+
+/* Login page: larger logo */
+.w-login__branding img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Admin sidebar logo */
+.w-sidebar__logo img {
+  max-width: 160px;
+  height: auto;
+}

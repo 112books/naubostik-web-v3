@@ -1,0 +1,13 @@
+{% extends "wagtailadmin/base.html" %}
+{% load static %}
+
+{% block branding %}
+  <img src="{% static 'img/logos/logo-nau-bostik.png' %}" alt="Nau Bostik" style="max-width:160px;height:auto;">
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+<footer style="text-align:center;padding:12px 0;font-size:12px;color:#666;border-top:1px solid #ddd;">
+  Desenvolupat per <a href="https://linuxbcn.com" target="_blank" rel="noopener">LinuxBCN</a> — Nau Bostik &copy; {{ year|default:"2026" }}
+</footer>
+{% endblock %}
