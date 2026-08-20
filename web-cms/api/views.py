@@ -1,13 +1,10 @@
 from rest_framework import viewsets
 from wagtail.models import Page
-from home.models import HomePage, StaticPage
 from events.models import Event
 from spaces.models import Space
 from entities.models import Entity
 from .serializers import (
     PageSerializer,
-    HomePageSerializer,
-    StaticPageSerializer,
     EventSerializer,
     SpaceSerializer,
     EntitySerializer,
@@ -15,20 +12,28 @@ from .serializers import (
 
 
 class PagesViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Page.objects.live().public()
     serializer_class = PageSerializer
+
+    def get_queryset(self):
+        return Page.objects.live().public()
 
 
 class EventsViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Event.objects.live().public().order_by("-date")
     serializer_class = EventSerializer
+
+    def get_queryset(self):
+        return Event.objects.live().public().order_by("-date")
 
 
 class SpacesViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Space.objects.live().public()
     serializer_class = SpaceSerializer
+
+    def get_queryset(self):
+        return Space.objects.live().public()
 
 
 class EntitiesViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Entity.objects.live().public()
     serializer_class = EntitySerializer
+
+    def get_queryset(self):
+        return Entity.objects.live().public()
