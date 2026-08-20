@@ -7,10 +7,10 @@ from api.views import PagesViewSet, EventsViewSet, SpacesViewSet, EntitiesViewSe
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r"pages", PagesViewSet)
-router.register(r"events", EventsViewSet)
-router.register(r"spaces", SpacesViewSet)
-router.register(r"entities", EntitiesViewSet)
+router.register(r"pages", PagesViewSet, basename="page")
+router.register(r"events", EventsViewSet, basename="event")
+router.register(r"spaces", SpacesViewSet, basename="space")
+router.register(r"entities", EntitiesViewSet, basename="entity")
 
 urlpatterns = [
     path("django-admin/", admin.site.urls),
