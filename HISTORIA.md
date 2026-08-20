@@ -1578,11 +1578,13 @@ ruting a `glm-5.2` (Z.ai / origen GLM). Sessió serves com a baseline.
 
 #### Tasques pendents:
 
-- [ ] Resoldre el bloqueig proxy/CSRF (decidir entre opcions 1-3)
+- [x] Mail a Dinahosting demanant mod_proxy + mod_proxy_http (enviat 2026-08-20)
+- [ ] Resposta de Dinahosting: si sí → configurar .htaccess amb [P]; si no → replantejar stack
 - [ ] Afegir logo Nau Bostik al login de Wagtail
 - [ ] Afegir signatura LinuxBCN al peu de l'admin
 - [ ] `makemigrations` + `migrate` dels models propis (home, events, spaces, entities)
 - [ ] Crear pàgines inicials (Home, Qui som, Contacte)
+- [ ] Importar contingut (activitats, espais, col·lectius) al CMS
 - [ ] Configurar gunicorn com a servei persistent (systemd no funciona: permisos)
 - [ ] Integració Hugo amb API Wagtail
 
