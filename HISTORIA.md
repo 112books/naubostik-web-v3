@@ -1502,3 +1502,96 @@ ruting a `glm-5.2` (Z.ai / origen GLM). Sessió serves com a baseline.
   basats en evidència (curl, headers). Errors resolts abans de tancar;
   documentació de continuació al repo.
 
+---
+
+## opencode/big-pickle (OpenCode)
+
+### 2026-08-20 — CMS Wagtail: desplegament i bloqueig CSRF/proxy
+
+- **Model + provider:** `opencode/big-pickle` (OpenCode).
+- **Tasca:** desplegar Wagtail CMS al VPS com a alternativa a Decap/Netlify
+  ( compte exhaurit). Configurar subdomini `cms.naubostik.com` amb proxy
+  PHP → gunicorn, models de contingut, i login funcional.
+- **Abast:** Desplegament complet del CMS + iteracions sobre el proxy PHP.
+  Sense logo ni branding al login (pendent).
+
+#### Fet (commits `03a163f` → `4f54ee2`):
+
+- **Wagtail CMS** instal·lat al VPS (`~/web-repo/web-cms/`):
+  Django 5.2 + Wagtail 6.4.2 + MariaDB (`naubo_naubostik_web`) + PyMySQL shim.
+- **Models de contingut**: `home` (HomePage, StaticPage), `events` (Event),
+  `spaces` (Space), `entities` (Entity).
+- **API REST**: `/api/v2/pages/`, `/api/v2/events/`, `/api/v2/spaces/`,
+  `/api/v2/entities/`.
+- **Superusuari**: `naubostik` / `joan@linuxbcn.com`.
+- **Subdomini**: `cms.naubostik.com` creat al panell Dinaserver, certificat
+  Let's Encrypt, docroot `~/www/cms-nb3/`.
+- **Gunicorn**: funcionant a `127.0.0.1:8001`, 3 workers sync, config
+  `gunicorn_config.py` (timeout 120s).
+- **CSRF_TRUSTED_ORIGINS** + **SECURE_PROXY_SSL_HEADER** configurats.
+- **.env**: SECRET_KEY, DB, ALLOWED_HOSTS, DEBUG=False.
+- **240 fitxers estàtics** recollits.
+- **Deploy script**: `web-cms/deploy/deploy.sh` (pull + deps + migrate +
+  collectstatic + copy proxy + restart gunicorn).
+- **Roadmap**: `web-cms/ROADMAP.md` amb 7 fases.
+- **Netlify eliminated**: `netlify.toml`, `static/admin/` esborrats.
+
+#### Bloqueig actual — proxy PHP + CSRF:
+
+- **Error**: `POST /admin/account/` retorna **403 CSRF** o **timeout60s**
+  ("Backend no disponible: Operation timed out").
+- **El backend funciona**: `curl http://127.0.0.1:8001/admin/` retorna 302,
+  el login POST funciona ( Django rep les dades i autentica).
+- **El proxy PHP és la causa**: `proxy.php` usa curl internament per
+  reenviar les peticions a gunicorn. Hi ha 3 problemes documentats:
+  1. **Content-Length duplicat**: el proxy forwardava el Content-Length del
+     browser + curl en calculava un de propi → gunicorn rebia body incomplet.
+     Corregit: ja no forwarda Content-Length/Content-Type.
+  2. **Cookies duplicades**: `getallheaders()` incloïa `Cookie` + `CURLOPT_COOKIE`
+     l'afegia una altra vegada → Django es confonia. Corregit: exclòs `Cookie`
+     de headers.
+  3. **FOLLOWLOCATION**: el proxy seguia redirects server-side → el navegador
+     mai rebia els `Set-Cookie` de logout/session. Corregit: eliminat.
+  4. **CSRF_COOKIE_SECURE = True** sobre connexió HTTP interna: Django podria
+     no enviar el cookie CSRF. Corregit: `False`.
+  5. **Cap d'aquests fixs ha resolt completament el problema**. L'últim
+     error observat és timeout60s amb 0 bytes rebuts.
+- **Arrel real del problema (hipòtesi)**: el proxy PHP amb curl no és
+  adequat per a aplicacions web dinàmiques amb CSRF, sessions i cookies
+  complexes. És una solució inherentment fràgil perquè:
+  - PHP consumeix el body (`php://input`) abans que curl pugui enviar-lo
+  - `getallheaders()` pot no retornar headers complets en tots els configs PHP
+  - El proxy afegeix latència i pot causar timeouts amb peticions POST grans
+  - Les cookies de sessió Django tenen atributs (Secure, SameSite) que
+    interaccionen malament amb proxies HTTP→HTTP
+
+#### Solucions possibles (pendents de decidir):
+
+1. **Demanar a Dinaserver** que habiliti `mod_proxy` + `mod_proxy_http` al
+   vhost de `cms.naubostik.com`. Llavors el `.htaccess` pot usar `[P]`
+   directament (solució nativa Apache, robusta). **Aquesta és la millor opció.**
+2. **Servir Django directament a un port** i usar un reverse proxy extern
+   (nginx, caddy) — impossible sense root al servidor.
+3. **Cambiar de stack**: usar un CMS PHP (WordPress, CraftCMS) en lloc de
+   Django/Wagtail — més compatible amb hosting compartit, menys necessitat
+   de proxy. Però perd tot el treball fet.
+
+#### Tasques pendents:
+
+- [ ] Resoldre el bloqueig proxy/CSRF (decidir entre opcions 1-3)
+- [ ] Afegir logo Nau Bostik al login de Wagtail
+- [ ] Afegir signatura LinuxBCN al peu de l'admin
+- [ ] `makemigrations` + `migrate` dels models propis (home, events, spaces, entities)
+- [ ] Crear pàgines inicials (Home, Qui som, Contacte)
+- [ ] Configurar gunicorn com a servei persistent (systemd no funciona: permisos)
+- [ ] Integració Hugo amb API Wagtail
+
+- **Valoració subjectiva:** 3 — el desplegament tècnic es va fer bé
+  (Wagtail + MariaDB + gunicorn + proxy + deploy script), però el proxy PHP
+  com a reverse proxy per a Django és una solució dolenta que ha consumit
+  ~2 hores d'iteracions sense resoldre's. Cal una decisió arquitectònica
+  abans de continuar.
+- **Lliçó clau**: un PHP proxy no és un reverse proxy adequat per a
+  frameworks amb CSRF/sessions complexes. Quan el panell no suporta proxy
+  directe, caldemar a Dinaserver que habiliti mod_proxy, o canviar de stack.
+
