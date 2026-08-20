@@ -7,9 +7,11 @@ ambit = ["fotografia", "educacio"]
 web = "https://www.llumatics.com"
 email = "hola@llumatics.com"
 instagram = "@llumatics"
-descripcio = "Associació dedicada a la fotografia química que imparteix tallers i classes de fotografia analògica."
+descripcio = "Escola de fotografia fotoquímica. Formació en fotografia fotoquímica: des dels fonaments de l'exposició fins al gran format, passant pel laboratori, els processos alternatius i el llenguatge fotogràfic."
 +++
 
-**Llumàtics**, un petit joc de paraules que vindria a significar “*influenciats per la llum*”, és una associació dedicada a la fotografía química, la de tota la vida. En aquest espai amés de treballar com a fotògrafs, impartim tallers i classes sempre relacionades amb la fotografia química, la que ens fa més feliços.
+**Llumàtics** és una escola de fotografia fotoquímica a Barcelona. Formació en fotografia fotoquímica: des dels fonaments de l'exposició fins al gran format, passant pel laboratori, els processos alternatius i el llenguatge fotogràfic. Tallers puntuals, cursos amb recorregut i acompanyament personalitzat.
 
-Contacteu-hi si voleu veure tot el que podeu apendre.
+Sis línies de formació: fonaments, procés analògic, pràctica fotogràfica, mig format, gran format i processos alternatius. Cada línia té el seu recorregut. Pots fer tallers solts o seguir un camí complet. Tens un laboratori propi amb zona de revelat, plató, zona d'escaneig i retoc, i biblioteca.
+
+**Llumàtics** és alhora un projecte resident a la Nau Bostik i una escola oberta a tothom que vulgui aprendre a veure amb llum pròpia.

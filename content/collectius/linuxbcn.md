@@ -6,11 +6,11 @@ logo = "/img/collectius/linuxbcn.jpg"
 ambit = "tecnologia"
 web = "https://www.linuxbcn.com"
 email = "info@linuxbcn.com"
-descripcio = "Consultoria tecnològica amb més de 20 anys d'experiència en assessorament tecnològic, desenvolupament web i programari lliure."
+descripcio = "Solucions digitals a mida. Desenvolupament web, aplicacions a mida i infraestructura digital. Programari lliure, sense complicacions."
 +++
 
-**LinuxBCN** ens dediquem, des de fa més de vint anys, a oferir una completa tasca d’assessorament tecnològic a empreses de diferents àmbits i mides. Des d’assessories per tenir una presència professional a internet; no només pàgines web, sinó també xarxes socials i webapps.
+**LinuxBCN** acompanyem artistes, col·lectius culturals i microempreses a construir una presència digital coherent, lliure i sostenible. Desenvolupament web, aplicacions a mida i infraestructura digital. Programari lliure, sense complicacions.
 
-En un món on sovint es prioritza la quantitat sobre la qualitat, a **LinuxBCN** apostem per un enfocament diferent. No ens deixem portar per les modes ni les ajudes fàcils. El nostre compromís és amb la qualitat, la proximitat i l’eficàcia.
+Existim des del 2001. Vint-i-cinc anys acompanyant músics, espais culturals, editores independents, col·lectius veïnals i petites empreses amb valors. Cada projecte és diferent. L'aproximació és la mateixa: escoltem, diagnostiquem, construïm amb programari lliure i acompanyem fins que el sistema és seu.
 
-Si busques una pàgina web que sigui més que un simple lloc a internet, una pàgina que expliqui la teva història i connecti amb el teu públic, estem aquí per ajudar-te.
+No fem webs de catàleg. No apliquem plantilles. No recomanem tecnologia de moda. Escoltem, entenem la situació, i dissenyem el sistema que té sentit per a cada projecte.
