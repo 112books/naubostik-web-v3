@@ -28,6 +28,9 @@ foreach (getallheaders() as $k => $v) {
     }
     $hopHeaders[] = "$k: $v";
 }
+// Indicar al backend que l'usuari ve per HTTPS
+$hopHeaders[] = 'X-Forwarded-Proto: https';
+$hopHeaders[] = 'X-Forwarded-Host: ' . $_SERVER['HTTP_HOST'];
 
 $ch = curl_init($url);
 curl_setopt_array($ch, [

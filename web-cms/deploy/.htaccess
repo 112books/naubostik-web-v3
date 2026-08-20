@@ -4,6 +4,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
 RewriteRule ^ - [L]
 
+# Arrel → /admin/
+RewriteRule ^$ /admin/ [R=302,L]
+
 # Tot el demés → proxy.php
 RewriteCond %{REQUEST_URI} !^/proxy\.php$
 RewriteRule ^(.*)$ /proxy.php [L,QSA]

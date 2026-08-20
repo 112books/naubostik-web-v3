@@ -12,7 +12,6 @@ if env_path.exists():
 SECRET_KEY = os.environ.get("SECRET_KEY", "insecure-dev-key-change-me")
 DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
-CSRF_TRUSTED_ORIGINS = ["https://cms.naubostik.com"]
 
 INSTALLED_APPS = [
     "home",
@@ -109,9 +108,16 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 WAGTAIL_SITE_NAME = "Nau Bostik"
-WAGTAILADMIN_BASE_URL = os.environ.get("WAGTAILADMIN_BASE_URL", "http://localhost:8001")
+WAGTAILADMIN_BASE_URL = os.environ.get("WAGTAILADMIN_BASE_URL", "https://cms.naubostik.com")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Proxy revers: Django rep requests via HTTP (proxy.php → gunicorn)
+# però l'usuari ve per HTTPS. Cal indicar-ho per CSRF i cookies.
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ["https://cms.naubostik.com"]
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
