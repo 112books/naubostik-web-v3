@@ -69,7 +69,7 @@ collections:
       - { label: "Ubicació", name: "ubicacio", widget: "select", options: ["Planta baixa", "Primera planta", "Segona planta", "Terrassa", "Exterior"] }
       - { label: "Cedible", name: "cedible", widget: "boolean", default: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Fotografies", name: "fotografies", widget: "list", required: false, field: { label: "Imatge", widget: "image", media_folder: "/img/espais" } }
+      - { label: "Fotografies", name: "fotografies", widget: "list", required: false, field: { label: "Imatge", name: "imatge", widget: "image", media_folder: "/img/espais" } }
       - { label: "Plànol", name: "plano", widget: "image", required: false, media_folder: "/img/espais" }
       - { label: "Logo", name: "logo", widget: "image", required: false, media_folder: "/img/espais" }
       - { label: "Col·lectiu", name: "collectiu", widget: "string", required: false }
