@@ -2,7 +2,6 @@
 /**
  * Reverse proxy per al CMS de Nau Bostik.
  * Proxy segur: només redirigeix a localhost (127.0.0.1:8001).
- * Sense FOLLOWLOCATION per permetre Set-Cookie als redirects.
  */
 
 $backend = 'http://127.0.0.1:8001';
@@ -18,7 +17,7 @@ if (in_array($method, ['POST', 'PUT', 'PATCH'])) {
 $hopHeaders = [];
 foreach (getallheaders() as $k => $v) {
     $lower = strtolower($k);
-    if (in_array($lower, ['host', 'connection'])) continue;
+    if (in_array($lower, ['host', 'connection', 'cookie'])) continue;
     $hopHeaders[] = "$k: $v";
 }
 
@@ -32,7 +31,7 @@ curl_setopt_array($ch, [
     CURLOPT_HEADER         => true,
     CURLOPT_CUSTOMREQUEST  => $method,
     CURLOPT_HTTPHEADER     => $hopHeaders,
-    CURLOPT_TIMEOUT        => 30,
+    CURLOPT_TIMEOUT        => 60,
     CURLOPT_CONNECTTIMEOUT => 5,
     CURLOPT_COOKIE         => $_SERVER['HTTP_COOKIE'] ?? '',
 ]);
@@ -44,11 +43,12 @@ if ($body !== null && strlen($body) > 0) {
 $response   = curl_exec($ch);
 $httpCode   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$curlError  = curl_error($ch);
 curl_close($ch);
 
 if ($response === false) {
     http_response_code(502);
-    echo 'Backend no disponible';
+    echo 'Backend no disponible: ' . htmlspecialchars($curlError);
     exit;
 }
 
