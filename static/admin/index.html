@@ -4,8 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMS Nau Bostik</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    #nc-root { min-height: 100vh; display: flex; flex-direction: column; }
+    .cms-footer { text-align: center; padding: 1rem; font-size: 0.75rem; color: #999; border-top: 1px solid #eee; background: #fafafa; }
+    .cms-footer a { color: #999; text-decoration: none; }
+    .cms-footer a:hover { color: #666; }
+  </style>
 </head>
 <body>
+  <div id="nc-root"></div>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    function addFooter() {
+      var root = document.getElementById('nc-root');
+      if (!root) return;
+      var footer = document.createElement('div');
+      footer.className = 'cms-footer';
+      footer.innerHTML = 'Gestor de continguts de <strong>naubostik.com</strong> &middot; Powered by <a href="https://linuxbcn.com" target="_blank" rel="noopener">LinuxBCN.com</a>';
+      root.appendChild(footer);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { setTimeout(addFooter, 1000); });
+    } else {
+      setTimeout(addFooter, 1000);
+    }
+  </script>
 </body>
 </html>
