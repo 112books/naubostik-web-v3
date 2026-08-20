@@ -12,6 +12,7 @@ if env_path.exists():
 SECRET_KEY = os.environ.get("SECRET_KEY", "insecure-dev-key-change-me")
 DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+CSRF_TRUSTED_ORIGINS = ["https://cms.naubostik.com"]
 
 INSTALLED_APPS = [
     "home",
