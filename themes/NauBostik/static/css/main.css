@@ -2271,9 +2271,7 @@ main.container {
   background: rgba(196, 30, 58, 0.04);
   border-top: 1px solid rgba(196, 30, 58, 0.12);
   border-bottom: 1px solid rgba(196, 30, 58, 0.12);
-  padding: 3rem calc(50vw - 50%);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  padding: 3rem 0;
   margin-bottom: 4rem;
 }
 
@@ -5104,6 +5102,7 @@ main.container {
   background: var(--color-accent);
   color: #fff;
   border: 1px solid var(--color-accent);
+  margin-top: -0.15rem;
 }
 
 .recinte-estat__dot {
@@ -5239,9 +5238,7 @@ main.container {
 .home-ecosistema {
   background: var(--color-primary);
   color: #fff;
-  padding: 3.5rem calc(50vw - 50%);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  padding: 3.5rem 0;
 }
 
 .home-ecosistema .section-title {
@@ -5417,6 +5414,239 @@ main.container {
   .hero-v3-claim { font-size: 2.4rem; }
   .home-assemblea__dades { grid-template-columns: 1fr; }
   .home-setmana__grid { grid-template-columns: 1fr; }
+}
+
+/* ── Hero dots ── */
+.hero-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.45);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-dot.is-active {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+.hero-dot:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+/* ── Countdown assemblea ── */
+.home-assemblea__countdown {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.countdown-value {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Calendari mensual ── */
+.home-setmana__calendari {
+  display: none;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-top: 1rem;
+}
+
+.cal-header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary);
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.cal-cell {
+  min-height: 80px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.35rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.cal-cell--empty {
+  background: transparent;
+  border-color: transparent;
+}
+
+.cal-cell--day:hover {
+  border-color: var(--color-accent);
+  background: #fffaf7;
+}
+
+.cal-cell--festiu {
+  background: #fdf2f2;
+}
+
+.cal-cell--festiu .cal-dia-num {
+  color: var(--color-accent);
+}
+
+.cal-festiu {
+  font-size: 0.56rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1.1;
+  margin-top: 1px;
+}
+
+.cal-dia-num {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.cal-dots {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.cal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.cal-event {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 2px;
+  text-decoration: none;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.cal-event:hover .cal-event-name {
+  color: var(--color-accent);
+}
+
+.cal-event-header {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cal-event-tipus {
+  font-size: 0.56rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.cal-event-name {
+  font-size: 0.62rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 100%;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.cal-dot--nb { background: var(--color-accent); }
+.cal-dot--entitats { background: var(--color-accent); opacity: 0.55; }
+.cal-dot--assemblea { background: var(--color-accent); opacity: 0.35; border-radius: 2px; }
+.cal-dot--comissio { background: var(--color-accent); opacity: 0.75; width: 10px; height: 4px; border-radius: 1px; }
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.cal-title {
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 140px;
+  text-align: center;
+}
+
+.cal-prev,
+.cal-next {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-primary);
+  transition: background 0.15s;
+}
+
+.cal-prev:hover,
+.cal-next:hover {
+  background: var(--color-surface);
+}
+
+@media (max-width: 600px) {
+  .cal-cell { min-height: 50px; padding: 0.2rem; }
+  .cal-dia-num { font-size: 0.72rem; }
+  .cal-dot { width: 5px; height: 5px; }
+  .cal-dot--comissio { width: 8px; height: 3px; }
 }
 
 /* ── 404 · Control de qualitat industrial ── */

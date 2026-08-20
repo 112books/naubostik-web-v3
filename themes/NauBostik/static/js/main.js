@@ -67,32 +67,63 @@ function initShareCopy() {
 }
 
 function initHeroSlideshow() {
-  const card = document.querySelector('.hero-card.hero-has-photo');
-  const slides = document.querySelectorAll('.hero-slideshow .hero-slide');
+  var card = document.querySelector('.hero-card.hero-has-photo');
+  var slides = document.querySelectorAll('.hero-slideshow .hero-slide');
   if (!card || slides.length < 2) return;
 
-  let current = 0;
-  let timer;
+  var current = 0;
+  var timer;
+  var touchStartX = 0;
+  var touchDeltaX = 0;
+
+  var dotsWrap = document.createElement('div');
+  dotsWrap.className = 'hero-dots';
+  dotsWrap.setAttribute('role', 'tablist');
+  dotsWrap.setAttribute('aria-label', 'Slides del hero');
+  slides.forEach(function(_, i) {
+    var dot = document.createElement('button');
+    dot.className = 'hero-dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+    dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    dot.addEventListener('click', function() { goTo(i); restart(); });
+    dotsWrap.appendChild(dot);
+  });
+  card.appendChild(dotsWrap);
 
   function goTo(index) {
+    var dots = dotsWrap.querySelectorAll('.hero-dot');
+    if (dots[current]) { dots[current].classList.remove('is-active'); dots[current].setAttribute('aria-selected', 'false'); }
     slides[current].classList.remove('is-active');
     current = (index + slides.length) % slides.length;
     slides[current].classList.add('is-active');
+    if (dots[current]) { dots[current].classList.add('is-active'); dots[current].setAttribute('aria-selected', 'true'); }
   }
 
   function restart() {
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 6000);
+    timer = setInterval(function() { goTo(current + 1); }, 6000);
   }
 
-  const prevBtn = card.querySelector('.hero-arrow-prev');
-  const nextBtn = card.querySelector('.hero-arrow-next');
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => { goTo(current - 1); restart(); });
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => { goTo(current + 1); restart(); });
-  }
+  var prevBtn = card.querySelector('.hero-arrow-prev');
+  var nextBtn = card.querySelector('.hero-arrow-next');
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); restart(); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); restart(); });
+
+  card.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].clientX;
+    touchDeltaX = 0;
+  }, { passive: true });
+  card.addEventListener('touchmove', function(e) {
+    touchDeltaX = e.changedTouches[0].clientX - touchStartX;
+  }, { passive: true });
+  card.addEventListener('touchend', function() {
+    if (Math.abs(touchDeltaX) > 50) {
+      goTo(touchDeltaX > 0 ? current - 1 : current + 1);
+      restart();
+    }
+    touchDeltaX = 0;
+  }, { passive: true });
 
   restart();
 }
@@ -546,16 +577,36 @@ function initHistoricGrid(gridId, sentinelId, dataId) {
 
 /* ── Filtres agenda setmana (home v3) ── */
 function initSetmanaFiltres() {
-  const filtres = document.querySelector('.home-setmana__filtres');
+  var filtres = document.querySelector('.home-setmana__filtres');
   if (!filtres) return;
-  filtres.addEventListener('click', e => {
-    const btn = e.target.closest('.filtre-btn');
-    if (!btn) return;
-    filtres.querySelectorAll('.filtre-btn').forEach(b => b.classList.remove('is-active'));
+  filtres.addEventListener('click', function(e) {
+    var btn = e.target.closest('.filtre-btn');
+    if (!btn || btn.dataset.view) return;
+    filtres.querySelectorAll('.filtre-btn').forEach(function(b) { b.classList.remove('is-active'); });
     btn.classList.add('is-active');
-    const filtre = btn.dataset.filtre;
-    document.querySelectorAll('.home-setmana__grid .home-act-card').forEach(card => {
-      card.classList.toggle('is-hidden', filtre !== 'tots' && card.dataset.grup !== filtre);
+    var filtre = btn.dataset.filtre;
+    var grid = document.querySelector('.home-setmana__grid');
+    if (!grid) return;
+    grid.querySelectorAll('.home-act-card').forEach(function(card) {
+      var shouldHide = filtre !== 'tots' && card.dataset.grup !== filtre;
+      if (shouldHide) {
+        card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.97)';
+        setTimeout(function() { card.classList.add('is-hidden'); card.style.opacity = ''; card.style.transform = ''; }, 250);
+      } else {
+        card.classList.remove('is-hidden');
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.97)';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          });
+        });
+        setTimeout(function() { card.style.transition = ''; card.style.opacity = ''; card.style.transform = ''; }, 350);
+      }
     });
   });
 }
@@ -566,6 +617,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initContacteForm();
   initMapScrollGuard();
   initCalendarDropdown();
+  initCountdownAssemblea();
+  initScrollReveal();
+  initCalendarView();
 });
 
 function initCalendarDropdown() {
@@ -665,4 +719,226 @@ function initMapScrollGuard() {
     clearTimeout(hideTimer);
     hideTimer = setTimeout(() => guard.classList.remove('is-visible'), 1500);
   }, { passive: false });
+}
+
+function initCountdownAssemblea() {
+  var el = document.querySelector('.home-assemblea__countdown');
+  if (!el) return;
+  var dateStr = el.dataset.date;
+  var timeStr = el.dataset.time || '17:00';
+  if (!dateStr) return;
+
+  var parts = dateStr.split('-');
+  var timeParts = timeStr.split(':');
+  var target = new Date(
+    parseInt(parts[0], 10),
+    parseInt(parts[1], 10) - 1,
+    parseInt(parts[2], 10),
+    parseInt(timeParts[0], 10),
+    parseInt(timeParts[1], 10)
+  );
+
+  function update() {
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0) {
+      el.innerHTML = '<span class="countdown-value">Avui!</span>';
+      return;
+    }
+    var dies = Math.floor(diff / 86400000);
+    var hores = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    var segments = [];
+    if (dies > 0) segments.push('<span class="countdown-value">' + dies + '</span> ' + (dies === 1 ? 'dia' : 'dies'));
+    if (hores > 0) segments.push('<span class="countdown-value">' + hores + '</span> ' + (hores === 1 ? 'hora' : 'hores'));
+    segments.push('<span class="countdown-value">' + mins + '</span> ' + (mins === 1 ? 'minut' : 'minuts'));
+    el.innerHTML = 'Falten ' + segments.join(', ');
+  }
+
+  update();
+  setInterval(update, 60000);
+}
+
+function initScrollReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sections = document.querySelectorAll('.section, .home-ecosistema, .home-comissions, .home-assemblea, .home-noticies');
+  if (!sections.length) return;
+
+  sections.forEach(function(s) { s.classList.add('reveal'); });
+
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  sections.forEach(function(s) { io.observe(s); });
+}
+
+function initCalendarView() {
+  var calWrap = document.getElementById('home-calendar');
+  var grid = document.querySelector('.home-setmana__grid');
+  var filtres = document.querySelector('.home-setmana__filtres');
+  if (!calWrap || !grid || !filtres) return;
+
+  var events = [];
+  try {
+    var raw = JSON.parse(document.getElementById('home-calendar-data').textContent);
+    events = typeof raw === 'string' ? JSON.parse(raw) : raw;
+  } catch (e) { return; }
+
+  var mesActual = new Date();
+  mesActual.setDate(1);
+
+  var viewBtn = filtres.querySelector('[data-view="calendari"]');
+  if (viewBtn) {
+    viewBtn.addEventListener('click', function() {
+      filtres.querySelectorAll('.filtre-btn').forEach(function(b) { b.classList.remove('is-active'); });
+      viewBtn.classList.add('is-active');
+      grid.style.display = 'none';
+      calWrap.style.display = 'block';
+      renderCalendar();
+    });
+  }
+
+  filtres.querySelectorAll('[data-filtre]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      calWrap.style.display = 'none';
+      grid.style.display = '';
+    });
+  });
+
+  function shortTitle(title) {
+    if (!title) return '';
+    var lower = title.toLowerCase();
+    var keywords = ['exposició', 'exposicion', 'presentació', 'presentacion', 'xerrada', 'taller', 'mercant', 'concert', 'festa', 'vermut', 'projecció', 'proyeccion', 'recital', 'workshop', 'activitat'];
+    for (var i = 0; i < keywords.length; i++) {
+      if (lower.indexOf(keywords[i]) !== -1) {
+        return keywords[i].charAt(0).toUpperCase() + keywords[i].slice(1);
+      }
+    }
+    var words = title.split(/\s+/);
+    return words.length > 3 ? words.slice(0, 3).join(' ') + '...' : title;
+  }
+
+  function dedupEvents(arr) {
+    var seen = {};
+    return arr.filter(function(ev) {
+      var key = ev.date + '|' + (ev.title || '');
+      if (seen[key]) return false;
+      seen[key] = true;
+      return true;
+    });
+  }
+
+  calWrap.querySelector('.cal-prev').addEventListener('click', function() {
+    mesActual.setMonth(mesActual.getMonth() - 1);
+    renderCalendar();
+  });
+  calWrap.querySelector('.cal-next').addEventListener('click', function() {
+    mesActual.setMonth(mesActual.getMonth() + 1);
+    renderCalendar();
+  });
+
+  var festius = {
+    '2026-01-01': 'Any Nou',
+    '2026-01-06': 'Reis',
+    '2026-04-03': 'Divendres Sant',
+    '2026-04-06': 'Dilluns de Pasqua Florida',
+    '2026-05-01': 'Dia del Treball',
+    '2026-05-25': 'Dilluns de Pasqua Granada',
+    '2026-06-24': 'Sant Joan',
+    '2026-08-15': 'L\'Assumpció',
+    '2026-09-11': 'Diada Nacional',
+    '2026-09-24': 'La Mercè',
+    '2026-10-12': 'Dia Nacional d\'Espanya',
+    '2026-11-01': 'Tots Sants',
+    '2026-12-06': 'Dia de la Constitució',
+    '2026-12-08': 'Immaculada Concepció',
+    '2026-12-25': 'Nadal',
+    '2026-12-26': 'Sant Esteve',
+    '2027-01-01': 'Any Nou',
+    '2027-01-06': 'Reis',
+    '2027-03-26': 'Divendres Sant',
+    '2027-03-29': 'Dilluns de Pasqua Florida',
+    '2027-05-01': 'Dia del Treball',
+    '2027-05-17': 'Dilluns de Pasqua Granada',
+    '2027-06-24': 'Sant Joan',
+    '2027-08-15': 'L\'Assumpció',
+    '2027-09-11': 'Diada Nacional',
+    '2027-09-24': 'La Mercè',
+    '2027-10-12': 'Dia Nacional d\'Espanya',
+    '2027-11-01': 'Tots Sants',
+    '2027-12-06': 'Dia de la Constitució',
+    '2027-12-08': 'Immaculada Concepció',
+    '2027-12-25': 'Nadal',
+    '2027-12-26': 'Sant Esteve'
+  };
+
+  function renderCalendar() {
+    var any = mesActual.getFullYear();
+    var mes = mesActual.getMonth();
+    var title = calWrap.querySelector('.cal-title');
+    var noms = ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny', 'Juliol', 'Agost', 'Setembre', 'Octubre', 'Novembre', 'Desembre'];
+    title.textContent = noms[mes] + ' ' + any;
+
+    var primerDia = new Date(any, mes, 1).getDay();
+    var diesAlMes = new Date(any, mes + 1, 0).getDate();
+    var offset = (primerDia + 6) % 7;
+
+    var cells = calWrap.querySelectorAll('.cal-cell');
+    cells.forEach(function(c) { c.innerHTML = ''; c.className = 'cal-cell'; });
+
+    for (var d = 0; d < offset; d++) {
+      cells[d].classList.add('cal-cell--empty');
+    }
+
+    for (var dia = 1; dia <= diesAlMes; dia++) {
+      var idx = offset + dia - 1;
+      if (idx >= cells.length) break;
+      var cell = cells[idx];
+      cell.classList.add('cal-cell--day');
+      var diaEl = document.createElement('span');
+      diaEl.className = 'cal-dia-num';
+      diaEl.textContent = dia;
+      cell.appendChild(diaEl);
+
+      var dataStr = any + '-' + String(mes + 1).padStart(2, '0') + '-' + String(dia).padStart(2, '0');
+      if (festius[dataStr]) {
+        cell.classList.add('cal-cell--festiu');
+        var festEl = document.createElement('span');
+        festEl.className = 'cal-festiu';
+        festEl.textContent = festius[dataStr];
+        cell.appendChild(festEl);
+      }
+      var dayEvents = dedupEvents(events.filter(function(ev) { return ev.date === dataStr; }));
+      if (dayEvents.length) {
+        dayEvents.forEach(function(ev) {
+          var evEl = document.createElement('a');
+          evEl.className = 'cal-event cal-event--' + (ev.tipus || 'nb');
+          evEl.href = ev.url || '#';
+          evEl.title = ev.title || '';
+          var header = document.createElement('span');
+          header.className = 'cal-event-header';
+          var dot = document.createElement('span');
+          dot.className = 'cal-dot cal-dot--' + (ev.tipus || 'nb');
+          header.appendChild(dot);
+          var tipusEl = document.createElement('span');
+          tipusEl.className = 'cal-event-tipus';
+          tipusEl.textContent = ev.tipusLabel || ev.tipus || '';
+          header.appendChild(tipusEl);
+          evEl.appendChild(header);
+          var name = document.createElement('span');
+          name.className = 'cal-event-name';
+          name.textContent = ev.title || '';
+          evEl.appendChild(name);
+          cell.appendChild(evEl);
+        });
+        cell.title = dayEvents.length + ' activitat' + (dayEvents.length > 1 ? 's' : '');
+      }
+    }
+  }
 }

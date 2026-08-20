@@ -68,6 +68,24 @@
 {{ $thisWeekAll := $thisWeekNB | append $thisWeekEnt }}
 
 {{ $assemblees := index site.Data "assemblees" }}
+
+{{/* ── Calendar data: events for current + next month ── */}}
+{{ $calData := slice }}
+{{ range $allAct.ByDate }}
+  {{ if not .Params.taller_fix }}
+    {{ $grup := "nb" }}
+    {{ $label := "Nau Bostik" }}
+    {{ if .Params.assemblea }}{{ $grup = "assemblea" }}{{ $label = "Assemblees" }}
+    {{ else if .Params.comissio }}{{ $grup = "comissio" }}{{ $label = "Comissions" }}
+    {{ else if .Params.entitat }}{{ $grup = "entitats" }}{{ $label = "Entitats" }}
+    {{ end }}
+    {{ $calData = $calData | append (dict "date" (.Date | time.Format "2006-01-02") "tipus" $grup "tipusLabel" $label "title" .LinkTitle "url" .RelPermalink) }}
+  {{ end }}
+{{ end }}
+{{ if $assemblees }}{{ with $assemblees.propera }}
+  {{ $assembleaURL := .url | default "https://konsento.naubostik.com" }}
+  {{ $calData = $calData | append (dict "date" (.data | string) "tipus" "assemblea" "tipusLabel" "Assemblees" "title" .titol "url" $assembleaURL) }}
+{{ end }}{{ end }}
 {{ $comissions := index site.Data "comissions" }}
 <section class="home-setmana section">
   <div class="section-header">
@@ -80,6 +98,7 @@
     <button class="filtre-btn" data-filtre="entitats" type="button">Entitats</button>
     <button class="filtre-btn" data-filtre="assemblea" type="button">Assemblees</button>
     <button class="filtre-btn" data-filtre="comissio" type="button">Comissions</button>
+    <button class="filtre-btn" data-view="calendari" type="button">Calendari</button>
   </div>
   <ul class="home-setmana__grid" id="setmana-grid">
     {{ range $thisWeekAll }}
@@ -97,7 +116,7 @@
         {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
       </div>
       {{ else }}
-      <a href="{{ .RelPermalink }}" class="home-act-card__link">
+      <a href="{{ with .Params.link_extern }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}" class="home-act-card__link"{{ with .Params.link_extern }} target="_blank" rel="noopener"{{ end }}>
         {{ if .Params.imatge }}
         <div class="home-act-card__img">
           <img src="{{ .Params.imatge | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">
@@ -161,6 +180,24 @@
     </li>
     {{ end }}
   </ul>
+
+  <script type="application/json" id="home-calendar-data">{{ $calData | jsonify }}</script>
+  <div id="home-calendar" class="home-setmana__calendari" style="display:none;">
+    <div class="cal-nav">
+      <button type="button" class="cal-prev" aria-label="Mes anterior">&larr;</button>
+      <span class="cal-title"></span>
+      <button type="button" class="cal-next" aria-label="Mes següent">&rarr;</button>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-header">Dl</div><div class="cal-header">Dm</div><div class="cal-header">Dc</div><div class="cal-header">Dj</div><div class="cal-header">Dv</div><div class="cal-header">Ds</div><div class="cal-header">Dg</div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+      <div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div><div class="cal-cell"></div>
+    </div>
+  </div>
 </section>
 
 {{/* ══════════════════════════════════════════════════
@@ -219,10 +256,12 @@
       </div>
       {{ end }}
       {{ with .propera }}
+      {{ $properaData := .data | time.Format "2006-01-02" }}
       <div class="home-assemblea__bloc home-assemblea__bloc--propera">
         <p class="home-assemblea__label">Propera assemblea</p>
         <p class="home-assemblea__data">{{ .data | time.Format "02 de January de 2006" }}{{ with .hora }} · {{ . }} h{{ end }}</p>
         {{ with .lloc }}<p class="home-assemblea__lloc">{{ . }}</p>{{ end }}
+        {{ with .hora }}<div class="home-assemblea__countdown" data-date="{{ $properaData }}" data-time="{{ . }}"></div>{{ end }}
         <a href="{{ .url | default "https://konsento.naubostik.com" }}" target="_blank" rel="noopener" class="home-assemblea__konsento-link">Confirmar assistència a Konsento →</a>
       </div>
       {{ else }}
