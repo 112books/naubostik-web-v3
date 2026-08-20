@@ -1604,3 +1604,64 @@ ruting a `glm-5.2` (Z.ai / origen GLM). Sessió serves com a baseline.
   a Wagtail, evitant haver de re-entrantar 495 activitats + 20 espais + 15
   entitats a mà.
 
+---
+
+## Sessió Portada v3 — Calendari, festius, link_extern, marges (2026-08-20)
+
+### Context
+Sessió per polir la portada de la Web 3 abans del desplegament a producció
+(setembre 2026). L'usuari volia que els canvis fossin revisats i aprovats
+abans de commitejar.
+
+### Tasques completades
+
+1. **Calendari: format i celles**
+   - Celles més altes (`min-height: 80px`)
+   - Format nou: punteig de color + tipus (Nau Bostik / Entitats / Assemblees / Comissions) + salt de línia + títol complet (truncat a 2 línies amb ellipsis)
+   - CSS: `.cal-event-header` (flex row), `.cal-event-tipus` (uppercase, secondary), `.cal-event-name` (webkit-line-clamp: 2)
+
+2. **Festius: llista completa**
+   - De 12 a 16 festius per any (2026 i 2027)
+   - Afegits: Pasqua Florida, Pasqua Granada, Sant Joan, 12 d'octubre
+   - Font: llista oficial de l'Ajuntament de Barcelona
+   - Nom visible dins la cel·la (`.cal-festiu`), no només tooltip
+
+3. **Cards + link_extern**
+   - Cards de la portada respecten `link_extern` del frontmatter
+   - Si existeix, obre l'enllaç extern (target=_blank, rel=noopener)
+   - 57 activitats amb `link_extern` al contingut
+
+4. **Marges simètrics**
+   - Ecosistema i comissions ja no surten del contenidor (breakout eliminat)
+   - Totes les seccions (excepte hero) tenen el mateix padding
+
+5. **Neteja**
+   - Eliminat `concert-globus-vermell.md` (event inventat)
+   - Retrats Lents: afegit `data_fi` i `link_extern`
+
+### Fitxers modificats
+
+- `themes/NauBostik/static/js/main.js` — calendari format, festius complets
+- `themes/NauBostik/static/css/main.css` — calendar cells, margins, festiu label
+- `themes/NauBostik/layouts/home.html` — card link_extern
+- `content/activitats/112-revelats-retrats-lents-2026.md` — data_fi + link_extern
+- `content/activitats/concert-globus-vermell.md` — ELIMINAT
+
+### Commit
+`b5944af` — "Portada v3: calendari amb festius i tipus, cards link_extern, marges simètrics"
+
+### Errors
+- Cap
+
+### Valoració subjectiva
+4 — Sessió fluida i productiva. L'usuari donava instruccions clares i
+concises. El format del calendari va requerir dues iteracions (primera versió
+sense tipus, segona amb dot+tipus+títol). Els festius es van completar amb
+una cerca web ràpida de la llista oficial de Barcelona.
+
+### Observacions
+- El web de producció (WordPress) té ~350 activitats. La web staging en té
+  ~350 també. La migració s'haurà de fer amb exportació de WordPress.
+- Pendents de portada: capítol obert. El calendari amb festius visibles és un
+  bon element informatiu per a visitants.
+
