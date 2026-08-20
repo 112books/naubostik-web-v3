@@ -1,9 +1,9 @@
 from django.db import models
 from wagtail.models import Page
 from wagtail.fields import RichTextField, StreamField
-from wagtail.blocks import CharBlock, TextBlock, ImageChooserBlock, URLBlock
+from wagtail.blocks import CharBlock, TextBlock, URLBlock
+from wagtail.images.blocks import ImageChooserBlock
 from wagtail.admin.panels import FieldPanel
-from wagtail.images.blocks import ImageChooserBlock as ImageChooserBlockImg
 
 
 class HomePage(Page):
@@ -39,7 +39,7 @@ class StaticPage(Page):
         [
             ("heading", CharBlock()),
             ("paragraph", TextBlock()),
-            ("image", ImageChooserBlockImg()),
+            ("image", ImageChooserBlock()),
             ("link", URLBlock()),
         ],
         blank=True,
