@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ self.title }} | Nau Bostik{% endblock %}</title>
+  <meta name="robots" content="noindex, nofollow">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/"><img src="/static/img/logos/logo-nau-bostik.png" alt="Nau Bostik" height="40"></a>
+      <span>Admin</span>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

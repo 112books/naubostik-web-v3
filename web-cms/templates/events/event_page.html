@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ page.title }}</h1>
+<p>{{ page.date }}</p>
+<p>{{ page.time_start }}{% if page.time_end %} — {{ page.time_end }}{% endif %}</p>
+{% if page.entity_name %}<p><strong>Entitat:</strong> {{ page.entity_name }}</p>{% endif %}
+{% if page.space_name %}<p><strong>Espai:</strong> {{ page.space_name }}</p>{% endif %}
+<div>{{ page.description|safe }}</div>
+{% endblock %}
