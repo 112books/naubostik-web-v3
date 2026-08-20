@@ -9,13 +9,17 @@ $method   = $_SERVER['REQUEST_METHOD'];
 $uri      = $_SERVER['REQUEST_URI'];
 $url      = $backend . $uri;
 
-$body = file_get_contents('php://input');
+// Llegir body només per POST/PUT/PATCH
+$body = null;
+if (in_array($method, ['POST', 'PUT', 'PATCH'])) {
+    $body = file_get_contents('php://input');
+}
 
-// Headers a enviar (excloent host i connection)
+// Headers a enviar
 $hopHeaders = [];
 foreach (getallheaders() as $k => $v) {
     $lower = strtolower($k);
-    if (in_array($lower, ['host', 'connection', 'content-length'])) continue;
+    if (in_array($lower, ['host', 'connection'])) continue;
     $hopHeaders[] = "$k: $v";
 }
 
@@ -29,15 +33,18 @@ curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HEADER         => true,
     CURLOPT_CUSTOMREQUEST  => $method,
-    CURLOPT_POSTFIELDS     => $body,
     CURLOPT_HTTPHEADER     => $hopHeaders,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_MAXREDIRS      => 5,
     CURLOPT_TIMEOUT        => 30,
     CURLOPT_CONNECTTIMEOUT => 5,
-    // Passar cookies explícitament
     CURLOPT_COOKIE         => $_SERVER['HTTP_COOKIE'] ?? '',
 ]);
+
+// Passar body només si existeix
+if ($body !== null && strlen($body) > 0) {
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+}
 
 $response   = curl_exec($ch);
 $httpCode   = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -53,7 +60,7 @@ if ($response === false) {
 $header = substr($response, 0, $headerSize);
 $body   = substr($response, $headerSize);
 
-// Passar TOTS els headers de resposta rellevants
+// Passar headers de resposta rellevants
 header_remove();
 foreach (explode("\r\n", $header) as $line) {
     if (preg_match('/^(Content-Type|Set-Cookie|Location|Cache-Control|Content-Disposition|Content-Length):/i', $line)) {
