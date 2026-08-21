@@ -308,4 +308,19 @@
   </div>
 
 </div>
+
+{{/* Auto-seleccionar pestanya de consulta per URL (?consulta=cessio) */}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var params = new URLSearchParams(window.location.search);
+    var consulta = params.get('consulta');
+    if (consulta) {
+      var btn = document.querySelector('.consulta-btn[data-consulta="' + consulta + '"]');
+      if (btn) {
+        btn.click();
+      }
+    }
+  });
+</script>
+
 {{ end }}
