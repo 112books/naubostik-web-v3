@@ -5,7 +5,7 @@ data_fi = 2024-07-20
 hora = "18:00"
 hora_fi = "23:00"
 preu = "Gratuït"
-imatge = "/img/activitats/240719_La-juganera_p.jpg"
+imatge = "img/activitats/240719_La-juganera_p.jpg"
 descripcio = "Arriba la quarta edició de La Juganera: concerts a la Nau Bostik Espais exteriors (Planta Baixa ) Ja està aquí, ja ha arribat la * 4a Edició de LA JUGANERA *. El cicle de concerts comunitari de La N…"
 draft = false
 +++

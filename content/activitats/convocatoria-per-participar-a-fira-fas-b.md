@@ -4,7 +4,7 @@ date = 2024-06-13
 data_fi = 2024-06-26
 hora = "09:00"
 hora_fi = "22:00"
-imatge = "/img/activitats/CONVOCATORIA_p.png"
+imatge = "img/activitats/CONVOCATORIA_p.png"
 descripcio = "2a edició de la Fira d’Art Sostenible de Barcelona Després de tot aquest temps, ens fa molta il·lusió anunciar que el diumenge 15 de setembre torna la segona edició del FASB !!!? Aquesta vegada torn…"
 draft = false
 +++

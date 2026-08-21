@@ -4,7 +4,7 @@ date = 2022-07-23
 hora = "06:00"
 hora_fi = "22:30"
 preu = "Gratuït"
-imatge = "/img/activitats/post-1.jpg"
+imatge = "img/activitats/post-1.jpg"
 descripcio = "Segon dia de la JUGANERA vol.2!!🎯🔥Dissabte 23 de juliol Vine al festival autogestionat de les entitats de la Bostik. Entrada lliure, fins a completar aforament!! 🕘QUAN: dissabte 23 de juliol a partir…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Worldwide Photography- Pinhole Day"
 date = 2023-04-30
 hora = "11:00"
 hora_fi = "17:00"
-imatge = "/img/activitats/Captura-de-pantalla-2023-04-27-a-les-10.16.40.png"
+imatge = "img/activitats/Captura-de-pantalla-2023-04-27-a-les-10.16.40.png"
 descripcio = "El Dia Mundial de la Fotografia Pinhole es crea per promoure l’essència de la fotografia estenopeica. S’anima a la gent a participar en la fotografia estenopeica i a fer fotografies sorprenents. Vin…"
 draft = false
 +++

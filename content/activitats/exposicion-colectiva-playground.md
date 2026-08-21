@@ -5,7 +5,7 @@ data_fi = 2022-02-05
 hora = "11:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "/img/activitats/ss.jpg"
+imatge = "img/activitats/ss.jpg"
 descripcio = "B-MURALS CENTRE D’ART Camil Escruela, Morise Art, Siuk y Lucciano. Exposición colectiva 27.11.21 – 05.02.22 (PRÓRROGA) «Playground» es una exposición colectiva que reúne a cuatro artistas urbanos de…"
 draft = false
 +++

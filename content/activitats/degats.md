@@ -3,7 +3,7 @@ title = "DeGats"
 date = 2022-06-05
 hora = "10:00"
 hora_fi = "17:00"
-imatge = "/img/activitats/a63152fa-0c8e-486c-9fd2-7c234641e2a6.jpg"
+imatge = "img/activitats/a63152fa-0c8e-486c-9fd2-7c234641e2a6.jpg"
 descripcio = "DeGats en Nau Bostik! Este domingo 5 de junio, de 10h a 17h , os esperamos a TODOS en @naubostik para que vengáis a visitarnos, conocer nuestra labor y colaborar adquiriendo algún artículo de nuestro…"
 draft = false
 +++

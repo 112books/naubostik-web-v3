@@ -4,7 +4,7 @@ date = 2025-06-07
 hora = "10:00"
 hora_fi = "20:00"
 preu = "Entrada lliure"
-imatge = "/img/activitats/250507-Aniversari-PAH_p.jpg"
+imatge = "img/activitats/250507-Aniversari-PAH_p.jpg"
 descripcio = "Vine a celebrar 16 anys de lluita per l’habitatge! ESPAI → ANDY WARHOL El dissabte 7 de juny, la PAH celebra 16 anys de LLuita pel Dret a l’Habitatge i l’Observatori del Deute en la Globalització 25…"
 draft = false
 +++

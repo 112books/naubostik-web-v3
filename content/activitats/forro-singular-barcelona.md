@@ -4,7 +4,7 @@ date = 2025-03-29
 hora = "16:00"
 hora_fi = "22:00"
 preu = "Varis preus"
-imatge = "/img/activitats/250329-forro_p.jpg"
+imatge = "img/activitats/250329-forro_p.jpg"
 descripcio = "Fira d’Art Sostenible de Barcelona (2a edició) ESPAI → NAU 53 FORRÓ SINGULAR BARCELONA és una proposta de Forró OCASIONAL, ESPECIAL que no es podria fer cada setmana, un Forró GESTAT A FOC LENT. Amb…"
 draft = false
 +++

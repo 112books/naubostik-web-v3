@@ -5,7 +5,7 @@ data_fi = 2023-06-04
 hora = "10:30"
 hora_fi = "22:00"
 preu = "12€"
-imatge = "/img/activitats/VEGFEST-e1684838466645.jpeg"
+imatge = "img/activitats/VEGFEST-e1684838466645.jpeg"
 descripcio = "VegFest BCN, 3 i 4 de juny a la Nau Bostik Nau Km14 , Nau 53 i Nau Roman Polankik (Planta Baixa) El VegFest aterra a la Nau Bositk els dies 3 i 4 de juny per oferir-nos un festival vegà organitzat p…"
 draft = false
 +++

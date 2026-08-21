@@ -4,7 +4,7 @@ date = 2023-09-15
 hora = "18:30"
 hora_fi = "21:30"
 preu = "Gratuït"
-imatge = "/img/activitats/230915-EXPO-RESIDENTS-B-MURALS_P.jpg"
+imatge = "img/activitats/230915-EXPO-RESIDENTS-B-MURALS_P.jpg"
 descripcio = "Inauguració exposició artistes Residencies B-Murals galeria b-murals (PLANTA baixa) Us convidem a la inauguració de l’exposició de dos artistes que han estat a la residència de B-Murals de la Nau Bo…"
 draft = false
 +++

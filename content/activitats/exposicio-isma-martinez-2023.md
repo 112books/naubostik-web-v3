@@ -3,7 +3,7 @@ title = "Exposició · Isma Martínez"
 date = 2023-12-17
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "/img/activitats/231217-expo_caspita_p.jpeg"
+imatge = "img/activitats/231217-expo_caspita_p.jpeg"
 descripcio = "SALA BASIANA (planta baixa) Isma Martínez ens explica: «Treballo la humanitat del cos, les seves edats, els seus silencis, el meu silenci en pintar-les, la meva edat en crear-les, la meva humanitat.…"
 draft = false
 +++

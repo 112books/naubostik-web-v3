@@ -4,7 +4,7 @@ date = 2023-05-12
 hora = "20:30"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/343978142_767681404913532_6713798953966439496_n.jpeg"
+imatge = "img/activitats/343978142_767681404913532_6713798953966439496_n.jpeg"
 descripcio = "Divendres 12 de maig tindrà lloc el monòleg de Jose Bailon , actor, humorista, director i presentador del programa Barcelona Comedy Club ; club de comèdia que es mou per tota la ciutat de Barcelona.…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-02-18
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "/img/activitats/240221_MARKET_p.jpg"
+imatge = "img/activitats/240221_MARKET_p.jpg"
 descripcio = "Tot a 1 € Diumenge 18 de febrer es durà a terme el Two Market aquí, a la Nau Bostik. S’obriran portes a les 10:00 h del matí i es podrà gaudir fins les 19:00 h. Es tracta d’un market de roba vintage…"
 draft = false
 +++

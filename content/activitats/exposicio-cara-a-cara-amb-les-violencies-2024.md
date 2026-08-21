@@ -5,7 +5,7 @@ data_fi = 2024-12-15
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Entrada lliure / Gratuït"
-imatge = "/img/activitats/expo1-500x340_p.jpg"
+imatge = "img/activitats/expo1-500x340_p.jpg"
 descripcio = "L’exposició “Cara a cara amb les violències” tanca la itinerància a la Nau Bostik ESPAI → EXTERIORS Després de dos anys de recórrer diferents indrets de Catalunya, l’exposició fotogràfica “ Cara a c…"
 draft = false
 +++

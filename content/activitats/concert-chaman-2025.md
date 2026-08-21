@@ -4,7 +4,7 @@ date = 2025-03-15
 hora = "18:30"
 hora_fi = "22:00"
 preu = "15€"
-imatge = "/img/activitats/250315-Concert-Chaman_p.jpg"
+imatge = "img/activitats/250315-Concert-Chaman_p.jpg"
 descripcio = "Gira 2024 – 2025 · Chaman ESPAI → NAU KM14 El concert tindrà lloc en la Nau Bostik el dissabte 15 de març a partir de les 19 hores. La tarda començarà amb el grup local, del mateix barri de La Sagre…"
 draft = false
 +++

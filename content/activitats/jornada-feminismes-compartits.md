@@ -3,7 +3,7 @@ title = "Jornada ‘Feminismes Compartits’"
 date = 2023-03-25
 hora = "09:30"
 hora_fi = "20:00"
-imatge = "/img/activitats/barcelonaencomu_20230310_131545.067010_0.jpg"
+imatge = "img/activitats/barcelonaencomu_20230310_131545.067010_0.jpg"
 descripcio = "Barcelona en Comú- Jornada ‘Feminismes Compartits’ Feminismes Compartits és el compromís de la nostra ciutat i de Barcelona En Comú de reivindicar la pluralitat i la força col·lectiva que caracterit…"
 draft = false
 +++

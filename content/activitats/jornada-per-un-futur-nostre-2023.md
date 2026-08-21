@@ -4,7 +4,7 @@ date = 2023-11-04
 hora = "08:00"
 hora_fi = "20:30"
 preu = "Gratuït"
-imatge = "/img/activitats/231104-Per-un-futur-nostre.jpeg"
+imatge = "img/activitats/231104-Per-un-futur-nostre.jpeg"
 descripcio = "Escola de Formació – Sentit Comú Per un futur nostre és l’ Escola de Formació que proposa la Fundació Sentit Comú per pensar conjuntament el nou context econòmic, social, polític i cultural que s’es…"
 draft = false
 +++

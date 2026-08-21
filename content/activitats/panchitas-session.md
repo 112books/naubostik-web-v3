@@ -3,7 +3,7 @@ title = "Panchita’s Session"
 date = 2025-02-23
 hora_fi = "14:30"
 preu = "10€"
-imatge = "/img/activitats/250223-PANCHITA-RECORDS_p.jpg"
+imatge = "img/activitats/250223-PANCHITA-RECORDS_p.jpg"
 descripcio = "10é Aniversari La Panchita Records ESPAI → NAU KM14 Diumenge 23 de febrer volem celebrar-ho amb totes vosaltres i que millor manera que presentant el nou disc de @chalart58 & The soul Adventurers «W…"
 draft = false
 +++

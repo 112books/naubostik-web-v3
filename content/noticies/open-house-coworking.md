@@ -1,7 +1,7 @@
 +++
 title = "Open House Coworking"
 date = 2022-11-03
-imatge = "/img/noticies/MG_3023_-e1667825004670.jpg"
+imatge = "img/noticies/MG_3023_-e1667825004670.jpg"
 draft = false
 +++
 

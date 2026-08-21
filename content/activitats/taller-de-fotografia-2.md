@@ -4,7 +4,7 @@ date = 2023-06-10
 hora = "16:00"
 hora_fi = "19:00"
 preu = "15€"
-imatge = "/img/activitats/351218256_218440804323147_3976767567494265827_n.jpeg"
+imatge = "img/activitats/351218256_218440804323147_3976767567494265827_n.jpeg"
 descripcio = "Taller de fotografia a càrrec de Sol Bela Mescladís Bostik (planta baixa) Diumenge 10 de juny de 16.00h a 19.00h tindrà lloc un taller de fotografia a càrrec de Sol Bela , fotògrafa resident de la c…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2023-01-14
 hora = "19:00"
 hora_fi = "21:00"
 preu = "€5"
-imatge = "/img/activitats/20221229_144821_0000.jpg"
+imatge = "img/activitats/20221229_144821_0000.jpg"
 descripcio = "ESTAMOS TOT@S LORC@S !! Continuem amb Pensant Lorca . (Reconstruïda) Pensant Lorca és el nostre segon treball que no descansa en una obra escrita per ser interpretada. És un treball que sí descansa…"
 draft = false
 +++

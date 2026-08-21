@@ -4,7 +4,7 @@ date = 2023-04-02
 data_fi = 2023-04-10
 preu = "Gratuït"
 planta = "Sala Basiana (Nau Bostik)"
-imatge = "/img/activitats/Post-IG-BEA.jpg"
+imatge = "img/activitats/Post-IG-BEA.jpg"
 descripcio = "Exposició fotogràfica de souvenirs de Senegal, a càrrec de Beatriz Terán i Arina Rogozina. Dos amigues amb la infinita curiositat per milers de temes, entre ells, l’aventura pel món i la fotografia.…"
 draft = false
 +++

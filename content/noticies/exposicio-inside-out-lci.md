@@ -1,7 +1,7 @@
 +++
 title = "Exposició fotogràfica: «Inside Out» - LCI"
 date = 2023-01-31
-imatge = "/img/noticies/WhatsApp-Image-2023-01-30-at-16.15.48-e1675169656926.jpg"
+imatge = "img/noticies/WhatsApp-Image-2023-01-30-at-16.15.48-e1675169656926.jpg"
 draft = false
 +++
 

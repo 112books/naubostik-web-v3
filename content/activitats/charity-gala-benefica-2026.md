@@ -4,7 +4,7 @@ date = 2026-03-22
 hora = "18:00"
 hora_fi = "22:00"
 preu = "7€"
-imatge = "/img/activitats/260322-Charity-gala_Arrels_p.jpg"
+imatge = "img/activitats/260322-Charity-gala_Arrels_p.jpg"
 descripcio = "La música té el poder d’unir persones i de generar canvi ESPAI → NAU KM14 Uneix-te a la nostra Gala Solidària organitzada per Esade Equal, Esade Music i Transpose, amb una actuació especial de convi…"
 draft = false
 +++

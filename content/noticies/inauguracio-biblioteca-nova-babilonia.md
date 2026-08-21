@@ -1,7 +1,7 @@
 +++
 title = "Inauguració de la Biblioteca Nova Babilònia"
 date = 2024-05-20
-imatge = "/img/noticies/biblio-nova-babilonia.jpg"
+imatge = "img/noticies/biblio-nova-babilonia.jpg"
 draft = false
 +++
 

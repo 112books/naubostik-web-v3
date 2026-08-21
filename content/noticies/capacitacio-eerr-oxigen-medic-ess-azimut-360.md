@@ -1,7 +1,7 @@
 +++
 title = "«Capacitació, EERR, oxigen mèdic i ESS» - Azimut 360"
 date = 2023-03-01
-imatge = "/img/noticies/WhatsApp-Image-2023-03-01-at-10.30.20-e1677664225158.jpg"
+imatge = "img/noticies/WhatsApp-Image-2023-03-01-at-10.30.20-e1677664225158.jpg"
 draft = false
 +++
 

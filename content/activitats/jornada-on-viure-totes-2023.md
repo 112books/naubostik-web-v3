@@ -3,7 +3,7 @@ title = "Jornada · On viure totes"
 date = 2023-10-17
 hora = "18:00"
 hora_fi = "20:00"
-imatge = "/img/activitats/231017-Singulars_17.10.23-C_p.jpg"
+imatge = "img/activitats/231017-Singulars_17.10.23-C_p.jpg"
 descripcio = "Presentació de la Guia elaborada per Perviure Un lloc on viure totes SALA MIRADOR (PRIMERA PLANTA) El dimarts 1 7 d’octubre hi haurà la jornada de presentació de la Guia elaborada per Perviure Un ll…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-10-05
 hora = "12:00"
 hora_fi = "15:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/251105-VERMUT-SALSERO_OCT_p.jpg"
+imatge = "img/activitats/251105-VERMUT-SALSERO_OCT_p.jpg"
 descripcio = "Vermut i taller de salsa ESPAI → NAU 53 T’esperem per passar una bona estona ballant! Aquest diumenge 5 d’octubre, el Col·lectiu Salsero de la Nau Bostik, autogestiona el Vermut Salsero. La totalita…"
 draft = false
 +++

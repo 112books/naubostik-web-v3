@@ -4,7 +4,7 @@ date = 2026-06-21
 hora = "14:00"
 hora_fi = "21:00"
 preu = "8€"
-imatge = "/img/activitats/Flyer-Final_Sao-Joao-2026__p.jpg"
+imatge = "img/activitats/Flyer-Final_Sao-Joao-2026__p.jpg"
 descripcio = "Aquest any cel.lebram el São João en un lloc molt especial: Nau Bostik. ESPAI → NAU KM14 Dissabte 21 de juny la Festa Junina “Ó nóis aquí de novo!” torna a Barcelona com una de les celebracions bras…"
 draft = false
 +++

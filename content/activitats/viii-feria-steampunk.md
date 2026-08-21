@@ -5,7 +5,7 @@ data_fi = 2024-03-03
 hora = "11:00"
 hora_fi = "20:00"
 preu = "8€"
-imatge = "/img/activitats/240303-VIII-Feria-Steampunk_p.jpg"
+imatge = "img/activitats/240303-VIII-Feria-Steampunk_p.jpg"
 descripcio = "Fira Steampunk Dames, cavallers i autòmats: Torna l’esdeveniment amb més engranatges de l’any! Renovats i amb més forces. Un esdeveniment que els transportarà a una singular vetllada. El 2 i 3 de ma…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-05-09
 hora = "19:00"
 hora_fi = "21:00"
 preu = "20€"
-imatge = "/img/activitats/250509-Halim_p.jpg"
+imatge = "img/activitats/250509-Halim_p.jpg"
 descripcio = "Túnez Fest #1 ESPAI → NAU KM14 Divendres 9 de maig Gultrah, grup mític de l’escena underground Tunisià, aterra a Barcelona per oferir un concert únic a l’espai cultural Nau Bostik. Un viatge mediter…"
 draft = false
 +++

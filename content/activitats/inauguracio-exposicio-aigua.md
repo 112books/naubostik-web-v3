@@ -3,7 +3,7 @@ title = "Inauguració exposició “AIGUA»"
 date = 2025-12-18
 hora = "18:30"
 hora_fi = "20:00"
-imatge = "/img/activitats/251218-exposicio-AIGUA_p.jpg"
+imatge = "img/activitats/251218-exposicio-AIGUA_p.jpg"
 descripcio = "Exposició – AIGUA 5W ESPAI → SALA GANDUL El pròxim dijous 18, a les 18.30 h, el nostre equip editorial de la revista 5w inaugura l’exposició “AIGUA: Un viatge per descobrir com mou el món”. Anna Sur…"
 draft = false
 +++

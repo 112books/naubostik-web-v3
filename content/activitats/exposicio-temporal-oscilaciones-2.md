@@ -4,7 +4,7 @@ date = 2023-05-17
 data_fi = 2023-05-23
 hora_fi = "11:00"
 preu = "Gratuït"
-imatge = "/img/activitats/oscilaciones.expo_event-e1684627750304.png"
+imatge = "img/activitats/oscilaciones.expo_event-e1684627750304.png"
 descripcio = "Exposició – Oscilaciones d’Isabella Casas López SALA BASIANA (nau bostik) Isabella Casas López és fotògrafa i artista multidisciplinar. Diumenge 14 de maig inaugura l’exposició del seu llibre a la S…"
 draft = false
 +++

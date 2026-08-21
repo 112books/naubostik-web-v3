@@ -4,7 +4,7 @@ date = 2026-01-15
 hora = "20:00"
 hora_fi = "22:00"
 preu = "Taquilla inversa"
-imatge = "/img/activitats/260115-Sant-andreu-jazz-band_p.jpg"
+imatge = "img/activitats/260115-Sant-andreu-jazz-band_p.jpg"
 descripcio = "Concert tancament del 10è aniversari de la Nau Bostik ESPAI → NAU KM14 El pròxim 15 de gener serà una data assenyalada. En el marc del desè aniversari de la Nau Bostik i, alhora, del vintè aniversar…"
 draft = false
 +++

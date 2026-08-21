@@ -4,7 +4,7 @@ date = 2024-10-06
 hora = "12:00"
 hora_fi = "14:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
+imatge = "img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
 descripcio = "Taller de salsa ESPAI → NAU 53 Vine a passar una bona estona ballant! Aquest diumenge 6 d’octubre, els grups de salsa de la Bostik, autogestionen el vermut salsero. L’ENTRADA ÉS LLIURE I GRATUÏTA! >…"
 draft = false
 +++

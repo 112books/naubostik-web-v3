@@ -5,7 +5,7 @@ hora = "13:00"
 hora_fi = "18:00"
 preu = "Free"
 planta = "Sala Basiana (Nau Bostik)"
-imatge = "/img/activitats/Redes.jpeg"
+imatge = "img/activitats/Redes.jpeg"
 descripcio = "Recollida d’aliments per gats Celebració del 12è aniversari de DeGats , una petita associació que ajuda als gats de carrer alimentant-los, rescatant-los i donant-los una llar on viure. Es gaudirà de…"
 draft = false
 +++

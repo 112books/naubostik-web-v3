@@ -4,7 +4,7 @@ date = 2023-11-05
 hora = "11:00"
 hora_fi = "17:00"
 preu = "Gratuït"
-imatge = "/img/activitats/394670147_18309323119190237_6858998522337912667_n.jpg"
+imatge = "img/activitats/394670147_18309323119190237_6858998522337912667_n.jpg"
 descripcio = "Festa Revista Convit/e La revista Convit/e , el projecte editorial de la Fundació Mescladís, es presenta com un aparador de projectes i iniciatives amb vocació de transformació social. El diumenge 5…"
 draft = false
 +++

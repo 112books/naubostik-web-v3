@@ -4,7 +4,7 @@ date = 2024-09-10
 hora = "20:00"
 hora_fi = "22:00"
 preu = "Gratüit"
-imatge = "/img/activitats/2024_ANUNCI-SALSA_p.jpg"
+imatge = "img/activitats/2024_ANUNCI-SALSA_p.jpg"
 descripcio = "Taller obert Salsa Cubana ESPAI → ANDY WARHOL El dimarts 10 i 17 podràs gaudir d’una classe de prova gratuïta. Si vols passar una bona estona, vine a ballar amb nosaltres! Pots aprendre a ballar de…"
 draft = false
 +++

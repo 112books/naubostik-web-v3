@@ -5,7 +5,7 @@ hora = "12:30"
 hora_fi = "19:00"
 preu = "Gratuït"
 planta = "Sala Basiana (Nau Bostik)"
-imatge = "/img/activitats/WhatsApp-Image-2023-03-07-at-11.36.51.jpeg"
+imatge = "img/activitats/WhatsApp-Image-2023-03-07-at-11.36.51.jpeg"
 descripcio = "Històries en trànsit. Donar cos al silenci. Espai de creació,escolta, diàleg i creació col·lectiva La jornada acull diferents accions per connectar sabers i pràctiques; teixir memòries col·lectives…"
 draft = false
 +++

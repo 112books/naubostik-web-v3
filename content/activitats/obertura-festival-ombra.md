@@ -3,7 +3,7 @@ title = "Obertura · Ombra Festival"
 date = 2024-12-05
 hora = "15:00"
 hora_fi = "22:00"
-imatge = "/img/activitats/241205-Festival-Ombra_p.jpg"
+imatge = "img/activitats/241205-Festival-Ombra_p.jpg"
 descripcio = "Ombra Festival 2024 ESPAI → NAU KM14 Prepara’t per gaudir d’una edició única amb els millors artistes de l’escena underground a escala global. No et perdis l’oportunitat d’aconseguir el teu abonamen…"
 draft = false
 +++

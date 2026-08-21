@@ -1,7 +1,7 @@
 +++
 title = "Verkami · Fronteres Invisibles, el joc de taula"
 date = 2024-12-10
-imatge = "/img/noticies/verkami_fronteres.jpg"
+imatge = "img/noticies/verkami_fronteres.jpg"
 draft = false
 +++
 

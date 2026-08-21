@@ -4,7 +4,7 @@ date = 2023-10-22
 hora = "13:00"
 hora_fi = "17:00"
 preu = "10€"
-imatge = "/img/activitats/231022-monologos_-caspita.jpeg"
+imatge = "img/activitats/231022-monologos_-caspita.jpeg"
 descripcio = "Monòlegs de Dr. Niko i Ferri López SALA BASIANA (PLANTA BAIXA) Diumenge 22 d’octubre a les 13.00 h tindrà lloc Vermut Comedy a la Sala Basiana de la Nau Bostik. Espectacle presentat per Jose Bailón…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-11-18
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Accés lliure fins exhaurir localitats"
-imatge = "/img/activitats/barcelonapensa2025_p.jpg"
+imatge = "img/activitats/barcelonapensa2025_p.jpg"
 descripcio = "Obra de teatre. Electra ESPAI → NAU KM14 Coincidint amb el Dia Mundial de la Filosofia de la UNESCO, el tercer dijous de novembre, arriba la dotzena edició del Festival de Filosofia Barcelona Pensa,…"
 draft = false
 +++

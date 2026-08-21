@@ -4,7 +4,7 @@ date = 2023-06-02
 hora = "18:30"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "/img/activitats/Horstik-250x250-1.png"
+imatge = "img/activitats/Horstik-250x250-1.png"
 descripcio = "Fenologia,la ciència ciutadana i el canvi climàtic sala mirador (Primera planta) Es durà a terme un taller en el qual s’explicarà què és la fenologia, la ciència ciutadana i el canvi climàtic. Es re…"
 draft = false
 +++

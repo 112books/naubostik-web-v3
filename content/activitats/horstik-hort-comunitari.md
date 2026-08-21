@@ -4,7 +4,7 @@ date = 2023-02-16
 hora = "18:30"
 hora_fi = "20:30"
 planta = "Nau Bostik Horstik"
-imatge = "/img/activitats/Captura-de-Pantalla-2023-02-10-a-les-10.59.44.png"
+imatge = "img/activitats/Captura-de-Pantalla-2023-02-10-a-les-10.59.44.png"
 descripcio = "LA NAU BOSTIK OBRE L’HORT AL BARRI! El nostre interès en la cura del medi ambient i la preocupació per aconseguir un món més sostenible ens va dur ja fa cinc anys a crear un hort urbà en un terrat d…"
 draft = false
 +++

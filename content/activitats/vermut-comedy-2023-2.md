@@ -4,7 +4,7 @@ date = 2023-12-23
 hora = "13:30"
 hora_fi = "17:00"
 preu = "10€"
-imatge = "/img/activitats/231221-monologos_-caspita_p.jpg"
+imatge = "img/activitats/231221-monologos_-caspita_p.jpg"
 descripcio = "Monòlegs de Chify Negretti i Boli SALA BASIANA (PLANTA BAIXA) Diumenge 23 de desembre a les 13.30 h tindrà lloc Vermut Comedy a la Sala Basiana de la Nau Bostik. Espectacle presentat per Jose Bailón…"
 draft = false
 +++

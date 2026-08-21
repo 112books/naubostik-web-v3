@@ -4,7 +4,7 @@ date = 2023-12-21
 hora = "18:30"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "/img/activitats/231221-fracaso-Javiern-Jaen_p.jpg"
+imatge = "img/activitats/231221-fracaso-Javiern-Jaen_p.jpg"
 descripcio = "Trobada sobre Disseny i Fracàs amb Javier Jaén NAU KM 14 (PLANTA BAIXA) L’esdeveniment gratuït tindrà lloc en Nau Bostik l’última trobada de la temporada al costat de Javier Jaén , un dels dissenyad…"
 draft = false
 +++

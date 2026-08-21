@@ -5,7 +5,7 @@ data_fi = 2023-06-15
 hora = "12:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/ResponsiveDreamsPoster-5-SQUARE.png"
+imatge = "img/activitats/ResponsiveDreamsPoster-5-SQUARE.png"
 descripcio = "La primera exposició d’art generatiu de Barcelona dedicada íntegrament a mostrar l’art creat per codi Nau Andy Warhol (Planta Baixa) El Museu d’Art Generatiu presenta Resposive Dreams, una exposició…"
 draft = false
 +++

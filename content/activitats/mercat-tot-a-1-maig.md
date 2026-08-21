@@ -4,7 +4,7 @@ date = 2026-05-10
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Tot a 1€! Especial Rave Market ESPAI → ANDY WARHOL i PILAR VERS Diumenge 10 de maig, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Has vingut alguna vegada a un mercat am…"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Hem fet els deures!"
 date = 2017-07-06
-imatge = "/img/noticies/naubostik-DSCF4375.jpg"
+imatge = "img/noticies/naubostik-DSCF4375.jpg"
 draft = false
 +++
 

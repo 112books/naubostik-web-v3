@@ -4,7 +4,7 @@ date = 2023-09-15
 hora = "16:00"
 hora_fi = "18:00"
 preu = "Gratuït"
-imatge = "/img/activitats/230728_PARKING-DAY_p.jpg"
+imatge = "img/activitats/230728_PARKING-DAY_p.jpg"
 descripcio = "Taller de plantes crasses horstik (primera planta) El Park(ing) Day és un esdeveniment anual que té lloc en diverses ciutats de tot el món . Es tracta d’una acció de ciutat performativa, educativa i…"
 draft = false
 +++

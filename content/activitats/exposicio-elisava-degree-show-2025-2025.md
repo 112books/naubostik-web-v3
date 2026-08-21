@@ -5,7 +5,7 @@ data_fi = 2025-07-20
 hora = "19:00"
 hora_fi = "19:30"
 preu = "Entrada lliure"
-imatge = "/img/activitats/250626-EXPO-ELISAVA_p.jpg"
+imatge = "img/activitats/250626-EXPO-ELISAVA_p.jpg"
 descripcio = "Projectes del Màster en Fotografia i Disseny ESPAI → SALA AURELI GANDUL (PRIMERA PLANTA) Dijous 26 de juny a les 17 h s’inaugura l’exposició «The Unseen» Emocionats d’anunciar l’exposició del Màster…"
 draft = false
 +++

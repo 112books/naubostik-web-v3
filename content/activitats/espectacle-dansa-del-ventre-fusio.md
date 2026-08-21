@@ -4,7 +4,7 @@ date = 2023-06-18
 hora = "19:00"
 hora_fi = "21:00"
 preu = "10€"
-imatge = "/img/activitats/IMG-20230519-WA0018.jpg"
+imatge = "img/activitats/IMG-20230519-WA0018.jpg"
 descripcio = "Espectacle de Dansa Oriental i Fusió Nau Km14 (Planta Baixa) Diumenge 18 de juny tindrà lloc un espectacle de Dansa Oriental i Fusió a la Nau km14 de la Nau Bostik de 19h a 21h . Podràs gaudir de le…"
 draft = false
 +++

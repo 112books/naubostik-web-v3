@@ -3,7 +3,7 @@ title = "Fira microedició · La Tietera"
 date = 2024-02-03
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "/img/activitats/240203-cartel-la-tietera_p.jpeg"
+imatge = "img/activitats/240203-cartel-la-tietera_p.jpeg"
 descripcio = "Fira de microedició, humor i coses Nau 53 (planta Baixa) Ai, la Tieta! La Tietera parteix de dues idees. La primera, la necessitat de fomentar l’edició i la creació independent , ja sigui com a llib…"
 draft = false
 +++

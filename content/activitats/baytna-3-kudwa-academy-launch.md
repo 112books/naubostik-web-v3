@@ -4,7 +4,7 @@ date = 2023-10-07
 hora = "17:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/231007-BAYTNA-3_P.jpg"
+imatge = "img/activitats/231007-BAYTNA-3_P.jpg"
 descripcio = "Connectant joves migrants i refugiats, i provocant el canvi sala roman polankik (PLANTA BAIXA) INSCRIPCIONS AQUÍ Donem la benvinguda a Baytna 3 , un esdeveniment, cultural i social, en el qual uneix…"
 draft = false
 +++

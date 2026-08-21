@@ -4,7 +4,7 @@ date = 2025-04-25
 hora = "20:00"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "/img/activitats/250425-POSTER-NUTSHELL_p.jpg"
+imatge = "img/activitats/250425-POSTER-NUTSHELL_p.jpg"
 descripcio = "Concert de la banda NUTSHELL organitzat per l’Associació de sards a Catalunya ESPAI → NAU KM14 Divendres 25 d’abril, prepara’t per a un viatge musical únic, un so fresc i ple de màgia que no et pots…"
 draft = false
 +++

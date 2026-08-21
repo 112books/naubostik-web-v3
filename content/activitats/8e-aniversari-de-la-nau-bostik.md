@@ -3,7 +3,7 @@ title = "8è Aniversari de la Nau Bostik"
 date = 2023-02-18
 hora = "16:00"
 hora_fi = "22:00"
-imatge = "/img/activitats/230218_ANUNCI-CALCOTADA_insta-1.jpg"
+imatge = "img/activitats/230218_ANUNCI-CALCOTADA_insta-1.jpg"
 descripcio = "8è Aniversari de la Nau Bostik! Seguim complint amb ganes i força i, a més, celebrem el Carnestoltes! Des de la comissió de festejos de la Nau organitzem aquesta super jornada de tarda vespre dissab…"
 draft = false
 +++

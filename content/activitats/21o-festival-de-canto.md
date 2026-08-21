@@ -4,7 +4,7 @@ date = 2023-12-16
 hora = "16:30"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "/img/activitats/231216-Festival-Madisound_p.jpeg"
+imatge = "img/activitats/231216-Festival-Madisound_p.jpeg"
 descripcio = "Festival MadiSound Studios Tenim el plaer i l’orgull de presentar-los el 21è Festival de cant ofert per l’acadèmia de cant MadiSound Studios en col·laboració amb l’espai sociocultural Nau Bostik de…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-02-02
 hora = "12:00"
 hora_fi = "15:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
+imatge = "img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
 descripcio = "Vermut i taller de salsa ESPAI → NAU 53 Vine a passar una bona estona ballant! Aquest diumenge 2 de febrer, els grups de salsa de la Bostik, autogestionen el vermut salsero. L’ENTRADA ÉS LLIURE I GR…"
 draft = false
 +++

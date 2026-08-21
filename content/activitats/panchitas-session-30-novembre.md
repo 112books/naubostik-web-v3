@@ -3,7 +3,7 @@ title = "Panchita’s Session"
 date = 2025-11-30
 hora_fi = "15:00"
 preu = "10€"
-imatge = "/img/activitats/251130-La-Panchita-Vermut_p.jpeg"
+imatge = "img/activitats/251130-La-Panchita-Vermut_p.jpeg"
 descripcio = "Matah presentarà el seu nou disc «Sound» ESPAI → NAU KM14 Diumenge 30 de novembre La Panchita Records et porta a Matah presentant el seu nou disc «Sound» a la Nau Bostik . Al warm up tindrem a Badal…"
 draft = false
 +++

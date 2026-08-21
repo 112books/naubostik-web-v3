@@ -4,7 +4,7 @@ date = 2025-04-04
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Amb inscripció"
-imatge = "/img/activitats/250425_Forum-FESC.25_p.jpg"
+imatge = "img/activitats/250425_Forum-FESC.25_p.jpg"
 descripcio = "Fòrum FESC’25: vine el 4 d’abril a la Nau Bostik! ESPAI → NAU PILAR VERS / NAU BETOR / SALA ROMAN POLANKIK El divendres 4 d’abril us esperem per celebrar el Fòrum FESC’25. El Fòrum FESC és l’espai d…"
 draft = false
 +++

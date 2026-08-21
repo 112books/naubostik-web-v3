@@ -4,7 +4,7 @@ date = 2025-03-08
 hora = "19:30"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "/img/activitats/250308-BIG-ZAY-BAND_p.jpg"
+imatge = "img/activitats/250308-BIG-ZAY-BAND_p.jpg"
 descripcio = "BIG ZAY & Band en directe ESPAI → NAU KM14 Dissabte 8 de març per primera vegada a Barcelona BIG ZAY – MR. BARRY arriba per a compartir la seva música en un concert únic i inoblidable, ple de bona v…"
 draft = false
 +++

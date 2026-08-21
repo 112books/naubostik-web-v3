@@ -4,7 +4,7 @@ date = 2025-10-30
 hora = "16:30"
 hora_fi = "22:30"
 preu = "1€"
-imatge = "/img/activitats/251022-CASTANYADA_p.jpg"
+imatge = "img/activitats/251022-CASTANYADA_p.jpg"
 descripcio = "Aniversari terrorífic, 10 anys de la Nau Bostik ESPAI → NAU PILAR VERS i ANDY WARHOL Aquest any la comi de festejos de la Nau Bostik presenta la Segona Edició de La Castanyada Diabòlica , una activi…"
 draft = false
 +++

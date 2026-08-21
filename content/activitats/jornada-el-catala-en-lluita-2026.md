@@ -4,7 +4,7 @@ date = 2026-02-21
 hora = "10:00"
 hora_fi = "13:30"
 preu = "Entrada lliure (sense incripció)"
-imatge = "/img/activitats/260221-PIEC_p.jpg"
+imatge = "img/activitats/260221-PIEC_p.jpg"
 descripcio = "Patis, xarxes i drets lingüístics ESPAI → NAU BETOR El pròxim dissabte 21 de febrer ens veiem a la Nau Bostik en una jornada de reflexió i anàlisi crítica per abordar els reptes que afronta la nostr…"
 draft = false
 +++

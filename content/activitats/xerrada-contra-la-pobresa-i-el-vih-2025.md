@@ -4,7 +4,7 @@ date = 2025-01-22
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "/img/activitats/250122-XERRADA_caspita_p.jpg"
+imatge = "img/activitats/250122-XERRADA_caspita_p.jpg"
 descripcio = "Hi ha una millor manera de lluitar contra la pobresa i el VIH? ESPAI → SALA BASIANA Vine a descobrir-ho aquest 22 de gener a les 19 h, a la Sala Basiana de Nau Bostik. Explorarem idees creatives i i…"
 draft = false
 +++

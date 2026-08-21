@@ -1,7 +1,7 @@
 +++
 title = "OPEN HOUSE"
 date = 2022-06-03
-imatge = "/img/activitats/00_Open_House_cuadrado-scaled-1.jpg"
+imatge = "img/activitats/00_Open_House_cuadrado-scaled-1.jpg"
 descripcio = "OPEN HOUSE #2 El coworking Nau Bostik vuelve a abrir sus puertas el Viernes 03 de Junio 2022 con un programa de actos artísticos que se extenderá a lo largo del día. Se abre un espacio de encuentro…"
 draft = false
 +++

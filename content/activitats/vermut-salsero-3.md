@@ -3,7 +3,7 @@ title = "Vermut Salsero"
 date = 2026-05-30
 hora_fi = "15:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/260530-VERMUT-LA-JUGANERA_p.jpg"
+imatge = "img/activitats/260530-VERMUT-LA-JUGANERA_p.jpg"
 descripcio = "Vermut salsero a La Juganera ESPAIS EXTERIORS DE LA NAU BOSTIK (PLANTA BAIXA) Accés a la Bostik pel C/ Pont del Treball Digne Dissabte 30 de maig el Col.lectiu Salsero omple la pista de ritme, molta…"
 draft = false
 +++

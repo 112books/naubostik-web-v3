@@ -4,7 +4,7 @@ date = 2026-06-07
 hora = "19:00"
 hora_fi = "22:00"
 preu = "15€"
-imatge = "/img/activitats/260607-TEATRE-SUPURA_-p.jpg"
+imatge = "img/activitats/260607-TEATRE-SUPURA_-p.jpg"
 descripcio = "«Supura» + col·loqui + Dj ESPAI → NAU KM14 Hola mama, aquesta és la nostra hipòtesi: (Societat “democràtica”, monàrquica i cristiana, on el pudor, la norma i l’exigència de la bellesa governen la no…"
 draft = false
 +++

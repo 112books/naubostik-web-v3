@@ -5,7 +5,7 @@ data_fi = 2024-02-12
 hora = "10:00"
 hora_fi = "18:00"
 preu = "20€"
-imatge = "/img/activitats/240211_Salo-de-vins_p.jpg"
+imatge = "img/activitats/240211_Salo-de-vins_p.jpg"
 descripcio = "Torna la 9a edició Saló dels Vins Naturals a Barcelona Us presentem el cartell del Saló de VinsNaturalsBCN24 creat per l’artista Joan Tàrrega de Vinyologia Canor , us agrada? A nosaltres molt! Els d…"
 draft = false
 +++

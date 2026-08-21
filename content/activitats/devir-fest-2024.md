@@ -4,7 +4,7 @@ date = 2024-01-25
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/240125-devir-fest_p.jpeg"
+imatge = "img/activitats/240125-devir-fest_p.jpeg"
 descripcio = "T’agraden els jocs de taula? Nau km14 i nau 53 (planta baixa) Primera Devir Fest de l’any! I la volem celebrar amb tots vosaltres. L’entrada no requereix reserva i és gratuïta, així que no teniu exc…"
 draft = false
 +++

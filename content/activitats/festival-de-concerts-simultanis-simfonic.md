@@ -4,7 +4,7 @@ date = 2023-06-10
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/337251268_980182343314915_7428787975586090719_n-e1684139662951.jpeg"
+imatge = "img/activitats/337251268_980182343314915_7428787975586090719_n-e1684139662951.jpeg"
 descripcio = "13ena edició del Festival de Concerts SIMFONIC Nau km14 (Planta Baixa) Diada de 100 concerts simultanis i gratuïts realitzats per més de 5.000 estudiants d’escoles de música a 100 racons de Cataluny…"
 draft = false
 +++

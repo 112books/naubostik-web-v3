@@ -4,7 +4,7 @@ date = 2023-07-08
 hora = "15:30"
 hora_fi = "22:00"
 preu = "20€"
-imatge = "/img/activitats/230708-THE-GLEAMING-MINIBALL_p.jpg"
+imatge = "img/activitats/230708-THE-GLEAMING-MINIBALL_p.jpg"
 descripcio = "Estàs preparat per brillar? NAU KM14 (PLANTA BAIXA) EU/AA RUNWAY? ? Disco ball. The party is about to begin. Bring it in a look inspired by a disco ball.. La fiesta va a empezar. Lleva un traje insp…"
 draft = false
 +++

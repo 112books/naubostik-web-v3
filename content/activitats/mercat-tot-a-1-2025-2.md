@@ -4,7 +4,7 @@ date = 2025-05-11
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Toto a 1 € ESPAI → ANDY WARHOL , PILAR VERS i NAU 53 El mercat ambulant més barat de Barcelona! Més de 4500 kg de roba, més de 10000 peces i dos torns de reposició! Matí i yardeo! Diumenge 11 de mai…"
 draft = false
 +++

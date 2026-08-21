@@ -5,7 +5,7 @@ data_fi = 2023-10-28
 hora = "13:00"
 hora_fi = "21:00"
 preu = "25€"
-imatge = "/img/activitats/231027-MASH-BEER.jpg"
+imatge = "img/activitats/231027-MASH-BEER.jpg"
 descripcio = "5a edició Festival de cervesa artesana Un any més es celebra a la Nau Bostik de Barcelona la 5a edició d’un dels festivals de cervesa artesana més exclusius de tot Europa. El Mash Beer és un festiva…"
 draft = false
 +++

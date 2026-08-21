@@ -4,7 +4,7 @@ date = 2024-04-20
 hora = "11:00"
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "/img/activitats/240420-Tallers-la-Sagrera_p.jpg"
+imatge = "img/activitats/240420-Tallers-la-Sagrera_p.jpg"
 descripcio = "PROGRAMA DE FESTES Tallers familiars oberts, per la Festa de la primavera de La Sagrera ESPAI EXTERIOR 11.30 h -14 h > Taller de rostres i diversitat Com són els rostres dels meus veïns i veïnes? I…"
 draft = false
 +++

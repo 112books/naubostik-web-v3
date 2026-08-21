@@ -4,7 +4,7 @@ date = 2023-09-23
 data_fi = 2023-09-24
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "/img/activitats/Cartel-Observatorio-2023.jpg"
+imatge = "img/activitats/Cartel-Observatorio-2023.jpg"
 descripcio = "5.76 m2 / Fotografia Documental d’Autor sala gandul (primera planta) ÉS SETEMBRE, i una vegada més estem encantats de convidar-los a 5.76m2, l’exposició que recull els projectes desenvolupats per la…"
 draft = false
 +++

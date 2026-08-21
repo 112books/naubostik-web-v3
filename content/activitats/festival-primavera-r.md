@@ -4,7 +4,7 @@ date = 2026-05-16
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/260516-POSTER-Primavera_p.jpg"
+imatge = "img/activitats/260516-POSTER-Primavera_p.jpg"
 descripcio = "Primavera R – El Festival de Resiliència de Barcelona ESPAI → NAU 53 Primavera R torna els dies 15 i 16 de maig de 2026 amb un programa ampliat de visites, tallers i activitats comunitàries dissenya…"
 draft = false
 +++

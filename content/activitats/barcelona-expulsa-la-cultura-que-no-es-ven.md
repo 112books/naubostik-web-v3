@@ -3,7 +3,7 @@ title = "Comunicat · Barcelona expulsa la cultura que no es ven"
 date = 2025-06-03
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "/img/activitats/250614_XES-campanya_p.jpeg"
+imatge = "img/activitats/250614_XES-campanya_p.jpeg"
 descripcio = "No a la concentració cultural i el model de ciutat neoliberal ESPAI → JARDINETS EL TALÍA (PARAL·LEL,100 Barcelona) Volem posar sobre la taula una situació que ens preocupa com a veïnes, com a entita…"
 draft = false
 +++

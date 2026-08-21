@@ -4,7 +4,7 @@ date = 2026-02-23
 hora = "10:00"
 hora_fi = "14:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "/img/activitats/260120-El-cami-Saraswati_p.jpg"
+imatge = "img/activitats/260120-El-cami-Saraswati_p.jpg"
 descripcio = "FORMACIÓ 4: Comunicació i màrqueting amb valors ESPAI → SALA 112 El camí de Saraswati és una proposta formativa que parteix d’aquest esperit: un itinerari per a dones que impulsen projectes amb valo…"
 draft = false
 +++

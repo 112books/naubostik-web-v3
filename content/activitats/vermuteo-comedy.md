@@ -4,7 +4,7 @@ date = 2024-09-29
 hora = "13:00"
 hora_fi = "14:30"
 preu = "10€"
-imatge = "/img/activitats/240929-Vermut_caspita_p.jpg"
+imatge = "img/activitats/240929-Vermut_caspita_p.jpg"
 descripcio = "Monòlegs a l’hora del Vermut ESPAI → SALA BASIANA Diumenge 29 de setembre a l’hora de vermut presentat per @jose_bailon El millor pla per al Diumenge. Monòlegs a l’hora del Vermut! Gaudireu d’una se…"
 draft = false
 +++

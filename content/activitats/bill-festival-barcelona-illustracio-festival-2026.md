@@ -4,7 +4,7 @@ date = 2026-05-16
 hora = "10:00"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/260516-Bill-Post-web-APIC_p.jpg"
+imatge = "img/activitats/260516-Bill-Post-web-APIC_p.jpg"
 descripcio = "Bill Festival és la teva trobada anual de la il.lustració ESPAI → NAU PILAR VERS / NAU KM14 Dissabte 16 de maig el Bill Festival celebra la trobada anual de la il·lustració. Amb el format de festiva…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2022-05-08
 hora = "09:00"
 hora_fi = "14:30"
 preu = "Gratuït"
-imatge = "/img/activitats/BOSTIK-1.jpg"
+imatge = "img/activitats/BOSTIK-1.jpg"
 descripcio = "Des de Mercat de Pagès La Sagrera i la Nau Bostik , amb la voluntat d’aconseguir un canvi en els hàbits de consum de la societat, apostem per aquest canvi de paradigma i ho continuem fent realitat amb…"
 draft = false
 +++

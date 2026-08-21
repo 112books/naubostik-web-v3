@@ -3,7 +3,7 @@ title = "Jornada Salsera"
 date = 2025-04-27
 hora = "11:00"
 hora_fi = "20:30"
-imatge = "/img/activitats/250427-Jornada-salsera_p2.jpg"
+imatge = "img/activitats/250427-Jornada-salsera_p2.jpg"
 descripcio = "10è aniversari Col.lectiu Salsero ESPAI → NAU 53 / NAU KM14 Amb motiu del nostre 10è Aniversari el Col·lectiu Salsero de la Nau Bostik, ens ha preparat una mega jornada el pròxim diumenge 27 d’abril…"
 draft = false
 +++

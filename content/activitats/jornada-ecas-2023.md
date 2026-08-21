@@ -3,7 +3,7 @@ title = "Jornada · ECAS"
 date = 2023-10-17
 hora = "18:00"
 hora_fi = "21:30"
-imatge = "/img/activitats/231017-JORNADA-ECAS_p.jpg"
+imatge = "img/activitats/231017-JORNADA-ECAS_p.jpg"
 descripcio = "ECAS, 20 anys sumant per la justícia social nau Pilar Vers i nau 53 A ECAS fem 20 anys i tenim ganes de compartir-ho amb tu! El proper dimarts 17 d’octubre, coincidint amb el Dia Internacional per a…"
 draft = false
 +++

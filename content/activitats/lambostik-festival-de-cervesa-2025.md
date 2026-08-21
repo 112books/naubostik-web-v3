@@ -4,7 +4,7 @@ date = 2025-05-16
 data_fi = 2025-05-17
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/LAMBOSTIK_p-0f3701.jpg"
+imatge = "img/activitats/LAMBOSTIK_p-0f3701.jpg"
 descripcio = "Cervesa artesana a la Nau Bostik Divendres 16 i dissabte 17 de maig t’esperem al Festival de cervesa artesana de La Sagrera. Entrada gratuïta i ambient amb DJ’s! El divendres estarem de 18 h a 22 h…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Conversatori- justícia i pau"
 date = 2023-05-09
 hora = "17:30"
 hora_fi = "20:30"
-imatge = "/img/activitats/cartellCONVERSATORIsetxpau23-scaled.jpeg"
+imatge = "img/activitats/cartellCONVERSATORIsetxpau23-scaled.jpeg"
 descripcio = "Ets jove i t’interessa la política municipal? Justícia i Pau és una associació de voluntariat que defensa els Drets Humans, la justícia social, la pau, la solidaritat i el medi ambient. Conversatori…"
 draft = false
 +++

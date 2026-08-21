@@ -5,7 +5,7 @@ data_fi = 2024-03-10
 hora = "10:00"
 hora_fi = "19:00"
 preu = "2€"
-imatge = "/img/activitats/A-kilo_p.jpg"
+imatge = "img/activitats/A-kilo_p.jpg"
 descripcio = "Roba Vintage a un preu increïble! Two Market i El Penjador Events obren nova proposta per a tots els amants del Vintage. +3 tones de roba Vintage a un preu increïble! Has vingut alguna vegada a una…"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Trobada de Sòcies de Sostre Cívic"
 date = 2023-05-06
-imatge = "/img/noticies/noticia_sostrecivic.jpg"
+imatge = "img/noticies/noticia_sostrecivic.jpg"
 draft = false
 +++
 

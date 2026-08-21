@@ -5,7 +5,7 @@ hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
 planta = "Nau Bostik Sala Roman Polankik"
-imatge = "/img/activitats/Captura-de-pantalla-2023-03-24-a-les-13.32.13.png"
+imatge = "img/activitats/Captura-de-pantalla-2023-03-24-a-les-13.32.13.png"
 descripcio = "Vine a la sessió informativa en la qual explicarem novetats sobre les intervencions urbanítstiques que es realitzaran entorn de la Nau Bostik. Es durà a terme a la Sala Roman Polankik de 18.00 a 20.…"
 draft = false
 +++

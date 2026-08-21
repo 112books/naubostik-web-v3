@@ -4,7 +4,7 @@ date = 2026-08-01
 data_fi = 2026-08-31
 hora = "08:00"
 hora_fi = "12:00"
-imatge = "/img/activitats/260801_VACANCES-BOSTIK_p.jpg"
+imatge = "img/activitats/260801_VACANCES-BOSTIK_p.jpg"
 descripcio = "Oficines tancades de l’1 al 31 d’agost Companyes i companys. Arribem al final d’una nova temporada i és moment d’aturar-nos. Descansar, desconnectar, canviar de ritme i agafar una mica de perspectiv…"
 draft = false
 +++

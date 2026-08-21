@@ -5,7 +5,7 @@ hora = "12:00"
 hora_fi = "14:30"
 preu = "€5"
 entitat = "Panchita Records"
-imatge = "/img/activitats/WhatsApp-Image-2023-01-20-at-13.44.41.jpeg"
+imatge = "img/activitats/WhatsApp-Image-2023-01-20-at-13.44.41.jpeg"
 descripcio = "Panchita’s Session – Panchita Soul Adventurers meets Harny Roots + Convidats + Badalonians Sound Roots Rock Reggae Dub Party Diumenge 22 de gener Panchita Records presenta la primera Panchita’s Sess…"
 link_extern = "https://www.instagram.com/lapanchitarecords/?next=blackandwhitevintage108"
 draft = false

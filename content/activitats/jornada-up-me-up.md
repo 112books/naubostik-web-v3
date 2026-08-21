@@ -3,7 +3,7 @@ title = "Jornada · Up me up"
 date = 2023-09-21
 hora = "18:30"
 hora_fi = "21:00"
-imatge = "/img/activitats/230921-Up-me-Up_P.png"
+imatge = "img/activitats/230921-Up-me-Up_P.png"
 descripcio = "Vols venir a la presentació d’Up me Up? La multiplataforma per a la recerca de feina i de talent d’ESS Reptes per un mercat de treball socialment responsable NAU KM14 (PLANTA BAIXA) VOLEM CONVIDAR-T…"
 draft = false
 +++

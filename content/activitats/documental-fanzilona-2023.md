@@ -4,7 +4,7 @@ date = 2023-12-01
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/231202-FANZILONA-2.jpeg"
+imatge = "img/activitats/231202-FANZILONA-2.jpeg"
 descripcio = "Presentació de la sèrie documental sobre història del grafiti a Barcelona NAU PILAR VERS (PLANTA BAIXA) Inspirada en les publicacions underground anomenades fanzins, Zosen Bandido, Miquel Ardèvol i…"
 draft = false
 +++

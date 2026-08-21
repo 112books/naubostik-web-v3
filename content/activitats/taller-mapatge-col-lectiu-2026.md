@@ -4,7 +4,7 @@ date = 2026-01-28
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "/img/activitats/260128-Mapatge-Properess_p.jpg"
+imatge = "img/activitats/260128-Mapatge-Properess_p.jpg"
 descripcio = "Cartografia creativa del territori viu. Redibuixem la Sagrera des dels vincles i les resistències. Et proposem una exploració col·lectiva i creativa del barri de la Sagrera, amb especial atenció als…"
 draft = false
 +++

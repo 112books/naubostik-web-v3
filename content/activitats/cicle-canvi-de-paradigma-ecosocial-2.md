@@ -4,7 +4,7 @@ date = 2023-06-29
 hora = "18:00"
 hora_fi = "19:30"
 preu = "Gratuït"
-imatge = "/img/activitats/2023-05-25_canvi-de-paradigma-ecosocial_TW-FB-BUTLLETI-2-e1685101000694.jpeg"
+imatge = "img/activitats/2023-05-25_canvi-de-paradigma-ecosocial_TW-FB-BUTLLETI-2-e1685101000694.jpeg"
 descripcio = "Canvi de paradigma ecosocial Sala Mirador (segona planta) Cicle de sessions destinades a la ciutadania amb l’objectiu de debatre sobre un canvi de paradigma en l’àmbit ecosocial, i per caminar cap a…"
 draft = false
 +++

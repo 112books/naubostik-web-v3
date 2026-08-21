@@ -4,7 +4,7 @@ date = 2024-02-17
 hora = "16:00"
 hora_fi = "22:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "/img/activitats/240217-ANIVERSARI-BOSTIK_p.jpg"
+imatge = "img/activitats/240217-ANIVERSARI-BOSTIK_p.jpg"
 descripcio = "Tornem a fer anys! Aniversari carnavalero de la Nau Bostik, vine a fer unes ballaruques i gaudir dels 9 anys de vida. La jornada començarà amb un Bingo musical i un karaoke organitzat per la comunit…"
 draft = false
 +++

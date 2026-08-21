@@ -4,7 +4,7 @@ date = 2025-05-17
 hora = "10:00"
 hora_fi = "21:00"
 preu = "Entrada lliure"
-imatge = "/img/activitats/250517_Bill2025_p.jpg"
+imatge = "img/activitats/250517_Bill2025_p.jpg"
 descripcio = "Bill Festival, la teva trobada anual de la il·lustració ESPAI → NAU PILAR VERS / NAU KM14 El Bill Festival és la teva trobada anual de la il·lustració. Amb el format de festival hem creat un espai m…"
 draft = false
 +++

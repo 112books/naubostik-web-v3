@@ -3,7 +3,7 @@ title = "Programa formatiu per a dones emprenedores"
 date = 2026-01-20
 hora = "10:00"
 hora_fi = "14:00"
-imatge = "/img/activitats/260120-El-cami-Saraswati_p.jpg"
+imatge = "img/activitats/260120-El-cami-Saraswati_p.jpg"
 descripcio = "Itineraris formatius per a dones que lideren des de realitats diverses ESPAI → SALA ROMAN POLANKIK El camí de Saraswati és una proposta formativa que parteix d’aquest esperit: un itinerari per a don…"
 draft = false
 +++

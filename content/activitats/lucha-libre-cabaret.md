@@ -4,7 +4,7 @@ date = 2026-04-04
 hora = "18:30"
 hora_fi = "22:00"
 preu = "19€"
-imatge = "/img/activitats/260404-Lucha-Libre-Cabaret_p.jpeg"
+imatge = "img/activitats/260404-Lucha-Libre-Cabaret_p.jpeg"
 descripcio = "Comença una nova era en el Cabaret i tu estàs convidada a viure-la a primera fila ESPAI → NAU KM14 Dissabte 4 d’abril les portes de Lucha Libre Cabaret tornen a obrir-se a Barcelona! Després d’arras…"
 draft = false
 +++

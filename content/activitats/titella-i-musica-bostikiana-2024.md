@@ -4,7 +4,7 @@ date = 2024-06-28
 hora = "20:00"
 hora_fi = "21:00"
 preu = "5€"
-imatge = "/img/activitats/BOSTIKIANA_divendres_p.png"
+imatge = "img/activitats/BOSTIKIANA_divendres_p.png"
 descripcio = "Espectacle amb Anna Maria Bostik, una iaia-titella ESPAI: NAU KM14 (PLANTA BAIXA) Bostikiana és un espectacle de titelles i música amb veu cantada en directe. Sorgeix de la necessitat d’explicar com…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2023-06-03
 hora = "11:30"
 hora_fi = "20:30"
 preu = "Gratuït"
-imatge = "/img/activitats/SLIDE1-1.jpeg"
+imatge = "img/activitats/SLIDE1-1.jpeg"
 descripcio = "V Jornada Indague i B-Murals Galeria B-Murals (Planta Baixa) Dissabte 3 de juny de 11:30 a 20:30 té lloc la V Jornada INDAGUE , associació espanyola per a la investigació i difusió de graffiti i art…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-01-11
 hora = "18:30"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "/img/activitats/240111-AFRO-MOTION_p.jpg"
+imatge = "img/activitats/240111-AFRO-MOTION_p.jpg"
 descripcio = "Diyata presenta Afro Motion ESPAI → NAU KM14 Dissabte 11 de gener prepara’t per a una experiència única plena de ritmes, colors i energia. Amb l’actuació en viu de KENKELIBA, el grup de percussió qu…"
 draft = false
 +++

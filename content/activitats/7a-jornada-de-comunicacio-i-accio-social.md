@@ -3,7 +3,7 @@ title = "7a Jornada de comunicació i acció social"
 date = 2023-06-16
 hora = "09:00"
 hora_fi = "16:30"
-imatge = "/img/activitats/0-e1684930371350.jpg"
+imatge = "img/activitats/0-e1684930371350.jpg"
 descripcio = "Social Lab: ‘Actuar en temps de crisi’ Nau 53 (Planta Baixa) Divendres 16 de juny, de 9:00h a 14:30h tindrà lloc una jornada de Social.cat » Actuar en temps de crisi . És un espai de trobada de prof…"
 draft = false
 +++

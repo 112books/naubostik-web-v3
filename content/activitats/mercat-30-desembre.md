@@ -4,7 +4,7 @@ date = 2025-11-30
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Tot a 1 € Especial Rave Market ESPAI → ANDY WARHOL i NAU 53 El diumenge 30 novembre, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Has vingut alguna vegada a un mercat am…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-12-11
 hora = "19:30"
 hora_fi = "21:30"
 preu = "Gratuït /Entrada lliure"
-imatge = "/img/activitats/241211_-Presentacio-Llibre-Lenin_p-1.jpg"
+imatge = "img/activitats/241211_-Presentacio-Llibre-Lenin_p-1.jpg"
 descripcio = "Presentació de “Si Lenin aixequés el cap” d’Albert Botran ESPAI → SALA ROMAN POLANKIK Conversa amb l’autor Albert Botran i Antonio Baños , periodista al voltant de Lenin, un pensador obert que recla…"
 draft = false
 +++

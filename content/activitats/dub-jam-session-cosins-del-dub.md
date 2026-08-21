@@ -4,7 +4,7 @@ date = 2026-05-24
 hora = "18:00"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "/img/activitats/260524_-Cosins-del-dub_p.jpg"
+imatge = "img/activitats/260524_-Cosins-del-dub_p.jpg"
 descripcio = "Els Cosins del Dub estem molt il·lusionats d’anunciar-vos el Tardeo de Dub & Reggae que estàveu esperant ESPAI → NAU KM14 Ets amant del Reggae, dub , musiclive? Aquest és l’esdeveniment al qual no p…"
 draft = false
 +++

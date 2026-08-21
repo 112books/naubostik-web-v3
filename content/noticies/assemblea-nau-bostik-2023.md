@@ -1,7 +1,7 @@
 +++
 title = "Assemblea de la Nau Bostik"
 date = 2023-03-01
-imatge = "/img/noticies/WhatsApp-Image-2023-03-01-at-11.53.52-6-e1677671386191.jpg"
+imatge = "img/noticies/WhatsApp-Image-2023-03-01-at-11.53.52-6-e1677671386191.jpg"
 draft = false
 +++
 

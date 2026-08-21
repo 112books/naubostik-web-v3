@@ -4,7 +4,7 @@ date = 2024-03-15
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "/img/activitats/expo_Bmurals.png"
+imatge = "img/activitats/expo_Bmurals.png"
 descripcio = "LANDSCAPES OF US Nowhere else but here ESPAI: GALERIA B-MURALS (PLANTA BAIXA) El treball artístic de MAJKA TKÁČIKOVÁ es va convertir en la seva eina per a construir una llar, donant forma a nous pai…"
 draft = false
 +++

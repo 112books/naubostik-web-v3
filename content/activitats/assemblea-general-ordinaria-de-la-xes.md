@@ -3,7 +3,7 @@ title = "Assemblea General Ordinària de la XES"
 date = 2026-03-14
 hora = "10:00"
 hora_fi = "14:00"
-imatge = "/img/activitats/260314-_Assemblea-XES_p.jpg"
+imatge = "img/activitats/260314-_Assemblea-XES_p.jpg"
 descripcio = "Trobada de la base social de la XES ESPAI → NAU KM14 Aquesta trobada de la base social de la XES és l’espai principal per compartir l’estat de l’organització, debatre’n les línies de treball i prend…"
 draft = false
 +++

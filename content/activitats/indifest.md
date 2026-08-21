@@ -4,7 +4,7 @@ date = 2023-10-20
 hora = "17:00"
 hora_fi = "21:30"
 preu = "Gratuït"
-imatge = "/img/activitats/IndieFEST_p.jpg"
+imatge = "img/activitats/IndieFEST_p.jpg"
 descripcio = "XVI Festival de Cine Indígena de Barcelona nau km14 (PLANTA BAIXA) Ganes de cinema? T’esperem a l’ IndiFest , amb una edició carregada de projeccions i activitats! Es tracta d’unes sessions de creac…"
 draft = false
 +++

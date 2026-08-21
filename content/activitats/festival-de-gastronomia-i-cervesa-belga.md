@@ -4,7 +4,7 @@ date = 2023-06-17
 hora = "12:00"
 hora_fi = "22:00"
 preu = "Entrada lliure"
-imatge = "/img/activitats/WhatsApp-Image-2023-05-12-at-13.37.22-1-1086x1536-1-e1684525616879.jpg"
+imatge = "img/activitats/WhatsApp-Image-2023-05-12-at-13.37.22-1-1086x1536-1-e1684525616879.jpg"
 descripcio = "Festival de Cervesa Belga Nau Pilar Vers (Planta Baixa) Dissabte 17 de juny de 2023 de 12 h a 22 h celebrarem a la Nau Bostik, un festival de cervesa i gastronomia belga amb 16 tiradors d’excel·lent…"
 draft = false
 +++

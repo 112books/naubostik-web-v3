@@ -3,7 +3,7 @@ title = "Festival Sereia · Música i cultura popular brasilera"
 date = 2025-02-02
 hora_fi = "22:00"
 preu = "Diversos preus"
-imatge = "/img/activitats/250202-Festival-Sereia_p-1.jpg"
+imatge = "img/activitats/250202-Festival-Sereia_p-1.jpg"
 descripcio = "El Festival Sereia torna amb novetats! ESPAI → NAU KM14 / ANDY WARHOL El Festival Sereia de Forró i Cultura Popular va néixer en 2019 amb un format de tallers, actuacions i immersió artística. Apost…"
 draft = false
 +++

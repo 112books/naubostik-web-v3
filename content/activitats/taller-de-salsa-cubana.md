@@ -3,7 +3,7 @@ title = "Taller de salsa cubana"
 date = 2023-09-26
 hora = "20:00"
 hora_fi = "22:00"
-imatge = "/img/activitats/salsa_02.png"
+imatge = "img/activitats/salsa_02.png"
 descripcio = "26 de setembre Classe de prova gratuïta Aquest setembre tornem amb el Taller de Salsa cubana! Deprés de l’èxit de la temporada passada, ampliem el curs d’iniciació amb el curs mitjà , per si ja tens…"
 draft = false
 +++

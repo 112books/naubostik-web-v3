@@ -5,7 +5,7 @@ data_fi = 2024-05-24
 hora = "11:30"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/Concerts-Finals-2024_p.jpg"
+imatge = "img/activitats/Concerts-Finals-2024_p.jpg"
 descripcio = "Comença el cicle de concerts finals del curs 2023-2024 Des del mes d’abril i fins al juny, l’alumnat de Grau i de Màster de les especialitats interpretatives i de Direcció mostrarà les competències…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2023-06-17
 hora = "16:30"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "/img/activitats/IMG-20230530-WA0000-e1685701866843.jpg"
+imatge = "img/activitats/IMG-20230530-WA0000-e1685701866843.jpg"
 descripcio = "20è Festival de Cant de l’Acadèmia Madisound Studios Nau Km14 (Planta Baixa) Dissabte 17 de juny de 16:30 a 22:00 tindrà lloc el 20è Festival de cant dels i les alumnes de l’acadèmia Madisound Studi…"
 draft = false
 +++

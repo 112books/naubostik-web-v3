@@ -4,7 +4,7 @@ date = 2024-11-10
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "/img/activitats/240221_MARKET_p.jpg"
+imatge = "img/activitats/240221_MARKET_p.jpg"
 descripcio = "Tot a 1 € i A kilo: Vintage Market ESPAI → ANDY WARHOL , PILAR VERS i NAU 53 TOT A 1 € Has vingut alguna vegada a un mercat ambulant de segona mà on tot es ven a 1 €? Diumenge 10 de novembre, es dur…"
 draft = false
 +++

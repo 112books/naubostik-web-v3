@@ -4,7 +4,7 @@ date = 2026-06-06
 hora = "11:00"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "/img/activitats/CARTEL-NOCTURNA_p.jpg"
+imatge = "img/activitats/CARTEL-NOCTURNA_p.jpg"
 descripcio = "Art fosc, creadors únics i alguna cosa que no sabies que estaves buscant ESPAI → NAU 53 Dissabte 6 de juny es celebra Nocturna BCN, un mercat d’estètica dark, esotèrica i alternativa que reuneix art…"
 draft = false
 +++

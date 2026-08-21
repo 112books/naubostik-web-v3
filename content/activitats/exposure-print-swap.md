@@ -4,7 +4,7 @@ date = 2025-10-05
 hora = "08:00"
 hora_fi = "21:00"
 preu = "Entrada lliure"
-imatge = "/img/activitats/251004-Exposure_p.jpg"
+imatge = "img/activitats/251004-Exposure_p.jpg"
 descripcio = "Fotografia analògica i skateboarding es donen la mà en Exposure Print – Swap ESPAI → NAU PILAR VERS Fotografia analògica i skateboarding es donen la mà en Exposure Print – Swap, un esdeveniment de d…"
 draft = false
 +++
