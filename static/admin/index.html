@@ -8,9 +8,11 @@
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     #nc-root { min-height: 100vh; }
 
-    .cms-footer { text-align: center; padding: 1rem; font-size: 0.75rem; color: #999; border-top: 1px solid #eee; background: #fafafa; }
-    .cms-footer a { color: #999; text-decoration: none; }
-    .cms-footer a:hover { color: #666; }
+    .cms-footer { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; font-size: 0.75rem; color: #666; border-top: 1px solid #eee; background: #fafafa; flex-wrap: wrap; gap: 0.5rem; }
+    .cms-footer a { color: #c41e3a; text-decoration: none; font-weight: 600; }
+    .cms-footer a:hover { text-decoration: underline; }
+    .cms-footer .cms-footer__right a { color: #999; font-weight: normal; margin-left: 1rem; }
+    .cms-footer .cms-footer__right a:hover { color: #666; }
 
     .nc-button-primary, .nc-button-primary:hover { background-color: #c41e3a !important; border-color: #c41e3a !important; }
     .nc-text-primary { color: #c41e3a !important; }
@@ -30,7 +32,7 @@
         var footer = document.createElement('div');
         footer.id = 'cms-footer';
         footer.className = 'cms-footer';
-        footer.innerHTML = 'Gestor de continguts de <a href="https://naubostik.com" target="_blank" rel="noopener"><strong>naubostik.com</strong></a> · Powered by <a href="https://linuxbcn.com" target="_blank" rel="noopener">LinuxBCN.com</a>';
+        footer.innerHTML = '<div class="cms-footer__left"><a href="/manual-cms/" target="_blank" rel="noopener">📖 Manual d\'Editors</a></div><div class="cms-footer__right"><a href="https://github.com/112books/naubostik-web-v3/issues" target="_blank" rel="noopener">Issues</a><span>Nau Bostik CMS v1.0</span></div>';
         root.appendChild(footer);
       }
     }
