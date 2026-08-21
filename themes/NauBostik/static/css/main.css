@@ -930,6 +930,36 @@ main.container {
   color: var(--color-accent);
 }
 
+.footer-konsento-bloc {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 1.5rem;
+  transition: opacity 0.2s;
+}
+
+.footer-konsento-bloc:hover { opacity: 0.75; }
+
+.footer-konsento-logo {
+  display: block;
+}
+
+.footer-konsento-nom {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.footer-konsento-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.15rem;
+}
+
 .footer-about address {
   font-style: normal;
   line-height: 2;
