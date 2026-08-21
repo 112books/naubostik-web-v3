@@ -1,8 +1,5 @@
-# Contingut de suport per a la portada.
-# Edita aquest fitxer per gestionar recursos i avisos sense tocar codi.
-
 recursos:
-  - titol: "Cedeix un espai"
+  - titol: "Cessió d'espais"
     descripcio: "Tens un projecte cultural o social? Coneix les condicions de cessió i reserva un espai a la Nau."
     url: "/cessio-despais/"
     tipus: "Espais"
@@ -11,8 +8,3 @@ recursos:
     descripcio: "Vols organitzar un taller, concert o exposició? Envia'ns la teva proposta de programació."
     url: "/proposa-activitat/"
     tipus: "Participa"
-
-  - titol: "Fes-te soci/a de l'AVV"
-    descripcio: "Dona suport al teixit veïnal de la Sagrera. L'Associació de Veïns treballa per millorar el barri."
-    url: "https://avvlasagrera.com/formulari-soci/"
-    tipus: "Territori"
