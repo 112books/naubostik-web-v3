@@ -1,12 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
+  base_url: https://auth.decapbridge.com/repos/112books/naubostik-web-v3
   branch: main
-  site_id: e6266d04-315d-480f-b258-cbbc08beb6a6
 
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
 media_folder: "static/img"
-public_folder: "/img"
+public_folder: "https://112books.github.io/naubostik-web-v3/img"
 
 slug:
   encoding: "unicode"
