@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  api_root: https://fastidious-melba-66bc1e.netlify.app/.netlify/identity
 
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
