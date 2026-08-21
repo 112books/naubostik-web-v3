@@ -40,9 +40,9 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  - name: "activitats-entitats"
-    label: "Activitats Entitats"
-    folder: "content/activitats-entitats"
+  - name: "activitats-residents"
+    label: "Activitats Residents"
+    folder: "content/activitats-residents"
     create: true
     slug: "{{slug}}"
     sort: { field: "date", order: "DESC" }
@@ -59,6 +59,30 @@ collections:
       - { label: "Planta", name: "planta", widget: "select", required: false, options: ["Planta Baixa", "Primera planta", "Segona planta", "Terrassa"] }
       - { label: "Enllac extern", name: "link_extern", widget: "string", required: false }
       - { label: "Col-lectiu", name: "collectiu", widget: "string", required: false }
+      - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
+      - { label: "Cos", name: "body", widget: "markdown", required: false }
+
+  # ── Tallers i activitats regulars ──
+  - name: "tallers"
+    label: "Tallers"
+    folder: "content/tallers"
+    create: true
+    slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
+    fields:
+      - { label: "Titol", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Imatge principal", name: "imatge", widget: "image", required: false }
+      - label: "Mes imatges"
+        name: "galeria"
+        widget: "list"
+        required: false
+        field: { label: "Imatge", name: "imatge", widget: "image" }
+      - { label: "Descripcio", name: "descripcio", widget: "text", required: false }
+      - { label: "Espai", name: "espai", widget: "string", required: false }
+      - { label: "Responsable", name: "responsable", widget: "string", required: false }
+      - { label: "Horari", name: "horari", widget: "string", required: false }
+      - { label: "Mes informacio (URL externa)", name: "link", widget: "string", required: false }
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
@@ -137,30 +161,6 @@ collections:
             fields:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Tipus", name: "tipus", widget: "select", options: ["tancament", "campanya", "info"] }
-
-  - name: "tallers-regulars"
-    label: "Tallers i activitats regulars"
-    files:
-      - name: "tallers-regulars"
-        label: "Tallers i activitats regulars"
-        file: "data/tallers-regulars.yaml"
-        fields:
-          - label: "Tallers"
-            name: "tallers"
-            widget: "list"
-            fields:
-              - { label: "Titol", name: "title", widget: "string" }
-              - { label: "Descripcio", name: "descripcio", widget: "text", required: false }
-              - { label: "Imatge principal", name: "imatge", widget: "image", required: false }
-              - label: "Mes imatges"
-                name: "galeria"
-                widget: "list"
-                required: false
-                field: { label: "Imatge", name: "imatge", widget: "image" }
-              - { label: "Espai", name: "espai", widget: "string", required: false }
-              - { label: "Responsable", name: "responsable", widget: "string", required: false }
-              - { label: "Horari", name: "horari", widget: "string", required: false }
-              - { label: "Mes informacio", name: "link", widget: "string", required: false }
 
   - name: "slogans"
     label: "Slogans"

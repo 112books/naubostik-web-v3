@@ -245,22 +245,30 @@ hugo --minify --baseURL https://naubostik.com/
 
 ---
 
-## 8. CMS Decap (estàtic, via GitHub)
+## 8. CMS Decap + Netlify Identity (Git Gateway)
 
 ### 8.1 Estratègia
 
-Decap CMS (abans Netlify CMS) és un CMS estàtic que commita directament al repo GitHub. Cap servidor backend, cap base de dades, zero cost addicional. L'usuari edita via `https://112books.github.io/naubostik-web-v3/admin/`, Decap fa push al branch `main`, GitHub Actions reconstrueix Hugo i desplega.
+Decap CMS amb backend **Git Gateway** de Netlify. Els editors entren amb **email + password** (sense compte de GitHub). Cada canvi és un commit al repo GitHub. Netlify només es fa servir per Identity + Git Gateway (pla gratuït). El site continua desplegat a GitHub Pages.
+
+- **CMS URL:** `https://112books.github.io/naubostik-web-v3/admin/`
+- **Netlify projecte:** `fastidious-melba-66bc1e`
+- **Compte Netlify:** `webmaster@naubostik.com` (Google Workspace)
 
 ### 8.2 Autenticació
 
-**Opció primària: GitHub OAuth App**
-- Crear una GitHub OAuth App al repo `112books/naubostik-web-v3`
-- Client ID + Secret emmagatzemats al CMS config
-- Usuaris autoritzats: llista blanca al config.yml (membres de l'equip)
+**Backend: Git Gateway (Netlify Identity)**
+- Editors entren amb email + password (sense GitHub)
+- Netlify gestiona usuaris, contrasenyes i tokens
+- Cada commit es fa al branch `main` del repo GitHub
+- Registre: **"Invite only"** (només usuaris convidats poden entrar)
 
-**Opció de fallback: External OAuth (Cloudflare Worker)**
-- Si GitHub OAuth no funciona directament (GH Pages no suporta redirect URI), usar un Cloudflare Worker com a proxy OAuth
-- Worker gratuït (100k requests/dia)
+**Compte Netlify:**
+- Email: `webmaster@naubostik.com`
+- Google Workspace de Nau Bostik
+- Projecte: `fastidious-melba-66bc1e`
+- Site ID: `e6266d04-315d-480f-b258-cbbc08beb6a6`
+- Identity API: `https://fastidious-melba-66bc1e.netlify.app/.netlify/identity`
 
 ### 8.3 Fitxers
 
