@@ -28,22 +28,12 @@
     function injectElements() {
       var root = document.getElementById('nc-root');
       if (!root) return;
-
       if (!document.getElementById('cms-footer')) {
         var footer = document.createElement('div');
         footer.id = 'cms-footer';
         footer.className = 'cms-footer';
         footer.innerHTML = 'Gestor de continguts de <a href="https://naubostik.com" target="_blank" rel="noopener"><strong>naubostik.com</strong></a> · Powered by <a href="https://linuxbcn.com" target="_blank" rel="noopener">LinuxBCN.com</a>';
         root.appendChild(footer);
-      }
-
-      var logo = root.querySelector('.nc-logo');
-      if (logo && !document.getElementById('cms-description')) {
-        var desc = document.createElement('p');
-        desc.id = 'cms-description';
-        desc.className = 'cms-description';
-        desc.textContent = 'Conviure, crear i cuidar. Espai cultural autogestionat al barri de la Sagrera.';
-        logo.parentNode.insertBefore(desc, logo.nextSibling);
       }
     }
 

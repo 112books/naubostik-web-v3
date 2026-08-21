@@ -10,7 +10,6 @@
     .cms-footer { text-align: center; padding: 1rem; font-size: 0.75rem; color: #999; border-top: 1px solid #eee; background: #fafafa; margin-top: auto; }
     .cms-footer a { color: #999; text-decoration: none; }
     .cms-footer a:hover { color: #666; }
-    .cms-description { text-align: center; padding: 0.75rem 1rem 0; font-size: 0.85rem; color: #666; line-height: 1.4; }
     .nc-button-primary, .nc-button-primary:hover { background-color: #c41e3a !important; border-color: #c41e3a !important; }
     .nc-text-primary { color: #c41e3a !important; }
     .nc-border-primary { border-color: #c41e3a !important; }
@@ -29,14 +28,6 @@
         footer.className = 'cms-footer';
         footer.innerHTML = 'Gestor de continguts de <a href="https://naubostik.com" target="_blank" rel="noopener"><strong>naubostik.com</strong></a> · Powered by <a href="https://linuxbcn.com" target="_blank" rel="noopener">LinuxBCN.com</a>';
         root.appendChild(footer);
-      }
-      var logo = root.querySelector('.nc-logo');
-      if (logo && !document.getElementById('cms-description')) {
-        var desc = document.createElement('p');
-        desc.id = 'cms-description';
-        desc.className = 'cms-description';
-        desc.textContent = 'Conviure, crear i cuidar. Espai cultural autogestionat al barri de la Sagrera.';
-        logo.parentNode.insertBefore(desc, logo.nextSibling);
       }
     }
     var observer = new MutationObserver(function() { injectElements(); });
