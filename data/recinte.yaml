@@ -1,12 +1,9 @@
-# Indicador d'estat del recinte. Actualitzar manualment o des del CMS.
-# estat: obert | tancat | parcial
 estat: tancat
-nota: "Tancat per vacances fins al 24 d'agost"
-
-# Avisos destacats que apareixen a la part superior de la portada.
-# tipus: tancament | campanya | info
+nota: Tancat per vacances fins al 24 d'agost
 avisos:
-  - text: "Tancat per vacances d'estiu del 14 al 24 d'agost. Tornem el 25 amb molta energia!"
+  - text: Tancat per vacances d'estiu del 01 al 31 d'agost. Tornem el 01 amb molta
+      energia!
     tipus: tancament
-  - text: "La Sagrera necessita més un centre cultural que una estació d'Alta Velocitat"
+  - text: La Sagrera necessita més un centre cultural que una estació d'Alta
+      Velocitat
     tipus: campanya
