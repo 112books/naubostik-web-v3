@@ -7,7 +7,7 @@
     {{ if $heroImages }}
     <div class="hero-slideshow" aria-hidden="true">
       {{ range $i, $img := $heroImages }}
-      <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}" style="background-image:url('{{ $img.src | relURL }}')"></div>
+      <div class="hero-slide{{ if eq $i 0 }} is-active{{ end }}" style="background-image:url('{{ printf "img/%s" $img.src | relURL }}')"></div>
       {{ end }}
     </div>
     {{ if gt (len $heroImages) 1 }}
