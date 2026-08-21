@@ -5,7 +5,7 @@ hora = "19:00"
 hora_fi = "22:00"
 preu = "Gratuït"
 planta = "Sala Basiana (Nau Bostik)"
-imatge = "img/activitats/WhatsApp-Image-2023-02-21-at-11.24.46.jpeg"
+imatge = "/img/activitats/WhatsApp-Image-2023-02-21-at-11.24.46.jpeg"
 descripcio = "«Epifanía/Éxtasis» és un espectacle amb la poesia com a eix vertebrador que s’endinsa en el vessant més escènic i experimental del gènere. A partir de 14 textos, poemes escollits dels llibres Paraís…"
 draft = false
 +++

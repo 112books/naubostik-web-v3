@@ -4,7 +4,7 @@ date = 2026-05-15
 hora = "09:00"
 hora_fi = "15:00"
 preu = "Gratuïta (amb inscripció)"
-imatge = "img/activitats/260515-PLENARIA-MUTARE_p.jpg"
+imatge = "/img/activitats/260515-PLENARIA-MUTARE_p.jpg"
 descripcio = "La Fundació Carulla amb la cultura compromesa ESPAI → NAU 53 / ANDY WARHOL Davant de certeses com l’auge de l’individualisme, el racisme o els discursos d’odi que deshumanitzen el món, la cultura co…"
 draft = false
 +++

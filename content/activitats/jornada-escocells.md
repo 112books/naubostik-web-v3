@@ -4,7 +4,7 @@ date = 2024-06-15
 hora = "11:00"
 hora_fi = "13:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/CARTELL-ESCOCELLS_p.jpg"
+imatge = "/img/activitats/CARTELL-ESCOCELLS_p.jpg"
 descripcio = "Des de l’Horstik de la Nau Bostik farem escocells als arbres ESPAI: EXTERIOR C/ FERRAN TURNÉ Volem convidar des de l’Horstik de la Nau Bostik al veïnat de la Sagrera a participar en aquesta activita…"
 draft = false
 +++

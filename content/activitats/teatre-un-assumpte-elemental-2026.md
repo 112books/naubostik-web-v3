@@ -3,7 +3,7 @@ title = "Teatre · Un assumpte elemental"
 date = 2026-02-06
 hora = "19:00"
 hora_fi = "20:00"
-imatge = "img/activitats/260206-TEATRE-ProperESS_p.jpg"
+imatge = "/img/activitats/260206-TEATRE-ProperESS_p.jpg"
 descripcio = "Teatre documental basat en testimonis de la vida real i natural ESPAI → NAU KM14 Què passaria si la Terra i l’Aigua es trobessin per a fer un te? De què parlarien? Què faria que se sentissin angoixa…"
 draft = false
 +++

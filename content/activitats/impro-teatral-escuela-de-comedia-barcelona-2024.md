@@ -4,7 +4,7 @@ date = 2024-11-30
 hora = "20:00"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/Escuela-de-Comedia-Barcelona_p.jpeg"
+imatge = "/img/activitats/Escuela-de-Comedia-Barcelona_p.jpeg"
 descripcio = "Show d’improvisació teatral: «No hay error» ESPAI → SALA BASIANA Torna el grup de IMPRO PRO d’Escuela de Comedia Barcelona amb NO HAY ERROR. En el nostre món de impro i joc no existeix l’ERROR, nomé…"
 draft = false
 +++

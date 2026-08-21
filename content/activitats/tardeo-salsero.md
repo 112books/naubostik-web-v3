@@ -4,7 +4,7 @@ date = 2025-06-14
 hora = "18:00"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
+imatge = "/img/activitats/241006-VERMUT-SALSERO-2_p.jpg"
 descripcio = "Taller i ball social de salsa ESPAI → NAU 53 Vine a passar una bona estona ballant! Aquest dissabte 14 de juny, el col·lectiu salsero de la Bostik, autogestionen aquest tardeo salsero. L’ENTRADA ÉS…"
 draft = false
 +++

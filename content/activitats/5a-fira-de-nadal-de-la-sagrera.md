@@ -4,7 +4,7 @@ date = 2024-12-22
 hora = "11:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/2024_-FIRA-NADAL-2_p.jpg"
+imatge = "/img/activitats/2024_-FIRA-NADAL-2_p.jpg"
 descripcio = "Regala artesania de proximitat a La Sagrera! ESPAI → NAU PILAR VERS / ANDY WARHOL / NAU 53 El diumenge 22 de desembre d’11 a 19 h se celebra la cinquena fira de Nadal al barri de la Sagrera. La sele…"
 draft = false
 +++

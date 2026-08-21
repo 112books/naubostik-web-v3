@@ -3,7 +3,7 @@ title = "Cap a on va la Renaturalització dels espais i els temps educatiu?"
 date = 2022-05-12
 hora = "18:30"
 hora_fi = "20:00"
-imatge = "img/activitats/2022_icona-jornades-bcn22-300x300-1.jpeg"
+imatge = "/img/activitats/2022_icona-jornades-bcn22-300x300-1.jpeg"
 descripcio = "Cap a on va la Renaturalització dels espais i els temps educatiu? Trobada de professionals i persones entorn a la Renaturalització dels espais i els temps educatius. Reflexionem, actuem, experimentem,…"
 draft = false
 +++

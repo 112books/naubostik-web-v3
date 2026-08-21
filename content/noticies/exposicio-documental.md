@@ -1,7 +1,7 @@
 +++
 title = "Exposició Documental"
 date = 2023-01-31
-imatge = "img/noticies/WhatsApp-Image-2023-01-30-at-22.29.04-1-e1675168488802.jpg"
+imatge = "/img/noticies/WhatsApp-Image-2023-01-30-at-22.29.04-1-e1675168488802.jpg"
 draft = false
 +++
 

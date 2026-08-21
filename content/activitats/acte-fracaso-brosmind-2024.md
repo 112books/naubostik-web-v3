@@ -4,7 +4,7 @@ date = 2024-12-04
 hora = "18:30"
 hora_fi = "21:30"
 preu = "Gratuït / Amb inscripció"
-imatge = "img/activitats/241204_-Fracaso_p.jpg"
+imatge = "/img/activitats/241204_-Fracaso_p.jpg"
 descripcio = "Fracaso amb Brosmind ESPAI → NAU KM14 El dimecres 4 de desembre, els germans Juan i Alejandro Mingarro, més coneguts com Brosmind , ens acompanyaran en l’últim episodi de la temporada Barcelona. Un…"
 draft = false
 +++

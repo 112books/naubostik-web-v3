@@ -4,7 +4,7 @@ date = 2023-12-17
 hora = "10:00"
 hora_fi = "18:00"
 preu = "Gratuït"
-imatge = "img/activitats/231217_-FIRA-ARTESANIA-NADAL_pp.jpg"
+imatge = "/img/activitats/231217_-FIRA-ARTESANIA-NADAL_pp.jpg"
 descripcio = "4a Fira de nadal Regala artesania de proximitat a La Sagrera! El diumenge 17 de desembre de 10 a 18 h se celebra la quarta fira de Nadal al barri de la Sagrera. La selecció de la fira d’artesanes d’…"
 draft = false
 +++

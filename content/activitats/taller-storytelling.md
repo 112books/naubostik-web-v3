@@ -4,7 +4,7 @@ date = 2025-03-27
 hora = "10:00"
 hora_fi = "13:30"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/250327-storytelling_p.jpg"
+imatge = "/img/activitats/250327-storytelling_p.jpg"
 descripcio = "Taller de comunicació digital de projectes artístics i culturals ESPAI → SALA MIRADOR L’ús de les diferents eines digitals s’ha convertit en un recurs indispensable per a assegurar la visibilitat i…"
 draft = false
 +++

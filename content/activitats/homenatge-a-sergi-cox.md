@@ -3,7 +3,7 @@ title = "Homenatge a Sergi Cox"
 date = 2026-01-18
 hora_fi = "17:00"
 preu = "5€"
-imatge = "img/activitats/260118-Homenatge-a-Sergi-Cox_p.jpg"
+imatge = "/img/activitats/260118-Homenatge-a-Sergi-Cox_p.jpg"
 descripcio = "Sergi Cox, creador inesgotable la petjada del qual segueix viva a l’escena artística de Barcelona ESPAI → NAU KM14 El pròxim 18 de gener celebrem un homenatge col·lectiu a la vida i l’obra de Sergi…"
 draft = false
 +++

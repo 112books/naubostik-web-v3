@@ -6,7 +6,7 @@ hora = "16:30"
 hora_fi = "20:00"
 preu = "Gratuït"
 planta = "Sala Aureli Gandul (Nau Bostik)"
-imatge = "img/activitats/cartell-ciutat-vacant-A3-scaled.jpg"
+imatge = "/img/activitats/cartell-ciutat-vacant-A3-scaled.jpg"
 descripcio = "Exposició i taula rodona ‘Barcelona Ciutat VACANT’ «Ciutat vacant. Experiències de re-ús d’edificis infrautilitzats » és una jornada composta per una taula rodona i exposició que vol ser un espai de…"
 draft = false
 +++

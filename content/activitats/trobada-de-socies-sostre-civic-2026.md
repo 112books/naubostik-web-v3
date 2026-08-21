@@ -4,7 +4,7 @@ date = 2026-04-25
 hora = "09:30"
 hora_fi = "16:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/260425-SOSTRE-CIVIC_p.jpg"
+imatge = "/img/activitats/260425-SOSTRE-CIVIC_p.jpg"
 descripcio = "Un sostre per a les classes populars ESPAI → NAU PILAR VERS / ANDY WARHOL El 25 d’abril ens tornem a trobar! En un moment en què l’habitatge s’ha convertit en un luxe i no en un dret, volem reflexio…"
 draft = false
 +++

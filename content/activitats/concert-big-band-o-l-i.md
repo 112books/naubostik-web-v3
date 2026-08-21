@@ -4,7 +4,7 @@ date = 2024-01-15
 hora = "19:00"
 hora_fi = "21:30"
 preu = "8€"
-imatge = "img/activitats/240108-O.L.I-Big-band-ESMUC_p.jpg"
+imatge = "/img/activitats/240108-O.L.I-Big-band-ESMUC_p.jpg"
 descripcio = "Big Band O.L.I. en concert NAU KM14 (PLANTA BAIXA) El pròxim dilluns 15 de gener, la Nau Bostik acollirà el concert de la Big Band ‘O.L.I.’ Un projecte musical creat per estudiants amb l’objectiu d’…"
 draft = false
 +++

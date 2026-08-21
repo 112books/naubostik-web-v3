@@ -4,7 +4,7 @@ date = 2026-06-05
 hora = "19:00"
 hora_fi = "22:00"
 preu = "15€"
-imatge = "img/activitats/260605-VUELO-DESPIERTO_p.jpeg"
+imatge = "/img/activitats/260605-VUELO-DESPIERTO_p.jpeg"
 descripcio = "Vuelo Despierto presenta “Todo o Nada”, el seu primer disc d’estudi en viu ESPAI → NAU KM14 Divendres 4 de juny, Vuelo Despierto presenta a la Nau Bostik el seu primer xou de l’any — i no és només u…"
 draft = false
 +++

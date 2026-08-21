@@ -5,7 +5,7 @@ data_fi = 2023-10-07
 hora = "20:00"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/231005-Mixtur_p.jpeg"
+imatge = "/img/activitats/231005-Mixtur_p.jpeg"
 descripcio = "Sond’Ar-te Electric Ensemble Ensemble Kompopolex Ensemble LUX:NM MIXTUR. Festival de nova creació sonora de Barcelona NAU KM14 (PLANTA BAIXA) Del 5 al 15 d’octubre, tindrà lloc a Barcelona la 12a ed…"
 draft = false
 +++

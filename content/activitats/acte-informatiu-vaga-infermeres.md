@@ -4,7 +4,7 @@ date = 2024-01-24
 hora = "17:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/240124_-Acte-manifestacio-infermeres_p.jpeg"
+imatge = "/img/activitats/240124_-Acte-manifestacio-infermeres_p.jpeg"
 descripcio = "Suport a la vaga de les infermeres, TCAI i GIS del CAP de la Sagrera Sala Roman Polankik (planta baixa) Salvem el Cap La Sagrera un acte informatiu sobre la vaga sanitària a càrrec del mateix person…"
 draft = false
 +++

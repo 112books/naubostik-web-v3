@@ -3,7 +3,7 @@ title = "Maniac Barber Fest"
 date = 2023-04-16
 hora = "09:30"
 hora_fi = "20:00"
-imatge = "img/activitats/rafa.earthblack_20230314_123111.801179_0.jpg"
+imatge = "/img/activitats/rafa.earthblack_20230314_123111.801179_0.jpg"
 descripcio = "Maniac Barber Fest arriba a Barcelona Diumenge 16 d’abril tindrà lloc el Maniac Barber Fest , una jornada que inclourà formació/seminari ( de 9.30h a 14.00h) i seguidament, batalla . La formació con…"
 draft = false
 +++

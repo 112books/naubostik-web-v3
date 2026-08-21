@@ -82,7 +82,7 @@
       <a class="home-act-card" href="{{ .RelPermalink }}">
         {{ if .Params.imatge }}
         <div class="home-act-card__img">
-          <img src="{{ .Params.imatge }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ .Params.imatge | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="home-act-card__body">
@@ -246,7 +246,7 @@
     <div class="equip-grid">
       {{ range .treballadors }}
       <div class="equip-card">
-        {{ if .foto }}<div class="equip-card__foto"><img src="{{ .foto }}" alt="{{ .nom }}" loading="lazy"></div>
+        {{ if .foto }}<div class="equip-card__foto"><img src="{{ .foto | strings.TrimPrefix "/" | relURL }}" alt="{{ .nom }}" loading="lazy"></div>
         {{ else }}<div class="equip-card__foto equip-card__foto--placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>{{ end }}
         <div class="equip-card__body">
           <h3 class="equip-card__nom">{{ .nom }}</h3>
@@ -263,7 +263,7 @@
     <div class="equip-grid">
       {{ range .colaboradors }}
       <div class="equip-card">
-        {{ if .foto }}<div class="equip-card__foto"><img src="{{ .foto }}" alt="{{ .nom }}" loading="lazy"></div>
+        {{ if .foto }}<div class="equip-card__foto"><img src="{{ .foto | strings.TrimPrefix "/" | relURL }}" alt="{{ .nom }}" loading="lazy"></div>
         {{ else }}<div class="equip-card__foto equip-card__foto--placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>{{ end }}
         <div class="equip-card__body">
           <h3 class="equip-card__nom">{{ .nom }}</h3>

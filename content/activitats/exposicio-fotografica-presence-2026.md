@@ -5,7 +5,7 @@ data_fi = 2026-07-25
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Gratuït"
-imatge = "img/activitats/260625-Expo-elisava_p.jpg"
+imatge = "/img/activitats/260625-Expo-elisava_p.jpg"
 descripcio = "Exposició del Màster en Fotografia i Disseny, escola de disseny Elisava ESPAI → SALA GANDUL “Presence” reuneix els mons interiors de dieciseis fotògrafes i fotògrafs. Cada obra contribueix a les nos…"
 draft = false
 +++

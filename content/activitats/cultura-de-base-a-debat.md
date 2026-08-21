@@ -4,7 +4,7 @@ date = 2024-05-09
 hora = "18:00"
 hora_fi = "21:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/240509_-DEBAT-cultura-de-base_p-copia.jpeg"
+imatge = "/img/activitats/240509_-DEBAT-cultura-de-base_p-copia.jpeg"
 descripcio = "Debat entre els representants de les forces polítiques progressistes Cultura de Base de Barcelona (CB) us convidem a participar d’un debat entre els representants de les forces polítiques progressis…"
 draft = false
 +++

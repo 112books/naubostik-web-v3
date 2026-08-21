@@ -4,7 +4,7 @@ date = 2025-10-19
 hora = "18:00"
 hora_fi = "20:00"
 preu = "12€ - 15€"
-imatge = "img/activitats/251018-CIUTAT-FLAMENCO_p.jpg"
+imatge = "/img/activitats/251018-CIUTAT-FLAMENCO_p.jpg"
 descripcio = "VANESA AIBAR, amb la col·laboració d’Estampa ESPAI → NAU KM14 CRISTALIZACIÓN IV Cristalización IV és la trobada poètica entre el cos flamenco de Vanesa Aibar i la mirada científica del cristal·lògra…"
 draft = false
 +++

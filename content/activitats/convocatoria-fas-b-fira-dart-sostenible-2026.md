@@ -5,7 +5,7 @@ data_fi = 2026-04-30
 hora = "08:00"
 hora_fi = "23:59"
 preu = "Amb inscripció"
-imatge = "img/activitats/2026-CARTELL-FASB_2p.jpg"
+imatge = "/img/activitats/2026-CARTELL-FASB_2p.jpg"
 descripcio = "Convocatòria per a Firaires i Tallers ESPAI → NAU PILAR VERS / ANDY WARHOL La FAS-B, Fira d’Art Sostenible de Barcelona, torna un any més a la Nau Bostik en una quarta edició, el dia 7 de juny de 20…"
 draft = false
 +++

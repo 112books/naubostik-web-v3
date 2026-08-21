@@ -1,7 +1,7 @@
 +++
 title = "BCN YOGA DAY"
 date = 2022-06-19
-imatge = "img/activitats/unnamed-ac347b.jpeg"
+imatge = "/img/activitats/unnamed-ac347b.jpeg"
 descripcio = "¿Qué es el Barcelona Yoga Day? El Barcelona Yoga Day es un punto de encuentro, reunión y celebración de practicantes y profesionales del yoga donde poder compartir y celebrar desde los principios yógu…"
 draft = false
 +++

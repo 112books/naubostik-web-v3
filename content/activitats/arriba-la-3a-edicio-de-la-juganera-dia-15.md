@@ -4,7 +4,7 @@ date = 2023-07-15
 hora = "18:00"
 hora_fi = "23:00"
 preu = "Gratuït"
-imatge = "img/activitats/2023-JUGANERA_-POST.dia-15.jpg"
+imatge = "/img/activitats/2023-JUGANERA_-POST.dia-15.jpg"
 descripcio = "Arriba la tercera edició de La Juganera: concerts a la Nau Bostik Espais exteriors (Planta Baixa) Amb una calor espatarrant i unes ganes esbojarrades de continuar fent malifetes perpètuament, la Com…"
 draft = false
 +++

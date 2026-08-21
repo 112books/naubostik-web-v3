@@ -1,7 +1,7 @@
 +++
 title = "Pre-Halloween Market"
 date = 2022-10-04
-imatge = "img/noticies/WhatsApp-Image-2022-10-04-at-11.35.20-edited-1.jpg"
+imatge = "/img/noticies/WhatsApp-Image-2022-10-04-at-11.35.20-edited-1.jpg"
 draft = false
 +++
 

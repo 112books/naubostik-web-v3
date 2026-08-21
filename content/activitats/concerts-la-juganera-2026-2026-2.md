@@ -4,7 +4,7 @@ date = 2026-05-29
 hora = "18:00"
 hora_fi = "23:00"
 preu = "Gratuït"
-imatge = "img/activitats/JUGANERA.26-_p.jpg"
+imatge = "/img/activitats/JUGANERA.26-_p.jpg"
 descripcio = "Arriba la 6a edició de La Juganera: concerts a la Nau Bostik ESPAI S EXTERIORS DE LA NAU BOSTIK (PLANTA BAIXA) Ja està aquí, ja ha arribat la 6a Edició de LA JUGANERA Cicle de concerts comunitari de…"
 draft = false
 +++

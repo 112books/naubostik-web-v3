@@ -4,7 +4,7 @@ date = 2026-01-17
 hora = "19:00"
 hora_fi = "21:00"
 preu = "10,4€"
-imatge = "img/activitats/260117-Cartell-Goliards_p.jpg"
+imatge = "/img/activitats/260117-Cartell-Goliards_p.jpg"
 descripcio = "The Goliards Collective a la Nau Bostik – L’últim ball ESPAI → NAU KM14 Dissabte 17 de gener els Goliards pujaran per últim cop a l’escenari. Últim concert de la banda de reggae, ska i altres espèci…"
 draft = false
 +++

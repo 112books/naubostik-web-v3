@@ -6,7 +6,7 @@ hora = "19:00"
 hora_fi = "22:00"
 preu = "Gratuït"
 planta = "Sala Basiana (Nau Bostik)"
-imatge = "img/activitats/Mountain-and-Sea-Photo-Redes.png"
+imatge = "/img/activitats/Mountain-and-Sea-Photo-Redes.png"
 descripcio = "L’exposició «Mar i Montanya» es tracta d’una exposició fotogràfica de diferents entorns naturals, d’entorns de mar i de muntanya. L’autor de les fotografies és Aurelio Gandul Lora, soci fundador de…"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Entrevista a Lluís Filella, impulsor de l'Horstik"
 date = 2023-03-05
-imatge = "img/noticies/noticia_horstik.jpg"
+imatge = "/img/noticies/noticia_horstik.jpg"
 draft = false
 +++
 

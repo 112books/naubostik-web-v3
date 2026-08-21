@@ -4,7 +4,7 @@ date = 2024-04-28
 hora = "11:00"
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "img/activitats/240428-Pinhole_p.jpeg"
+imatge = "/img/activitats/240428-Pinhole_p.jpeg"
 descripcio = "NO plans, NO regles, NO estrès ESPAI: EXTERIOR I SALA BASIANA El diumenge 28 d’abril, vine a passar-ho bé, el dia internacional de la fotografia estenopeica; la més primitiva, crua i alhora accessib…"
 draft = false
 +++

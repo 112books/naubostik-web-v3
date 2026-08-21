@@ -3,7 +3,7 @@ title = "Celebración Holi"
 date = 2022-03-18
 hora = "17:30"
 hora_fi = "22:30"
-imatge = "img/activitats/event_img_entraium_holi.jpg"
+imatge = "/img/activitats/event_img_entraium_holi.jpg"
 descripcio = "CELEBRACIÓN HOLI FIESTA DE LOS COLORES Kirtan de celebración con Manu Om, Karuna, Lucas Masciano, Gonzalo Paniagua y la baking band Atman Brothers. Coincidiendo con la famosa celebración India Holi. F…"
 draft = false
 +++

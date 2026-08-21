@@ -4,7 +4,7 @@ date = 2024-02-29
 hora = "19:30"
 hora_fi = "22:00"
 preu = "15€"
-imatge = "img/activitats/240225-Concert-Tue_-caspita_p.jpg"
+imatge = "/img/activitats/240225-Concert-Tue_-caspita_p.jpg"
 descripcio = "THE TRUE CONCERTS SALA BASIANA (PLATA BAIXA) Us convidem al concert solidari al 29 de febrer a les 19:30 h organitzat per Asha And The True Ones @ushamiro @sir_richard_wakefield. Grans veus i ritme…"
 draft = false
 +++

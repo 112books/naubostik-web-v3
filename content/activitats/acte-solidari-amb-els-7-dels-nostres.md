@@ -4,7 +4,7 @@ date = 2026-04-30
 hora = "19:30"
 hora_fi = "22:30"
 preu = "25€"
-imatge = "img/activitats/260430-Sopar-solidari-amb-@7delsnostres_p.jpg"
+imatge = "/img/activitats/260430-Sopar-solidari-amb-@7delsnostres_p.jpg"
 descripcio = "Acte de suport als 7 represaliats de la Vaga General de 29 de març de 2012 ESPAI → NAU 53 i NAU KM14 Dijous 30 d’abril celebrem l’acte de suport als 7 represaliats de la Vaga General de 29 de març d…"
 draft = false
 +++

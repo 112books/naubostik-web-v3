@@ -4,7 +4,7 @@ date = 2023-06-10
 hora = "09:30"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/deute-seminari-odg-2023-e1684325195432.jpg"
+imatge = "/img/activitats/deute-seminari-odg-2023-e1684325195432.jpg"
 descripcio = "Seminari d’ODG per fer front a una nova onada d’austeritat tenyida de verd Nau Roman Polankik (Planta Baixa) Emergència climàtica, deute, feminismes, antiracisme, justícia global, diàlegs, concerts…"
 draft = false
 +++

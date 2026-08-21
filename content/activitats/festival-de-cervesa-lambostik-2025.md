@@ -4,7 +4,7 @@ date = 2025-11-14
 data_fi = 2025-11-15
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/LAMBOSTIK_p.jpg"
+imatge = "/img/activitats/LAMBOSTIK_p.jpg"
 descripcio = "Dia de cervesa i cultura a Lambostik Divendres 14 i dissabte 15 de novembre torna la Lambostik amb les millors cerveses catalanes i belgues. Entrada gratuïta i ambient amb DJ’s! El festival se celeb…"
 draft = false
 +++

@@ -2,15 +2,15 @@
 # qualsevol futur CMS que llegeixi fitxers YAML de data/ (mateix patró que
 # data/slogans.yaml). L'ordre de la llista és l'ordre del slideshow.
 images:
-  - src: "img/hero/hero-1.jpg"
+  - src: "/img/hero/hero-1.jpg"
     alt: "Nau Bostik"
-  - src: "img/hero/hero-2.jpg"
+  - src: "/img/hero/hero-2.jpg"
     alt: "Nau Bostik"
-  - src: "img/hero/hero-3.jpg"
+  - src: "/img/hero/hero-3.jpg"
     alt: "Nau Bostik"
-  - src: "img/hero/hero-4.jpg"
+  - src: "/img/hero/hero-4.jpg"
     alt: "Nau Bostik"
-  - src: "img/hero/hero-5.jpg"
+  - src: "/img/hero/hero-5.jpg"
     alt: "Nau Bostik"
-  - src: "img/hero/hero-6.jpg"
+  - src: "/img/hero/hero-6.jpg"
     alt: "Nau Bostik"

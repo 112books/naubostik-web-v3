@@ -3,7 +3,7 @@ title = "Presentació de l’informe: Del sistema de (des)protecció al carrer"
 date = 2022-09-20
 hora = "18:30"
 hora_fi = "20:00"
-imatge = "img/activitats/PROP_CARTELL1024x512.jpeg"
+imatge = "/img/activitats/PROP_CARTELL1024x512.jpeg"
 descripcio = "Presentació de l’informe: Del sistema de (des)protecció al carrer El proper dimarts 20 de setembre al vespre, el CNJC presentem públicament el seu darrer informe, elaborat durantels darrers mesos: El…"
 draft = false
 +++

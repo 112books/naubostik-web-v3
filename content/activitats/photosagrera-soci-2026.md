@@ -6,7 +6,7 @@ hora = "11:00"
 entitat = "Photosagrera"
 planta = "Planta Baixa"
 preu = "Quota de soci/a"
-imatge = "img/activitats/photosagrera-soci-2026.jpg"
+imatge = "/img/activitats/photosagrera-soci-2026.jpg"
 descripcio = "Fes-te soci/a de l'Espai Fotogràfic Photosagrera i participa de la comunitat fotogràfica de la Sagrera."
 draft = false
 +++

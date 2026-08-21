@@ -4,7 +4,7 @@ date = 2026-04-29
 data_fi = 2026-05-04
 hora = "18:00"
 hora_fi = "19:30"
-imatge = "img/activitats/2026-CURSOS-PINTURA-MELISSA_p.jpg"
+imatge = "/img/activitats/2026-CURSOS-PINTURA-MELISSA_p.jpg"
 descripcio = "Inscripcións obertes als tallers de pintura acrílica i pintura amb aquarel.la A la Nau Bostik oferim uns nous tallers artístics, a partir de maig. Taller de PINTURA ACRÍLICA Tots els dimarts de maig…"
 draft = false
 +++

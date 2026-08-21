@@ -5,7 +5,7 @@ data_fi = 2025-12-14
 hora = "17:30"
 hora_fi = "20:30"
 preu = "Diversos preus"
-imatge = "img/activitats/251213-RETEENA-2025_p.jpg"
+imatge = "/img/activitats/251213-RETEENA-2025_p.jpg"
 descripcio = "8a edició del Reteena Del 5 al 14 de desembre de 2025 , el Festival Audiovisual Jove de Barcelona, Reteena , celebra la seva vuitena edició a la Filmoteca de Catalunya, el CCCB, la Nau Bostik i el c…"
 draft = false
 +++

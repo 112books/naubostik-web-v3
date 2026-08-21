@@ -4,7 +4,7 @@ date = 2026-03-06
 hora = "17:30"
 hora_fi = "22:00"
 preu = "Amb inscripció"
-imatge = "img/activitats/260306-msc_cartell_p.jpg"
+imatge = "/img/activitats/260306-msc_cartell_p.jpg"
 descripcio = "Descolonitzem la tecnologia ESPAI → NAU KM14 El divendres 6 de març, Setem organitza un Tardeo Crític a la Nau Bostik, dins el programa del Mobile Social Congress. Hi haurà una xerrada sobre Mines,…"
 draft = false
 +++

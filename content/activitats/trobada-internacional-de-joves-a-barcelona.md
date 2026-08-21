@@ -4,7 +4,7 @@ date = 2024-10-30
 data_fi = 2024-10-31
 hora = "10:00"
 hora_fi = "18:30"
-imatge = "img/activitats/Teleduca_p.jpg"
+imatge = "/img/activitats/Teleduca_p.jpg"
 descripcio = "Trobada europea de joves sobre gentrificació, globalització i cultura ESPAI → NAU KM14 No us podeu perdre la Trobada europea de joves sobre gentrificació, globalització i cultura que fem en el marc…"
 draft = false
 +++

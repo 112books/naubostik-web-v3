@@ -4,7 +4,7 @@ date = 2026-06-06
 hora = "18:00"
 hora_fi = "22:00"
 preu = "11€"
-imatge = "img/activitats/251220-Concert-Sombras01_p.jpg"
+imatge = "/img/activitats/251220-Concert-Sombras01_p.jpg"
 descripcio = "Prepara’t per a una nit de metall i rock que farà tremolar Barcelona! ESPAI → NAU KM14 Dissabte 6 de juny, la Nau Bostik acull un concert explosiu on tres bandes s’uneixen per a oferir una descàrreg…"
 draft = false
 +++

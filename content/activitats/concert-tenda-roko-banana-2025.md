@@ -4,7 +4,7 @@ date = 2025-02-21
 hora = "19:30"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/250221-Concert-TENDA_p.jpg"
+imatge = "/img/activitats/250221-Concert-TENDA_p.jpg"
 descripcio = "Tenda: gira Patrik ESPAI → NAU KM14 Divendres 21 de febrer estem a la Nau Bostik. Continuem presentant a PATRICK i tenim moltes ganes de portar-ho a Barcelona, a qui veurem per allí? ENTRADES 10 € A…"
 draft = false
 +++

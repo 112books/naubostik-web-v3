@@ -4,7 +4,7 @@ date = 2023-12-23
 hora = "11:30"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/231223-PIRATAS-RUMB-FEST_p.jpg"
+imatge = "/img/activitats/231223-PIRATAS-RUMB-FEST_p.jpg"
 descripcio = "Ja és aquí el 1r PIRATA’S RUMB FEST! SALA KM14 i andy warhol (PLANTA BAIXA) No podem estar més feliços d’anunciar que el 23 de desembre serà un gran dia pirata en el qual els i les protagonistes sou…"
 draft = false
 +++

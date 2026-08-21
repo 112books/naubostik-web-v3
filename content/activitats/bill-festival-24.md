@@ -4,7 +4,7 @@ date = 2024-05-11
 hora = "10:30"
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/240611_Bill-Festival_p.jpg"
+imatge = "/img/activitats/240611_Bill-Festival_p.jpg"
 descripcio = "La teva trobada anual de la il.lustració Què és el Bill Festival? El Bill Festival és la teva trobada anual de la il·lustració. Amb el format de festival hem creat un espai multidisciplinari en el q…"
 draft = false
 +++

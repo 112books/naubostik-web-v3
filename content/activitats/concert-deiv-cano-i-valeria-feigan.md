@@ -4,7 +4,7 @@ date = 2023-06-26
 hora = "19:30"
 hora_fi = "22:00"
 preu = "Gratüit"
-imatge = "img/activitats/230623-cartel-concierto_p.jpg"
+imatge = "/img/activitats/230623-cartel-concierto_p.jpg"
 descripcio = "Concert de fi de carrera, Taller de Músics Nau KM14 (planta baixa) Dilluns 26 de juny de 20.30h a 22h vine a gaudir del concert de Deiv Cano (Jazz Fusión) i de la Valeria Feigan (Vocal Techno), alum…"
 draft = false
 +++

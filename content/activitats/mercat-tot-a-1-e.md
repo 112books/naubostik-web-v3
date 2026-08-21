@@ -4,7 +4,7 @@ date = 2024-09-29
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/240221_MARKET_p.jpg"
+imatge = "/img/activitats/240221_MARKET_p.jpg"
 descripcio = "Mercat · Second hand Market ESPAI → ANDY WARHOL Has vingut alguna vegada a un mercat ambulant de segona mà on tot es ven a 1 €? Diumenge 29 de setembre, es durà a terme el Two Market , a la Nau Bost…"
 draft = false
 +++

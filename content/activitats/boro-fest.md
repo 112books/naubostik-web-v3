@@ -5,7 +5,7 @@ data_fi = 2026-03-29
 hora = "14:00"
 hora_fi = "20:00"
 preu = "25€"
-imatge = "img/activitats/BBF-FLYER-INST-POST_p.jpg"
+imatge = "/img/activitats/BBF-FLYER-INST-POST_p.jpg"
 descripcio = "El Barcelona Boro Fest és el primer festival de la ciutat dedicat al fascinant art del vidre treballat amb foc. ESPAI → NAUS DE LA PLANTA BAIXA Més que un simple esdeveniment, és una celebració popu…"
 draft = false
 +++

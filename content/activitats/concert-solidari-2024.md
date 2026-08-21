@@ -4,7 +4,7 @@ date = 2024-01-13
 hora = "12:00"
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "img/activitats/240113-ELTON-JOHN-TRIBUTE-_p.jpg"
+imatge = "/img/activitats/240113-ELTON-JOHN-TRIBUTE-_p.jpg"
 descripcio = "Concert solidari Your Song Dissabte 13 de gener 2024, a les 12 hores Nau KM14 (planta baixa) L’Associació de pares i mares de nens prematurs, Petits Grans Herois, ens convida a vindre al Concert Sol…"
 draft = false
 +++

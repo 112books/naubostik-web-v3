@@ -4,7 +4,7 @@ date = 2024-07-11
 hora = "17:00"
 hora_fi = "20:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/240711-EXPO-Capitalismo_p.png"
+imatge = "/img/activitats/240711-EXPO-Capitalismo_p.png"
 descripcio = "Desemmascarar el capitalisme clandestí ESPAI: PILAR VERS (PLANTA BAIXA) Els qui acaparen els béns comuns i naturals per a convertir-los en actius financers? Exposició i presentació dels resultats de…"
 draft = false
 +++

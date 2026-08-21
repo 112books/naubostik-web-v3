@@ -4,7 +4,7 @@ date = 2025-11-11
 hora = "09:00"
 hora_fi = "20:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/01_-ES_UNTOLD-AGENDA_p-copia.jpg"
+imatge = "/img/activitats/01_-ES_UNTOLD-AGENDA_p-copia.jpg"
 descripcio = "Parlem sobre polítiques migratòries ESPAI → NAU KM14 « Converses Valentes sobre Migració” és un esdeveniment organitzat pel projecte UNTOLD, concebut com un espai de trobada per a activistes, que ti…"
 draft = false
 +++

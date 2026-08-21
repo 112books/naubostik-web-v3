@@ -5,7 +5,7 @@ data_fi = 2026-07-04
 hora = "09:30"
 hora_fi = "22:00"
 preu = "10€ - 40€"
-imatge = "img/activitats/260702_-historicalmaterialism_p.jpg"
+imatge = "/img/activitats/260702_-historicalmaterialism_p.jpg"
 descripcio = "Compte enrere… Pensar la catàstrofe per a conjurar-nos-hi Una onada de guerra i reacció recorre el món. La realitat supera la ficció distòpica: autoritarisme, militarisme i emergència climàtica s’en…"
 draft = false
 +++

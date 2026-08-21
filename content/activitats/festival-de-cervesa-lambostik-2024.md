@@ -3,7 +3,7 @@ title = "Festival de cervesa · Lambostik"
 date = 2024-11-16
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/LAMBOSTIK_p.jpg"
+imatge = "/img/activitats/LAMBOSTIK_p.jpg"
 descripcio = "Dia de cervesa i cultura a Lambostik Dissabte 16 de novembre t’esperem a la Fira de cervesa artesana de La Sagrera. Entrada gratuïta i ambient amb DJ’s! El festival que celebrem dissabte 16 de novem…"
 draft = false
 +++

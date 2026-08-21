@@ -4,7 +4,7 @@ date = 2024-10-30
 hora = "18:00"
 hora_fi = "22:00"
 preu = "1€"
-imatge = "img/activitats/Castanyada_p.jpg"
+imatge = "/img/activitats/Castanyada_p.jpg"
 descripcio = "Bostik 1934, túnel del terror ESPAI → NAU PILAR VERS Aquest any la Comissió de Festejos de la Nau Bostik presenta La Castanyada Diabòlica, una activitat en el marc de la tardor. Un acte per tots els…"
 draft = false
 +++

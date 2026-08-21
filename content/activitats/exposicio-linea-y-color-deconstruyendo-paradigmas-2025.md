@@ -4,7 +4,7 @@ date = 2025-01-25
 hora = "17:30"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/250125_F.B-MURALS__p-1.jpg"
+imatge = "/img/activitats/250125_F.B-MURALS__p-1.jpg"
 descripcio = "Línea y Color – Deconstruyendo Paradigmas ESPAI → GALERIA B-MURALS La primera exposició que obre la programació de la Galeria B-Murals en 2025, Línia y Color – Deconstruyendo Paradigmas , resulta de…"
 draft = false
 +++

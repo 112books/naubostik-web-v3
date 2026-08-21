@@ -4,7 +4,7 @@ date = 2024-01-26
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/240126-PALESTINA-EDUCATIVA-anulat_p.jpg"
+imatge = "/img/activitats/240126-PALESTINA-EDUCATIVA-anulat_p.jpg"
 descripcio = "Assemblea oberta de la comunitat educativa sala roman polankik (planta baixa) El moviment de solidaritat amb Palestina, impulsat per la Comunitat Palestina de Catalunya i la Coalició Prou Complicita…"
 draft = false
 +++

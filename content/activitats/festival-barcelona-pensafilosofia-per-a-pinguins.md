@@ -4,7 +4,7 @@ date = 2025-11-19
 hora = "20:00"
 hora_fi = "21:45"
 preu = "Accés lliure fins exhaurir localitats"
-imatge = "img/activitats/barcelonapensa2025_p.jpg"
+imatge = "/img/activitats/barcelonapensa2025_p.jpg"
 descripcio = "Filosofia per a pingüins. Salut mental i lluita de classes ESPAI → NAU BETOR Coincidint amb el Dia Mundial de la Filosofia de la UNESCO, el tercer dijous de novembre, arriba la dotzena edició del Fe…"
 draft = false
 +++

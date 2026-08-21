@@ -4,7 +4,7 @@ date = 2025-03-23
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Second hand Market ESPAI → ANDY WARHOL , PILAR VERS i NAU 53 Two Market torna a obrir una nova proposta per a tots els amants del Vintage. Diumenge 23 de març, es durà a terme el Two Market , a la N…"
 draft = false
 +++

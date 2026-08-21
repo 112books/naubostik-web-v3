@@ -4,7 +4,7 @@ date = 2023-06-11
 hora = "11:00"
 hora_fi = "15:00"
 preu = "Gratuït"
-imatge = "img/activitats/festa_culturacoop-e1684627442454.jpeg"
+imatge = "/img/activitats/festa_culturacoop-e1684627442454.jpeg"
 descripcio = "Festa de la Cultura Cooperativa Nau Km14 , Nau Andy Warho l i Nau Pilar Vers (Planta Baixa) Diumenge 11 de juny tindrà lloc la Festa de la Cultura Cooperativa a la Nau Bostik d’ 11 h a 15 h , organi…"
 draft = false
 +++

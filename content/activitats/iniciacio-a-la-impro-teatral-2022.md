@@ -3,7 +3,7 @@ title = "Iniciació a la Impro Teatral"
 date = 2022-04-16
 hora = "10:00"
 hora_fi = "18:00"
-imatge = "img/activitats/Impro-Iniciación-1.png"
+imatge = "/img/activitats/Impro-Iniciación-1.png"
 descripcio = "Monográfico: Iniciación a la Impro Teatral Este curso es el ritual iniciático, el paso sin retorno, un plot point, el antes y después, el salto al abismo de la impro en tu vida y la vida en tu impro.…"
 draft = false
 +++

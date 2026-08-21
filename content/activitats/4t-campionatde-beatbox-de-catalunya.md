@@ -4,7 +4,7 @@ date = 2025-10-11
 hora = "16:00"
 hora_fi = "22:00"
 preu = "Entrada gratuïta"
-imatge = "img/activitats/251011-Campionat-de-Beatbox_p.jpg"
+imatge = "/img/activitats/251011-Campionat-de-Beatbox_p.jpg"
 descripcio = "Ritme, creativitat i competició ESPAI → NAU KM14 El pròxim 11 d’octubre, la Nau Bostik acollirà la 4a edició del Campionat de Beatbox de Catalunya. A partir de les 16:00 h s’obriran les portes per v…"
 draft = false
 +++

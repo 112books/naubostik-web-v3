@@ -3,7 +3,7 @@ title = "Mobile Social Congress 2025"
 date = 2025-03-04
 hora = "19:00"
 hora_fi = "21:00"
-imatge = "img/activitats/250303-Mobile-Social-Congres_p.jpg"
+imatge = "/img/activitats/250303-Mobile-Social-Congres_p.jpg"
 descripcio = "Hackegem el sistema construïm resistències ESPAI → NAU KM14 Dimarts 4 de març capgirem el focus sobre l’ús de la tecnologia i plantem cara al Mobile World Congress. Pódcast en directe amb la Turra:…"
 draft = false
 +++

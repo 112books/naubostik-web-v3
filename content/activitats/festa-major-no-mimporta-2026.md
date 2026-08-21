@@ -4,7 +4,7 @@ date = 2026-06-19
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/260619-NO-MIMPORTA_p.jpg"
+imatge = "/img/activitats/260619-NO-MIMPORTA_p.jpg"
 descripcio = "BIRRES de NO M’IMPORTA ESPAI → NAU KM14 Després de molts mesos treballant en això ja us ho podem presentar… el BIRRES de NO M’IMPORTA, se celebra el divendres 19 de juny . Una festa sense ànim de lu…"
 draft = false
 +++

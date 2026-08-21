@@ -4,7 +4,7 @@ date = 2023-07-08
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratüit"
-imatge = "img/activitats/230708_-exposure_caspita.jpeg"
+imatge = "/img/activitats/230708_-exposure_caspita.jpeg"
 descripcio = "EXPOSURE – Print swap SALA BASIANA (PLANTA BAIXA) Si t’agrada la fotografia analògica i el skate el pròxim cap de setmana tenim en el nostre espai la tercera edició de EXPOSURE – Print swap , un esd…"
 draft = false
 +++

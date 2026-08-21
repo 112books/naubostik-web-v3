@@ -5,7 +5,7 @@ data_fi = 2024-11-22
 hora = "08:00"
 hora_fi = "17:00"
 preu = "Gratuït"
-imatge = "img/activitats/GoalsforChange_p.jpg"
+imatge = "/img/activitats/GoalsforChange_p.jpg"
 descripcio = "Creant una nova narrativa sobre migració a través de l’art audiovisual i el futbol ESPAI → AURELI GANDUL “ El racismo nos quita la propiedad de nuestras vidas. Muchos nos tratan como si no pudiéramo…"
 draft = false
 +++

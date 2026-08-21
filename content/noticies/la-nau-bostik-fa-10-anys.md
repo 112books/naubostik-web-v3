@@ -2,7 +2,7 @@
 title = "La Nau Bostik fa 10 anys"
 date = 2025-02-15
 destacada = true
-imatge = "img/noticies/10anys-bostik.jpg"
+imatge = "/img/noticies/10anys-bostik.jpg"
 draft = false
 +++
 

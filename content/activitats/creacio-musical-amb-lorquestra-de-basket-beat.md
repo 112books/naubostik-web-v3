@@ -5,7 +5,7 @@ data_fi = 2025-07-10
 hora = "16:00"
 hora_fi = "20:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/St_BasketBeat_IntensiuJuliol_p.jpg"
+imatge = "/img/activitats/St_BasketBeat_IntensiuJuliol_p.jpg"
 descripcio = "Setmana Intensiva de Creació Musical amb l’Orquestra de Basket Beat Vols fer alguna cosa diferent aquest estiu? Has fet mai música amb pilotes de bàsquet? Si tens entre 16 i 25 anys, et convidem a p…"
 draft = false
 +++

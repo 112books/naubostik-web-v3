@@ -3,7 +3,7 @@ title = "Bcn Chicha Fest"
 date = 2023-05-13
 hora = "02:00"
 hora_fi = "22:00"
-imatge = "img/activitats/event_gallery_CHICHA_A4.jpeg"
+imatge = "/img/activitats/event_gallery_CHICHA_A4.jpeg"
 descripcio = "Cúmbia, rap i els sons més amazònics al Barcelona Chica Fest Cholo Chica i La Selvática Mestiza arriben a la Nau Bostik per oferir-nos uns concertassos. El dissabte 13 de maig tindrà lloc la primera…"
 draft = false
 +++

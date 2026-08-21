@@ -4,7 +4,7 @@ date = 2023-09-22
 hora = "19:00"
 hora_fi = "21:30"
 preu = "Gratuït"
-imatge = "img/activitats/230922-Eclectico1-p_caspita.jpg"
+imatge = "/img/activitats/230922-Eclectico1-p_caspita.jpg"
 descripcio = "Inauguració exposició «Ecléctico» SALA BASIANA (PLANTA BAIXA) Aviat tindrem una nova expo, i aquesta es presenta eclèctica: pirogravat, acrílic, pastís, llapis…! @Akrossthetwin – «Ecléctico» Inaugur…"
 draft = false
 +++

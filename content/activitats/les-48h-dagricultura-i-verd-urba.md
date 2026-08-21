@@ -2,7 +2,7 @@
 title = "Les 48h d’agricultura i verd urbà"
 date = 2022-05-14
 data_fi = 2022-05-15
-imatge = "img/activitats/WhatsApp-Image-2022-05-03-at-16.45.43.jpeg"
+imatge = "/img/activitats/WhatsApp-Image-2022-05-03-at-16.45.43.jpeg"
 descripcio = "Torna a Barcelona LES 48H l’esdeveniment insignia d’agricultura i cultura verda urbana els dies 14 i 15 de maig Participa de forma gratuïta a totes les activitats presencials! Durant les 48H gaudirem…"
 draft = false
 +++

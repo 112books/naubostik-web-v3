@@ -1,7 +1,7 @@
 +++
 title = "La Nau Bostik té present i té futur…"
 date = 2023-11-15
-imatge = "img/noticies/noticia_video.jpg"
+imatge = "/img/noticies/noticia_video.jpg"
 draft = false
 +++
 

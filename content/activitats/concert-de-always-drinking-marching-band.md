@@ -4,7 +4,7 @@ date = 2023-06-09
 hora = "20:00"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "img/activitats/MARCHING_BAND.png"
+imatge = "/img/activitats/MARCHING_BAND.png"
 descripcio = "Always Drinking Marching Band torna a la Bostik Nau Km14 (Planta Baixa) La companyia de música i teatre arriba a la Bostik per oferir-nos un concertàs Divendres 9 de juny tindrà lloc el concert de A…"
 draft = false
 +++

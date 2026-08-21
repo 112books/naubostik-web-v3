@@ -4,7 +4,7 @@ date = 2025-12-21
 hora = "11:00"
 hora_fi = "18:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/Fira-Nadal-2025_p.jpg"
+imatge = "/img/activitats/Fira-Nadal-2025_p.jpg"
 descripcio = "Regala artesania de proximitat a La Sagrera! ESPAI → NAU PILAR VERS / ANDY WARHOL El diumenge 21 de desembre d’11 a 18 h se celebra la Fira de Nadal al barri de La Sagrera. La selecció de la fira d’…"
 draft = false
 +++

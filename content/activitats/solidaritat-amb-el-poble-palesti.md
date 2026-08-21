@@ -4,7 +4,7 @@ date = 2023-11-29
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/231129_DIA-SOLIDARITAT_p.jpeg"
+imatge = "/img/activitats/231129_DIA-SOLIDARITAT_p.jpeg"
 descripcio = "29N Dia Internacional amb el poble palestí sala roman polankik (planta baixa) El moviment de solidaritat amb Palestina, impulsat per la Comunitat Palestina de Catalunya i la Coalició Prou Complicita…"
 draft = false
 +++

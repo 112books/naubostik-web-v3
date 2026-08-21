@@ -4,7 +4,7 @@ date = 2024-09-26
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Entrada lliure / Taquilla inversa"
-imatge = "img/activitats/WhereOliveTreesWeep_p2.jpg"
+imatge = "/img/activitats/WhereOliveTreesWeep_p2.jpg"
 descripcio = "Pel·lícula Where Olive Trees Weep ESPAI → NAU KM14 La pel·lícula és la nostra modesta contribució al nostre somni d’acabar amb l’ocupació a Palestina, la consecució de la igualtat de drets i un trac…"
 draft = false
 +++

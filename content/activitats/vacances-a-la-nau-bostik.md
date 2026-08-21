@@ -4,7 +4,7 @@ date = 2024-08-01
 data_fi = 2024-08-31
 hora = "08:00"
 hora_fi = "22:00"
-imatge = "img/activitats/240801_VACANCES-BOSTIK_p.png"
+imatge = "/img/activitats/240801_VACANCES-BOSTIK_p.png"
 descripcio = "Vacances oficines Nau Bostik S’acaba juliol, finalitza el curs 2023-24 carregat de bons moments, molta intensitat i també un desgast inevitable. Els valors de l’autogestió, el suport mutu i la const…"
 draft = false
 +++

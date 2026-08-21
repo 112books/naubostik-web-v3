@@ -1,7 +1,7 @@
 +++
 title = "Festes de primavera 2019"
 date = 2019-04-28
-imatge = "img/noticies/cartel-SagreraBanner.jpg"
+imatge = "/img/noticies/cartel-SagreraBanner.jpg"
 draft = false
 +++
 

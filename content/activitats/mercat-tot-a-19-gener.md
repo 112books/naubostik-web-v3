@@ -4,7 +4,7 @@ date = 2025-01-19
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "A kilo: Vintage Market ESPAI → ANDY WARHOL , PILAR VERS i NAU 53 Two Market torna a obrir una nova proposta per a tots els amants del Vintage. Diumenge 19 de gener, es durà a terme el Two Market , a…"
 draft = false
 +++

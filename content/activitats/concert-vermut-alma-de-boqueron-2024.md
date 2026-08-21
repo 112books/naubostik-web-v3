@@ -4,7 +4,7 @@ date = 2024-02-25
 hora = "13:00"
 hora_fi = "15:00"
 preu = "8€"
-imatge = "img/activitats/240225_-Concert-Alma-Boqueron_p.jpg"
+imatge = "/img/activitats/240225_-Concert-Alma-Boqueron_p.jpg"
 descripcio = "Rumba a la Nau Bostik Nau km14 (planta baixa) Dos anys després tornem al nostre escenari favorit del barri de La Sagrera, on tantes bones estones hem passat! Us esperem a partir de les 13.00 h amb l…"
 draft = false
 +++

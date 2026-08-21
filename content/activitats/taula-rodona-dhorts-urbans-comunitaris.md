@@ -3,7 +3,7 @@ title = "Taula Rodona d’Horts Urbans Comunitaris"
 date = 2023-02-15
 hora = "18:00"
 hora_fi = "20:00"
-imatge = "img/activitats/WhatsApp-Image-2023-02-09-at-11.53.47.jpeg"
+imatge = "/img/activitats/WhatsApp-Image-2023-02-09-at-11.53.47.jpeg"
 descripcio = "Taula rodona d’horts urbans comunitaris a la Nau Bostik dimecres 15 de febrer Els horts comunitaris són una oportunitat de potenciar la sobirania alimentària a la vegada que enforteixen els vincles…"
 draft = false
 +++

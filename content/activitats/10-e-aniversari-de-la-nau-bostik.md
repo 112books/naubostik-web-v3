@@ -4,7 +4,7 @@ date = 2025-02-15
 hora = "17:00"
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/10e-ANIVERSARI-NAU-BOSTIK_p.jpg"
+imatge = "/img/activitats/10e-ANIVERSARI-NAU-BOSTIK_p.jpg"
 descripcio = "Celebrem l’aniversari de la Nau Bostik ESPAI → ESPAI EXTERIOR Dissabte 15 de febrer celebrem l’aniversari carnavalero de la Nau Bostik, vine a ballar i gaudir dels 10 anys de vida. La jornada començ…"
 draft = false
 +++

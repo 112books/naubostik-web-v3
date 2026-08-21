@@ -4,7 +4,7 @@ date = 2026-04-19
 hora = "17:00"
 hora_fi = "22:00"
 preu = "7€ - 10€"
-imatge = "img/activitats/260419-La-Cumbiamba_p.jpg"
+imatge = "/img/activitats/260419-La-Cumbiamba_p.jpg"
 descripcio = "La Cumbiamba presenta café i cumbia ESPAI → NAU KM14 El proper 19 d’abril torna a la Nau Bostik LA CUMBIAMBA, amb una tarda de pura cumbia, amb el directe de @lachamuyeraok i les sessions de @asiakn…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2026-05-30
 hora = "16:00"
 hora_fi = "18:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/JUGANERA.26_-INFANTIL_p.jpg"
+imatge = "/img/activitats/JUGANERA.26_-INFANTIL_p.jpg"
 descripcio = "Espai creatiu i compartit on infants i famílies ESPAIS EXTERIORS DE LA NAU BOSTIK (PLANTA BAIXA) Accés a la Bostik pel C/ Pont del Treball Digne Un espai creatiu i compartit on infants i famílies po…"
 draft = false
 +++

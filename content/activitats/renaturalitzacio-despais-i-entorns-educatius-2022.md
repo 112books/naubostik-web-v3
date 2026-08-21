@@ -4,7 +4,7 @@ date = 2022-06-08
 data_fi = 2022-06-09
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/VI-Jornades-IG2.jpeg"
+imatge = "/img/activitats/VI-Jornades-IG2.jpeg"
 descripcio = "Lloc Nau Bostik Data 8 i 9 de Juny 2022 Organitza El globus vermell (Patis x Clima) + Universitat Oberta de Catalunya (Coolschools) Col·labora Ajuntament de Barcelona, Escoles + Sostenibles, Nau Bosti…"
 draft = false
 +++

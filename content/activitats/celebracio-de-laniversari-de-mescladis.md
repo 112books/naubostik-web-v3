@@ -4,7 +4,7 @@ date = 2023-05-27
 hora = "12:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/portada_aniv.mescladis.png"
+imatge = "/img/activitats/portada_aniv.mescladis.png"
 descripcio = "Celebrem els 18 anys de Mescladís Mescladís Bostik , Espais Exteriors i Sala Km14 (Planta Baixa) Dissabte 27 de maig vine a celebrar els 18 anys de la Fundació Mescladís en una jornada artística ple…"
 draft = false
 +++

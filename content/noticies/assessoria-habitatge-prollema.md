@@ -1,7 +1,7 @@
 +++
 title = "Assessoria d'accés a l'habitatge · Prollema"
 date = 2023-03-01
-imatge = "img/noticies/noticia_prollema.jpg"
+imatge = "/img/noticies/noticia_prollema.jpg"
 draft = false
 +++
 

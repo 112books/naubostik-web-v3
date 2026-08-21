@@ -5,7 +5,7 @@ destacat = true
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/Market_p.jpg"
+imatge = "/img/activitats/Market_p.jpg"
 descripcio = "Tot a 2 €! Especial Rave Market ESPAI → ANDY WARHOL Diumenge 23 d’agost, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Roba a tones, customització de roba en directe i mo…"
 draft = false
 +++

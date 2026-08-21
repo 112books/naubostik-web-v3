@@ -4,7 +4,7 @@ date = 2024-04-05
 hora = "17:00"
 hora_fi = "20:30"
 preu = "Gratuït"
-imatge = "img/activitats/240405-acTe_p.jpg"
+imatge = "/img/activitats/240405-acTe_p.jpg"
 descripcio = "Revolta, vida, futur ESPAI: NAU KM1 4 (PLANTA BAIXA) Ens roben el futur. Cal construir un futur de d’abaix, un futur on capiguem totes. Som un front comú de moviments, col·lectius i persones que com…"
 draft = false
 +++

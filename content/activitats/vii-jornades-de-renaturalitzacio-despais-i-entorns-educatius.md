@@ -5,7 +5,7 @@ data_fi = 2023-10-19
 hora = "09:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/230728_VII-Jornades-GLOBUSVERMELL.jpg"
+imatge = "/img/activitats/230728_VII-Jornades-GLOBUSVERMELL.jpg"
 descripcio = "VII Jornades de Renaturalització d’Espais i Entorns Educatius Nau Espai 53 i Nau Andy Warhol (planta baixa) El 18, 19 i 20 d’octubre vine a les VII Jornades de Renaturalització d’Espais i Entorns Ed…"
 draft = false
 +++

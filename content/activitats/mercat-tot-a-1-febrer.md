@@ -4,7 +4,7 @@ date = 2026-02-08
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "/img/activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Especial Rave Market ESPAI → ANDY WARHOL i PILAR VERS Diumenge 8 de febrer, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Arrenca una nova proposta per als amants de la s…"
 draft = false
 +++

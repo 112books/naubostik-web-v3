@@ -4,7 +4,7 @@ date = 2026-05-09
 hora = "00:30"
 hora_fi = "19:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/260509-JORNADES-Intermon-oxfam_p.jpg"
+imatge = "/img/activitats/260509-JORNADES-Intermon-oxfam_p.jpg"
 descripcio = "Jornada la vida que volem ESPAI → NAU 112 Et convidem a participar a les nostra jornada el dissabte 9 de maig. A les jornades « La vida que volem », volem coneixer diferents causes socials i explora…"
 draft = false
 +++

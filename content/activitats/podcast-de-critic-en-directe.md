@@ -3,7 +3,7 @@ title = "Pòdcast de CRÍTIC en directe"
 date = 2024-07-09
 hora = "19:00"
 hora_fi = "21:00"
-imatge = "img/activitats/Podcast_p.jpg"
+imatge = "/img/activitats/Podcast_p.jpg"
 descripcio = "Presentació de la nova revista monogràfica anual de CRÍTIC, Habitar ESPAI: SALA ROMAN POLANKIK (PLANTA BAIXA) El pròxim dimarts 9 de juliol a les 19 h serem a la @naubostik presentant la revista Hab…"
 draft = false
 +++

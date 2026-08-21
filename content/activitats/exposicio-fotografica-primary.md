@@ -5,7 +5,7 @@ data_fi = 2023-05-28
 hora = "10:00"
 hora_fi = "17:00"
 preu = "Gratuït"
-imatge = "img/activitats/Captura-de-pantalla-2023-05-15-a-les-11.46.12.png"
+imatge = "/img/activitats/Captura-de-pantalla-2023-05-15-a-les-11.46.12.png"
 descripcio = "Primary – A primera línia de la desforestació SALA AURELI GANDUL (PRIMER PLANTA BOSTIK CENTRAL) L’exposició PRIMARY gira entorn de la destrucció dels boscos primaris tropicals; un problema ecològic…"
 draft = false
 +++

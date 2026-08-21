@@ -4,7 +4,7 @@ date = 2026-05-02
 hora = "18:00"
 hora_fi = "22:00"
 preu = "12€"
-imatge = "img/activitats/260502-EL-MAMUT_p.jpg"
+imatge = "/img/activitats/260502-EL-MAMUT_p.jpg"
 descripcio = "L’esdeveniment de poesia més gran del mon torna a Barcelona ESPAI → NAU KM14 Amigxs d’Espanya, Europa i viajerxs del món! El dissabte 2 de maig EL MAMUT torna a Barcelona per a donar inici a la seva…"
 draft = false
 +++

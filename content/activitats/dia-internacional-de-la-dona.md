@@ -3,7 +3,7 @@ title = "Dia Internacional de la Dona"
 date = 2023-03-08
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/230308_DIA-DE-LA-DONA_2-e1678201065713.jpg"
+imatge = "/img/activitats/230308_DIA-DE-LA-DONA_2-e1678201065713.jpg"
 descripcio = "La Nau Bostik davant el 8 de març atura màquines. Demà 8 de Març, les dones de tot el món estem convocades a la VAGA FEMINISTA. Per això, la Nau Bostik, com a equipament comunitari, romandrem tancad…"
 draft = false
 +++

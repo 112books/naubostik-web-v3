@@ -4,7 +4,7 @@ date = 2023-06-30
 hora = "07:00"
 hora_fi = "22:00"
 preu = "7€"
-imatge = "img/activitats/230630-wacha-feria_-web.jpg"
+imatge = "/img/activitats/230630-wacha-feria_-web.jpg"
 descripcio = "Los Errores i The Cosmic Fox Band compartiran l’escenari a la Feria Wacha SALA KM14 (PLANTA BAIXA) Los Errores i The Cosmic Fox Band compartiran l’escenari a la sala KM14 de la Nau Bostik. També es…"
 draft = false
 +++

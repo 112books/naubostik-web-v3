@@ -4,7 +4,7 @@ date = 2023-06-18
 hora = "18:30"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/official-poster-e1686129563243.jpg"
+imatge = "/img/activitats/official-poster-e1686129563243.jpg"
 descripcio = "Drag Jam «School is out» Sala Basiana (Planta Baixa) Diumenge 18 de juny a les 18.30h tindrà lloc un acte de Drag Jam «School is out» , la presentació de Dragjam vol.2 , amb l’equip @ dragjambcn a l…"
 draft = false
 +++

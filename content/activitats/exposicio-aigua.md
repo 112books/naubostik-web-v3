@@ -5,7 +5,7 @@ data_fi = 2026-01-20
 hora = "18:30"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/251218-exposicio-AIGUA_p.jpg"
+imatge = "/img/activitats/251218-exposicio-AIGUA_p.jpg"
 descripcio = "Una exposició de la Revista 5W ESPAI → SALA GANDUL El pròxim dijous 18, a les 18.30 h, el nostre equip editorial de la revista 5w va inaugurar l’exposició “AIGUA: Un viatge per descobrir com mou el…"
 draft = false
 +++

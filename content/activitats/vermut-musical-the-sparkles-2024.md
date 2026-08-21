@@ -4,7 +4,7 @@ date = 2024-04-21
 hora = "00:30"
 hora_fi = "14:30"
 preu = "8€"
-imatge = "img/activitats/240410-The-Sparkles_p.png"
+imatge = "/img/activitats/240410-The-Sparkles_p.png"
 descripcio = "The Sparkles en concert ESPAI: SALA KM14 (PLANTA BAIXA) Tot a punt per al pròxim vermut musical a la Nau Bostik!! El diumenge 21 d’abril, a les 12.30 h. Amb les impressionants The Sparkles , una ban…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-11-29
 hora = "18:30"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/Captura-de-pantalla-2024-11-19-a-les-12.52.44.png"
+imatge = "/img/activitats/Captura-de-pantalla-2024-11-19-a-les-12.52.44.png"
 descripcio = "La OLI Big Band torna a l’escenari ESPAI → NAU KM14 La Oli Big Band és un projecte musical format per joves de tota la península assentats a Barcelona. Estem a punt per omplir la nit de bona música…"
 draft = false
 +++

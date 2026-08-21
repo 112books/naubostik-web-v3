@@ -4,7 +4,7 @@ date = 2022-04-06
 data_fi = 2022-05-14
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/CARTEL-EXPO_-català-1.jpg"
+imatge = "/img/activitats/CARTEL-EXPO_-català-1.jpg"
 descripcio = "El 6 d’abril torna El Venadito 4a edició Biennal d’art contra el maltractament animal creada per siNesteSia. En aquesta edició la mostra pren com a protagonistes els primats. La Fundació Mona, (centre…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2022-02-06
 data_fi = 2022-02-07
 hora = "10:00"
 hora_fi = "20:00"
-imatge = "img/activitats/salo-vins-naturals-_-rgb-1448x2048-1.jpg"
+imatge = "/img/activitats/salo-vins-naturals-_-rgb-1448x2048-1.jpg"
 descripcio = "Torna el Saló de #VinsNaturalsBCN22 el 6 i 7 de febrer de 2022, en la Nau Bostik , La Sagrera. Més de 50 vinaters i vinateres 100% naturals! Segueix les nostres xarxes per estar al corrent de totes le…"
 draft = false
 +++

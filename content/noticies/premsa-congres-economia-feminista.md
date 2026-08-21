@@ -1,7 +1,7 @@
 +++
 title = "Premsa · VIII Congrés d'Economia Feminista"
 date = 2023-03-10
-imatge = "img/noticies/noticia_diari.jpg"
+imatge = "/img/noticies/noticia_diari.jpg"
 draft = false
 +++
 

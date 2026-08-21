@@ -4,7 +4,7 @@ date = 2026-06-07
 hora = "11:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/2026-CARTELL-FASB_p.jpg"
+imatge = "/img/activitats/2026-CARTELL-FASB_p.jpg"
 descripcio = "Fira d’Art Sostenible de Barcelona (6a edició) ESPAI → NAU PILAR VERS / ANDY WARHOL El diumenge 7 de juny la Nau Bostik acollirà la sisena edició del FAS-B , una jornada que promou l’art i la sosten…"
 draft = false
 +++

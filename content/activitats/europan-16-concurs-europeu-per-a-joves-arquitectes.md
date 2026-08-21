@@ -1,7 +1,7 @@
 +++
 title = "EUROPAN 16. CONCURS EUROPEU PER A JOVES ARQUITECTES"
 date = 2022-06-03
-imatge = "img/activitats/Captura-de-pantalla-2022-05-11-a-les-11.17.49-copia-1.png"
+imatge = "/img/activitats/Captura-de-pantalla-2022-05-11-a-les-11.17.49-copia-1.png"
 descripcio = "EUROPAN 16. CONCURS EUROPEU PER A JOVES ARQUITECTES CIUTATS VIVES EUROPAN és un concurs biennal que té com a objectiu principal aprofundir en el coneixement i la recerca en el camp de l’hàbitat i de l…"
 draft = false
 +++

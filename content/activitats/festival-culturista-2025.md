@@ -5,7 +5,7 @@ data_fi = 2025-11-23
 hora = "11:00"
 hora_fi = "19:00"
 preu = "Entrada lliure/Gratuït"
-imatge = "img/activitats/251122-Festival-Culturista-2025_p.jpg"
+imatge = "/img/activitats/251122-Festival-Culturista-2025_p.jpg"
 descripcio = "Viu la cultura en família! El festival se celebrarà els dies 22 i 23 de novembre a la Nau Bostik , un espai perfecte per a tots els culturistes. Una nova edició organitzada per El Culturista , l’age…"
 draft = false
 +++

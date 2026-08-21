@@ -4,7 +4,7 @@ date = 2025-06-07
 hora = "10:00"
 hora_fi = "20:00"
 preu = "Entrada lluire"
-imatge = "img/activitats/250507-25e-Aniversari-ODG_p.jpg"
+imatge = "/img/activitats/250507-25e-Aniversari-ODG_p.jpg"
 descripcio = "Vine a celebrar amb nosaltres! ESPAI → NAU KM14 El 7 de juny celebrem els vint-i-cinc anys de l’ODG. Una jornada molt especial, amb espai per la memòria i també pels desitjos de futur. PROGRAMA 10:0…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-06-29
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/240629-Acroyoga_p.jpg"
+imatge = "/img/activitats/240629-Acroyoga_p.jpg"
 descripcio = "Taller Acroioga ESPAI: NAU PILAR VERS (PLANTA BAIXA) Esteu convidats a participar, el dissabte 29 de juny al taller d’iniciació d’acroioga. Pots venir sense parella, no es necessita experiència. És…"
 draft = false
 +++
