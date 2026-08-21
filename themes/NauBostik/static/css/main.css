@@ -5144,7 +5144,7 @@ main.container {
   background: var(--color-accent);
   color: #fff;
   border: 1px solid var(--color-accent);
-  margin-top: -0.15rem;
+  margin-top: -0.55rem;
 }
 
 .recinte-estat__dot {
