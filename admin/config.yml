@@ -151,9 +151,16 @@ collections:
             fields:
               - { label: "Titol", name: "title", widget: "string" }
               - { label: "Descripcio", name: "descripcio", widget: "text", required: false }
+              - { label: "Imatge principal", name: "imatge", widget: "image", required: false }
+              - label: "Mes imatges"
+                name: "galeria"
+                widget: "list"
+                required: false
+                field: { label: "Imatge", name: "imatge", widget: "image" }
               - { label: "Espai", name: "espai", widget: "string", required: false }
               - { label: "Responsable", name: "responsable", widget: "string", required: false }
               - { label: "Horari", name: "horari", widget: "string", required: false }
+              - { label: "Mes informacio", name: "link", widget: "string", required: false }
 
   - name: "slogans"
     label: "Slogans"
