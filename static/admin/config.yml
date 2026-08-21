@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: 112books/naubostik-web-v3
   client_id: Ov23liziSDMYRMx0NpeN
   client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
   branch: main
