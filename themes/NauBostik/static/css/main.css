@@ -917,9 +917,23 @@ main.container {
 }
 .footer-about .footer-logo img { width: 88px; }
 
+.footer-adreca {
+  margin-top: 1.5rem;
+}
+
+.footer-com-arribar {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-com-arribar:hover {
+  color: var(--color-accent);
+}
+
 .footer-about address {
   font-style: normal;
   line-height: 2;
+  margin-top: 0.5rem;
 }
 
 .footer-section h4 {

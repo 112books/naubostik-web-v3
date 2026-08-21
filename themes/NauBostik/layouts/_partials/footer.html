@@ -6,16 +6,14 @@
         <a href="{{ $home }}" class="footer-logo" aria-label="{{ i18n "logo_aria" }}">
           <img src="{{ "img/logos/logo-nau-bostik.png" | relURL }}" alt="Nau Bostik" width="120" height="114">
         </a>
-        <address>
-          <a href="{{ $home }}contacte/">Carrer Ferran Turné, 1-11<br>08027 Barcelona</a><br>
-          <a href="tel:+34933408350">+34 933 408 350</a><br>
-          <a href="mailto:info@naubostik.com">info@naubostik.com</a>
-        </address>
-        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="footer-konsento-bloc" aria-label="Konsento — eina de governança assembleària">
-          <img src="https://konsento.naubostik.com/static/img/konsento-logo-rodo.svg" alt="Konsento" width="120" height="120" class="footer-konsento-logo">
-          <span class="footer-konsento-nom">Konsento</span>
-          <span class="footer-konsento-sub">Assemblees&nbsp;| Comissions</span>
-        </a>
+        <div class="footer-adreca">
+          <p><a href="{{ $home }}contacte/" class="footer-com-arribar"><strong>Com arribar</strong></a></p>
+          <address>
+            Carrer Ferran Turné, 1-11<br>
+            08027 Barcelona
+          </address>
+          <p><a href="mailto:info@naubostik.com">info@naubostik.com</a></p>
+        </div>
       </div>
       <div class="footer-section footer-section--nav">
         <h4>{{ i18n "footer_nav_title" }}</h4>
