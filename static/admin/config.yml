@@ -1,20 +1,17 @@
 backend:
-  name: github
-  client_id: Ov23liziSDMYRMx0NpeN
-  client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
+  name: git-gateway
   branch: main
 
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
 media_folder: "static/img"
-public_folder: "https://112books.github.io/naubostik-web-v3/img"
+public_folder: "/img"
 
 slug:
   encoding: "unicode"
   clean_replacement: "-"
 
 collections:
-  # ── Programació ──
   - name: "activitats"
     label: "Activitats"
     folder: "content/activitats"
@@ -63,7 +60,6 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Tallers i activitats regulars ──
   - name: "tallers"
     label: "Tallers"
     folder: "content/tallers"
@@ -87,7 +83,6 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Contingut ──
   - name: "collectius"
     label: "Col·lectius"
     folder: "content/collectius"
@@ -145,7 +140,6 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Dades del recinte ──
   - name: "recinte"
     label: "Estat de la Nau Bostik"
     files:
@@ -203,7 +197,6 @@ collections:
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Tipus", name: "tipus", widget: "string" }
 
-  # ── Equip i fonts ──
   - name: "equip"
     label: "Equip"
     files:
@@ -243,9 +236,3 @@ collections:
               - { label: "Nom", name: "name", widget: "string" }
               - { label: "URL RSS", name: "url", widget: "string" }
               - { label: "Activa", name: "active", widget: "boolean", default: true }
-
-backend:
-  name: github
-  client_id: Ov23liziSDMYRMx0NpeN
-  client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
-  branch: main
