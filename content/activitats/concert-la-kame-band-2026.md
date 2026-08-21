@@ -4,7 +4,7 @@ date = 2026-03-07
 hora = "07:30"
 hora_fi = "21:30"
 preu = "12,50€"
-imatge = "img/activitats/260307-concert-KAME-BAND_p.jpg"
+imatge = "activitats/260307-concert-KAME-BAND_p.jpg"
 descripcio = "La Kame Band a la Nau Bostik! ESPAI → NAU KM14 Dissabte 7 de març, torna la Kame Band i ho fa en un nou concert autoproduït a la ciutat de Barcelona: l’anime en català com mai l’havies escoltat! Si…"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Horstik (hort comunitari)"
 date = 2023-01-04
-imatge = "img/noticies/230104_ANUNCI-HORSTIK_web.jpg"
+imatge = "noticies/230104_ANUNCI-HORSTIK_web.jpg"
 draft = false
 +++
 

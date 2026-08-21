@@ -4,7 +4,7 @@ date = 2026-10-18
 hora = "18:00"
 hora_fi = "19:00"
 preu = "12€ - 15€"
-imatge = "img/activitats/261018_CIUTAT-FLAMENCO_p.jpg"
+imatge = "activitats/261018_CIUTAT-FLAMENCO_p.jpg"
 descripcio = "Esperanza Garrido, presenta Firmamento ESPAI → NAU KM14 El Festival de flamenc de referència a Barcelona, impulsat pel Taller de Músics conjuntament amb altres entitats culturals. Presenta el 18 d’o…"
 draft = false
 +++

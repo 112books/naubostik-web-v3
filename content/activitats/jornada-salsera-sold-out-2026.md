@@ -4,7 +4,7 @@ date = 2026-01-31
 hora = "17:30"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "img/activitats/260131-JORNADA-SALSERA_p_sold-out-copia.jpg"
+imatge = "activitats/260131-JORNADA-SALSERA_p_sold-out-copia.jpg"
 descripcio = "Jornada Col.lectiu Salsero ESPAI → NAU KM14 El col·lectiu Salsero de la Nau Bostik s’ajunta amb l ‘Associació RAI i ens ha preparat una jornada salsera aquest dissabte 31 de gener. De 17:30 h a 22 h…"
 draft = false
 +++

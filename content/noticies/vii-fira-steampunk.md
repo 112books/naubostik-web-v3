@@ -1,7 +1,7 @@
 +++
 title = "VII Fira Steampunk"
 date = 2022-10-04
-imatge = "img/noticies/CARTEL-2022.jpg-copia.jpg"
+imatge = "noticies/CARTEL-2022.jpg-copia.jpg"
 draft = false
 +++
 

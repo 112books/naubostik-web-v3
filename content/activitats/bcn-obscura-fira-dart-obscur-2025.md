@@ -4,7 +4,7 @@ date = 2025-11-29
 hora = "11:00"
 hora_fi = "20:00"
 preu = "Entrada lliure"
-imatge = "img/activitats/251129-Cartell-obscura_p.jpg"
+imatge = "activitats/251129-Cartell-obscura_p.jpg"
 descripcio = "Primera Fira d’art obscur ESPAI → NAU ANDY WARHOL Dissabte 29 de novembre, se celebra OBSCURA BCN és la primera fira d’art obscur del seu tipus a Europa, un projecte comunitari nascut de la passió i…"
 draft = false
 +++

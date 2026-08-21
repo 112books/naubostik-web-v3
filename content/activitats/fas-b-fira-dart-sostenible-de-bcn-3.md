@@ -4,7 +4,7 @@ date = 2025-05-25
 hora = "11:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/250525-Cartell-FAS-B_p.jpg"
+imatge = "activitats/250525-Cartell-FAS-B_p.jpg"
 descripcio = "Fira d’Art Sostenible de Barcelona (3a edició) ESPAI → NAU PILAR VERS / ANDY WARHOL El diumenge 25 de maig la Nau Bostik acollirà la tercera edició del FAS-B , una jornada que promou l’art i la sost…"
 draft = false
 +++

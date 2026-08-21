@@ -5,7 +5,7 @@ data_fi = 2022-01-29
 hora = "12:00"
 hora_fi = "17:00"
 preu = "Gratuït"
-imatge = "img/activitats/Torrell_QUADRADA.jpg"
+imatge = "activitats/Torrell_QUADRADA.jpg"
 descripcio = "Antoni Torrell Exposició: Un esperit Lliure DEL 11/12/2021 AL 29/01/2021 Horari de visites De dimarts a dissabte de 10 a 14h TANCAT DEL 24 DESEMBRE AL 2 DE GENER Antoni Torrell (Alcover, 1953 – Tarrag…"
 draft = false
 +++

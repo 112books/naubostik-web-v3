@@ -1,7 +1,7 @@
 +++
 title = "Festa Major Alternativa"
 date = 2022-11-16
-imatge = "img/noticies/WhatsApp-Image-2022-11-03-at-11.42.41-e1667474050441.jpg"
+imatge = "noticies/WhatsApp-Image-2022-11-03-at-11.42.41-e1667474050441.jpg"
 draft = false
 +++
 

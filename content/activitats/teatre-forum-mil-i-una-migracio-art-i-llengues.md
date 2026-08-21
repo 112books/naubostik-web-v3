@@ -4,7 +4,7 @@ date = 2025-11-27
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Entrada lliure"
-imatge = "img/activitats/251129-Linguapax_p.jpg"
+imatge = "activitats/251129-Linguapax_p.jpg"
 descripcio = "Vine a gaudir de la peça “Mille e uno, Tausend Und Eine ESPAI → NAU KM14 La Nau Bostik acull el teatre-fòrum “Mil i una. Migració, art i llengües”, una proposta escènica que posa al centre l’experiè…"
 draft = false
 +++

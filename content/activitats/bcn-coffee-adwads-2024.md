@@ -5,7 +5,7 @@ data_fi = 2024-10-20
 hora = "10:00"
 hora_fi = "18:00"
 preu = "12€"
-imatge = "img/activitats/241018_bcncoffeeawards_p.jpg"
+imatge = "activitats/241018_bcncoffeeawards_p.jpg"
 descripcio = "El major esdeveniment de cafè d’especialitat ESPAI → TOT EL RECINTE Els Barcelona Coffee Awards (BCA) tornen! Aquest extraordinari esdeveniment promet captivar un cop més als entusiastes del cafè. U…"
 draft = false
 +++

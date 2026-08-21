@@ -4,7 +4,7 @@ date = 2025-03-15
 data_fi = 2025-03-16
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/250315-FRMNT_p.jpg"
+imatge = "activitats/250315-FRMNT_p.jpg"
 descripcio = "Neix el Festival de Fermentació de Barcelona ESPAI → NAU PILAR VERS / SALA ROMAN POLANKIK Un nou FRMNT Festival, més gran, obert a tothom i amb moltes novetats. WORKSHOPS, MARKET, FOOD&DRINK. Un cap…"
 draft = false
 +++

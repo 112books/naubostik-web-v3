@@ -4,7 +4,7 @@ date = 2023-05-28
 hora = "10:30"
 hora_fi = "19:00"
 preu = "Gratuït"
-imatge = "img/activitats/fasb_event.png"
+imatge = "activitats/fasb_event.png"
 descripcio = "FAS-B, Fira d’Art Sostenible de Barcelona Nau Pilar vers (nau bostik) Diumenge 28 de maig la FAS-B aterra a la Nau Bostik per oferir una jornada artística i sostenible on gaudir de l’art més emergen…"
 draft = false
 +++

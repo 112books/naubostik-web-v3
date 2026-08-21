@@ -4,7 +4,7 @@ date = 2023-06-29
 hora = "10:00"
 hora_fi = "14:30"
 preu = "Gratuït"
-imatge = "img/activitats/1200-863-max-9-e1686730672533.jpeg"
+imatge = "activitats/1200-863-max-9-e1686730672533.jpeg"
 descripcio = "Jornada: Fent economia plural, cap a una democràcia comunal Nau Km14 (Planta Baixa) El proper 29 de juny de 10.00h a 14.30 des de l’ Observatori de Coòpolis organitzen, en col·laboració amb la XES i…"
 draft = false
 +++

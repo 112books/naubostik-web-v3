@@ -3,7 +3,7 @@ title = "Festa 10è aniversari de 5W"
 date = 2025-09-27
 hora_fi = "20:00"
 preu = "Entrada lliure"
-imatge = "img/activitats/250927-Aniversari-5W_p2.jpg"
+imatge = "activitats/250927-Aniversari-5W_p2.jpg"
 descripcio = "10 anys, 5 preguntes, 1.000 històries ESPAI → NAU KM14 / ANDY WARHOL El dia 22 de setembre del 2015 van néixer les nostres cròniques de llarga distància. Avui continuen sent el cor del que fem: peti…"
 draft = false
 +++

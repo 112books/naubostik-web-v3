@@ -5,7 +5,7 @@ data_fi = 2025-02-10
 hora = "10:00"
 hora_fi = "18:00"
 preu = "5€ - 15€"
-imatge = "img/activitats/250209-Salo-dels-Vins-Naturals_p-1.jpg"
+imatge = "activitats/250209-Salo-dels-Vins-Naturals_p-1.jpg"
 descripcio = "Saló dels vins naturals Barcelona 2025 El 9 i 10 de febrer, no us perdeu aquesta oportunitat de gaudir d’un dia ple de sabor, cultura i passió pel vi. T’esperem per celebrar junts la riquesa de les…"
 draft = false
 +++

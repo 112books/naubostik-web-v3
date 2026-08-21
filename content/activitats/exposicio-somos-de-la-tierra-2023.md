@@ -4,7 +4,7 @@ date = 2023-10-21
 hora = "16:00"
 hora_fi = "19:00"
 preu = "Gratuït"
-imatge = "img/activitats/231021-Cartel_Expo_Somos_de_la_tierra.jpeg"
+imatge = "activitats/231021-Cartel_Expo_Somos_de_la_tierra.jpeg"
 descripcio = "Exposició i conversatori sala roman polankik (planta baixa) El dissabte 21 a les 16 h, s’inaugura l’exposició Somos de la tierra del fotògraf Miguel Gutiérrez Chero. El Col·lectiu Contra l’indult i…"
 draft = false
 +++

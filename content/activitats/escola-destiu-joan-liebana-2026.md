@@ -5,7 +5,7 @@ data_fi = 2026-06-28
 hora = "09:00"
 hora_fi = "18:00"
 preu = "15€ - 20€"
-imatge = "img/activitats/260626-escolaestiu2026_p.jpg"
+imatge = "activitats/260626-escolaestiu2026_p.jpg"
 descripcio = "El 26, 27 i 28 de juny a la Nau Bostik, un espai social i cultural de gestió comunitària L’Escola d’Estiu Joan Lièbana és una aposta del Sindicat de Llogateres i la CGT Catalunya per fer del sindica…"
 draft = false
 +++

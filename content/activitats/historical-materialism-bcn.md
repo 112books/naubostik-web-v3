@@ -4,7 +4,7 @@ date = 2024-07-04
 data_fi = 2024-07-06
 hora = "09:00"
 hora_fi = "20:00"
-imatge = "img/activitats/240704-Historical-Materialism_p.png"
+imatge = "activitats/240704-Historical-Materialism_p.png"
 descripcio = "Lluita de classes i construcció d’alternatives en l’era del capitalisme del desastre En la tercera dècada del segle XXI, el Capital ha desplaçat ja gran part dels processos de generació de plusvàlua…"
 draft = false
 +++

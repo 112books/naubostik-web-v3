@@ -3,7 +3,7 @@ title = "MARCA CFGS FOTOGRAFIA"
 date = 2022-06-04
 data_fi = 2022-07-03
 preu = "Gratuït"
-imatge = "img/activitats/MARCA-_instagram.jpg"
+imatge = "activitats/MARCA-_instagram.jpg"
 descripcio = "MARCA CFGS FOTOGRAFIA Mostra de Projectes Integrats del CFGS Fotografia. Escola Serra i Abella. Del 4 de juny al 3 de juliol de 2022. El dia 4 de juny a les 12h s’inaugura la mostra de projectes int…"
 draft = false
 +++

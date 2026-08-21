@@ -4,7 +4,7 @@ date = 2025-10-16
 hora = "14:00"
 hora_fi = "20:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/251015-XARTEC_p.jpg"
+imatge = "activitats/251015-XARTEC_p.jpg"
 descripcio = "4a edició de HealthTech2030 ESPAI → NAU PILAR VERS / ANDY WARHOL / NAU KM14 / NAU 53 Benvinguts a la 4a edició de HealthTech2030, l’esdeveniment insígnia que reuneix actors clau que configuren el fu…"
 draft = false
 +++

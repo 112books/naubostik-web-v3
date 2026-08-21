@@ -4,7 +4,7 @@ date = 2026-03-14
 hora = "16:00"
 hora_fi = "22:00"
 preu = "5,5€"
-imatge = "img/activitats/260314-CARTEL-Tocart_p.jpg"
+imatge = "activitats/260314-CARTEL-Tocart_p.jpg"
 descripcio = "10è aniversari Tocart. Festival de música en viu ESPAI → NAU KM14 El pròxim 14 de març celebrem el concert Na Gandaia en la Nau Bostik. On actuaran els alumnes de l’escola TocArt. A més, aprofitarem…"
 draft = false
 +++

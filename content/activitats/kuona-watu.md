@@ -4,7 +4,7 @@ date = 2025-09-13
 hora = "19:00"
 hora_fi = "22:00"
 preu = "15€"
-imatge = "img/activitats/250913-Kuona-Watu_p.jpg"
+imatge = "activitats/250913-Kuona-Watu_p.jpg"
 descripcio = "“Kuona Watu”, posem cara a les crisis oblidades ESPAI → NAU KM14 Dissabte 13 de setembre veniu a gaudir aquest esdeveniment, un concert solidari, exposició de fotografia, històries i relats per a hu…"
 draft = false
 +++

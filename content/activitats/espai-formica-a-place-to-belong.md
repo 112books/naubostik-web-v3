@@ -2,7 +2,7 @@
 title = "ESPAI FORMICA® A PLACE TO BELONG"
 date = 2022-06-09
 data_fi = 2022-06-17
-imatge = "img/activitats/bdw-formica_0.jpg"
+imatge = "activitats/bdw-formica_0.jpg"
 descripcio = "Espai Formica® és un projecte col·laboratiu académico-profesional, desenvolupat entre Elisava, Facultat de Disseny i Enginyeria de Barcelona i Rhode Island School of Design RISD ; i liderat per l’estu…"
 draft = false
 +++

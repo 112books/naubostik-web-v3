@@ -4,7 +4,7 @@ date = 2025-02-20
 hora = "18:00"
 hora_fi = "19:30"
 preu = "Gratuït"
-imatge = "img/activitats/250220-Comunitat-energetica_p.jpg"
+imatge = "activitats/250220-Comunitat-energetica_p.jpg"
 descripcio = "Vols formar part de la Comunitat Energètica de La Sagrera? ESPAI → NAU IVANOW Dijous 20 de febrer, participa en la xerrada informativa per formar el grup motor! Les Comunitats Energètiques (CE) són…"
 draft = false
 +++

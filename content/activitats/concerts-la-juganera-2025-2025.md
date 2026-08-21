@@ -5,7 +5,7 @@ data_fi = 2025-05-31
 hora = "08:00"
 hora_fi = "17:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/LAJUGENERA_p.png"
+imatge = "activitats/LAJUGENERA_p.png"
 descripcio = "Per fi ja tenim aquí el cartellot de La Juganera 2025! ESPAI → ESPAI EXTERIOR Estem molt contentes d’anunciar aquesta programació especial pel primer dia del nostre 10è aniversari. La Juganera és un…"
 draft = false
 +++

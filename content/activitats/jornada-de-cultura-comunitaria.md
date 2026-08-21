@@ -4,7 +4,7 @@ date = 2025-11-15
 hora = "10:00"
 hora_fi = "22:00"
 preu = "Entrada lliure / Gratuït"
-imatge = "img/activitats/251115-JORNADA_BOSTIK_p.jpg"
+imatge = "activitats/251115-JORNADA_BOSTIK_p.jpg"
 descripcio = "La Nau Bostik oberta per a totes! Dissabte 15 de novembre la Nau Bostik obre les portes a les 10:00 al barri en una Jornada de Cultura Comunitària que tindrà lloc durant tot el dia, fins les 22:00 h…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-12-23
 data_fi = 2026-01-06
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/2025_Nadal_p.jpg"
+imatge = "activitats/2025_Nadal_p.jpg"
 descripcio = "Més Bostik, més barri, més ciutat La Nau Bostik ha celebrat aquest 2025 el seu desè aniversari. Al llarg de l’any s’han dut a terme diversos actes commemoratius, entre els quals no podia faltar la j…"
 draft = false
 +++

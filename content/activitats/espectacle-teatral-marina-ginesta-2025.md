@@ -4,7 +4,7 @@ date = 2025-10-10
 hora = "19:00"
 hora_fi = "21:00"
 preu = "10,20€"
-imatge = "img/activitats/251010-Obra-teatre-GATS_p.jpg"
+imatge = "activitats/251010-Obra-teatre-GATS_p.jpg"
 descripcio = "Marina Ginestà – Fotos de memòria Espectacle Teatral que presenta Cia GATS ESPAI → NAU KM14 Aquest 10 d’octubre a les 19 h es representarà l’espectacle teatral amb música en directe, a la Nau Km14 d…"
 draft = false
 +++

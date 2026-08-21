@@ -4,7 +4,7 @@ date = 2024-12-14
 hora = "17:00"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "img/activitats/241214_-24-Festival-Madisound_p.jpeg"
+imatge = "activitats/241214_-24-Festival-Madisound_p.jpeg"
 descripcio = "FESTIVAL DE CANT Madisound Studios Academy ESPAI → NAU KM14 Tenim el plaer d’oferir-los el 24è Festival de Cant de l’Acadèmia Madisound Studios en col·laboració amb l’espai sociocultural Nau Bostik.…"
 draft = false
 +++

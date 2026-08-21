@@ -3,7 +3,7 @@ title = "Assemblea general – acTe"
 date = 2025-06-27
 hora = "17:30"
 hora_fi = "20:30"
-imatge = "img/activitats/250627-Pactes-Ecosocials_p.jpg"
+imatge = "activitats/250627-Pactes-Ecosocials_p.jpg"
 descripcio = "Pactes Ecosocials per Catalunya ESPAI → SALA ROMAN POLANKIK Divendres 27 de juny, volem presentar-vos els Pactes Ecosocials per Catalunya compartir el camí recorregut, explicar com l’hem pensat i, e…"
 draft = false
 +++

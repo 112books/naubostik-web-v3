@@ -4,7 +4,7 @@ date = 2025-09-27
 hora = "10:00"
 hora_fi = "21:00"
 preu = "70€"
-imatge = "img/activitats/250928-SOMOS-CUBA_p.jpg"
+imatge = "activitats/250928-SOMOS-CUBA_p.jpg"
 descripcio = "ATENCIÓ! Encara no tens el teu Full Pass per l’esdeveniment de l’any? ESPAI → NAU KM14 Aquest 28 de setembre prepara’t per a 9 hores de pura intensitat cubana De 10.00 h a 21.00 h Tallers, sabor, ri…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "BURLESQUE SHOW"
 date = 2022-06-05
 hora = "06:00"
 hora_fi = "21:00"
-imatge = "img/activitats/oooo.jpeg"
+imatge = "activitats/oooo.jpeg"
 descripcio = "Vuelve la Cuchara de Bella, un espectáculo Burlesque único en Barcelona. Un espectáculo diferente, dinámico, divertido, actual… Acompaña a Mr Von Whatever en la búsqueda del elixir de la belleza y d…"
 draft = false
 +++

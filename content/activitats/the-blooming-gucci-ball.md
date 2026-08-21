@@ -4,7 +4,7 @@ date = 2024-10-12
 hora = "16:30"
 hora_fi = "22:00"
 preu = "22€"
-imatge = "img/activitats/241012-The-Blooming-Gucci-Ball_p.jpg"
+imatge = "activitats/241012-The-Blooming-Gucci-Ball_p.jpg"
 descripcio = "The Blooming Gucci Ball by Gorgeous Jayce Gucci ESPAI → NAU KM14 Deixa’t encantar amb la màgia de l’elegància florida al Ballroom. Uneix-te a nosaltres per a una tarda inoblidable on l’estil, la grà…"
 draft = false
 +++

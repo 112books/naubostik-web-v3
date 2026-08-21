@@ -4,7 +4,7 @@ date = 2023-06-30
 hora = "20:30"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "img/activitats/WhatsApp-Image-2023-06-26-at-09.55.08.jpeg"
+imatge = "activitats/WhatsApp-Image-2023-06-26-at-09.55.08.jpeg"
 descripcio = "Todólogos amb Néstor Flórez i Dani Morlá Sala Basiana (Planta Baixa) Divendres 30 de juny de 20.30h a 22h , Néstor Flórez i Dani Morlá presenten Todólogos , un show amb monòlegs, diàlegs i improvitz…"
 draft = false
 +++

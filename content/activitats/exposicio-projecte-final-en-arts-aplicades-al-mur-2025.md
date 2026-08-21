@@ -5,7 +5,7 @@ data_fi = 2025-06-09
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/250603_Expo-llotja-Arts-al-Mur.jpg"
+imatge = "activitats/250603_Expo-llotja-Arts-al-Mur.jpg"
 descripcio = "Alumnat de Projecte Final del Cicle de Grau Superior d’Arts Aplicades al Mur, La Llotja ESPAI → SALA AURELI GANDUL El dimarts 3 de juny, a la sala Gandul de la Nau Bostik, tindrem el plaer de conèix…"
 draft = false
 +++

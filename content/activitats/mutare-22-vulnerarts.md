@@ -2,7 +2,7 @@
 title = "Mutare’ 22: VulnerArts"
 date = 2022-05-26
 hora = "09:00"
-imatge = "img/activitats/6c6641a0-6518-0884-75d4-4c535782ca37.jpeg"
+imatge = "activitats/6c6641a0-6518-0884-75d4-4c535782ca37.jpeg"
 descripcio = "Com les arts abracen la vulnerabilitat ? Inscriu – te a Mutare ! El pròxim 26 de maig torna Mutare, l’espai de la Fundació Carulla per buscar respostes culturals als diferents reptes social que vivim.…"
 draft = false
 +++

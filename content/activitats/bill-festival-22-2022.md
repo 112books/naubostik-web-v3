@@ -3,7 +3,7 @@ title = "Bill Festival ’22"
 date = 2022-06-11
 hora = "11:00"
 hora_fi = "21:00"
-imatge = "img/activitats/PUBLICACIO-INSTAGRAM_1250x1250_01.jpg"
+imatge = "activitats/PUBLICACIO-INSTAGRAM_1250x1250_01.jpg"
 descripcio = "📣 Atenció, ja podeu consultar el programa amb totes les activitats del Bill Festival 2022! AQUÍ TROBAREU TOTA LA INFORMACIÓ Programa Bill Festival 2022 … Matí 11:00 Sessió de treball Parlem de pasta.…"
 draft = false
 +++

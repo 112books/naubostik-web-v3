@@ -4,7 +4,7 @@ date = 2025-10-12
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Tot a 1 € Two Market ESPAI → ANDY WARHOL i NAU 53 El diumenge 12 d’octubre, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Has vingut alguna vegada a un mercat ambulant de…"
 draft = false
 +++

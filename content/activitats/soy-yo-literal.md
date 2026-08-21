@@ -3,7 +3,7 @@ title = "Soy yo literal Fest"
 date = 2023-10-21
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/231021-soyyoliteral.jpeg"
+imatge = "activitats/231021-soyyoliteral.jpeg"
 descripcio = "Salut mental que millora vides Fundació Joia i Soy Yo Literal tenim una sorpresa per a tu… Arriba el Soy Yo Literal Fest! Segueix les xarxes de @fundaciojoia i @soyyoliteraloficial i t’ho explicarem…"
 draft = false
 +++

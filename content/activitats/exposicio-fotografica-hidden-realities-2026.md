@@ -5,7 +5,7 @@ data_fi = 2026-07-02
 hora = "19:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/260630-Lci_EXPO_p.jpg"
+imatge = "activitats/260630-Lci_EXPO_p.jpg"
 descripcio = "Exposició de la LCI Barcelona ESPAI → SALA BASIANA / SALA BETOR Dimarts 30 de juny inauguració de l’exposició a les 19 h. Es podrà visitar fins al 2 de juliol. LCI Barcelona és el hub europeu de LCI…"
 draft = false
 +++

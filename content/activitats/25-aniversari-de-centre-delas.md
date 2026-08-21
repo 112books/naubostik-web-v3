@@ -4,7 +4,7 @@ date = 2024-11-27
 hora = "17:30"
 hora_fi = "20:00"
 preu = "Gratuït / Amb inscripció"
-imatge = "img/activitats/Carrusel_CARTELL_25e_p.jpg"
+imatge = "activitats/Carrusel_CARTELL_25e_p.jpg"
 descripcio = "El Centre Delàs celebrarà els seus ‘25 anys desarmant la guerra’ amb diferents actes oberts ESPAI → NAU KM14 El novembre de 2024 es compleixen 25 anys del naixement del Centre Delàs d’Estudis per la…"
 draft = false
 +++

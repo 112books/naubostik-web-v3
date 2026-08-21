@@ -4,7 +4,7 @@ date = 2024-11-16
 hora = "17:00"
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/cartel-malick-redes_p.jpg"
+imatge = "activitats/cartel-malick-redes_p.jpg"
 descripcio = "Homenatge al gran Malick Coumba Samb ESPAI → NAU KM14 El 16 de novembre homenatjarem al gran Malick Coumba Samb a partir de les 17 h. homenatge a Malick Coumba Samb, un músic percussionista senegalè…"
 draft = false
 +++

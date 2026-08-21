@@ -4,7 +4,7 @@ date = 2024-09-20
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/240920-Expo-Marginal.-Pere-F_p_caspita.png"
+imatge = "activitats/240920-Expo-Marginal.-Pere-F_p_caspita.png"
 descripcio = "Art outsider Marginal ESPAI → SALA BASIANA Avui divendres 20 la Sala Basiana inaugura aquesta exposició, a les 19 h. El sistema de psiquiatria català tracta les persones com a una mercaderia capital…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2026-06-20
 hora = "17:00"
 hora_fi = "22:00"
 preu = "10€"
-imatge = "img/activitats/260620-PAH_p.jpg"
+imatge = "activitats/260620-PAH_p.jpg"
 descripcio = "Veus Valentes pel Dret a l’Habitatge ESPAI → NAU KM14 Dissabte 20 de juny, se celebra el Concert benèfic per recaptar fons en defensa del dret a l’habitatge, on la cultura es converteix en eina de t…"
 draft = false
 +++

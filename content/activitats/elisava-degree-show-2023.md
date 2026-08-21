@@ -4,7 +4,7 @@ date = 2023-07-27
 hora = "19:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/Captura-de-pantalla-2023-06-28-a-les-14.30.48-e1687956543963.png"
+imatge = "activitats/Captura-de-pantalla-2023-06-28-a-les-14.30.48-e1687956543963.png"
 descripcio = "Exposició Looking for a Title, Projectes de Final de Grau Sala Aureli Gandul (Primera planta) Dijous 29 de juny a les 19.00h hi ha la inauguració de l’exposició dels projectes de Final de Grau del M…"
 draft = false
 +++

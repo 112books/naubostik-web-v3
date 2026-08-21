@@ -4,7 +4,7 @@ date = 2024-04-30
 hora = "18:30"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/240430-Comunitat-energetica_p.jpeg"
+imatge = "activitats/240430-Comunitat-energetica_p.jpeg"
 descripcio = "Comunitat energètica de La Sagrera ESPAI: SALA MIRADOR Som un front comú de moviments, col·lectius i persones que compartim l’ambició i el desig d’empènyer una transició ecosocial a Catalunya. Busqu…"
 draft = false
 +++

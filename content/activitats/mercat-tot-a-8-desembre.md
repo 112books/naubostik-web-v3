@@ -4,7 +4,7 @@ date = 2024-12-08
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/240221_MARKET_p.jpg"
+imatge = "activitats/240221_MARKET_p.jpg"
 descripcio = "Todt a 1 €: Second hand Market ESPAI → ANDY WARHOL , PILAR VERS i NAU 53 Has vingut alguna vegada a un mercat ambulant de segona mà on tot es ven a 1 €? Diumenge 8 de desembre, es durà a terme el Tw…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2025-11-14
 hora = "18:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/251114-JORNADES-GATZARA_p.jpg"
+imatge = "activitats/251114-JORNADES-GATZARA_p.jpg"
 descripcio = "Com ens apropem a una escola intercultural? ESPAI → NAU KM14 Divendres 14 de novembre arriben les V Jornades Gatzara: les arts com a vehicle de transmissió intercultural per compartir, dialogar i co…"
 draft = false
 +++

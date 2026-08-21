@@ -5,7 +5,7 @@ data_fi = 2026-10-01
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/260901-EXPO-VOLTES_p-copia.jpg"
+imatge = "activitats/260901-EXPO-VOLTES_p-copia.jpg"
 descripcio = "Posada en valor d’un patrimoni arquitectònic femeni ESPAI → NAU PILAR VERS (In)visibles recupera la trajectòria de 19 dones arquitectes que van ser invisibilitzades al llarg de la història. Una expo…"
 draft = false
 +++

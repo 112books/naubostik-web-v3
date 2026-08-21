@@ -5,7 +5,7 @@ data_fi = 2023-11-12
 hora = "13:00"
 hora_fi = "21:00"
 preu = "3€"
-imatge = "img/activitats/231111-Vinokilo-1.jpeg"
+imatge = "activitats/231111-Vinokilo-1.jpeg"
 descripcio = "¿Qué es una venta al kilo vintage? És un moment en el qual visites un lloc fabulós, actualitzes el teu armari amb roba única i sostenible, gaudeixes de bona música, menjar, begudes i en una experièn…"
 draft = false
 +++

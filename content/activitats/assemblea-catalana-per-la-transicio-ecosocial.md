@@ -4,7 +4,7 @@ date = 2023-07-06
 hora = "17:00"
 hora_fi = "20:30"
 preu = "Gratuït"
-imatge = "img/activitats/355447381_229629793269538_2159149601325094678_n.jpeg"
+imatge = "activitats/355447381_229629793269538_2159149601325094678_n.jpeg"
 descripcio = "Neix l’Assemblea Catalana per la Transició Ecosocial Nau Km14 (Planta Baixa) Dijous 6 de juliol de 17h a 20.30h tindrà lloc l’ Assemblea Catalana per la Transició Ecosocial a la Nau Km14 de la Nau B…"
 draft = false
 +++

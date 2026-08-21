@@ -4,7 +4,7 @@ date = 2023-06-15
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/TW-taularodona_1-scaled-1-e1686224586438.jpeg"
+imatge = "activitats/TW-taularodona_1-scaled-1-e1686224586438.jpeg"
 descripcio = "Taula rodona: El cooperativisme ha de créixer. Les cooperatives també? Quan, com i per què? Sala Roman Polankik (Planta Baixa) Dijous 15 de juny, a les 18h tindrà lloc la taula rodona: “El cooperati…"
 draft = false
 +++

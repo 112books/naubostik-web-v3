@@ -3,7 +3,7 @@ title = "Dub Jam Session · Cosins del Dub"
 date = 2025-05-25
 hora_fi = "16:00"
 preu = "5€"
-imatge = "img/activitats/250525-dubjamsession_p.jpeg"
+imatge = "activitats/250525-dubjamsession_p.jpeg"
 descripcio = "Dub Jam Session ESPAI → NAU KM14 Ets amant del Reggae, dub , musiclive? Aquest és l’esdeveniment al qual no pots faltar! És únic a Catalunya i Espanya des de fa 15 anys, o sigui que no us ho podeu p…"
 draft = false
 +++

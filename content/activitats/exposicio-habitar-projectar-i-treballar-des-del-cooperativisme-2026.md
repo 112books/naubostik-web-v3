@@ -6,7 +6,7 @@ data_fi = 2026-10-31
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/260901-EXPO-VOLTES_p.jpg"
+imatge = "activitats/260901-EXPO-VOLTES_p.jpg"
 descripcio = "Arquitectura.coop : Habitar, projectar i treballar des del cooperativisme ESPAI EXTERIOR Una exposició itinerant que explora com les cooperatives estan transformant la pràctica arquitectònica a trav…"
 draft = false
 +++

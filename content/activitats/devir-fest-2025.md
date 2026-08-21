@@ -3,7 +3,7 @@ title = "Devir Fest"
 date = 2025-01-23
 hora = "18:00"
 hora_fi = "22:00"
-imatge = "img/activitats/250123_Devir-Fest-BCN-25_p.jpg"
+imatge = "activitats/250123_Devir-Fest-BCN-25_p.jpg"
 descripcio = "Devir Fest invernal ESPAI → NAU KM14 / ANDY WARHOL Com cada any, organitzem una Devir Fest hivernal en la Nau Bostik de Barcelona. Tindrà lloc el 23 de gener a les 18 h i us cuidarem molt bé amb con…"
 draft = false
 +++

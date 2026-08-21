@@ -4,7 +4,7 @@ date = 2024-09-15
 hora = "11:00"
 hora_fi = "20:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/CARTELL-FABSB-2_p.jpg"
+imatge = "activitats/CARTELL-FABSB-2_p.jpg"
 descripcio = "Fira d’Art Sostenible de Barcelona (2a edició) ESPAI → NAU PILAR VERS / ANDY WARHOL Diumenge 15 de setembre la segona edició de FAS-B aterra de nou a la Nau Bostik per oferir una jornada artística i…"
 draft = false
 +++

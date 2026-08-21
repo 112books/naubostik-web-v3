@@ -4,7 +4,7 @@ date = 2026-08-09
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Tot a 2 €! Especial Rave Market ESPAI → ANDY WARHOL Diumenge 9 d’agost, arrenca una nova proposta per als amants de la segona mà i el reciclatge. Roba a tones, customització de roba en directe i mol…"
 draft = false
 +++

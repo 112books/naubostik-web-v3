@@ -4,7 +4,7 @@ date = 2024-11-30
 hora = "10:00"
 hora_fi = "14:00"
 preu = "Gratuït / Amb inscripció"
-imatge = "img/activitats/Ocell-de-foc_02_p.jpg"
+imatge = "activitats/Ocell-de-foc_02_p.jpg"
 descripcio = "Volem alt i ho seguirem fent! ESPAI → NAU KM14, NAU53, NAU BETOR El proper dissabte dia 30 de novembre , de 10 a 14 h, vine a la @naubostik de Barcelona per descobrir el que hem aconseguit amb aques…"
 draft = false
 +++

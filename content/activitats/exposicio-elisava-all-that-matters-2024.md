@@ -5,7 +5,7 @@ data_fi = 2024-07-21
 hora = "10:00"
 hora_fi = "18:00"
 preu = "Gratuït"
-imatge = "img/activitats/240626_-Expo-Elisava_p.jpg"
+imatge = "activitats/240626_-Expo-Elisava_p.jpg"
 descripcio = "Projectes del Màster en Fotografia i Disseny ESPAI: AURELI GANDU L (PRIMERA PLANTA) Entusiasmats d’anunciar la mostra de treballs de grau d’enguany del Màster en Fotografia i Disseny d’Elisava: All…"
 draft = false
 +++

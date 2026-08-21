@@ -1,7 +1,7 @@
 +++
 title = "Saló dels Vins Naturals"
 date = 2022-12-22
-imatge = "img/noticies/vinsnaturalsbarcelona_20221224_174256.585045_0-e1671901350152.jpg"
+imatge = "noticies/vinsnaturalsbarcelona_20221224_174256.585045_0-e1671901350152.jpg"
 draft = false
 +++
 

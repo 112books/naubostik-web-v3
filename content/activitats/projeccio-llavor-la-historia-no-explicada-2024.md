@@ -4,7 +4,7 @@ date = 2024-10-05
 hora = "10:30"
 hora_fi = "13:00"
 preu = "Gratuït"
-imatge = "img/activitats/241005-Mostra-de-Cinema-Etnografic_p.jpg"
+imatge = "activitats/241005-Mostra-de-Cinema-Etnografic_p.jpg"
 descripcio = "14a Mostra de Cinema Etnogràfic de Catalunya ESPAI → SALA ROMAN POLANKIK Vine dissabte, 5 d’octubre, a les 10:30 h , a compartir una bona pel·lícula i a reflexionar sobre plantes oblidades i sobiran…"
 draft = false
 +++

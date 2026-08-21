@@ -4,7 +4,7 @@ date = 2023-05-06
 hora = "11:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/banner_bill-festival-2023_2.jpeg"
+imatge = "activitats/banner_bill-festival-2023_2.jpeg"
 descripcio = "Barcelona iI·lustració Festival 2023 El Bill Festival és la trobada anual de la il·lustració , un espai multidisciplinari en el qual tinguin cabuda diferents activitats en el mateix dia en format fe…"
 draft = false
 +++

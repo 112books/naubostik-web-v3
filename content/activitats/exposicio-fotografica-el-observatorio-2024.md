@@ -4,7 +4,7 @@ date = 2024-09-21
 data_fi = 2024-09-22
 hora_fi = "20:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/240921-EL-OBSERVATORIO_p.png"
+imatge = "activitats/240921-EL-OBSERVATORIO_p.png"
 descripcio = "Exposició 1:1 del curs de Fotografia Documental d’Autor ESPAI → SALA GANDU L / ANDY WARHOL Torna setembre i això significa que l’Observatori torna a la Nau Bostik amb quinze nous projectes desenvolu…"
 draft = false
 +++

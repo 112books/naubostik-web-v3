@@ -4,7 +4,7 @@ date = 2025-10-05
 hora = "18:00"
 hora_fi = "22:00"
 preu = "12€"
-imatge = "img/activitats/251005-MAMUT_p.jpg"
+imatge = "activitats/251005-MAMUT_p.jpg"
 descripcio = "EL MAMUT l’esdeveniment de poesia més gran del món torna a Barcelona ESPAI → NAU KM14 Amigxs, ens tornem a trobar el diumenge 5 d’octubre de 18 a 22 h a Nau Bostik. Som l’esdeveniment de poesia més…"
 draft = false
 +++

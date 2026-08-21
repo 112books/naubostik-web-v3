@@ -3,7 +3,7 @@ title = "Vermut Cumbiero"
 date = 2024-04-28
 hora_fi = "15:00"
 preu = "5€"
-imatge = "img/activitats/240428-Vermut-Cumbiero_p.jpeg"
+imatge = "activitats/240428-Vermut-Cumbiero_p.jpeg"
 descripcio = "Amb Lxs Nadie + Kemadito Sound + Billy La Timba ESPAI: SALA KM14 (PLANTA BAIXA) Tot a punt per al pròxim vermut Cumbiero a La Nau Bostik el pròxim 28 d’abril a partir de les 12.00 h del migdia. (Obe…"
 draft = false
 +++

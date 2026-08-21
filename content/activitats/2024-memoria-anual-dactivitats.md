@@ -4,7 +4,7 @@ date = 2025-04-08
 data_fi = 2025-04-30
 hora = "08:00"
 hora_fi = "22:00"
-imatge = "img/activitats/2024-MEMORIA-BOSTIK_p.jpg"
+imatge = "activitats/2024-MEMORIA-BOSTIK_p.jpg"
 descripcio = "Ja està aquí la Memòria Anual 2024 Tens a les teves mans la memòria de les activitats que s’han dut a terme a la Nau Bostik, durant l’any 2024. Un recull de tota l’activitat, que de manera sintetitz…"
 draft = false
 +++

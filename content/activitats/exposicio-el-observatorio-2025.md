@@ -4,7 +4,7 @@ date = 2025-09-20
 data_fi = 2025-09-21
 hora_fi = "20:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/250920-LLEGOEN5_p.jpeg"
+imatge = "activitats/250920-LLEGOEN5_p.jpeg"
 descripcio = "Exposició «Llego en 5» del curs de Fotografia documental d’autor ESPAI → SALA GANDU L / ANDY WARHOL Torna setembre i això significa que l’ Observatorio torna a la Nau Bostik amb nous projectes desen…"
 draft = false
 +++

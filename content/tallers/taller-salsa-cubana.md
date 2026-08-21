@@ -1,7 +1,7 @@
 +++
 title = "Taller de Salsa Cubana"
 date = 2023-09-26
-imatge = "img/activitats/taller-de-salsa-cubana.jpg"
+imatge = "activitats/taller-de-salsa-cubana.jpg"
 descripcio = "Classes setmanals de salsa cubana per a tots els nivells. Cada dimarts a la Nau Bostik."
 espai = "Nau Bostik"
 responsable = "Properess · Comunalitat dels Barris de Sant Andreu"

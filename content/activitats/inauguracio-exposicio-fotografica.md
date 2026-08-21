@@ -4,7 +4,7 @@ date = 2024-04-23
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/240423-Expo-Basiana-A4_p.jpg"
+imatge = "activitats/240423-Expo-Basiana-A4_p.jpg"
 descripcio = "50 anys a La Sagrera Inauguració de l’exposició de fotografies del barri de La Sagrera, realitzades pel Xavier Basiana . Afegeix al calendari Google Calendar iCalendar Outlook 365 Outlook Live"
 draft = false
 +++

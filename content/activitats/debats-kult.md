@@ -4,7 +4,7 @@ date = 2023-11-09
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/231109_DEBATS_Barcelona-1-scaled-1.jpg"
+imatge = "activitats/231109_DEBATS_Barcelona-1-scaled-1.jpg"
 descripcio = "Macrofestivals vs. cultura comunitària El proper dijous 9 de novembre a les 19h tindrà lloc el debat Macrofestivals vs. cultura comunitària a la Nau Bostik. Hi participaran Nando Cruz (periodista i…"
 draft = false
 +++

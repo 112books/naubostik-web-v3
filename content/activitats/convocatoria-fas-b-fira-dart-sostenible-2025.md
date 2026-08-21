@@ -5,7 +5,7 @@ data_fi = 2025-04-13
 hora = "08:00"
 hora_fi = "22:00"
 preu = "Amb inscripció"
-imatge = "img/activitats/CARTELL-PROMO-CONVOS_p-1.jpg"
+imatge = "activitats/CARTELL-PROMO-CONVOS_p-1.jpg"
 descripcio = "Convocatòria per a Fira/Taller/Podcast ESPAI → NAU PILAR VERS / ANDY WARHOL Diumenge 25 de maig, presentem la tercera edició de FAS-B a la Nau Bostik. Una jornada artística i sostenible on gaudir de…"
 draft = false
 +++

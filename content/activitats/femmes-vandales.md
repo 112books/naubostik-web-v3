@@ -5,7 +5,7 @@ data_fi = 2022-07-10
 hora = "05:30"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/8e384faf-5c43-4298-95bc-b6009ee01db8.jpg"
+imatge = "activitats/8e384faf-5c43-4298-95bc-b6009ee01db8.jpg"
 descripcio = "GROUP EXHIBITION – FEMMES VANDALES La exposición colectiva @femmesvandales cierra puertas este Sáb.04/Jun A partir de las 17:30 Visita guiada por las artistas, música en directo Últimos días para disf…"
 draft = false
 +++

@@ -2,7 +2,7 @@
 title = "+ ART a les escoles"
 date = 2022-02-28
 data_fi = 2022-04-02
-imatge = "img/activitats/WhatsApp-Image-2022-02-03-at-15.55.45.jpeg"
+imatge = "activitats/WhatsApp-Image-2022-02-03-at-15.55.45.jpeg"
 descripcio = "COMPTE ENRERE! S’acosta el gran esdeveniment @mesartalesescoles , que tindrà lloc a la @NauBostik de #Barcelona per impulsar la presència de l’art en el sistema educatiu. Reserveu espai a les vostres…"
 draft = false
 +++

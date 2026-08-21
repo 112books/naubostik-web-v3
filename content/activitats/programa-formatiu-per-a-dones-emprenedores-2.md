@@ -4,7 +4,7 @@ date = 2026-02-10
 hora = "11:00"
 hora_fi = "13:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/260120-El-cami-Saraswati_p.jpg"
+imatge = "activitats/260120-El-cami-Saraswati_p.jpg"
 descripcio = "Eines per al control i la gestió econòmico-financera ESPAI → SALA ROMAN POLANKIK El camí de Saraswati és una proposta formativa que parteix d’aquest esperit: un itinerari per a dones que impulsen pr…"
 draft = false
 +++

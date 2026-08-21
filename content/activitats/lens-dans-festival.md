@@ -5,7 +5,7 @@ data_fi = 2024-11-09
 hora = "17:00"
 hora_fi = "22:00"
 preu = "7€ - 10€"
-imatge = "img/activitats/241108-LENS-DANS_p.jpg"
+imatge = "activitats/241108-LENS-DANS_p.jpg"
 descripcio = "Lens Dans, festival de videodansa ESPAI → NAU KM14 Lens Dans és un Festival de Vídeo Dansa entre Barcelona i Brussel·les destinat a promoure, donar a conèixer i celebrar projectes de la disciplina i…"
 draft = false
 +++

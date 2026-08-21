@@ -5,7 +5,7 @@ data_fi = 2023-10-01
 hora = "10:00"
 hora_fi = "22:00"
 preu = "6€ - 25€"
-imatge = "img/activitats/Coffeeawards_P.jpg"
+imatge = "activitats/Coffeeawards_P.jpg"
 descripcio = "Els Barcelona Coffee Awards tornen amb més força que mai! Els Barcelona Coffee Awards (BCA) tornen! Després de l’èxit del seu any inaugural, aquest extraordinari esdeveniment promet captivar un cop…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Dub Jam Session · Cosins del Dub"
 date = 2025-01-19
 hora_fi = "17:00"
 preu = "5€"
-imatge = "img/activitats/250119-DUB-JAM_p.jpg"
+imatge = "activitats/250119-DUB-JAM_p.jpg"
 descripcio = "Dub Jam Session ESPAI → NAU KM14 Molt contents d’anunciar que el 19 de gener del 2025 tornem a la càrrega por todo lo alto! En @dr.dubwiser als efectes analògics i muntarà la seva monotower. En @roo…"
 draft = false
 +++

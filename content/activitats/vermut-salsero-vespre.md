@@ -4,7 +4,7 @@ date = 2025-12-12
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/251212-VESPRE-SALSERO_p.jpg"
+imatge = "activitats/251212-VESPRE-SALSERO_p.jpg"
 descripcio = "Vespre salsero i taller de salsa ESPAI → NAU 53 T’esperem per passar una bona estona ballant! Aquest divendres 12 de desembre, el Col·lectiu Salsero de la Nau Bostik, autogestiona el Vespre Salsero.…"
 draft = false
 +++

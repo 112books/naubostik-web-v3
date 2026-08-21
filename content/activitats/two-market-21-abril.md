@@ -4,7 +4,7 @@ date = 2024-04-21
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/Market_p.jpg"
+imatge = "activitats/Market_p.jpg"
 descripcio = "Second hand Market nau 53 / nau andy warhol Has vingut alguna vegada a un mercat ambulant de segona mà on tot s’embeni a 1 €? Et presentem Tot a 1 € de Two Market, amb més d’1 tona de roba i més de…"
 draft = false
 +++

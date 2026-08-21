@@ -4,7 +4,7 @@ date = 2024-05-25
 hora = "10:30"
 hora_fi = "14:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/MURAL-ANSEDH_p.jpg"
+imatge = "activitats/MURAL-ANSEDH_p.jpg"
 descripcio = "Dia Internacional del Síndrome de Ehlers-Danlos ESPAI EXTERIOR Bona tarda, companyes! Des d’ ANSEDH ens complau convidar-vos a una activitat lúdico-festiva que ens fa una especial il·lusió: la reali…"
 draft = false
 +++

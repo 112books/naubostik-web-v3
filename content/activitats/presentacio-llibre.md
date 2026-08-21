@@ -4,7 +4,7 @@ date = 2024-01-20
 hora = "11:00"
 hora_fi = "13:00"
 preu = "Gratuït"
-imatge = "img/activitats/240120-PRESENTACIO-LLIBRE_caspita_p.jpeg"
+imatge = "activitats/240120-PRESENTACIO-LLIBRE_caspita_p.jpeg"
 descripcio = "SALA BASIANA (PLANTA BAIXA) Mi Papá es un Hada Estem encantats de presentar a la nostra sala el conte Mi Papá es un Hada , el conte de Noa publicat amb l’editorial @editorialsaralejandria Fa uns mes…"
 draft = false
 +++

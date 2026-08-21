@@ -4,7 +4,7 @@ date = 2026-09-19
 data_fi = 2026-09-20
 hora = "09:00"
 hora_fi = "20:00"
-imatge = "img/activitats/260919-Escola-Estiu-CUP_p.jpg"
+imatge = "activitats/260919-Escola-Estiu-CUP_p.jpg"
 descripcio = "Escola d’estiu 2026 L’esperança és la major amenaça per als opressors. « Marwan Barghouti « L’escola d’estiu de la CUP, un espai de trobada i construcció política. Reivindiquem l’esperança com a ein…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Reivindicació a Barcelona d’un model cultural comunitari i no-comerc
 date = 2025-06-19
 hora = "13:00"
 hora_fi = "22:00"
-imatge = "img/activitats/250614_XES-campanya_p.jpeg"
+imatge = "activitats/250614_XES-campanya_p.jpeg"
 descripcio = "Barcelona expulsa la cultura que no es ven Volem posar sobre la taula una situació que ens preocupa com a veïnes, com a entitats de barri i com a persones que vivim i fem ciutat cada dia: el model d…"
 draft = false
 +++

@@ -3,7 +3,7 @@ title = "Programa d’Economia Social"
 date = 2022-05-03
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/278060309_4875435035889152_1217849405674827752_n.png"
+imatge = "activitats/278060309_4875435035889152_1217849405674827752_n.png"
 descripcio = "Construïm #Ecosistemes: Acte de presentació del Programa d’Economia Social Dimecres 18 de maig al matí tindrà lloc l’Acte de Presentació del Programa d’Economia Social 2022 a la Nau Bostik de Barcelon…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-04-25
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/240425-Holy-Shit-web_p.jpeg"
+imatge = "activitats/240425-Holy-Shit-web_p.jpeg"
 descripcio = "Holy Shit, la revolució orgànica ESPAI: NAU KM14 (PLANTA BAIXA) Un documental que explica la gestió de la merda a diferents parts del món, un tema super silenciat i poc transparent per tothom. A més…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2023-11-10
 hora = "20:00"
 hora_fi = "23:00"
 preu = "12€"
-imatge = "img/activitats/231124-J.Garriga_POST-web.jpg"
+imatge = "activitats/231124-J.Garriga_POST-web.jpg"
 descripcio = "Festa de la tardor a la Nau Bostik sala km14 (planta baixa) Vine a celebrar la festa de la tardor de la Nau Bostik!!!️ Gaudirem de la música del Joan Garriga i el Mariatxi Galàctic , que ens oferirà…"
 draft = false
 +++

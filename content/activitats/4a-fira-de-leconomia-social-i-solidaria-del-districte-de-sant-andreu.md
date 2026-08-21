@@ -1,7 +1,7 @@
 +++
 title = "4a Fira de l’Economia Social i Solidària del Districte de Sant Andreu"
 date = 2022-05-15
-imatge = "img/activitats/Captura-de-pantalla-2022-05-11-a-les-11.47.26-copia.png"
+imatge = "activitats/Captura-de-pantalla-2022-05-11-a-les-11.47.26-copia.png"
 descripcio = "Fira d’entitats, debats, ràdio comunitària, exposicions, concerts i molt més !! Aquest diumenge 4a edició de la Fira d’Economia Social i Solidària del @BCN_SantAndreu #FiraESS #SantAndreu … «✊ Recuper…"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Acadèmia de Cant · MadiSound Studios"
 date = 2023-01-15
-imatge = "img/activitats/academia-cant-madisound.jpg"
+imatge = "activitats/academia-cant-madisound.jpg"
 descripcio = "Classes individuals i grupals de cant, tècnica vocal i interpretació. Horaris flexibles, tots els nivells."
 espai = "Nau KM14"
 responsable = "MadiSound Studios Academy"

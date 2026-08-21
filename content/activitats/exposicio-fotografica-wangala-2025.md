@@ -5,7 +5,7 @@ data_fi = 2025-06-30
 hora = "10:00"
 hora_fi = "18:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/250612-WANGALA-RUIDO-BOSTIK_p.jpg"
+imatge = "activitats/250612-WANGALA-RUIDO-BOSTIK_p.jpg"
 descripcio = "WANGALA, visions de resistència de la dona Sahrauí ESPAI → NAU BETOR Podreu gaudir de l’exposició fins al 30 de juny. Una exposició de RUIDO Photo amb fotografies de Pau Coll i textos de Samuel Naca…"
 draft = false
 +++

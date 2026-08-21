@@ -4,7 +4,7 @@ date = 2024-11-03
 hora = "16:00"
 hora_fi = "20:00"
 preu = "17€"
-imatge = "img/activitats/241103-Monstruos_Luchadores_p.jpg"
+imatge = "activitats/241103-Monstruos_Luchadores_p.jpg"
 descripcio = "Prepara’t per a la segona edició de «Monstruos vs Luchadores» ESPAI → NAU KM14 Aquest 3 de novembre de 2024, la lluita lliure mexicana torna amb més força que mai. Gaudeix d’una tarda plena d’acció,…"
 draft = false
 +++

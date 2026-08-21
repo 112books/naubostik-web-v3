@@ -4,7 +4,7 @@ date = 2025-11-15
 hora = "10:00"
 hora_fi = "14:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/251115-Jornada-XES_p.jpeg"
+imatge = "activitats/251115-Jornada-XES_p.jpeg"
 descripcio = "Parlarem dels Drets Culturals exercits des de la gestió comunitària ESPAI → ROMAN POLANKIK D issabte 15 de novembre de 10 h a 14 h . Jornada de Cultura Comunitària de la Xarxa d’Espais Comunitaris p…"
 draft = false
 +++

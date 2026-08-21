@@ -2,7 +2,7 @@
 title = "Alma de Boquerón"
 date = 2022-02-20
 preu = "10€"
-imatge = "img/activitats/unnamed.jpeg"
+imatge = "activitats/unnamed.jpeg"
 descripcio = "CONCIERTO PARA TODOS LOS BOQUERONES! Rumba mestiza de autor Alma de Boquerón el proper diumenge 20 de Febrer a la Nau Bostik a l’hora del vermut com a ells els hi agrada! Banda formada per músics molt…"
 link_extern = "https://www.entrapolis.com/entradas/alma-de-boqueron-nau-bostik"
 draft = false

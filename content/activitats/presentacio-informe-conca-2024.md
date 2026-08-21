@@ -4,7 +4,7 @@ date = 2024-11-26
 hora = "10:00"
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "img/activitats/CONCA_p.jpg"
+imatge = "activitats/CONCA_p.jpg"
 descripcio = "Presentació de l’informe “El tractament de la diversitat cultural a les institucions culturals catalanes” ESPAI → ANDY WARHOL El 26 de novembre, a les 10 h, es farà públic l’informe El tractament de…"
 draft = false
 +++

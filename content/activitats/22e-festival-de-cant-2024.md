@@ -4,7 +4,7 @@ date = 2024-03-16
 hora = "17:00"
 hora_fi = "22:00"
 preu = "5€"
-imatge = "img/activitats/240316-Concert-Madisoud_p.jpeg"
+imatge = "activitats/240316-Concert-Madisoud_p.jpeg"
 descripcio = "Festival MadiSound Studios Tenim el plaer i l’orgull de presentar-los el 22è Festival de cant ofert per l’acadèmia de cant MadiSound Studios en col·laboració amb l’espai sociocultural Nau Bostik de…"
 draft = false
 +++

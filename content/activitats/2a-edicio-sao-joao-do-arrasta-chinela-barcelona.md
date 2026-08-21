@@ -3,7 +3,7 @@ title = "2ª Edició – São João do Arrasta Chinela Barcelona"
 date = 2023-06-10
 hora = "15:30"
 hora_fi = "22:00"
-imatge = "img/activitats/Brasil.jpg"
+imatge = "activitats/Brasil.jpg"
 descripcio = "São João do Arrasta Chinela Barcelona Nau Andy Warhol i Nau 53 (Planta Baixa) Les festes de Sant Joan al Brasil arriben a la Nau Bostik dissabte 10 de juny a partir de les 15.30 h del migdia. Les fe…"
 draft = false
 +++

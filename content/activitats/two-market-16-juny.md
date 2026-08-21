@@ -4,7 +4,7 @@ date = 2024-06-16
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/240221_MARKET_p.jpg"
+imatge = "activitats/240221_MARKET_p.jpg"
 descripcio = "Market tot a 1 € Diumenge 16 de juny es durà a terme el Two Market aquí, a la Nau Bostik. Torna el mercat ambulant més barat de Barcelona! Més de 4 tones de roba de segona mà i Vintage, més de 8000…"
 draft = false
 +++

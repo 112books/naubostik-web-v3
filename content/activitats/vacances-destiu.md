@@ -4,7 +4,7 @@ date = 2023-08-31
 data_fi = 2023-09-03
 hora = "08:00"
 hora_fi = "17:00"
-imatge = "img/activitats/2023_VACANCES-BOSTIK_foto.jpg"
+imatge = "activitats/2023_VACANCES-BOSTIK_foto.jpg"
 descripcio = "Marxem de vacances L’equip tècnic de la Nau Bostik farà vacances del dia 31 de juliol al 3 de setembre. Ens veiem al setembre amb energies renovades. Seguim sent un punt de trobada pel moviment soci…"
 draft = false
 +++

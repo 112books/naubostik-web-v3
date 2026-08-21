@@ -4,7 +4,7 @@ date = 2024-07-11
 data_fi = 2024-07-23
 hora = "10:00"
 hora_fi = "18:00"
-imatge = "img/activitats/240712-expoRUIDO-PHOTO_p.jpg"
+imatge = "activitats/240712-expoRUIDO-PHOTO_p.jpg"
 descripcio = "Qui acaparen els béns comuns i naturals per a convertir-los en actius financers? ESPAI: PILAR VERS (PLANTA BAIXA) Exposició que visibilitza els processos de financerització i al mateix temps present…"
 draft = false
 +++

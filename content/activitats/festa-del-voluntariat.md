@@ -4,7 +4,7 @@ date = 2026-05-22
 hora = "18:00"
 hora_fi = "22:00"
 preu = "Gratuït (amb inscripció)"
-imatge = "img/activitats/260622-Cartel-Sarau-Nous-Cims_p.jpg"
+imatge = "activitats/260622-Cartel-Sarau-Nous-Cims_p.jpg"
 descripcio = "Vols ser mentora aquest curs? Vine a la festa del voluntariat de mentoria Zing ESPAI → NAU PILAR VERS / ANDY WARHOL En el marc de la campanya, el proper 22 de maig celebrem el SARAU ZING, un esdeven…"
 draft = false
 +++

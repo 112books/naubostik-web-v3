@@ -5,7 +5,7 @@ data_fi = 2024-06-09
 hora = "10:00"
 hora_fi = "22:00"
 preu = "12€"
-imatge = "img/activitats/240608-vegfest_p.jpg"
+imatge = "activitats/240608-vegfest_p.jpg"
 descripcio = "VegFest BCN, 8 i 9 de juny a la Nau Bostik El VegFest aterra a la Nau Bostik els dies 8 i 9 de juny per oferir-nos un festival vegà organitzat per AnimaNaturalis , organització sense ànim de lucre,…"
 draft = false
 +++

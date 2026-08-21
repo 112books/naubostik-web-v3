@@ -1,7 +1,7 @@
 +++
 title = "Revista 5W, la nova incorporació a la Bostik"
 date = 2023-04-01
-imatge = "img/noticies/00_portada_2020-1200x630-3.jpg"
+imatge = "noticies/00_portada_2020-1200x630-3.jpg"
 draft = false
 +++
 

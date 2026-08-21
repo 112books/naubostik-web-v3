@@ -4,7 +4,7 @@ date = 2025-08-17
 hora = "10:00"
 hora_fi = "19:00"
 preu = "3€"
-imatge = "img/activitats/TwoMarket_2025_p.jpeg"
+imatge = "activitats/TwoMarket_2025_p.jpeg"
 descripcio = "Tot a 1 € Two Market ESPAI → ANDY WARHOL El diumenge 17 d’agost, et presentem Tot a 1 € de Two Market amb més de 2 tones de roba i més de 8000 peces de roba. Has vingut alguna vegada a un mercat amb…"
 draft = false
 +++

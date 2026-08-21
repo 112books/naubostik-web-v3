@@ -4,7 +4,7 @@ date = 2024-01-31
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/20240131-Palestina_p-copia.jpg"
+imatge = "activitats/20240131-Palestina_p-copia.jpg"
 descripcio = "Conferència presencial i en línia sala roman polankik A la conferència presencial i en línia «L’artivisme per la Pau a Palestina» , moderada per la Laura Grau, comunicadora i creadora de continguts…"
 draft = false
 +++

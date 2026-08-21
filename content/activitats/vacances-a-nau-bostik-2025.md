@@ -4,7 +4,7 @@ date = 2025-08-01
 data_fi = 2025-08-31
 hora = "08:00"
 hora_fi = "22:00"
-imatge = "img/activitats/240801_VACANCES-BOSTIK_p.png"
+imatge = "activitats/240801_VACANCES-BOSTIK_p.png"
 descripcio = "Oficines tancades de l’1 al 31 d’agost Ja tenim l’agost a sobre i a les oficines de la Nau Bostik aturem màquines per fer una pausa. Aquest 2025 està sent un any intens i molt especial, marcat per l…"
 draft = false
 +++

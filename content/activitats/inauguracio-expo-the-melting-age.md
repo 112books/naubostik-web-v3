@@ -4,7 +4,7 @@ date = 2023-11-02
 hora = "18:00"
 hora_fi = "20:00"
 preu = "Gratuït"
-imatge = "img/activitats/231102-EXPO-Melting-Age_p.jpeg"
+imatge = "activitats/231102-EXPO-Melting-Age_p.jpeg"
 descripcio = "The Melting Age, de Alfons Rodríguez Sala aureli gandul (Primera planta) El fotògraf Alfons Rodríguez porta més de dues dècades documentant la crisi climàtica amb el seu projecte «The Melting Age».…"
 draft = false
 +++

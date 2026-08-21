@@ -4,7 +4,7 @@ date = 2023-07-09
 hora = "13:00"
 hora_fi = "15:00"
 preu = "5€"
-imatge = "img/activitats/230709_vermouts_caspita.jpeg"
+imatge = "activitats/230709_vermouts_caspita.jpeg"
 descripcio = "SALA BASIANA (PLANTA BAIXA) Diumenge 9 de juliol a les 13.00 h tindrà lloc Vermut Comedy Més d’una hora de monòlegs a l’hora del Vermut! Diversos artistes presentats per Jose Bailón!! @jose_*bailon…"
 draft = false
 +++

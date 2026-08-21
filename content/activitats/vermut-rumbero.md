@@ -3,7 +3,7 @@ title = "Vermut rumbero"
 date = 2026-04-26
 hora_fi = "15:00"
 preu = "Gratuït"
-imatge = "img/activitats/2026-Vermut-Festes-La-Sagrera_p.jpg"
+imatge = "activitats/2026-Vermut-Festes-La-Sagrera_p.jpg"
 descripcio = "Rumba a les Festes de la primavera de La Sagrera ESPAI → NAU KM14 Us esperem el diumenge 26 d’abril a una gran festa de la rumba. En un ambient de de festa i amb bandes locals, tindrem beguda a preu…"
 draft = false
 +++

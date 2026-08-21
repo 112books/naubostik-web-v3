@@ -4,7 +4,7 @@ date = 2023-09-24
 hora = "11:00"
 hora_fi = "18:00"
 preu = "Gratuït"
-imatge = "img/activitats/Culturaviva_P.jpg"
+imatge = "activitats/Culturaviva_P.jpg"
 descripcio = "Final de festa a la Nau Bostik L’Acció Cultura Viva vol ser un espai amable per a totes les veïnes i veïns de la ciutat i pels artistes i totes les persones que s’han involucrat en la seva organitza…"
 draft = false
 +++

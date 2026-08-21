@@ -4,7 +4,7 @@ date = 2023-11-08
 hora = "15:00"
 hora_fi = "20:30"
 preu = "Gratuït"
-imatge = "img/activitats/231108_healthtech2030_p.jpg"
+imatge = "activitats/231108_healthtech2030_p.jpg"
 descripcio = "Esdeveniment anual HealthTech2030 NAU 53 , NAU Andy Warhol I NAU KM14 (PLANTA BAIXA) Xartec Salut , la xarxa de transferència en tecnologia de la salut liderada pel CREB-UPC, organitza l’esdevenimen…"
 draft = false
 +++

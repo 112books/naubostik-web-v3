@@ -4,7 +4,7 @@ date = 2026-06-14
 hora = "18:00"
 hora_fi = "22:00"
 preu = "8,71€"
-imatge = "img/activitats/260424-MARIO-KART_p.jpg"
+imatge = "activitats/260424-MARIO-KART_p.jpg"
 descripcio = "Torna el torneig de Mario Kart amb música en directe de la mà de Press Start Project! ESPAI → NAU KM14 Ens veiem el 14 de juny a la @naubostik a les 18 h Aquesta vegada amb més participants (64 indi…"
 draft = false
 +++

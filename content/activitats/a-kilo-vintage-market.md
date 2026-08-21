@@ -5,7 +5,7 @@ data_fi = 2023-10-15
 hora = "22:00"
 hora_fi = "19:00"
 preu = "2€"
-imatge = "img/activitats/231014-A-kilo-Vintage-Market_p-1.jpg"
+imatge = "activitats/231014-A-kilo-Vintage-Market_p-1.jpg"
 descripcio = "Has vingut alguna vegada a una Pop up? Two Market i El Penjador Events obren nova proposta per a tots els amants del Vintage. Més de 4000 kg de roba Vintage, més de 4 tones! a un preu increïble! R﻿o…"
 draft = false
 +++

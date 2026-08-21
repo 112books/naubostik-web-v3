@@ -4,7 +4,7 @@ date = 2024-06-15
 hora = "10:00"
 hora_fi = "20:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/240615-DEVIR-DAY-2_p.png"
+imatge = "activitats/240615-DEVIR-DAY-2_p.png"
 descripcio = "Jornada de jocs de taula, per a tota la familia ESPAI: PILAR VERS i ANDY WARHOL (PLANTA BAIXA) Aquesta jornada de jocs i activitats gratuïtes per a tota la família se celebra per primera vegada a Ba…"
 draft = false
 +++

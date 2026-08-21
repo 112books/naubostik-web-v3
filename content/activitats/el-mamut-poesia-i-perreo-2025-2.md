@@ -4,7 +4,7 @@ date = 2025-06-08
 hora = "18:00"
 hora_fi = "22:00"
 preu = "12€"
-imatge = "img/activitats/250608-Mamut-Barcelona_p.jpeg"
+imatge = "activitats/250608-Mamut-Barcelona_p.jpeg"
 descripcio = "Full riesgo tour – Europa 2025 ESPAI → NAU KM14 Des del sud amb amor, aterrem a BCN per a fer un ritual sudaka en plena Catalunya. Som l’esdeveniment de poesia més gran del món amb més de 100 edicio…"
 draft = false
 +++

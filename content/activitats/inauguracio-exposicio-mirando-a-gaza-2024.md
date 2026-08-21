@@ -4,7 +4,7 @@ date = 2024-05-31
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït /Entrada lliure"
-imatge = "img/activitats/240531-EXPO-CHANTAL_p.jpeg"
+imatge = "activitats/240531-EXPO-CHANTAL_p.jpeg"
 descripcio = "Exposició per a ajudar a Palestina, de l’artista Chantal Vizcaino ESPAI: SALA ROMAN POLANKIK (PLANTA BAIXA) Inauguració divendres 31 maig, 19 h Chantal Vizcaino està preparant una exposició per a aj…"
 draft = false
 +++

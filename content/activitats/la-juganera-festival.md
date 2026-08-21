@@ -3,7 +3,7 @@ title = "LA JUGANERA FESTIVAL"
 date = 2022-07-09
 hora = "18:00"
 hora_fi = "22:30"
-imatge = "img/activitats/post-1.jpg"
+imatge = "activitats/post-1.jpg"
 descripcio = "Primer dia de la JUGANERA vol.2!!🎯🔥Dissabte 9 de juliol Vine al festival autogestionat de les entitats de la Bostik. Entrada lliure, fins a completar aforament!! 🕘QUAN: dissabte 9de juliol a partir de…"
 draft = false
 +++

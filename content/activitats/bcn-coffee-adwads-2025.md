@@ -5,7 +5,7 @@ data_fi = 2025-11-09
 hora = "09:00"
 hora_fi = "19:00"
 preu = "10€ - 18€"
-imatge = "img/activitats/251107-Coffee-Adwads-2025_p.jpg"
+imatge = "activitats/251107-Coffee-Adwads-2025_p.jpg"
 descripcio = "Celebrant l’excel·lència. Construint comunitat. Inspirant el futur del cafè ESPAI → TOT EL RECINTE Els Meet Your Coffee Adwards tornen! Aquest extraordinari esdeveniment promet captivar un cop més a…"
 draft = false
 +++

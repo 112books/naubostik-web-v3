@@ -4,7 +4,7 @@ date = 2024-03-15
 hora = "19:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/240315-cartell-expo-Linux_p.jpeg"
+imatge = "activitats/240315-cartell-expo-Linux_p.jpeg"
 descripcio = "Inauguració exposició i presentació del llibre aCarrejant ESPAI: SALA BASIAN A (PLANTA BAIXA) Joan Linux posa els nostres ulls de lector davant el visor de la seva càmera, per ensenyar-nos els carre…"
 draft = false
 +++

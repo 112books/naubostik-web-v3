@@ -4,7 +4,7 @@ date = 2023-07-09
 hora = "10:00"
 hora_fi = "19:00"
 preu = "2€"
-imatge = "img/activitats/BooomMarketWeb.jpeg"
+imatge = "activitats/BooomMarketWeb.jpeg"
 descripcio = "Two Market Nau Pilar Vers (Planta Baixa) Diumenge 9 de juliol es durà a terme el Two Market aquí a la Nau Bostik. S’obriran portes a les 10:00 h del matí i es podrà gaudir fins les 19:00 h. Es tract…"
 draft = false
 +++

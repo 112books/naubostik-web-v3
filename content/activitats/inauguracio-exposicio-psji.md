@@ -4,7 +4,7 @@ date = 2024-11-05
 hora = "19:00"
 hora_fi = "21:00"
 preu = "Gratuït / Entrada lliure"
-imatge = "img/activitats/EXPOSICIO-PSJI_p.jpg"
+imatge = "activitats/EXPOSICIO-PSJI_p.jpg"
 descripcio = "Exposició sensorial ESPAI → SALA BASIANA Avui 5 de novembre a les 19 h. Inaugurem l’exposició sensorial de PSJI Una expo de fotos molt bonica d’una artista molt jove de @_mx.galli i la performance d…"
 draft = false
 +++

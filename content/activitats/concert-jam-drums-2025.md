@@ -4,7 +4,7 @@ date = 2025-06-12
 hora = "19:30"
 hora_fi = "22:00"
 preu = "9€"
-imatge = "img/activitats/250612-JAM-Drums_p.jpg"
+imatge = "activitats/250612-JAM-Drums_p.jpg"
 descripcio = "JAM Drums – Mostra Baterística 2025 ESPAI → NAU KM14 Dijous 12 de juny l’escola de bateria JAM Drums presentarà els seus 20 alumnes. JAM Drums és una escola de bateria del Poblenou que presentarà el…"
 draft = false
 +++

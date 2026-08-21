@@ -3,7 +3,7 @@ title = "lectura manifest · la cultura és un dret, no un negoci"
 date = 2025-06-14
 hora = "18:00"
 hora_fi = "21:00"
-imatge = "img/activitats/250614_XES-campanya_p.jpeg"
+imatge = "activitats/250614_XES-campanya_p.jpeg"
 descripcio = "Dissabte 14 de juny ESPAI → JARDINETS EL TALIA (PARAL·LEL,100 Barcelona) Volem posar sobre la taula una situació que ens preocupa com a veïnes, com a entitats de barri i com a persones que vivim i f…"
 draft = false
 +++

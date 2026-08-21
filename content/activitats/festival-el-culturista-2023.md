@@ -5,7 +5,7 @@ data_fi = 2023-11-19
 hora = "11:00"
 hora_fi = "21:00"
 preu = "Gratuït"
-imatge = "img/activitats/231118-festival_culturista_2023.jpg"
+imatge = "activitats/231118-festival_culturista_2023.jpg"
 descripcio = "Viu la cultura en família! Tornem! Anoteu a les vostres agendes! 18 i 19 de novembre arriba el Festival Culturista 2023 ! Tot un cap de setmana per viure la cultura en família! Us proposem dues jorn…"
 draft = false
 +++

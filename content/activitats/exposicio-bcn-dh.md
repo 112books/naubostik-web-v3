@@ -5,7 +5,7 @@ data_fi = 2025-10-31
 hora = "10:00"
 hora_fi = "19:00"
 preu = "Entrada lliure"
-imatge = "img/activitats/BCN-GANDUL-CARTEL_p.jpg"
+imatge = "activitats/BCN-GANDUL-CARTEL_p.jpg"
 descripcio = "Cicle expositiu Gandul Bostik 2025 ESPAI → SALA GANDUL El cicle Expositiu Gandul Bostik 2025 coordinat per La Productora Fotogràfica , acull aquest any el BCN-DH Festival Internacional de Drets Huma…"
 draft = false
 +++

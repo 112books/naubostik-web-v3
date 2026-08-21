@@ -4,7 +4,7 @@ date = 2024-04-18
 hora = "19:00"
 hora_fi = "22:00"
 preu = "Gratuït"
-imatge = "img/activitats/240418-Tinta-de-Llum_p.jpeg"
+imatge = "activitats/240418-Tinta-de-Llum_p.jpeg"
 descripcio = "Nou projecte cultural, creat per compartir coneixement entre les persones ESPAI: NAU 5 3 (PLANTA BAIXA) El proper dijous dia 18 d’abril del 2024, a les 19 hores, tindrà lloc la presentació oficial d…"
 draft = false
 +++

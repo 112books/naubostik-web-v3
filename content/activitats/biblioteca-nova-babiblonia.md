@@ -4,7 +4,7 @@ date = 2024-06-18
 hora = "18:00"
 hora_fi = "19:00"
 preu = "Entrada lliure"
-imatge = "img/activitats/biblio-nova-babilonia_p.jpg"
+imatge = "activitats/biblio-nova-babilonia_p.jpg"
 descripcio = "Nova biblioteca popular i social ESPAI: BIBLIOTECA (1a PLANTA) El proper dimarts 18 de juny, a les 18.00 h, farem la presentació de la “ Biblioteca Nova Babilònia ” de la Nau Bostik , una nova bibli…"
 draft = false
 +++

@@ -4,7 +4,7 @@ date = 2024-04-14
 hora = "11:00"
 hora_fi = "14:00"
 preu = "Gratuït"
-imatge = "img/activitats/240414-VERMUT-SALSERO_p.jpeg"
+imatge = "activitats/240414-VERMUT-SALSERO_p.jpeg"
 descripcio = "Taller de salsa Cubana Nau 53 (planta baixa) Aquest diumenge 14 d’abril, els grups de salsa de la Bostik autogestionen el vermut salsero. Vine’t a partir de les 11 h i que no t’ho expliquin! 11 h a…"
 draft = false
 +++

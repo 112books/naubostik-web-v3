@@ -4,7 +4,7 @@ date = 2024-01-28
 hora = "10:00"
 hora_fi = "19:00"
 preu = "2€"
-imatge = "img/activitats/A-kilo_p.jpg"
+imatge = "activitats/A-kilo_p.jpg"
 descripcio = "Liquidació total 20€/Kg Segueix de ruta un dels millors mercats ambulants itinerants amb una de les millors seleccions Vintage d’Europa. Barcelona rep una edició de liquidació de roba d’hivern que n…"
 draft = false
 +++

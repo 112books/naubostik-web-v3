@@ -2,7 +2,7 @@
 title = "Acte de balanç · Acció>Cinema"
 date = 2024-12-03
 preu = "Gratuït / Amb inscripció"
-imatge = "img/activitats/241203_-Accio-cinema_p.jpg"
+imatge = "activitats/241203_-Accio-cinema_p.jpg"
 descripcio = "Acció>Cinema 2024 Balanç de la segona edició ESPAI → SALA ROMAN POLANKIK L’edició 2024 del projecte Acció>Cinema , que acosta el món de la cooperació i l’audiovisual a través del cinema com a eina d…"
 draft = false
 +++

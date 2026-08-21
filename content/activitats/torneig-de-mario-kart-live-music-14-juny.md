@@ -3,7 +3,7 @@ title = "POSPOSAT · Torneig de Mario Kart Live Music"
 date = 2026-04-24
 hora = "18:00"
 hora_fi = "22:00"
-imatge = "img/activitats/260424-MARIO-KART_p-14-juny.jpg"
+imatge = "activitats/260424-MARIO-KART_p-14-juny.jpg"
 descripcio = "Lamentem comunicar-vos que, per causes alienes a l’espai, el torneig live music s’ha reprogramat pel 14 de juny ESPAI → NAU KM14 Torna el torneig de Mario Kart amb música en directe de la mà de Pres…"
 draft = false
 +++

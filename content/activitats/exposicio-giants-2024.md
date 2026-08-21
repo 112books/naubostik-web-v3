@@ -5,7 +5,7 @@ data_fi = 2024-02-02
 hora = "11:00"
 hora_fi = "19:00"
 preu = "Gratuït"
-imatge = "img/activitats/240230-Giants_01_P.jpg"
+imatge = "activitats/240230-Giants_01_P.jpg"
 descripcio = "GIANTS de Dunja Jankovic galeria b-murals (planta baixa) L’exposició de Dunja Jankovic “GIANTS” organitzada per B-Murals, en una sèrie d’exposicions-instal·lacions dedicades a artistes que utilitzen…"
 draft = false
 +++

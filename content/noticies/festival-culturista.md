@@ -1,7 +1,7 @@
 +++
 title = "Festival Culturista"
 date = 2022-11-16
-imatge = "img/noticies/Captura-de-pantalla-2022-11-02-a-les-13.52.01.jpg"
+imatge = "noticies/Captura-de-pantalla-2022-11-02-a-les-13.52.01.jpg"
 draft = false
 +++
 

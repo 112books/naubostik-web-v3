@@ -5,7 +5,7 @@ data_fi = 2026-01-26
 hora = "10:00"
 hora_fi = "18:00"
 preu = "5€ - 15€"
-imatge = "img/activitats/250209-Salo-dels-Vins-Naturals_p-1.jpg"
+imatge = "activitats/250209-Salo-dels-Vins-Naturals_p-1.jpg"
 descripcio = "Una nova edició i la mateixa força de sempre: sense artificis, sense poses, sense discursos buits. ESPAI → ESPAIS DE LA PLANTA BAIXA Ja és aquí una nova edició del genuí Saló de Vins Naturals de Bar…"
 draft = false
 +++
