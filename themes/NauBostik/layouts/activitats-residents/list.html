@@ -1,7 +1,10 @@
 {{ define "main" }}
 {{ $now := now }}
-{{ $all := where site.RegularPages "Section" "activitats" }}
-{{ $entitats := where $all "Params.entitat" "!=" nil }}
+{{ $allAct := where site.RegularPages "Section" "activitats" }}
+{{ $entAct  := where $allAct "Params.entitat" "!=" nil }}
+{{ $residents := where site.RegularPages "Section" "activitats-residents" }}
+{{ $entRes    := where $residents "Params.entitat" "!=" nil }}
+{{ $entitats  := $entAct | union $entRes }}
 
 {{ $fut  := where $entitats "Date" ">=" $now }}
 {{ $past := where $entitats "Date" "<"  $now }}
@@ -81,7 +84,7 @@
         </a>
         {{ end }}
         <div class="act-item__body">
-  
+
           <span class="act-item__entitat">{{ .Params.entitat }}</span>
           <p class="act-item__date">{{ .Date | time.Format "02/01/2006" }}{{ with .Params.hora }} · {{ . }} h{{ end }}{{ with .Params.preu }} · {{ . }}{{ end }}</p>
           <h3 class="act-item__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
