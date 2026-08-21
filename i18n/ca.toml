@@ -32,6 +32,13 @@ error_404_title = "404 - Pàgina no trobada"
 error_404_lead = "La pàgina que cerques no existeix."
 error_404_back = "Torna a l'inici"
 
+# Tallers
+taller_space = "Espai"
+taller_responsable = "Organitza"
+taller_schedule = "Horari"
+taller_more_info = "Més informació i inscripcions"
+taller_share = "Comparteix:"
+
 # Portada
 home_hero_kicker = "Nau Bostik"
 home_hero_title_line1 = "Espai cultural autogestionat"
@@ -61,6 +68,7 @@ activitats_propia_title = "Programació pròpia"
 activitats_propia_desc = "Activitats organitzades per Nau Bostik"
 activitats_entitats_title = "Activitats d'entitats"
 activitats_entitats_desc = "Activitats dels col·lectius que fan vida a Nau Bostik"
+event_entity = "Entitat"
 
 # Espais
 espais_title = "Espais"
