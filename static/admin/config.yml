@@ -8,7 +8,7 @@ backend:
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
 media_folder: "static/img"
-public_folder: "/img"
+public_folder: "/naubostik-web-v3/img"
 
 slug:
   encoding: "unicode"

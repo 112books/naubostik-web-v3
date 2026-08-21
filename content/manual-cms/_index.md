@@ -4,6 +4,7 @@ description = "Guia completa per gestionar continguts a la Nau Bostik"
 draft = false
 menu = "footer"
 weight = 10
+toc = true
 +++
 
 # Manual d'Editors — CMS Nau Bostik

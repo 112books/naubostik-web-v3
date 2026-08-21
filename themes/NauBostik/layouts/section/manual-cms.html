@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="manual-cms">
+  <header class="manual-header">
+    <h1 class="manual-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="manual-lead">{{ . }}</p>{{ end }}
+  </header>
+
+  {{/* Table of Contents - using Hugo's built-in TOC */}}
+  <nav class="manual-toc" aria-label="Taula de continguts">
+    <h2 class="toc-title">📋 Taula de continguts</h2>
+    {{ .TableOfContents }}
+  </nav>
+
+  <div class="manual-content content">
+    {{ .Content }}
+  </div>
+</div>
+
+{{/* Smooth scroll for TOC links */}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.toc-list a, .manual-toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          var target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, '', href);
+          }
+        }
+      });
+    });
+
+    // Mobile TOC toggle
+    var tocTitle = document.querySelector('.toc-title');
+    var tocList = document.querySelector('.toc-list');
+    if (tocTitle && tocList) {
+      tocTitle.addEventListener('click', function() {
+        tocList.classList.toggle('is-open');
+        tocTitle.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+{{ end }}
