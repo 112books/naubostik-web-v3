@@ -49,7 +49,9 @@
      AGENDA DE LA SETMANA
 ══════════════════════════════════════════════════ */}}
 {{ $weekEnd := now.AddDate 0 0 7 }}
-{{ $allAct  := where site.RegularPages "Section" "activitats" }}
+{{$activitats := where site.RegularPages "Section" "activitats" }}
+{{$residents := where site.RegularPages "Section" "activitats-residents" }}
+{{$allAct := $activitats | union $residents }}
 
 {{ $thisWeekNB  := slice }}
 {{ $thisWeekEnt := slice }}
