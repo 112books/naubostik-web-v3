@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ $prefix := strings.TrimSuffix "/" (urls.Parse site.BaseURL).Path }}
+
+<article class="taller-single">
+
+  <header class="taller-header">
+    <div class="taller-header__back">
+      <a href="{{ "tallers/" | relLangURL }}">&larr; Tallers</a>
+    </div>
+    <h1 class="taller-header__title">{{ .Title }}</h1>
+
+    <dl class="taller-meta">
+      {{ with .Params.espai }}
+      <div class="taller-meta__item">
+        <dt>{{ i18n "taller_space" | default "Espai" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+      {{ with .Params.responsable }}
+      <div class="taller-meta__item">
+        <dt>{{ i18n "taller_responsable" | default "Organitza" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+      {{ with .Params.horari }}
+      <div class="taller-meta__item">
+        <dt>{{ i18n "taller_schedule" | default "Horari" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+    </dl>
+  </header>
+
+  {{ with .Params.imatge }}
+  <figure class="taller-photo">
+    <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+  </figure>
+  {{ end }}
+
+  <div class="taller-body content">
+    {{ $cos := .Content | replaceRE "/img/tallers/" (printf "%s/img/tallers/" $prefix) }}
+    {{ $cos = $cos | replaceRE `<figure class="historia-fig"><img src="([^"]+)"(.*?)</figure>` (printf `<a class="espai-gallery-item taller-body__galeria-item" data-gallery="%s" href="$1"><figure class="historia-fig"><img src="$1"$2</figure></a>` $gallery) }}
+    {{ $cos | safeHTML }}
+  </div>
+
+  <footer class="taller-footer">
+    {{ with .Params.link }}
+    <a href="{{ . }}" class="btn btn-primary taller-footer__more" target="_blank" rel="noopener">
+      {{ i18n "taller_more_info" | default "Més informació i inscripcions" }} &rarr;
+    </a>
+    {{ end }}
+
+    <div class="taller-share">
+      <span>{{ i18n "taller_share" | default "Comparteix:" }}</span>
+      <a href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink | urlquery }}" target="_blank" rel="noopener" aria-label="Compartir a Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 9.24-5.234 4.667-5.575-5.185-9.253-3.054h-3.296l7.273 7.237L0 24h3.316l8.043-9.308 6.372 5.473 8.443-8.192-2.114-7.152h3.316z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener" aria-label="Compartir a Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.046V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.097 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="mailto:?subject={{ .Title | urlquery }}&body={{ .Permalink | urlquery }}" target="_blank" rel="noopener" aria-label="Enviar per correu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+</article>
+{{ end }}

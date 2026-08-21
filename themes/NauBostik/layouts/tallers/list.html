@@ -3,17 +3,37 @@
   <h1>{{ .Title }}</h1>
   {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
 </div>
-<ul class="post-list">
+
+<div class="tallers-grid">
   {{ range .Paginator.Pages }}
     {{ if ne .Kind "section" }}
-    <li class="post-card">
-      <article>
-        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-        <p class="post-excerpt">{{ .Summary }}</p>
-      </article>
-    </li>
+    <article class="taller-card">
+      {{ with .Params.imatge }}
+      <figure class="taller-card__img">
+        <a href="{{ .RelPermalink }}" aria-label="{{ $.Title }}">
+          <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+        </a>
+      </figure>
+      {{ end }}
+      <div class="taller-card__body">
+        <h3 class="taller-card__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        {{ with .Params.descripcio }}<p class="taller-card__descripcio">{{ . }}</p>{{ end }}
+        {{ with .Params.espai }}
+        <p class="taller-card__meta"><strong>{{ i18n "taller_space" | default "Espai" }}:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.responsable }}
+        <p class="taller-card__meta"><strong>{{ i18n "taller_responsable" | default "Organitza" }}:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.horari }}
+        <p class="taller-card__meta"><strong>{{ i18n "taller_schedule" | default "Horari" }}:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.link }}
+        <a href="{{ . }}" class="btn btn-primary taller-card__link" target="_blank" rel="noopener">
+          {{ i18n "taller_more_info" | default "Més informació i inscripcions" }} &rarr;
+        </a>
+        {{ end }}
+      </div>
+    </article>
     {{ end }}
   {{ end }}
-</ul>
+</div>
+
 {{ template "_internal/pagination.html" . }}
 {{ end }}

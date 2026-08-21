@@ -1,0 +1,112 @@
+{{ define "main" }}
+{{ $prefix := strings.TrimSuffix "/" (urls.Parse site.BaseURL).Path }}
+{{ $gallery := printf "activitat-%s" .File.BaseFileName }}
+{{ $dateStart := .Date }}
+{{ $dateEnd   := .Params.data_fi | default .Date }}
+{{ $hora      := .Params.hora | default "" }}
+{{ $horaFi    := .Params.hora_fi | default "" }}
+
+{{/* Dates ISO per als calendaris */}}
+{{ $fmtDay  := "20060102" }}
+{{ $fmtDT   := "20060102T150405" }}
+
+{{ $gcalStart := "" }}
+{{ $gcalEnd   := "" }}
+{{ if $hora }}
+  {{ $gcalStart = printf "%sT%s00" ($dateStart | time.Format $fmtDay) (replace $hora ":" "") }}
+  {{ if $horaFi }}
+    {{ $gcalEnd = printf "%sT%s00" ($dateEnd | time.Format $fmtDay) (replace $horaFi ":" "") }}
+  {{ else }}
+    {{ $gcalEnd = $gcalStart }}
+  {{ end }}
+{{ else }}
+  {{ $gcalStart = $dateStart | time.Format $fmtDay }}
+  {{ $gcalEnd   = $dateEnd | time.Format $fmtDay }}
+{{ end }}
+
+{{ $location := printf "%s · Nau Bostik, Ferran Turné 1-11, Barcelona" (.Params.planta | default "Nau Bostik") }}
+{{ $gcalURL := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&location=%s&details=%s" (.Title | urlquery) $gcalStart $gcalEnd ($location | urlquery) (.Params.descripcio | default .Summary | urlquery) }}
+
+<article class="event-single activitat-resident-single">
+
+  <header class="event-header">
+    <div class="event-header__back">
+      <a href="{{ "activitats-residents/" | relLangURL }}">&larr; Activitats Residents</a>
+    </div>
+    <h1 class="event-header__title">{{ .Title }}</h1>
+
+    <dl class="event-meta">
+      <div class="event-meta__item">
+        <dt>{{ i18n "event_date" | default "Data" }}</dt>
+        <dd>
+          {{ $dateStart | time.Format "02/01/2006" }}
+          {{ if ne ($dateEnd | time.Format $fmtDay) ($dateStart | time.Format $fmtDay) }}
+            – {{ $dateEnd | time.Format "02/01/2006" }}
+          {{ end }}
+        </dd>
+      </div>
+      {{ if $hora }}
+      <div class="event-meta__item">
+        <dt>{{ i18n "event_time" | default "Hora" }}</dt>
+        <dd>{{ $hora }}{{ if $horaFi }} – {{ $horaFi }}{{ end }}</dd>
+      </div>
+      {{ end }}
+      <div class="event-meta__item">
+        <dt>{{ i18n "event_location" | default "Lloc" }}</dt>
+        <dd>{{ .Params.planta | default "Nau Bostik" }}{{ with .Params.entitat }} · {{ . }}{{ end }}</dd>
+      </div>
+      {{ with .Params.preu }}
+      <div class="event-meta__item event-meta__item--preu">
+        <dt>{{ i18n "event_price" | default "Entrada" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+      {{ with .Params.entitat }}
+      <div class="event-meta__item">
+        <dt>{{ i18n "event_entity" | default "Entitat" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+    </dl>
+  </header>
+
+  {{ with .Params.imatge }}
+  <figure class="event-photo">
+    <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+  </figure>
+  {{ end }}
+
+  <div class="event-body content">
+    {{ $cos := .Content | replaceRE "/img/activitats/" (printf "%s/img/activitats/" $prefix) }}
+    {{ $cos = $cos | replaceRE `<figure class="historia-fig"><img src="([^"]+)"(.*?)</figure>` (printf `<a class="espai-gallery-item event-body__galeria-item" data-gallery="%s" href="$1"><figure class="historia-fig"><img src="$1"$2</figure></a>` $gallery) }}
+    {{ $cos | safeHTML }}
+  </div>
+
+  <footer class="event-footer">
+    {{ with .Params.link_extern }}
+    <a href="{{ . }}" class="btn btn-primary event-footer__more" target="_blank" rel="noopener">
+      {{ i18n "event_more_info" | default "Més informació" }} &rarr;
+    </a>
+    {{ end }}
+
+    <div class="event-calendar"
+         data-title="{{ .Title | htmlEscape }}"
+         data-start="{{ $gcalStart }}"
+         data-end="{{ $gcalEnd }}"
+         data-location="{{ $location | htmlEscape }}"
+         data-desc="{{ .Params.descripcio | default .Summary | htmlEscape }}"
+         data-slug="{{ .File.ContentBaseName }}">
+      <details class="cal-dropdown">
+        <summary class="cal-dropdown__btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          {{ i18n "event_add_calendar" | default "Afegeix al calendari" }}
+        </summary>
+        <ul class="cal-dropdown__menu">
+          <li><button class="cal-dropdown__item js-cal-ics" type="button">Descarrega fitxer .ics</button></li>
+        </ul>
+      </details>
+    </div>
+  </footer>
+
+</article>
+{{ end }}
