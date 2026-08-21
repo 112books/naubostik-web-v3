@@ -1,0 +1,12 @@
+sources:
+  - name: "La Sagrerina"
+    url: "https://lasagrerina.com/feed/"
+    active: true
+
+  - name: "AVV La Sagrera"
+    url: "https://avvlasagrera.com/feed/"
+    active: true
+
+  - name: "Betevé"
+    url: "https://beteve.cat/sant-andreu/la-sagrera/feed/"
+    active: true

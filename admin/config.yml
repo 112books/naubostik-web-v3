@@ -13,12 +13,13 @@ slug:
   clean_replacement: "-"
 
 collections:
-  # ── Activitats ──
+  # ── Programació ──
   - name: "activitats"
     label: "Activitats"
     folder: "content/activitats"
     create: true
     slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
     fields:
       - { label: "Titol", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -39,12 +40,12 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Activitats Entitats ──
   - name: "activitats-entitats"
     label: "Activitats Entitats"
     folder: "content/activitats-entitats"
     create: true
     slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
     fields:
       - { label: "Titol", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -61,12 +62,13 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Col·lectius ──
+  # ── Contingut ──
   - name: "collectius"
     label: "Col·lectius"
     folder: "content/collectius"
     create: true
     slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
     fields:
       - { label: "Titol", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -79,12 +81,12 @@ collections:
       - { label: "Descripcio", name: "descripcio", widget: "text" }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Espais ──
   - name: "espais"
     label: "Espais"
     folder: "content/espais"
     create: true
     slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
     fields:
       - { label: "Titol", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -104,12 +106,12 @@ collections:
           ] }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Noticies ──
   - name: "noticies"
     label: "Noticies"
     folder: "content/noticies"
     create: true
     slug: "{{slug}}"
+    sort: { field: "date", order: "DESC" }
     fields:
       - { label: "Titol", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
@@ -118,7 +120,7 @@ collections:
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
-  # ── Dades: Recinte ──
+  # ── Dades del recinte ──
   - name: "recinte"
     label: "Estat de la Nau Bostik"
     files:
@@ -136,7 +138,23 @@ collections:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "Tipus", name: "tipus", widget: "select", options: ["tancament", "campanya", "info"] }
 
-  # ── Dades: Slogans ──
+  - name: "tallers-regulars"
+    label: "Tallers i activitats regulars"
+    files:
+      - name: "tallers-regulars"
+        label: "Tallers i activitats regulars"
+        file: "data/tallers-regulars.yaml"
+        fields:
+          - label: "Tallers"
+            name: "tallers"
+            widget: "list"
+            fields:
+              - { label: "Titol", name: "title", widget: "string" }
+              - { label: "Descripcio", name: "descripcio", widget: "text", required: false }
+              - { label: "Espai", name: "espai", widget: "string", required: false }
+              - { label: "Responsable", name: "responsable", widget: "string", required: false }
+              - { label: "Horari", name: "horari", widget: "string", required: false }
+
   - name: "slogans"
     label: "Slogans"
     files:
@@ -146,7 +164,6 @@ collections:
         fields:
           - { label: "Slogans", name: "slogans", widget: "list", required: false }
 
-  # ── Dades: Hero Slideshow ──
   - name: "hero-slideshow"
     label: "Hero Slideshow"
     files:
@@ -161,7 +178,6 @@ collections:
               - { label: "Imatge", name: "src", widget: "image" }
               - { label: "Text alternatiu", name: "alt", widget: "string" }
 
-  # ── Dades: Portada ──
   - name: "portada"
     label: "Portada"
     files:
@@ -179,7 +195,7 @@ collections:
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Tipus", name: "tipus", widget: "string" }
 
-  # ── Dades: Equip ──
+  # ── Equip i fonts ──
   - name: "equip"
     label: "Equip"
     files:
@@ -204,3 +220,18 @@ collections:
               - { label: "Rol", name: "rol", widget: "string" }
               - { label: "Email", name: "email", widget: "string", required: false }
               - { label: "Foto", name: "foto", widget: "string", required: false }
+
+  - name: "sources"
+    label: "Fonts RSS"
+    files:
+      - name: "sources"
+        label: "Fonts de notícies del territori"
+        file: "data/sources.yaml"
+        fields:
+          - label: "Fonts"
+            name: "sources"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "URL RSS", name: "url", widget: "string" }
+              - { label: "Activa", name: "active", widget: "boolean", default: true }

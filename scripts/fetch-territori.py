@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Fetch notícies de territori des de fonts RSS i escriu data/noticies-territori.yaml.
-Fonts: La Sagrerina, AVV La Sagrera, Betevé (Sant Andreu/La Sagrera).
+Llegeix les fonts des de data/sources.yaml (gestionable des del CMS).
 """
 
 import urllib.request
@@ -9,12 +9,17 @@ import xml.etree.ElementTree as ET
 import datetime
 import re
 import os
+import yaml
 
-FEEDS = [
-    {"url": "https://lasagrerina.com/feed/",                        "source": "La Sagrerina"},
-    {"url": "https://avvlasagrera.com/feed/",                       "source": "AVV La Sagrera"},
-    {"url": "https://beteve.cat/sant-andreu/la-sagrera/feed/",      "source": "Betevé"},
-]
+
+def load_sources():
+    """Llegeix fonts RSS des de data/sources.yaml."""
+    path = os.path.join(os.path.dirname(__file__), "..", "data", "sources.yaml")
+    path = os.path.normpath(path)
+    with open(path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+    return [s for s in data.get("sources", []) if s.get("active", True)]
+
 
 MAX_ITEMS = 10
 MAX_PER_SOURCE = 5
@@ -94,15 +99,20 @@ def parse_feed(xml_bytes, source_name):
 
 def main():
     all_items = []
+    sources = load_sources()
 
-    for feed_cfg in FEEDS:
+    if not sources:
+        print("  Cap font RSS activa a data/sources.yaml")
+        return
+
+    for src in sources:
         try:
-            xml_bytes = fetch_feed(feed_cfg["url"])
-            items = parse_feed(xml_bytes, feed_cfg["source"])
+            xml_bytes = fetch_feed(src["url"])
+            items = parse_feed(xml_bytes, src["name"])
             all_items.extend(items)
-            print(f"  {feed_cfg['source']}: {len(items)} items")
+            print(f"  {src['name']}: {len(items)} items")
         except Exception as e:
-            print(f"  ERROR {feed_cfg['source']}: {e}")
+            print(f"  ERROR {src['name']}: {e}")
 
     all_items.sort(key=lambda x: x["_dt"], reverse=True)
     top = all_items[:MAX_ITEMS]
