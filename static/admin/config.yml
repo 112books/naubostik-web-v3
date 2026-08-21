@@ -1,6 +1,7 @@
 backend:
   name: github
-  base_url: https://auth.decapbridge.com/repos/112books/naubostik-web-v3
+  client_id: Ov23liziSDMYRMx0NpeN
+  client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
   branch: main
 
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
@@ -242,3 +243,9 @@ collections:
               - { label: "Nom", name: "name", widget: "string" }
               - { label: "URL RSS", name: "url", widget: "string" }
               - { label: "Activa", name: "active", widget: "boolean", default: true }
+
+backend:
+  name: github
+  client_id: Ov23liziSDMYRMx0NpeN
+  client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
+  branch: main
