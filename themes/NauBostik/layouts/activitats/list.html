@@ -6,8 +6,7 @@
 {{ $all := $activitats | union $residents }}
 
 {{/* Tres grups exclusius */}}
-{{ $tallers  := where $all "Params.taller_fix" true }}
-{{ $tallers  = $tallers | union $tallersSec }}
+{{ $tallers  := $tallersSec }}
 {{ $noTaller := where $all "Params.taller_fix" "!=" true }}
 {{ $propies  := where $noTaller "Params.entitat" nil }}
 {{ $entitats := where (where $noTaller "Params.entitat" "!=" nil) "Params.entitat" "!=" "" }}
