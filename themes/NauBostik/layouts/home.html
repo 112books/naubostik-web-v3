@@ -116,7 +116,7 @@
         {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
       </div>
       {{ else }}
-      <a href="{{ with .Params.link_extern }}{{ . }}{{ else }}{{ .RelPermalink }}{{ end }}" class="home-act-card__link"{{ with .Params.link_extern }} target="_blank" rel="noopener"{{ end }}>
+      <a href="{{ .RelPermalink }}" class="home-act-card__link">
         {{ if .Params.imatge }}
         <div class="home-act-card__img">
           <img src="{{ .Params.imatge | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">
