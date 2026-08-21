@@ -145,13 +145,14 @@ collections:
 
   - name: "recinte"
     label: "Estat de la Nau Bostik"
+    description: "Configura l'estat del recinte i avisos. El camp 'Nota' apareix al hero de la portada. Els 'Avisos' es mostren a la pàgina d'inici i a l'agenda."
     files:
       - name: "recinte"
         label: "Estat de la Nau Bostik"
         file: "data/recinte.yaml"
         fields:
-          - { label: "Estat", name: "estat", widget: "select", options: ["obert", "tancat", "parcial"] }
-          - { label: "Nota", name: "nota", widget: "string", required: false }
+          - { label: "Estat", name: "estat", widget: "select", options: ["obert", "tancat", "parcial"], required: true }
+          - { label: "Nota (text visible al hero)", name: "nota", widget: "string", required: false }
           - label: "Avisos"
             name: "avisos"
             widget: "list"
@@ -161,27 +162,30 @@ collections:
               - { label: "Tipus", name: "tipus", widget: "select", options: ["tancament", "campanya", "info"] }
 
   - name: "slogans"
-    label: "Slogans"
+    label: "Slogans / Frases del ticker"
+    description: "Frases que rolen al ticker de la portada (hero). Una per línia, s'alternen automàticament."
     files:
       - name: "slogans"
-        label: "Slogans del ticker"
+        label: "Llista de slogans"
         file: "data/slogans.yaml"
         fields:
           - { label: "Slogans", name: "slogans", widget: "list", required: false }
 
   - name: "hero-slideshow"
-    label: "Hero Slideshow"
+    label: "Hero Slideshow (Portada)"
+    description: "Imatges de fons del carrusel principal de la portada. L'ordre = ordre visual. Recomanat: 1920x1080px. Opcional: URL per fer clicable la imatge."
     files:
       - name: "hero-slideshow"
         label: "Imatges del Hero"
         file: "data/hero-slideshow.yaml"
         fields:
-          - label: "Imatges"
+          - label: "Imatges del carrusel"
             name: "images"
             widget: "list"
             fields:
-              - { label: "Imatge", name: "src", widget: "image" }
-              - { label: "Text alternatiu", name: "alt", widget: "string" }
+              - { label: "Imatge (1920x1080px recomanat)", name: "src", widget: "image" }
+              - { label: "Text alternatiu (accessibilitat)", name: "alt", widget: "string" }
+              - { label: "Enllaç opcional (URL absoluta)", name: "link", widget: "string", required: false }
 
   - name: "portada"
     label: "Portada"
