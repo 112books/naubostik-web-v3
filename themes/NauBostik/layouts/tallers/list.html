@@ -7,16 +7,18 @@
 <div class="tallers-grid">
   {{ range .Paginator.Pages }}
     {{ if ne .Kind "section" }}
+    {{ $permalink := .RelPermalink }}
+    {{ $title := .LinkTitle }}
     <article class="taller-card">
       {{ with .Params.imatge }}
       <figure class="taller-card__img">
-        <a href="{{ .RelPermalink }}" aria-label="{{ $.Title }}">
-          <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+        <a href="{{ $permalink }}" aria-label="{{ $title }}">
+          <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $title }}" loading="lazy">
         </a>
       </figure>
       {{ end }}
       <div class="taller-card__body">
-        <h3 class="taller-card__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        <h3 class="taller-card__title"><a href="{{ $permalink }}">{{ .LinkTitle }}</a></h3>
         {{ with .Params.descripcio }}<p class="taller-card__descripcio">{{ . }}</p>{{ end }}
         {{ with .Params.espai }}
         <p class="taller-card__meta"><strong>{{ i18n "taller_space" | default "Espai" }}:</strong> {{ . }}</p>{{ end }}

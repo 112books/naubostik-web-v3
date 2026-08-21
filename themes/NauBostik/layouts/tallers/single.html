@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $prefix := strings.TrimSuffix "/" (urls.Parse site.BaseURL).Path }}
+{{ $gallery := printf "taller-%s" .File.BaseFileName }}
 
 <article class="taller-single">
 
