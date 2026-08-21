@@ -217,7 +217,7 @@ collections:
               - { label: "Nom", name: "nom", widget: "string" }
               - { label: "Rol", name: "rol", widget: "string" }
               - { label: "Email", name: "email", widget: "string", required: false }
-              - { label: "Foto", name: "foto", widget: "string", required: false }
+              - { label: "Foto (300x300 o 600x600 px)", name: "foto", widget: "image", required: false }
           - label: "Colaboradors"
             name: "colaboradors"
             widget: "list"
@@ -226,7 +226,7 @@ collections:
               - { label: "Nom", name: "nom", widget: "string" }
               - { label: "Rol", name: "rol", widget: "string" }
               - { label: "Email", name: "email", widget: "string", required: false }
-              - { label: "Foto", name: "foto", widget: "string", required: false }
+              - { label: "Foto (300x300 o 600x600 px)", name: "foto", widget: "image", required: false }
 
   - name: "sources"
     label: "Fonts RSS"
