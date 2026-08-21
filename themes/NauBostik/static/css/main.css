@@ -1152,8 +1152,6 @@ main.container {
   .footer-about .footer-title { display: none; }
   .footer-tagline { display: none; }
   .footer-about address { order: 2; flex: 1; margin-top: 0; line-height: 1.8; }
-  .footer-about .footer-konsento-bloc { order: 3; width: 100%; margin-top: 0.5rem; }
-  .footer-about .footer-konsento-logo { width: 60px; height: 60px; }
 }
 
 .search-form {
@@ -5895,36 +5893,6 @@ main.container {
 }
 @media (max-width: 640px) {
   .konsento-bloc { flex-direction: column; gap: 1rem; }
-}
-
-/* Footer — Konsento bloc (columna footer-about) */
-.footer-konsento-bloc {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  margin-top: 1.5rem;
-  transition: opacity 0.2s;
-}
-.footer-konsento-bloc:hover { opacity: 0.75; }
-.footer-konsento-logo {
-  display: block;
-  border-radius: 50%;
-  width: 88px;
-  height: 88px;
-}
-.footer-konsento-nom {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.2;
-}
-.footer-konsento-sub {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--color-secondary);
-  margin-top: 0.15rem;
 }
 
 /* Cards especials a "Aquesta setmana" */
