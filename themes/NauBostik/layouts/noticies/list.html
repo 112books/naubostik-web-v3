@@ -13,7 +13,7 @@
       <li class="noticia-card">
         <a class="noticia-card__img-wrap" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
           {{ if .Params.imatge }}
-          <img src="{{ .Params.imatge | relURL }}" alt="" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="" loading="lazy">
           {{ else }}
           <div class="noticia-card__img-placeholder"></div>
           {{ end }}

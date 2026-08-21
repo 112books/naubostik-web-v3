@@ -4,9 +4,9 @@
 
 <article class="noticia-single">
   {{ with .Params.imatge }}
-  <figure class="noticia-single__hero">
-    <img src="{{ . | relURL }}" alt="" fetchpriority="high">
-  </figure>
+<figure class="noticia-single__hero">
+    <img src="{{ printf "img/%s" . | relURL }}" alt="" fetchpriority="high">
+</figure>
   {{ end }}
 
   <header class="noticia-single__header">
@@ -38,7 +38,7 @@
     {{ range $recents }}
     <li class="noticia-card">
       <a class="noticia-card__img-wrap" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-        {{ with .Params.imatge }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<div class="noticia-card__img-placeholder"></div>{{ end }}
+        {{ with .Params.imatge }}<img src="{{ printf "img/%s" . | relURL }}" alt="" loading="lazy">{{ else }}<div class="noticia-card__img-placeholder"></div>{{ end }}
       </a>
       <article class="noticia-card__body">
         <p class="noticia-card__meta">{{ .Date.Format "02/01/2006" }}{{ if .Params.destacada }} · <span class="noticia-badge">Destacat</span>{{ end }}</p>

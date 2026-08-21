@@ -125,7 +125,7 @@
       <a href="{{ .RelPermalink }}" class="home-act-card__link">
         {{ if .Params.imatge }}
         <div class="home-act-card__img">
-          <img src="{{ .Params.imatge | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="home-act-card__body">
@@ -324,7 +324,7 @@
   <div class="home-news-grid">
     {{ with $noticiesHero }}
     <a class="home-news-hero" href="{{ .RelPermalink }}">
-      {{ with .Params.imatge }}<div class="home-news-hero__img"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy"></div>{{ end }}
+      {{ with .Params.imatge }}<div class="home-news-hero__img"><img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy"></div>{{ end }}
       <div class="home-news-hero__body">
         {{ if .Params.destacada }}<span class="home-news-badge">Destacat</span>{{ end }}
         <h3 class="home-news-hero__title">{{ .LinkTitle }}</h3>
@@ -337,7 +337,7 @@
       {{ range $noticiesRecents }}
       <li class="home-news-item">
         <a href="{{ .RelPermalink }}">
-          {{ with .Params.imatge }}<div class="home-news-item__thumb"><img src="{{ . | relURL }}" alt="" loading="lazy"></div>{{ end }}
+          {{ with .Params.imatge }}<div class="home-news-item__thumb"><img src="{{ printf "img/%s" . | relURL }}" alt="" loading="lazy"></div>{{ end }}
           <div class="home-news-item__text">
             <p class="home-news-item__date">{{ .Date.Format "02/01/2006" }}</p>
             <h4 class="home-news-item__title">{{ .LinkTitle }}</h4>

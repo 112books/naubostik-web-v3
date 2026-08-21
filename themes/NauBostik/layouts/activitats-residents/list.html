@@ -26,7 +26,7 @@
     <li class="act-item">
       {{ if .Params.imatge }}
       <a class="act-item__img act-item__img--cover" href="{{ .RelPermalink }}">
-        <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+        <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
       </a>
       {{ else if $logo }}
       <a class="act-item__img act-item__img--logo" href="{{ .RelPermalink }}">
@@ -53,7 +53,7 @@
 {{ $pastJson   := slice }}
 {{ range (after 48 $pastSorted) }}
   {{ $logo := partial "logo-entitat" .Params.entitat }}
-  {{ $foto := cond (ne .Params.imatge "") (.Params.imatge | relURL) $logo }}
+  {{ $foto := cond (ne .Params.imatge "") (printf "img/%s" .Params.imatge | relURL) $logo }}
   {{ $pastJson = $pastJson | append (dict
        "title"    .Title
        "url"      .RelPermalink
@@ -76,7 +76,7 @@
       <li class="act-item">
         {{ if .Params.imatge }}
         <a class="act-item__img act-item__img--cover" href="{{ .RelPermalink }}">
-          <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </a>
         {{ else if $logo }}
         <a class="act-item__img act-item__img--logo" href="{{ .RelPermalink }}">

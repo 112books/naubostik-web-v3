@@ -50,7 +50,7 @@
        "date"  (.Date | time.Format "02/01/2006")
        "hora"  (.Params.hora | default "")
        "preu"  (.Params.preu | default "")
-       "img"   (.Params.imatge | relURL)
+       "img"   (printf "img/%s" .Params.imatge | relURL)
        "desc"  (.Params.descripcio | default "")) }}
 {{ end }}
 
@@ -71,7 +71,7 @@
       <li class="act-item">
         {{ if .Params.imatge }}
         <a class="act-item__img" href="{{ .RelPermalink }}">
-          <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </a>
         {{ end }}
         <div class="act-item__body">
@@ -98,7 +98,7 @@
       <li class="act-item act-item--entitat">
         {{ if .Params.imatge }}
         <a class="act-item__img act-item__img--cover" href="{{ .RelPermalink }}">
-          <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </a>
         {{ else if $logo }}
         <a class="act-item__img act-item__img--logo" href="{{ .RelPermalink }}">
@@ -168,7 +168,7 @@
       <li class="act-item">
         {{ if .Params.imatge }}
         <a class="act-item__img" href="{{ .RelPermalink }}">
-          <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </a>
         {{ end }}
         <div class="act-item__body">
@@ -196,7 +196,7 @@
     <li class="act-item">
       {{ if .Params.imatge }}
       <a class="act-item__img" href="{{ .RelPermalink }}">
-        <img src="{{ .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+        <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
       </a>
       {{ end }}
       <div class="act-item__body">
