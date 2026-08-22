@@ -19,7 +19,7 @@
 {{/* Smooth scroll for TOC links */}}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.toc-list a, .manual-toc a').forEach(function(link) {
+    document.querySelectorAll('.manual-toc a, #TableOfContents a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         var href = this.getAttribute('href');
         if (href && href.startsWith('#')) {
@@ -35,10 +35,13 @@
 
     // Mobile TOC toggle
     var tocTitle = document.querySelector('.toc-title');
-    var tocList = document.querySelector('.toc-list');
+    var tocList = document.querySelector('#TableOfContents ul, .toc-list');
     if (tocTitle && tocList) {
       tocTitle.addEventListener('click', function() {
-        tocList.classList.toggle('is-open');
+        var list = document.querySelector('#TableOfContents ul');
+        if (list) {
+          list.classList.toggle('is-open');
+        }
         tocTitle.classList.toggle('is-open');
       });
     }
