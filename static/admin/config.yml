@@ -1,9 +1,9 @@
 backend:
   name: github
   repo: 112books/naubostik-web-v3
-  client_id: Ov23liziSDMYRMx0NpeN
-  client_secret: f784e76c20cd5250fcdd79ff06fb13835161d4a6
   branch: main
+  base_url: https://naubostik-cms-auth.hola-78f.workers.dev
+  auth_type: redirect
 
 logo_url: https://112books.github.io/naubostik-web-v3/img/logos/logo-nau-bostik.png
 
