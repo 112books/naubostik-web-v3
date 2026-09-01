@@ -528,17 +528,17 @@ Els **Issues** (incidències) són el sistema de seguiment de tasques, errors i 
 
 ### 17.2 Processament (Capa A)
 1. El proposant omple el formulari i clica **Envia**
-2. El navegador fa `POST` a `https://konsento.naubostik.com/proposta-activitat/` (app `propostes` de Konsento)
-3. Konsento **desa la proposta** (model `Proposta`) i **avisa tots els editors** per email i Telegram
+2. El navegador fa `POST` a `https://konsento.naubostik.com/web/formulari/`
+3. Konsento **desa la petició** (model `Peticio`, tipus "activitat web") i **avisa l'equip** per Telegram i email
 4. El proposant torna a `/proposa-activitat/` amb un avís d'èxit (`?enviat=1`) o error (`?error=1`)
-5. Un editor obre Konsento → **`/admin/` → Propostes**, revisa les dades
+5. Un editor obre Konsento → **`/ca/revisio/`** (o l'admin → Peticions), revisa les dades
 6. Al CMS del web → **Activitats Residents** → **New**, hi passa les dades
 7. Revisa, completa camps opcionals, puja imatge si cal
 8. Desmarca **Esborrany** → **Save** → publica al proper deploy
 9. (Opcional) A Konsento, marca la proposta com a **Publicada**
 
-> Configuració tècnica: `konsento/propostes/`, secrets al `.env` del servidor
-> (`PROPOSTES_NOTIFY_EMAILS`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`).
+> Configuració tècnica: `assemblees/views.py` (`formulari_web`), repo
+> `codeberg.org/linuxbcn/konsento`. Telegram ja configurat al servidor.
 
 ### 17.3 Millores futures (Capa B — roadmap)
 - [ ] El bostikià entra amb el seu compte de Konsento (no cal GitHub)

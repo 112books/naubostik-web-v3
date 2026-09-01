@@ -31,19 +31,31 @@ Res s'ha tocat a producció (`git pull`/`migrate` NO fets).
 - Fix enllaços TOC del manual (`getElementById`, CSS `#TableOfContents`, toggle mòbil, `<script>` tret de `main.css`, `scroll-margin-top`).
 - Docs: `CLAUDE.md` §8 (backend real CMS), `docs/usuaris-i-grups.md` (PROPOSTA, per revisar), manual-cms §12.4/§17, spec Capa B.
 
-### Revertit (opció A, commit següent)
-- L'`action=` dels formularis `/proposa-activitat/` i `/contacte/` apuntava a `konsento.naubostik.com/proposta-activitat/` i `/missatge-contacte/` → **no existeixen a producció, 404**. Tret l'`action` (tornen a enviar a la mateixa pàgina, noop, sense 404). Bàners + honeypot es queden (inerts).
-- `hugo.toml`: `params.konsento_url` es manté (l'usarà la Capa A definitiva).
+### Capa A — FETA (2026-09-01)
 
-### Pendent — Capa A definitiva (fer al repo Codeberg)
-Afegir a `assemblees/` (repo Codeberg) una vista pública tipus `fes_pregunta`:
-- Endpoint p. ex. `/activitat-agenda/` (fora `i18n_patterns` o dins, decidir).
-- Crea una `Peticio` amb un `Tipus` nou (p. ex. `ACTIVITAT_WEB`) o reutilitza `PROPOSTA` amb marca.
-- Reutilitza `_spam_detectat` + `notifications.py` + `telegram.py` (ja avisen l'equip).
-- Camps del formulari `/proposa-activitat/`: nom, email, entitat, titol, tipus, espai, data, hora, descripcio, observacions.
-- Redirect amb `?enviat=1` / `?error=1` de tornada al web (validar `next` contra open-redirect; hosts permesos `112books.github.io`, `naubostik.com`).
-- Un editor revisa a l'admin (`/revisio/` ja existeix) i publica manualment a "Activitats Residents" del CMS.
-- Llavors: canviar l'`action` dels 2 formularis del web a l'endpoint real i redeploy.
+**Codeberg** (`assemblees/`, commit `a9db195`, push `6147a20..a9db195`):
+- `Peticio.Tipus.ACTIVITAT_WEB` nou (migració `0022_alter_peticio_tipus`).
+- Vista `formulari_web` (`@csrf_exempt @require_POST`) a `assemblees/views.py` →
+  endpoint **`POST /web/formulari/`** (a `konsento/urls.py` arrel, fora i18n).
+  Camp `mena` = `activitat` | `contacte`. Reusa `_spam_detectat` (honeypot
+  **`nb_url`**), `_valida_email`. Redirect a `next` validat (`?enviat=1`/`?error=1`,
+  hosts `112books.github.io` / `naubostik.com`).
+- `telegram.py` `notifica_activitat_web` + branca al signal `notifica_telegram_peticio`.
+  Email als responsables d'`equip-gestor` via el signal existent.
+- 8 tests a `assemblees/tests_web.py`; suite 22/22 OK.
+
+**Web** (commit següent): `action=` dels 2 formularis → `{{ site.Params.konsento_url }}/web/formulari/`,
+camp `mena`, honeypot renombrat `bot-field`→`nb_url`.
+
+### Pendent al servidor (usuari)
+```
+ssh naubostik@vl28359.dinaserver.com
+cd ~/konsento && git pull            # remot = codeberg
+set -a && source .env && set +a && .venv/bin/python manage.py migrate assemblees
+```
+Reiniciar gunicorn. `TELEGRAM_BOT_TOKEN`/`TELEGRAM_CHAT_ID` ja hi són (Telegram ja
+funciona a producció). Provar: omplir el formulari del web un cop desplegat.
+Editor revisa a `/ca/revisio/` i publica manual a "Activitats Residents" del CMS.
 
 ### Pendent — Capa B
 Spec a `docs/superpowers/specs/2026-09-01-capa-b-propostes-autenticades-design.md` (adaptar a l'arquitectura real de Codeberg: `Peticio`, no l'app `propostes`).

@@ -25,13 +25,13 @@
         No s'ha pogut enviar. Revisa el nom, el correu i el missatge, o escriu-nos a <a href="mailto:info@naubostik.com">info@naubostik.com</a>.
       </div>
 
-      {{/* TODO Capa A: action cap a l'endpoint real de Konsento (repo Codeberg),
-           encara no existeix. Vegeu docs/ESTAT-konsento-i-formularis.md §3. */}}
-      <form class="contacte-form" id="contacte-form" method="POST" novalidate>
+      <form class="contacte-form" id="contacte-form" method="POST" novalidate
+            action="{{ site.Params.konsento_url }}/web/formulari/">
+        <input type="hidden" name="mena" value="contacte">
         <input type="hidden" name="next" value="{{ .Permalink }}">
         <input type="hidden" name="consulta" id="form-consulta-hidden" value="general">
         <p aria-hidden="true" style="position:absolute;left:-9999px">
-          <label>No ompliu: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          <label>No ompliu: <input name="nb_url" tabindex="-1" autocomplete="off"></label>
         </p>
         <div class="form-group">
           <label for="form-nom">Nom</label>

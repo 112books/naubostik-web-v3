@@ -275,7 +275,9 @@ Decap CMS amb backend **GitHub** (`static/admin/config.yml`: `backend.name: gith
 
 ### 8.2b Formularis del web → Konsento (Capa A)
 
-Els formularis públics (`/proposa-activitat/`, `/contacte/`) fan `POST` a **Konsento** (`konsento.naubostik.com`, app `propostes`), no a Netlify Forms ni Formspree. Konsento desa cada enviament, avisa els editors per email + Telegram, i redirigeix a la pàgina Hugo amb `?enviat=1` / `?error=1`. Endpoint configurat via `site.Params.konsento_url` a `hugo.toml`. Detall: `konsento/docs/` i `docs/usuaris-i-grups.md`.
+Els formularis públics (`/proposa-activitat/`, `/contacte/`) fan `POST` a **Konsento** (`konsento.naubostik.com/web/formulari/`, vista `formulari_web` a `assemblees/`), no a Netlify Forms ni Formspree. Konsento desa una `Peticio`, avisa l'equip per Telegram + email, i redirigeix a la pàgina Hugo amb `?enviat=1` / `?error=1`. Endpoint via `site.Params.konsento_url` a `hugo.toml`.
+
+> **Konsento canònic = `codeberg.org/linuxbcn/konsento`** (no `github.com/112books/konsento`, fork abandonat). Vegeu `docs/ESTAT-konsento-i-formularis.md`.
 
 ### 8.3 Fitxers
 
