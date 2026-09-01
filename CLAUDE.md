@@ -245,30 +245,37 @@ hugo --minify --baseURL https://naubostik.com/
 
 ---
 
-## 8. CMS Decap + Netlify Identity (Git Gateway)
+## 8. CMS Decap (backend GitHub + Cloudflare Worker OAuth)
 
 ### 8.1 Estratègia
 
-Decap CMS amb backend **Git Gateway** de Netlify. Els editors entren amb **email + password** (sense compte de GitHub). Cada canvi és un commit al repo GitHub. Netlify només es fa servir per Identity + Git Gateway (pla gratuït). El site continua desplegat a GitHub Pages.
+Decap CMS amb backend **GitHub** (`static/admin/config.yml`: `backend.name: github`, `repo: 112books/naubostik-web-v3`). L'intercanvi OAuth el fa un **Cloudflare Worker** propi (`base_url: https://naubostik-cms-auth.hola-78f.workers.dev`). Cada canvi és un commit directe a `main`. El site es desplega a GitHub Pages.
 
 - **CMS URL:** `https://112books.github.io/naubostik-web-v3/admin/`
-- **Netlify projecte:** `fastidious-melba-66bc1e`
-- **Compte Netlify:** `webmaster@naubostik.com` (Google Workspace)
+- **Worker OAuth:** compte Cloudflare `hola-78f`, worker `naubostik-cms-auth`
+- **Compte Google Workspace:** `webmaster@naubostik.com`
 
-### 8.2 Autenticació
+> Netlify Identity / Git Gateway **NO** es fa servir (esment antic superat). Cap servei de Netlify actiu.
 
-**Backend: Git Gateway (Netlify Identity)**
-- Editors entren amb email + password (sense GitHub)
-- Netlify gestiona usuaris, contrasenyes i tokens
-- Cada commit es fa al branch `main` del repo GitHub
-- Registre: **"Invite only"** (només usuaris convidats poden entrar)
+### 8.2 Autenticació i rols
 
-**Compte Netlify:**
-- Email: `webmaster@naubostik.com`
-- Google Workspace de Nau Bostik
-- Projecte: `fastidious-melba-66bc1e`
-- Site ID: `e6266d04-315d-480f-b258-cbbc08beb6a6`
-- Identity API: `https://fastidious-melba-66bc1e.netlify.app/.netlify/identity`
+**Els editors necessiten compte GitHub + ser col·laboradors del repo amb rol `Write`.** No hi ha email+password.
+
+| Rol | Mecanisme | Qui |
+|---|---|---|
+| Superusuari | `Admin` al repo GitHub (o owner de l'org) | Joan + 1 persona de back |
+| Editor de continguts | Col·laborador `Write` | Equip de gestió |
+| Bostikià (entitat/resident) | Sense accés al CMS — formulari públic | Entitats i residents |
+
+- **Alta d'un editor:** un superusuari afegeix el nom d'usuari GitHub a `github.com/112books/naubostik-web-v3/settings/access` amb rol `Write`; la persona accepta la invitació i ja pot entrar al CMS.
+- Decap amb backend GitHub **no** té permisos per col·lecció: qualsevol editor pot tocar qualsevol contingut.
+- Model complet de persones i grups dels dos entorns (web + Konsento): `docs/usuaris-i-grups.md`.
+
+**Futur (subsistema B):** el pont d'autenticació CMS ↔ Konsento farà que l'entrada al CMS l'autoritzi el grup `editors_web` de Konsento (helper `is_editor_web`). No implementat.
+
+### 8.2b Formularis del web → Konsento (Capa A)
+
+Els formularis públics (`/proposa-activitat/`, `/contacte/`) fan `POST` a **Konsento** (`konsento.naubostik.com`, app `propostes`), no a Netlify Forms ni Formspree. Konsento desa cada enviament, avisa els editors per email + Telegram, i redirigeix a la pàgina Hugo amb `?enviat=1` / `?error=1`. Endpoint configurat via `site.Params.konsento_url` a `hugo.toml`. Detall: `konsento/docs/` i `docs/usuaris-i-grups.md`.
 
 ### 8.3 Fitxers
 

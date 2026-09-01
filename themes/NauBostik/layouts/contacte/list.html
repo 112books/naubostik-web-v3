@@ -18,8 +18,20 @@
         <button class="consulta-btn" data-consulta="incidencia" type="button">Incidència</button>
       </div>
 
-      <form class="contacte-form" id="contacte-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+      <div class="form-banner form-banner--ok" data-form-banner="enviat" hidden>
+        Missatge rebut. Et respondrem al més aviat possible. Gràcies!
+      </div>
+      <div class="form-banner form-banner--error" data-form-banner="error" hidden>
+        No s'ha pogut enviar. Revisa el nom, el correu i el missatge, o escriu-nos a <a href="mailto:info@naubostik.com">info@naubostik.com</a>.
+      </div>
+
+      <form class="contacte-form" id="contacte-form" method="POST" novalidate
+            action="{{ site.Params.konsento_url }}/missatge-contacte/">
+        <input type="hidden" name="next" value="{{ .Permalink }}">
         <input type="hidden" name="consulta" id="form-consulta-hidden" value="general">
+        <p aria-hidden="true" style="position:absolute;left:-9999px">
+          <label>No ompliu: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
         <div class="form-group">
           <label for="form-nom">Nom</label>
           <input type="text" id="form-nom" name="nom" required autocomplete="name">
@@ -319,6 +331,11 @@
       if (btn) {
         btn.click();
       }
+    }
+    var estat = params.get('enviat') ? 'enviat' : params.get('error') ? 'error' : null;
+    if (estat) {
+      var banner = document.querySelector('[data-form-banner="' + estat + '"]');
+      if (banner) { banner.hidden = false; banner.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
     }
   });
 </script>

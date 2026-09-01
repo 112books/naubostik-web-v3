@@ -16,32 +16,30 @@
   </div>
 </div>
 
-{{/* Smooth scroll for TOC links */}}
+{{/* TOC: desplaçament suau + plegat en mòbil */}}
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.manual-toc a, #TableOfContents a').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault();
-          var target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, '', href);
-          }
-        }
+  document.addEventListener('DOMContentLoaded', function () {
+    var toc = document.getElementById('TableOfContents');
+    if (!toc) return;
+
+    toc.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        // getElementById evita el SyntaxError de querySelector amb ids que
+        // comencen per dígit (ex: "1-acces-al-cms").
+        var id = decodeURIComponent(this.getAttribute('href').slice(1));
+        var target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + id);
       });
     });
 
-    // Mobile TOC toggle
     var tocTitle = document.querySelector('.toc-title');
-    var tocList = document.querySelector('#TableOfContents ul, .toc-list');
-    if (tocTitle && tocList) {
-      tocTitle.addEventListener('click', function() {
-        var list = document.querySelector('#TableOfContents ul');
-        if (list) {
-          list.classList.toggle('is-open');
-        }
+    var tocRoot = toc.querySelector('ul');
+    if (tocTitle && tocRoot) {
+      tocTitle.addEventListener('click', function () {
+        tocRoot.classList.toggle('is-open');
         tocTitle.classList.toggle('is-open');
       });
     }

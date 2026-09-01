@@ -75,10 +75,18 @@
       <h2>Envia la teva proposta</h2>
       <p>Omple el formulari i l'equip de gestió es posarà en contacte amb tu.</p>
 
-      <form name="proposta-activitat" method="POST" netlify netlify-honeypot="bot-field" class="proposa-form">
-        <input type="hidden" name="form-name" value="proposta-activitat">
-        <p class="proposa-form__honeypot" aria-hidden="true">
-          <label>No ompliu aquest camp: <input name="bot-field"></label>
+      <div class="form-banner form-banner--ok" data-form-banner="enviat" hidden>
+        Proposta rebuda. L'equip de gestió la revisarà i et respondrà. Gràcies!
+      </div>
+      <div class="form-banner form-banner--error" data-form-banner="error" hidden>
+        No s'ha pogut enviar la proposta. Revisa els camps obligatoris i torna-ho a provar, o escriu-nos a <a href="mailto:info@naubostik.com">info@naubostik.com</a>.
+      </div>
+
+      <form name="proposta-activitat" method="POST" class="proposa-form"
+            action="{{ site.Params.konsento_url }}/proposta-activitat/">
+        <input type="hidden" name="next" value="{{ .Permalink }}">
+        <p class="proposa-form__honeypot" aria-hidden="true" style="position:absolute;left:-9999px">
+          <label>No ompliu aquest camp: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
         </p>
 
         <div class="form-group">
@@ -169,4 +177,14 @@
   </aside>
 
 </div>
+
+<script>
+  (function () {
+    var p = new URLSearchParams(location.search).get('enviat') ? 'enviat'
+          : new URLSearchParams(location.search).get('error') ? 'error' : null;
+    if (!p) return;
+    var b = document.querySelector('[data-form-banner="' + p + '"]');
+    if (b) { b.hidden = false; b.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  })();
+</script>
 {{ end }}

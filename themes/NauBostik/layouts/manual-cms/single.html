@@ -16,29 +16,28 @@
   </div>
 </div>
 
-{{/* Smooth scroll for TOC links */}}
+{{/* TOC: desplaçament suau + plegat en mòbil */}}
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.toc-list a, .manual-toc a').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault();
-          var target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, '', href);
-          }
-        }
+  document.addEventListener('DOMContentLoaded', function () {
+    var toc = document.getElementById('TableOfContents');
+    if (!toc) return;
+
+    toc.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var id = decodeURIComponent(this.getAttribute('href').slice(1));
+        var target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + id);
       });
     });
 
-    // Mobile TOC toggle
     var tocTitle = document.querySelector('.toc-title');
-    var tocList = document.querySelector('.toc-list');
-    if (tocTitle && tocList) {
-      tocTitle.addEventListener('click', function() {
-        tocList.classList.toggle('is-open');
+    var tocRoot = toc.querySelector('ul');
+    if (tocTitle && tocRoot) {
+      tocTitle.addEventListener('click', function () {
+        tocRoot.classList.toggle('is-open');
         tocTitle.classList.toggle('is-open');
       });
     }

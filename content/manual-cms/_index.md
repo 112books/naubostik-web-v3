@@ -398,33 +398,32 @@ Si ets un nou editor convidat:
 
 > **Important**: Si no tens compte GitHub, has de crear-ne un primer a https://github.com/join (és gratuït). Un cop tinguis compte, diu al Superadmin el teu nom d'usuari GitHub per convidar-te.
 
-### 12.4 Sistema per Entitats/Residents (sense accés CMS)
+### 12.4 Sistema per Entitats/Residents ("bostikians", sense accés CMS)
 
-Les entitats i residents **NO tenen accés direct al CMS** (no tenen compte GitHub ni col·laborador).
+Les entitats i residents **NO tenen accés directe al CMS** (no tenen compte GitHub). Envien les seves activitats amb el **formulari públic**, i un editor les revisa i publica.
 
-**Flux actual (MVP): Formulari web + Revisió editorial**
+**Flux actual (Capa A): Formulari web → Konsento → Revisió editorial**
 
 ```
-Entitat/Resident
+Entitat/Resident (bostikià)
        │
        ▼
-Formulari "Proposa activitat" al web (/proposa-activitat/)
+Formulari "Proposa una activitat" (/proposa-activitat/)
        │
        ▼
-Sistema rep les dades → crea issue a GitHub / notifica editors
+POST a Konsento (konsento.naubostik.com, app "propostes")
+       │  · desa la proposta (no es perd res)
+       │  · avisa TOTS els editors per email + Telegram
+       ▼
+Un editor obre Konsento → /admin/ → Propostes
        │
        ▼
-Editor/Superadmin revisa al CMS
-       │
-       ▼
-Crea l'entrada a "Activitats Residents" → Publica
+Crea l'entrada a "Activitats Residents" al CMS → Publica
 ```
 
-**Formulari actual** (`/proposa-activitat/`):
-- Camps: Info general + Material per l'agenda + Material operatiu
-- Enviament: Formspree / Netlify Forms → notifica per correu als editors
+**Formulari** (`/proposa-activitat/`): camps d'info general + agenda + material operatiu. En enviar, el proposant torna a la pàgina amb un avís d'èxit o error.
 
-**Futur (v2)**: Sistema amb dashboard propi per entitats + dashboard revisió editors (Sveltia CMS + Cloudflare Worker o similar).
+**Futur (Capa B)**: el bostikià entra amb el seu compte de Konsento i la proposta crea directament un esborrany al CMS, sense transcripció manual. Vegeu `docs/superpowers/specs/`.
 
 ---
 
@@ -527,28 +526,32 @@ Els **Issues** (incidències) són el sistema de seguiment de tasques, errors i 
   2. **Material per l'agenda** (descripció curta, títol públic, enllaç extern)
   3. **Material operatiu** (espai demanat, necessitats tècniques, contacte responsable, observacions internes)
 
-### 17.2 Processament
-1. L'usuaria omple el formulari i clica **Envia**
-2. El formulari envia les dades a **Formspree** (endpoint configurat)
-3. Formspree envia un correu a `activitats@naubostik.com` (llista editors)
-4. Els editors reben el correu amb totes les dades estructurades
-5. Un editor accedeix al CMS → **Activitats Residents** → **New**
-6. Copia/enganxa les dades del correu als camps corresponents
+### 17.2 Processament (Capa A)
+1. El proposant omple el formulari i clica **Envia**
+2. El navegador fa `POST` a `https://konsento.naubostik.com/proposta-activitat/` (app `propostes` de Konsento)
+3. Konsento **desa la proposta** (model `Proposta`) i **avisa tots els editors** per email i Telegram
+4. El proposant torna a `/proposa-activitat/` amb un avís d'èxit (`?enviat=1`) o error (`?error=1`)
+5. Un editor obre Konsento → **`/admin/` → Propostes**, revisa les dades
+6. Al CMS del web → **Activitats Residents** → **New**, hi passa les dades
 7. Revisa, completa camps opcionals, puja imatge si cal
 8. Desmarca **Esborrany** → **Save** → publica al proper deploy
+9. (Opcional) A Konsento, marca la proposta com a **Publicada**
 
-### 17.3 Millores futures (roadmap)
-- [ ] Dashboard propi per entitats (login sense GitHub)
-- [ ] Notificació automàtica a l'entitat quan es publica
-- [ ] Estat de la proposta (pendent / en revisió / publicat / rebutjat)
+> Configuració tècnica: `konsento/propostes/`, secrets al `.env` del servidor
+> (`PROPOSTES_NOTIFY_EMAILS`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`).
+
+### 17.3 Millores futures (Capa B — roadmap)
+- [ ] El bostikià entra amb el seu compte de Konsento (no cal GitHub)
+- [ ] La proposta crea directament un esborrany a "Activitats Residents"
+- [ ] Estat de la proposta visible per al proposant (pendent / en revisió / publicada / rebutjada)
 - [ ] Històric de propostes per entitat
-- [ ] Integració amb calendarí de cessió d'espais
+- [ ] Notificació automàtica a l'entitat quan es publica
 
 ---
 
 ---
 
-*Manual actualitzat: 22 Agost 2026*  
-*Versió: 3.0*  
+*Manual actualitzat: 1 Setembre 2026*  
+*Versió: 3.1*  
 *Mantenit per: LinuxBCN.com per a Nau Bostik*  
 *Repositori: https://github.com/112books/naubostik-web-v3*

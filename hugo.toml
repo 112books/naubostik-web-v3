@@ -77,6 +77,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
   description = "Nau Bostik. Equipament sociocultural de gestió comunitària situat al barri de La Sagrera."
   # Tira reivindicativa de lemes: mostra-la només a la portada. Desactiva a false.
   showTicker = true
+  # Konsento rep els POST dels formularis (proposta d'activitat, contacte).
+  konsento_url = "https://konsento.naubostik.com"
 
 [[menu.main]]
   name = "Activitats"
