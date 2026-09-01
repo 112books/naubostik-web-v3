@@ -82,8 +82,9 @@
         No s'ha pogut enviar la proposta. Revisa els camps obligatoris i torna-ho a provar, o escriu-nos a <a href="mailto:info@naubostik.com">info@naubostik.com</a>.
       </div>
 
-      <form name="proposta-activitat" method="POST" class="proposa-form"
-            action="{{ site.Params.konsento_url }}/proposta-activitat/">
+      {{/* TODO Capa A: action cap a l'endpoint real de Konsento (repo Codeberg),
+           encara no existeix. Vegeu docs/ESTAT-konsento-i-formularis.md §3. */}}
+      <form name="proposta-activitat" method="POST" class="proposa-form">
         <input type="hidden" name="next" value="{{ .Permalink }}">
         <p class="proposa-form__honeypot" aria-hidden="true" style="position:absolute;left:-9999px">
           <label>No ompliu aquest camp: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
