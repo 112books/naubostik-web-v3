@@ -170,12 +170,6 @@ https://github.com/112books/naubostik-web-v3/actions
 1. **Verificar CMS** després de rebuild (imatges + manual)
 2. **Actualitzar `data/recinte.yaml`** amb vacances 1-31 agost
 3. **Implementar flux entitats**: formulari + Formspree → correu + Telegram → editor revisa CMS
-4. **Nova funcionalitat: Convocatóries d'assemblea amb dates múltiples**
-   - Crear col·lecció `assemblees` al CMS (o ampliar `activitats` amb tipus `assemblea`)
-   - Camps: títol, descripció, 1-5 dates proposades, 2 francs horaris per data
-   - Formulari públic per votar disponibilitat (Google Forms / Typeform / formulari propi)
-   - Resultats visibles a editors → trien data/hora final → publiquen
-   - Notificació automàtica a participants (email/Telegram)
 4. **Sincronitzar contingut** amb naubostik.com (evitant duplicats)
 5. **Fotos equip** → descarregar i actualitzar `data/equip.yaml`
 
