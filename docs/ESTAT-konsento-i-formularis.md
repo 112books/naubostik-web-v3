@@ -58,7 +58,7 @@ funciona a producció). Provar: omplir el formulari del web un cop desplegat.
 Editor revisa a `/ca/revisio/` i publica manual a "Activitats Residents" del CMS.
 
 ### Pendent — Capa B
-Spec a `docs/superpowers/specs/2026-09-01-capa-b-propostes-autenticades-design.md` (adaptar a l'arquitectura real de Codeberg: `Peticio`, no l'app `propostes`).
+Spec (2a versió, sobre el repo real): `docs/superpowers/specs/2026-09-01-capa-b-agenda-sync-design.md`. B1 (auto-publicació via JSON + GitHub Action, patró `fetch-territori.py`) dissenyat i llest per implementar. B2 (bostikià autenticat) només esbossat.
 
 ## 4. Model de persones (per revisar amb l'equip)
 

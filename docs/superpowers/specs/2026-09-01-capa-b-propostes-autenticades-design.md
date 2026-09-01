@@ -1,5 +1,12 @@
 # Capa B — Propostes autenticades des de Konsento
 
+> **DESCARTAT.** Escrit sobre el fork mort `github.com/112books/konsento`
+> (app `propostes`, model `Entitat`). El Konsento real és
+> `codeberg.org/linuxbcn/konsento` (model `Peticio`, sense `Entitat`).
+> Substituït per `2026-09-01-capa-b-agenda-sync-design.md`. Es manté només
+> com a referència d'idees (§1 objectiu, §3.1 decisions obertes de B2 hi
+> encaixen), no com a pla d'implementació.
+
 **Estat:** SPEC per implementar més endavant. Capa A (formulari públic →
 Konsento → avís editors → publicació manual) ja està feta i desplegada.
 Aquest document és per continuar el treball en una sessió futura.
