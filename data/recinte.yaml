@@ -1,9 +1,8 @@
 estat: tancat
-nota: Tancat per vacances fins al 31 d'agost
+nota: Iniciant el curs 2026-2027!
 avisos:
-  - text: Tancat per vacances d'estiu del 01 al 31 d'agost. Tornem el 01 amb molta
-      energia!
-    tipus: tancament
+  - text: Iniciem el curs amb tota la energia renovada!
+    tipus: info
   - text: La Sagrera necessita més un centre cultural que una estació d'Alta
       Velocitat
     tipus: campanya
