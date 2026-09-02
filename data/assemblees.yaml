@@ -2,13 +2,11 @@
 darrera: ~
 
 propera:
-  data: 2026-09-15
-  hora: "17:00"
-  lloc: "Nau Bostik — sala d'assemblees"
-  titol: "Presentació del nou web i de Konsento, l'àgora digital de la Nau Bostik"
-  url: https://konsento.naubostik.com/ca/assemblea/1/
+  data: 2026-09-22
+  hora: "16:30"
+  lloc: "Nau Bostik — sala de comissions"
+  titol: "Reunió de la comissió de comunicació"
+  url: https://konsento.naubostik.com/ca/assemblea/2/
   ordre_del_dia:
-    - "Benvinguda i presentació del nou web"
-    - "Què és Konsento i com l'usarem"
-    - "Properes assemblees i comissions"
-    - "Torn obert de paraula"
+    - "Pla de difusió de l'assemblea del 15 de setembre"
+    - "Publicació d'actes i acords a Konsento"
