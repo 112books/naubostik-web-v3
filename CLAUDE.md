@@ -72,15 +72,15 @@ Sempre **Nau Bostik**, mai "la Nau" ni "Bostik" sols.
 
 ### MVP — Fonaments imprescindibles
 
-- [ ] **Home v3** nova — hero newtro, indicador d'estat, agenda setmana, CTAs (veure §4)
-- [ ] **Agenda pública filtrable** — per tipus, entitat, espai, franja horària
-- [ ] **Visita Nau Bostik** — nova secció: com arribar, horaris, accessibilitat, mapa per plantes
-- [ ] **Indicador d'estat del recinte** — camp editable des del CMS, visible a home i Visita
-- [ ] **Fitxes d'espais** completes (equipament tècnic, disponibilitat, aforament)
-- [ ] **Formulari "Proposa una activitat"** — camps bàsics (info + agenda + operatiu)
-- [ ] **Registre públic d'assemblees** — pàgina simple: data, temes, acords, propera conv.
-- [ ] **GH Pages** funcionant a `https://112books.github.io/naubostik-web-v3/`
-- [ ] Narrativa newtro aplicada al hero i textos principals
+- [x] **Home v3** nova — hero newtro, indicador d'estat, agenda setmana, CTAs (veure §4)
+- [x] **Agenda pública filtrable** — per tipus, entitat, espai, franja horària (2026-09-02, Bloc "Properes activitats")
+- [x] **Visita Nau Bostik** — nova secció: com arribar, horaris, accessibilitat, mapa per plantes
+- [x] **Indicador d'estat del recinte** — camp editable des del CMS (`data/recinte.yaml`), visible a home i Visita
+- [x] **Fitxes d'espais** completes (equipament tècnic, disponibilitat, aforament) — 2026-09-02, 5 dels 6 espais cedibles (Espais Exteriors sense dades al dossier original)
+- [x] **Formulari "Proposa una activitat"** — Capa A, posta a Konsento (`konsento.naubostik.com/web/formulari/`)
+- [x] **Registre públic d'assemblees** — decisió: NO fer pàgina pròpia al web, Konsento és la font; el web només mostra teaser + link perquè l'usuari s'identifiqui i voti disponibilitat a Konsento
+- [x] **GH Pages** funcionant a `https://112books.github.io/naubostik-web-v3/`
+- [ ] Narrativa newtro aplicada al hero i textos principals — no auditat
 
 ### Fase 1 — Profunditat i diferenciació
 
