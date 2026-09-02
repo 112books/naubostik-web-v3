@@ -50,28 +50,29 @@
 </section>
 
 {{/* ══════════════════════════════════════════════════
-     AGENDA DE LA SETMANA
+     AGENDA: 3 propers propis + 3 propers entitats
 ══════════════════════════════════════════════════ */}}
-{{ $weekEnd := now.AddDate 0 0 7 }}
 {{$activitats := where site.RegularPages "Section" "activitats" }}
 {{$residents := where site.RegularPages "Section" "activitats-residents" }}
 {{$allAct := $activitats | union $residents }}
 
-{{ $thisWeekNB  := slice }}
-{{ $thisWeekEnt := slice }}
+{{ $propiesFut  := slice }}
+{{ $entitatsFut := slice }}
 {{ range $allAct.ByDate }}
   {{ if not .Params.taller_fix }}
     {{ $end := .Params.data_fi | default .Date }}
-    {{ if and (ge $end $now) (le .Date $weekEnd) }}
+    {{ if ge $end $now }}
       {{ if .Params.entitat }}
-        {{ $thisWeekEnt = $thisWeekEnt | append . }}
+        {{ $entitatsFut = $entitatsFut | append . }}
       {{ else }}
-        {{ $thisWeekNB = $thisWeekNB | append . }}
+        {{ $propiesFut = $propiesFut | append . }}
       {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $thisWeekAll := $thisWeekNB | append $thisWeekEnt }}
+{{ $propiesFut  = first 3 $propiesFut }}
+{{ $entitatsFut = first 2 $entitatsFut }}
+{{ $thisWeekAll := append $propiesFut $entitatsFut }}
 
 {{ $assemblees := index site.Data "assemblees" }}
 
@@ -95,7 +96,7 @@
 {{ $comissions := index site.Data "comissions" }}
 <section class="home-setmana section">
   <div class="section-header">
-    <h2 class="section-title">Aquesta setmana <span class="section-title__dates">{{ $now | time.Format "2" }}–{{ $weekEnd | time.Format "2 de January" }}</span></h2>
+    <h2 class="section-title">Properes activitats</h2>
     <a href="{{ "activitats/" | relLangURL }}" class="section-link">Agenda completa &rarr;</a>
   </div>
   <div class="home-setmana__filtres" role="group" aria-label="Filtra activitats">
@@ -107,7 +108,8 @@
     <button class="filtre-btn" data-view="calendari" type="button">Calendari</button>
   </div>
   <ul class="home-setmana__grid" id="setmana-grid">
-    {{ range $thisWeekAll }}
+    {{/* ── Fila 1: 3 propers propis ── */}}
+    {{ range $propiesFut }}
     {{ $grup := "nb" }}
     {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
     {{ else if .Params.comissio }}{{ $grup = "comissio" }}
@@ -139,48 +141,73 @@
     </li>
     {{ end }}
 
-    {{/* ── Card fixa: propera assemblea de Konsento ── */}}
-    {{ if $assemblees }}{{ with $assemblees.propera }}
-    <li class="home-act-card home-act-card--konsento" data-grup="assemblea">
-      <a href="{{ .url | default "https://konsento.naubostik.com" }}" target="_blank" rel="noopener" class="home-act-card__link">
+    {{/* ── Fila 2: 2 propers entitats ── */}}
+    {{ range $entitatsFut }}
+    {{ $grup := "nb" }}
+    {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
+    {{ else if .Params.comissio }}{{ $grup = "comissio" }}
+    {{ else if .Params.entitat }}{{ $grup = "entitats" }}
+    {{ end }}
+    <li class="home-act-card" data-grup="{{ $grup }}">
+      {{ if .Params.avis }}
+      <div class="home-act-card__body">
+        <p class="home-act-card__badge">{{ if eq .Params.avis "tancament" }}Tancat{{ else }}Avís{{ end }}</p>
+        {{ with .Params.data_fi }}<p class="home-act-card__date">Fins al {{ . | time.Format "02/01/2006" }}</p>{{ end }}
+        <h3 class="home-act-card__title">{{ .LinkTitle }}</h3>
+        {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
+      </div>
+      {{ else }}
+      <a href="{{ .RelPermalink }}" class="home-act-card__link">
+        {{ if .Params.imatge }}
+        <div class="home-act-card__img">
+          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+        </div>
+        {{ end }}
         <div class="home-act-card__body">
-          <p class="home-act-card__badge home-act-card__badge--assemblea">Assemblea</p>
-          <p class="home-act-card__date">{{ .data | time.Format "02/01" }}{{ with .hora }} · {{ . }} h{{ end }}</p>
-          <h3 class="home-act-card__title">{{ .titol | default "Assemblea de la Nau Bostik" }}</h3>
-          {{ with .lloc }}<p class="home-act-card__desc">📍 {{ . }}</p>{{ end }}
-          <p class="home-act-card__konsento-link">Confirmar assistència a Konsento →</p>
+          {{ with .Params.entitat }}<p class="home-act-card__entitat">{{ . }}</p>{{ end }}
+          <p class="home-act-card__date">{{ .Date | time.Format "02/01" }}{{ with .Params.hora }} · {{ . }} h{{ end }}{{ with .Params.preu }} · {{ . }}{{ end }}</p>
+          <h3 class="home-act-card__title">{{ .LinkTitle }}</h3>
+          {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
         </div>
       </a>
+      {{ end }}
     </li>
-    {{ else }}
-    <li class="home-act-card home-act-card--buit" data-grup="assemblea">
-      <div class="home-act-card__body">
-        <p class="home-act-card__badge home-act-card__badge--assemblea">Assemblea</p>
-        <p class="home-act-card__desc">No hi ha cap assemblea convocada de moment.</p>
-        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Consultar a Konsento →</a>
-      </div>
-    </li>
-    {{ end }}{{ end }}
+    {{ end }}
 
-    {{/* ── Card fixa: comissions a Konsento ── */}}
-    <li class="home-act-card home-act-card--buit" data-grup="comissio">
+    {{/* ── Card fixa: propera assemblea (Konsento) + comissions ── */}}
+    <li class="home-act-card home-act-card--konsento home-act-card--govern" data-grup="assemblea">
       <div class="home-act-card__body">
-        <p class="home-act-card__badge home-act-card__badge--comissio">Comissions</p>
-        {{ if $comissions }}{{ with $comissions.comissions }}
-        <p class="home-act-card__desc">{{ len . }} comissions actives. Les reunions es coordinen a Konsento.</p>
-        {{ else }}
-        <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
-        {{ end }}{{ else }}
-        <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
-        {{ end }}
-        <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Veure a Konsento →</a>
+        <div class="home-govern__bloc">
+          <p class="home-act-card__badge home-act-card__badge--assemblea">Propera assemblea</p>
+          {{ if $assemblees }}{{ with $assemblees.propera }}
+            {{ if .data }}<p class="home-act-card__date">{{ .data | time.Format "02/01" }}{{ with .hora }} · {{ . }} h{{ end }}</p>{{ end }}
+            <h3 class="home-act-card__title">{{ .titol | default "Assemblea de la Nau Bostik" }}</h3>
+            {{ with .lloc }}<p class="home-act-card__desc">📍 {{ . }}</p>{{ end }}
+          {{ else }}
+            <p class="home-act-card__desc">Apunta't per votar les properes decisions.</p>
+          {{ end }}{{ else }}
+          <p class="home-act-card__desc">Apunta't per votar les properes decisions.</p>
+          {{ end }}
+          <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Votar a Konsento →</a>
+        </div>
+        <div class="home-govern__bloc home-govern__bloc--comissions">
+          <p class="home-act-card__badge home-act-card__badge--comissio">Comissions</p>
+          {{ if $comissions }}{{ with $comissions.comissions }}
+          <p class="home-act-card__desc">{{ len . }} comissions actives. Les reunions es coordinen a Konsento.</p>
+          {{ else }}
+          <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
+          {{ end }}{{ else }}
+          <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
+          {{ end }}
+          <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Veure a Konsento →</a>
+        </div>
       </div>
     </li>
 
     {{ if not $thisWeekAll }}
     <li class="home-act-card home-act-card--buit" data-grup="nb">
       <div class="home-act-card__body">
-        <p class="home-act-card__desc">No hi ha activitats programades per als propers 7 dies.</p>
+        <p class="home-act-card__desc">No hi ha activitats programades properament.</p>
         <a href="{{ "activitats/" | relLangURL }}" class="home-act-card__konsento-link">Consulta l'agenda completa →</a>
       </div>
     </li>

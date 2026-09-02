@@ -1708,3 +1708,54 @@ ja fan push a GitHub.
 - Cal decidir si el VPS de Dinahosting es dona de baixa o es manté per
   altres usos (Hugo staging? WordPress?).
 
+## Sessió UI Agenda van v3: filtres, fletxes i portada 2×3 (2026-09-02)
+
+### Tasca
+Ajustos a la pàgina d'agenda (`/activitats/`) i la portada (`home`) per
+millorar l'ús i ordenar el contingut:
+1. Arreglar els **filtres** del bloc "Properes activitats" (no funcionaven).
+2. Afegir **fletxes de desplaçament horitzontal** (visibles al hover) pels
+   usuaris sense ratolí amb scroll horitzontal.
+3. **Portada**: noves seccions "Properes activitats" en format **2 files × 3
+   columnes** (3 propers propis · 2 propers d'entitats · card de governança
+   amb propera assemblea + comissions).
+4. **Agenda**: la columna 1 "Activitats" mostra les **3 properes pròpies** i
+   la resta va al bloc "Properes activitats".
+
+### Fitxers modificats
+- `themes/NauBostik/static/js/main.js` — try/catch a totes les inits del
+  DOMContentLoaded (fix filtres: si fallava una funció anterior, els filtres
+  no s'executaven); nova funció `initHscrollArrows`; `initAgendaFilters`
+  recalcula les fletxes en filtrar.
+- `themes/NauBostik/layouts/activitats/list.html` — fletxes prev/next als
+  blocs "Properes" i "Passades"; columna 1 → `first 3` de propies futures,
+  Bloc B → `after 3` + entitats.
+- `themes/NauBostik/layouts/home.html` — nova lògica: `first 3` propies +
+  `first 2` entitats; card combinada de governança (assemblea + comissions);
+  títol "Aquesta setmana" → "Properes activitats".
+- `themes/NauBostik/static/css/main.css` — fletxes `.act-hscroll-arrow`,
+  cards `.home-act-card--govern`, `.home-govern__bloc`; grid `.home-setmana__grid`
+  a 3 columnes fixes + media queries (2 cols ≤760px, 1 col ≤600px).
+
+### Notes clau
+- El bug dels filtres era probabilístic: `initAgendaFilters` s'executava
+  l'última al `DOMContentLoaded`; si qualsevol funció anterior llançava una
+  excepció, els filtres quedaven morts. Fix: embolicar totes les inits en
+  try/catch.
+- Hugo **reordena per data** un slice de Pages quan s'itera amb `range`, de
+  manera que per forçar l'ordre 3 propis → 2 entitats cal fer dos `range`
+  separats (no un `append` combinat).
+- El grid de portada és ara `repeat(3, 1fr)`: 6 cards → 2×3.
+- Els 3 esdeveniments qüestionats ((In)visibles, Escola CUP, Cooperativisme)
+  ja tenien fitxer a `content/activitats/`; ara surten a la columna 1 de
+  l'agenda i a la portada.
+
+### Valoració subjectiva
+4 — Canvis ben acotats i verificats amb build net. El fix dels filtres amb
+try/catch és robust i el benefici de la portada 2×3 és clar.
+
+### Pendents
+- [ ] Verificació visual final en navegador (360/768/1100px).
+- [ ] Publicar a GH Pages (push a `main`) perquè els canvis es vegin en viu.
+
+

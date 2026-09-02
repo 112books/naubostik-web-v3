@@ -23,17 +23,14 @@
   {{ if ge $end $now }}{{ $entitatsFutSlice = $entitatsFutSlice | append . }}{{ end }}
 {{ end }}
 
-{{/* Columna 1: activitats destacades futures / Bloc B: la resta (pròpies + entitats, per poder-les filtrar totes juntes) */}}
-{{ $destacades  := slice }}
+{{/* Columna 1: les 3 properes activitats pròpies / Bloc B: la resta de pròpies + entitats (per poder-les filtrar totes juntes) */}}
+{{ $propiesFutSlice = $propiesFutSlice.ByDate }}
+{{ $destacades  := first 3 $propiesFutSlice }}
 {{ $properesFut := slice }}
-{{ range $propiesFutSlice }}
-  {{ if .Params.destacat }}
-    {{ $destacades  = $destacades  | append . }}
-  {{ else }}
-    {{ $properesFut = $properesFut | append . }}
-  {{ end }}
+{{ range (after 3 $propiesFutSlice) }}
+  {{ $properesFut = $properesFut | append . }}
 {{ end }}
-{{ range $entitatsFutSlice }}
+{{ range $entitatsFutSlice.ByDate }}
   {{ $properesFut = $properesFut | append . }}
 {{ end }}
 {{ $properesFut = $properesFut.ByDate }}
@@ -105,7 +102,7 @@
       {{ end }}
     </ul>
     {{ else }}
-    <p class="act-empty">No hi ha activitats destacades programades.</p>
+    <p class="act-empty">No hi ha activitats pròpies programades properament.</p>
     {{ end }}
   </section>
 
@@ -208,6 +205,9 @@
   <p class="act-filters-empty" id="act-filters-empty" hidden>Cap activitat coincideix amb els filtres seleccionats.</p>
 
   <div class="act-hscroll-wrap">
+    <button type="button" class="act-hscroll-arrow act-hscroll-arrow--prev" aria-label="Desplaça cap a l'esquerra" tabindex="-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
     <ul class="act-historica-grid act-historica-grid--hscroll" id="act-properes-grid">
       {{ range $properesFut }}
       {{ $tipus := "propia" }}
@@ -248,6 +248,9 @@
       {{ end }}
       {{ end }}
     </ul>
+    <button type="button" class="act-hscroll-arrow act-hscroll-arrow--next" aria-label="Desplaça cap a la dreta" tabindex="-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
   </div>
 </section>
 {{ end }}
@@ -259,6 +262,9 @@
   </div>
 
   <div class="act-hscroll-wrap">
+  <button type="button" class="act-hscroll-arrow act-hscroll-arrow--prev" aria-label="Desplaça cap a l'esquerra" tabindex="-1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
   <ul class="act-historica-grid act-historica-grid--hscroll" id="act-historica-grid">
     {{ range $passadesIni }}
     <li class="act-item">
@@ -276,6 +282,9 @@
     {{ end }}
     {{ if $passadesJson }}<li class="act-historica-sentinel" id="act-historica-sentinel"></li>{{ end }}
   </ul>
+  <button type="button" class="act-hscroll-arrow act-hscroll-arrow--next" aria-label="Desplaça cap a la dreta" tabindex="-1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
   </div>
 
   <script type="application/json" id="act-historica-data">{{ $passadesJson | jsonify | safeHTML }}</script>

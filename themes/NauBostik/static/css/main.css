@@ -3276,6 +3276,50 @@ main.container {
   align-self: stretch;
 }
 
+.act-hscroll-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #ccc);
+  background: #fff;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, background 0.2s ease, color 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.act-hscroll-wrap.has-overflow:hover .act-hscroll-arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+.act-hscroll-arrow:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.act-hscroll-arrow--prev { left: -16px; }
+.act-hscroll-arrow--next { right: -16px; }
+.act-hscroll-arrow.is-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.act-hscroll-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 600px) {
+  .act-hscroll-arrow--prev { left: 2px; }
+  .act-hscroll-arrow--next { right: 2px; }
+}
+
 .act-archive-btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -5699,7 +5743,7 @@ main.container {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -5955,6 +5999,10 @@ main.container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
+
+@media (max-width: 760px) {
+  .home-setmana__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
@@ -6446,6 +6494,17 @@ main.container {
 .home-act-card--konsento .home-act-card__link { text-decoration: none; }
 .home-act-card--buit .home-act-card__body { padding: 1rem; }
 .home-act-card--buit { background: var(--color-surface-alt, #f8f5f0); border: 1px dashed var(--color-border, #ddd); }
+
+.home-act-card--govern .home-act-card__body {
+  padding: 1rem 1rem 1.1rem;
+  gap: 1rem;
+}
+.home-govern__bloc + .home-govern__bloc {
+  border-top: 1px solid var(--color-border, #eee);
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+}
+.home-govern__bloc .home-act-card__konsento-link { margin-top: 0.25rem; }
 
 /* ══════════════════════════════════════════════════
    MANUAL CMS
