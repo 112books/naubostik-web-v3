@@ -23,7 +23,7 @@
   {{ if ge $end $now }}{{ $entitatsFutSlice = $entitatsFutSlice | append . }}{{ end }}
 {{ end }}
 
-{{/* Columna 1: activitats destacades futures / Bloc B: la resta */}}
+{{/* Columna 1: activitats destacades futures / Bloc B: la resta (pròpies + entitats, per poder-les filtrar totes juntes) */}}
 {{ $destacades  := slice }}
 {{ $properesFut := slice }}
 {{ range $propiesFutSlice }}
@@ -33,7 +33,29 @@
     {{ $properesFut = $properesFut | append . }}
   {{ end }}
 {{ end }}
+{{ range $entitatsFutSlice }}
+  {{ $properesFut = $properesFut | append . }}
+{{ end }}
+{{ $properesFut = $properesFut.ByDate }}
 {{ $entitatsFut := $entitatsFutSlice }}
+
+{{/* Llista d'entitats presents al Bloc B, per omplir el filtre */}}
+{{ $entitatsFiltre := slice }}
+{{ range $properesFut }}
+  {{ with .Params.entitat }}
+    {{ if not (in $entitatsFiltre .) }}{{ $entitatsFiltre = $entitatsFiltre | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $entitatsFiltre = sort $entitatsFiltre }}
+
+{{/* Llista de plantes/espais presents al Bloc B (dada lliure, no un select tancat) */}}
+{{ $plantesFiltre := slice }}
+{{ range $properesFut }}
+  {{ with .Params.planta }}
+    {{ if not (in $plantesFiltre .) }}{{ $plantesFiltre = $plantesFiltre | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $plantesFiltre = sort $plantesFiltre }}
 
 {{/* Bloc C: activitats passades (exclou les que data_fi >= ara), ordre desc */}}
 {{ $passades := slice }}
@@ -152,11 +174,56 @@
   <div class="section-header">
     <h2 class="act-historica__title">Properes activitats</h2>
   </div>
+
+  <div class="act-filters" role="group" aria-label="Filtres de l'agenda">
+    <select class="act-filter" data-filter="tipus">
+      <option value="">Tots els tipus</option>
+      <option value="propia">Activitats pròpies</option>
+      <option value="entitat">Entitats residents</option>
+      <option value="assemblea">Assemblees</option>
+    </select>
+    {{ if $entitatsFiltre }}
+    <select class="act-filter" data-filter="entitat">
+      <option value="">Totes les entitats</option>
+      {{ range $entitatsFiltre }}
+      <option value="{{ . }}">{{ . }}</option>
+      {{ end }}
+    </select>
+    {{ end }}
+    {{ if $plantesFiltre }}
+    <select class="act-filter" data-filter="planta">
+      <option value="">Tots els espais</option>
+      {{ range $plantesFiltre }}
+      <option value="{{ . }}">{{ . }}</option>
+      {{ end }}
+    </select>
+    {{ end }}
+    <select class="act-filter" data-filter="franja">
+      <option value="">Tot el dia</option>
+      <option value="mati">Matí</option>
+      <option value="tarda">Tarda</option>
+      <option value="vespre">Vespre</option>
+    </select>
+  </div>
+  <p class="act-filters-empty" id="act-filters-empty" hidden>Cap activitat coincideix amb els filtres seleccionats.</p>
+
   <div class="act-hscroll-wrap">
-    <ul class="act-historica-grid act-historica-grid--hscroll">
+    <ul class="act-historica-grid act-historica-grid--hscroll" id="act-properes-grid">
       {{ range $properesFut }}
+      {{ $tipus := "propia" }}
+      {{ if .Params.entitat }}{{ $tipus = "entitat" }}{{ else if .Params.assemblea }}{{ $tipus = "assemblea" }}{{ end }}
+      {{ $franja := "" }}
+      {{ with .Params.hora }}
+        {{ $hStr := strings.TrimLeft (index (strings.Split . ":") 0) "0" }}
+        {{ if eq $hStr "" }}{{ $hStr = "0" }}{{ end }}
+        {{ $hInt := int $hStr }}
+        {{ if lt $hInt 13 }}{{ $franja = "mati" }}
+        {{ else if lt $hInt 19 }}{{ $franja = "tarda" }}
+        {{ else }}{{ $franja = "vespre" }}
+        {{ end }}
+      {{ end }}
       {{ if .Params.avis }}
-      <li class="act-item act-item--avis">
+      <li class="act-item act-item--avis" data-exempt="1">
         <div class="act-item__body">
           <p class="act-item__badge">{{ if eq .Params.avis "tancament" }}Tancat{{ else }}Avís{{ end }}</p>
           {{ with .Params.data_fi }}<p class="act-item__date">Fins al {{ . | time.Format "02/01/2006" }}</p>{{ end }}
@@ -165,13 +232,14 @@
         </div>
       </li>
       {{ else }}
-      <li class="act-item">
+      <li class="act-item" data-tipus="{{ $tipus }}" data-entitat="{{ .Params.entitat }}" data-planta="{{ .Params.planta }}" data-franja="{{ $franja }}">
         {{ if .Params.imatge }}
         <a class="act-item__img" href="{{ .RelPermalink }}">
           <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
         </a>
         {{ end }}
         <div class="act-item__body">
+          {{ if .Params.entitat }}<span class="act-item__entitat">{{ .Params.entitat }}</span>{{ end }}
           <p class="act-item__date">{{ .Date | time.Format "02/01/2006" }}{{ with .Params.hora }} · {{ . }} h{{ end }}{{ with .Params.preu }} · {{ . }}{{ end }}</p>
           <h3 class="act-item__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
           {{ with .Params.descripcio }}<p class="act-item__desc">{{ . }}</p>{{ end }}

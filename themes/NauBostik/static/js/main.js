@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initActivitatsHistoric();
   initHscrollFade();
   initFooterLogo();
+  initAgendaFilters();
 });
 
 function initShareCopy() {
@@ -494,6 +495,37 @@ function initHscrollFade() {
     }
     grid.addEventListener('scroll', check, { passive: true });
     check();
+  });
+}
+
+function initAgendaFilters() {
+  var grid = document.getElementById('act-properes-grid');
+  if (!grid) return;
+  var selects = document.querySelectorAll('.act-filter');
+  if (!selects.length) return;
+  var empty = document.getElementById('act-filters-empty');
+  var items = grid.querySelectorAll('.act-item:not([data-exempt])');
+
+  function apply() {
+    var active = {};
+    selects.forEach(function(sel) {
+      if (sel.value) active[sel.dataset.filter] = sel.value;
+    });
+
+    var visibleCount = 0;
+    items.forEach(function(item) {
+      var match = Object.keys(active).every(function(key) {
+        return item.dataset[key] === active[key];
+      });
+      item.hidden = !match;
+      if (match) visibleCount++;
+    });
+
+    if (empty) empty.hidden = visibleCount > 0;
+  }
+
+  selects.forEach(function(sel) {
+    sel.addEventListener('change', apply);
   });
 }
 
