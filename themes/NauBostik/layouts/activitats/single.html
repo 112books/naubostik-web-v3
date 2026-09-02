@@ -64,9 +64,14 @@
     </dl>
   </header>
 
-  {{ with .Params.imatge }}
+  {{ $esGovernanca := or .Params.assemblea .Params.comissio }}
+  {{ if .Params.imatge }}
   <figure class="event-photo">
     <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+  </figure>
+  {{ else if $esGovernanca }}
+  <figure class="event-photo event-photo--fallback">
+    <img src="{{ "img/logos/konsento-logo-rodo.svg" | relURL }}" alt="Konsento" loading="lazy">
   </figure>
   {{ end }}
 

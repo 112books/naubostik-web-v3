@@ -178,6 +178,7 @@
       <option value="propia">Activitats pròpies</option>
       <option value="entitat">Entitats residents</option>
       <option value="assemblea">Assemblees</option>
+      <option value="comissio">Comissions</option>
     </select>
     {{ if $entitatsFiltre }}
     <select class="act-filter" data-filter="entitat">
@@ -213,7 +214,10 @@
     <ul class="act-historica-grid act-historica-grid--hscroll" id="act-properes-grid">
       {{ range $properesFut }}
       {{ $tipus := "propia" }}
-      {{ if .Params.entitat }}{{ $tipus = "entitat" }}{{ else if .Params.assemblea }}{{ $tipus = "assemblea" }}{{ end }}
+      {{ if .Params.comissio }}{{ $tipus = "comissio" }}
+      {{ else if .Params.assemblea }}{{ $tipus = "assemblea" }}
+      {{ else if .Params.entitat }}{{ $tipus = "entitat" }}
+      {{ end }}
       {{ $franja := "" }}
       {{ with .Params.hora }}
         {{ $hStr := strings.TrimLeft (index (strings.Split . ":") 0) "0" }}

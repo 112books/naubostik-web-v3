@@ -6809,3 +6809,19 @@ main.container {
   color: inherit;
   font-weight: 600;
 }
+
+/* ── Imatge de fallback per a activitats de governança (assemblea/comissió) ── */
+.event-photo--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface, #f8f8f8);
+  padding: 2rem;
+}
+
+.event-photo--fallback img {
+  width: auto;
+  max-width: 60%;
+  max-height: 85%;
+  object-fit: contain;
+}
