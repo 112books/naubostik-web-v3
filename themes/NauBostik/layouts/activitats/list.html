@@ -88,9 +88,9 @@
     <ul class="act-list">
       {{ range $destacades }}
       <li class="act-item">
-        {{ if .Params.imatge }}
+        {{ if or .Params.imatge .Params.assemblea .Params.comissio }}
         <a class="act-item__img" href="{{ .RelPermalink }}">
-          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          {{ partial "img-acte" (dict "page" .) }}
         </a>
         {{ end }}
         <div class="act-item__body">
@@ -239,9 +239,9 @@
       </li>
       {{ else }}
       <li class="act-item" data-tipus="{{ $tipus }}" data-entitat="{{ .Params.entitat }}" data-planta="{{ .Params.planta }}" data-franja="{{ $franja }}">
-        {{ if .Params.imatge }}
+        {{ if or .Params.imatge .Params.assemblea .Params.comissio }}
         <a class="act-item__img" href="{{ .RelPermalink }}">
-          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          {{ partial "img-acte" (dict "page" .) }}
         </a>
         {{ end }}
         <div class="act-item__body">

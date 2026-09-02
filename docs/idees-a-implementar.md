@@ -40,6 +40,7 @@ Recull de funcionalitats i millores pendents per a naubostik.com. Document viu �
 **Pendent:**
 - Importar tots els events de naubostik.com producció (script a `docs/superpowers/import-activitats-produccio.md`)
 - Revisar que el formulari "Proposa la teva activitat" arriba al correu de gestió (Netlify Forms)
+- **[PENDENT D'ESTUDIAR] Modelatge de l'origen de cada activitat** — Cal definir clarament què és una activitat *pròpia* (totes menys les que venen de residents/entitats) i què és una activitat *d'entitat/resident* (les que envien ells i s'aproven). Estudiar la millor forma de representar-ho (camp `origen`/`tipus` explícit al frontmatter vs. inferir-ho del camp `entitat`), i com gestionar-ho des del CMS i el flux de proposta → aprovació. (2026-09-02)
 
 ### /noticies/
 **Implementat (2026-08-13):** Pàgina llista amb cards (foto · títol · data · resum · "Llegir més") i paginador numèric. Totes les **23 notícies de producció importades** amb imatges del cos a `static/img/noticies/` (figures amb peu, galeries, vídeo YouTube a "Hem fet els deures"), portades 100% locals (les 10 que usaven URL del WP s'han localitzat). Enllaços interns morts (naubostik.com) convertits a text pla.

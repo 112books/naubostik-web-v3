@@ -1758,4 +1758,68 @@ try/catch és robust i el benefici de la portada 2×3 és clar.
 - [ ] Verificació visual final en navegador (360/768/1100px).
 - [ ] Publicar a GH Pages (push a `main`) perquè els canvis es vegin en viu.
 
+## Sessió UI Agenda v3 (II): botó Aplica, classificació per tipus, neteja de contingut fals i logo Konsento (2026-09-02)
+
+### Tasca
+Continuació de la sessió anterior d'agenda/portada. L'usuari reporta que el
+filtratge no funciona bé i que "no està ben definit què és cada activitat".
+Demana revisar/arreglar la **classificació per tipus**, esborrar **contingut
+fals** (s'està fent un "reflex" del web amb contingut real), i posar el **logo
+de Konsento** a les activitats de governança.
+
+### Decisions
+- **Semàntica del `data-tipus`** (ordre de prioritat, unificat amb la portada):
+  `comissio` → `assemblea` → `entitat` → `propia`. Al `list.html` no es
+  comprovava el camp `comissio` (bug: una comissió es classificava com a
+  "pròpia"), i l'ordre era diferent del de `home.html`.
+- **Botó "Aplica filtres"**: els `select` del bloc "Properes activitats" ja no
+  filtren en temps real; ara cal prémer "Aplica filtres" (o "Neteja").
+- **Fletxes sempre visibles** quan hi ha overflow (abans només amb `:hover`).
+- **Pendent d'estudiar**: com modelar l'origen de cada activitat (pròpia vs.
+  d'entitat/resident que envia proposta i s'aprova). Documentat a `CLAUDE.md`
+  i `docs/idees-a-implementar.md`. Possible camp `origen`/`tipus` al frontmatter
+  o inferència pel camp `entitat`.
+
+### Fitxers modificats / creats / eliminats
+- `content/activitats-residents/exposicio-sala-basiana-setembre.md` —
+  **ELIMINAT** (dada de mostra falsa del commit fb96652).
+- `content/activitats-residents/xerrada-cooperativisme.md` — **ELIMINAT**
+  (dada de mostra falsa del commit fb96652).
+- `content/activitats-residents/taller-salsa-cubana.md` — **ELIMINAT**
+  (duplicat del taller de `content/tallers/`).
+- `content/activitats-residents/academia-cant-madisound.md` — **ELIMINAT**
+  (duplicat del taller de `content/tallers/`).
+- `content/activitats/assemblea-konsento.md` — corregit de `assemblea = true`
+  a `comissio = true` (el títol diu "Reunió de la comissió de comunicació").
+- `themes/NauBostik/layouts/activitats/list.html` — classificació amb
+  `comissio`; opció "Comissions" al select de tipus; botons "Aplica/Neteja";
+  fallback de logo a les cards (partial `img-acte`).
+- `themes/NauBostik/layouts/activitats/single.html` — fallback del logo de
+  Konsento per a activitats de governança sense imatge.
+- `themes/NauBostik/layouts/partials/img-acte.html` — **CREAT** (partial per
+  mostrar `imatge` o el logo de Konsento en cards de governança).
+- `themes/NauBostik/static/css/main.css` — `.event-photo--fallback`,
+  `.img-acte-fallback`, botons de filtres.
+- `CLAUDE.md`, `docs/idees-a-implementar.md` — pendent d'estudi del modelatge
+  de l'origen de l'activitat.
+
+### Notes clau
+- El "contingut fals" venia del commit `fb96652` ("3 events entitats de mostra":
+  Globus Vermell, Arquitectura.coop, Sala Basiana). El concert de Globus Vermell
+  ja s'havia esborrat; van quedar els 2 de mostra + 2 duplicats de tallers.
+- El logo `konsento-logo-rodo.svg` és una **silueta negra** (`#000000`); si es
+  vol un logo a color caldrà un altre asset.
+- L'usuari espera la icona de governança **a les llistes/cards**, no només al
+  single (es va aclarir i s'aplica amb el partial).
+
+### Valoració subjectiva
+4 — Neteja acotada al que l'usuari va aprovar (només els 4 fitxers falsos,
+sense arriscar contingut real), classificació unificada i logo fallback
+reutilitzable via partial.
+
+### Pendents
+- [ ] Verificar visualment la icona a les cards del grid de /activitats/ i la portada.
+- [ ] Decidir si cal un **asset de logo de Konsento a color** (l'actual és negre).
+- [ ] Estudiar el modelatge de l'origen de l'activitat (pendent registrat).
+- [ ] Actualitzar `CLAUDE.md` §9 i `robots.txt`/`disableKinds` quan es passi a producció.
 

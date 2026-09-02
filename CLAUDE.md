@@ -52,6 +52,8 @@ Sempre **Nau Bostik**, mai "la Nau" ni "Bostik" sols.
 
 **Agenda** (renovada, MVP): separació important: Agenda pública (el que el públic veu) ≠ Calendari viu del recinte (eina de l'equip, Fase 3). Filtres MVP: per tipus · per entitat · per espai/planta · per franja horària. Seguiment post-activitat (Fase 2).
 
+> **Pendent d'estudiar (2026-09-02):** com modelar l'origen de cada activitat — *pròpia* (totes menys les dels residents) vs. *d'entitat/resident* (les que envien ells i s'aproven). Estudiar si cal un camp `origen`/`tipus` explícit al frontmatter o si n'hi ha prou inferint-ho del camp `entitat`, i com encaixa amb el flux proposta → aprovació i el CMS. Vegeu `docs/idees-a-implementar.md`.
+
 **Espais** (millorada, MVP): fitxes completes (superfície, aforament, equipament tècnic, disponibilitat), mapa navegable, indicador d'accés motoritzat, portada aleatòria d'espais especials.
 
 **Col·lectius i residents** (renovada, Fase 1): no un llistat de logos — una **xarxa visible**. Inspiració machizukuri japonès. Mapa de sinèrgies anual (Fase 1–2). Banc de recursos i capacitats (Fase 2).

@@ -1,0 +1,6 @@
+{{ $imatge := .page.Params.imatge }}
+{{ if $imatge }}
+<img src="{{ printf "img/%s" $imatge | relURL }}" alt="{{ .page.Title }}" loading="lazy">
+{{ else if or .page.Params.assemblea .page.Params.comissio }}
+<img class="img-acte-fallback" src="{{ "img/logos/konsento-logo-rodo.svg" | relURL }}" alt="Konsento" loading="lazy">
+{{ end }}

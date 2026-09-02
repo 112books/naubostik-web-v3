@@ -6825,3 +6825,14 @@ main.container {
   max-height: 85%;
   object-fit: contain;
 }
+
+/* ── Logo de Konsento com a imatge de fallback a les llistes/cards de governança ── */
+.act-item__img .img-acte-fallback,
+.home-act-card__img .img-acte-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.5rem;
+  background: var(--color-surface, #f8f8f8);
+  box-sizing: border-box;
+}
