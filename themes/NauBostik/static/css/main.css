@@ -3233,6 +3233,23 @@ main.container {
   font-style: italic;
 }
 
+.act-filters__apply {
+  padding: 0.4rem 1.1rem;
+}
+
+.act-filters__reset {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.act-filters__reset:hover {
+  color: var(--color-accent);
+}
+
 .act-hscroll-wrap {
   position: relative;
 }
@@ -3296,7 +3313,7 @@ main.container {
   z-index: 2;
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
-.act-hscroll-wrap.has-overflow:hover .act-hscroll-arrow {
+.act-hscroll-wrap.has-overflow .act-hscroll-arrow {
   opacity: 1;
   pointer-events: auto;
 }
@@ -5760,6 +5777,10 @@ main.container {
 .home-setmana__grid .home-act-card:not([data-grup]) { /* avis */ }
 
 .home-setmana__grid .home-act-card.is-hidden {
+  display: none;
+}
+
+.home-setmana__grid .home-act-card.is-extra {
   display: none;
 }
 

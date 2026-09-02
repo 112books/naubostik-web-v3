@@ -71,7 +71,8 @@
   {{ end }}
 {{ end }}
 {{ $propiesFut  = first 3 $propiesFut }}
-{{ $entitatsFut = first 2 $entitatsFut }}
+{{ $entitats6    := first 6 $entitatsFut }}
+{{ $entitatsFut  = first 2 $entitatsFut }}
 {{ $thisWeekAll := append $propiesFut $entitatsFut }}
 
 {{ $assemblees := index site.Data "assemblees" }}
@@ -148,33 +149,33 @@
     </li>
     {{ end }}
 
-    {{/* ── Fila 2: 2 propers entitats ── */}}
-    {{ range $entitatsFut }}
+    {{/* ── Fila 2: entitats (2 visibles per defecte, fins a 6 al filtre "Entitats") ── */}}
+    {{ range $i, $p := $entitats6 }}
     {{ $grup := "nb" }}
-    {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
-    {{ else if .Params.comissio }}{{ $grup = "comissio" }}
-    {{ else if .Params.entitat }}{{ $grup = "entitats" }}
+    {{ if $p.Params.assemblea }}{{ $grup = "assemblea" }}
+    {{ else if $p.Params.comissio }}{{ $grup = "comissio" }}
+    {{ else if $p.Params.entitat }}{{ $grup = "entitats" }}
     {{ end }}
-    <li class="home-act-card" data-grup="{{ $grup }}">
-      {{ if .Params.avis }}
+    <li class="home-act-card{{ if ge $i 2 }} is-extra{{ end }}" data-grup="{{ $grup }}">
+      {{ if $p.Params.avis }}
       <div class="home-act-card__body">
-        <p class="home-act-card__badge">{{ if eq .Params.avis "tancament" }}Tancat{{ else }}Avís{{ end }}</p>
-        {{ with .Params.data_fi }}<p class="home-act-card__date">Fins al {{ . | time.Format "02/01/2006" }}</p>{{ end }}
-        <h3 class="home-act-card__title">{{ .LinkTitle }}</h3>
-        {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
+        <p class="home-act-card__badge">{{ if eq $p.Params.avis "tancament" }}Tancat{{ else }}Avís{{ end }}</p>
+        {{ with $p.Params.data_fi }}<p class="home-act-card__date">Fins al {{ . | time.Format "02/01/2006" }}</p>{{ end }}
+        <h3 class="home-act-card__title">{{ $p.LinkTitle }}</h3>
+        {{ with $p.Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
       </div>
       {{ else }}
-      <a href="{{ .RelPermalink }}" class="home-act-card__link">
-        {{ if .Params.imatge }}
+      <a href="{{ $p.RelPermalink }}" class="home-act-card__link">
+        {{ if $p.Params.imatge }}
         <div class="home-act-card__img">
-          <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ printf "img/%s" $p.Params.imatge | relURL }}" alt="{{ $p.Title }}" loading="lazy">
         </div>
         {{ end }}
         <div class="home-act-card__body">
-          {{ with .Params.entitat }}<p class="home-act-card__entitat">{{ . }}</p>{{ end }}
-          <p class="home-act-card__date">{{ .Date | time.Format "02/01" }}{{ with .Params.hora }} · {{ . }} h{{ end }}{{ with .Params.preu }} · {{ . }}{{ end }}</p>
-          <h3 class="home-act-card__title">{{ .LinkTitle }}</h3>
-          {{ with .Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
+          {{ with $p.Params.entitat }}<p class="home-act-card__entitat">{{ . }}</p>{{ end }}
+          <p class="home-act-card__date">{{ $p.Date | time.Format "02/01" }}{{ with $p.Params.hora }} · {{ . }} h{{ end }}{{ with $p.Params.preu }} · {{ . }}{{ end }}</p>
+          <h3 class="home-act-card__title">{{ $p.LinkTitle }}</h3>
+          {{ with $p.Params.descripcio }}<p class="home-act-card__desc">{{ . }}</p>{{ end }}
         </div>
       </a>
       {{ end }}
@@ -184,7 +185,7 @@
     {{/* ── Card fixa: propera assemblea (Konsento) + comissions ── */}}
     <li class="home-act-card home-act-card--konsento home-act-card--govern" data-grup="assemblea">
       <div class="home-act-card__body">
-        <div class="home-govern__bloc">
+        <div class="home-govern__bloc home-govern__bloc--assemblea">
           <p class="home-act-card__badge home-act-card__badge--assemblea">Propera assemblea</p>
           {{ if $assemblees }}{{ with $assemblees.propera }}
             {{ if .data }}<p class="home-act-card__date">{{ .data | time.Format "02/01" }}{{ with .hora }} · {{ . }} h{{ end }}</p>{{ end }}

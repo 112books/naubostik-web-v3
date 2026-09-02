@@ -526,6 +526,8 @@ function initAgendaFilters() {
   if (!selects.length) return;
   var empty = document.getElementById('act-filters-empty');
   var items = grid.querySelectorAll('.act-item:not([data-exempt])');
+  var applyBtn = document.getElementById('act-filters-apply');
+  var resetBtn = document.getElementById('act-filters-reset');
 
   function apply() {
     var active = {};
@@ -556,9 +558,15 @@ function initAgendaFilters() {
     });
   }
 
-  selects.forEach(function(sel) {
-    sel.addEventListener('change', apply);
-  });
+  function reset() {
+    selects.forEach(function(sel) { sel.value = ''; });
+    items.forEach(function(item) { item.hidden = false; });
+    if (empty) empty.hidden = true;
+  }
+
+  // Els selects només configuren la selecció; cal prémer "Aplica filtres".
+  if (applyBtn) applyBtn.addEventListener('click', apply);
+  if (resetBtn) resetBtn.addEventListener('click', reset);
 }
 
 function initActivitatsHistoric() {
@@ -651,13 +659,41 @@ function initSetmanaFiltres() {
     var filtre = btn.dataset.filtre;
     var grid = document.querySelector('.home-setmana__grid');
     if (!grid) return;
+
     grid.querySelectorAll('.home-act-card').forEach(function(card) {
-      var shouldHide = filtre !== 'tots' && card.dataset.grup !== filtre;
-      if (shouldHide) {
+      var isGovern = card.classList.contains('home-act-card--govern');
+      var isExtra  = card.classList.contains('is-extra');
+      var isVisible;
+
+      if (isGovern) {
+        // La card de governança agrupa assemblea + comissions.
+        isVisible = filtre === 'tots' || filtre === 'assemblea' || filtre === 'comissio';
+      } else if (isExtra) {
+        // Les entitats extra (3a–6a) només es mostren al filtre "Entitats".
+        isVisible = filtre === 'entitats';
+      } else {
+        isVisible = filtre === 'tots' || card.dataset.grup === filtre;
+      }
+
+      if (isExtra) {
+        card.classList.toggle('is-extra', !isVisible);
+      } else if (isGovern) {
+        card.classList.toggle('is-hidden', !isVisible);
+      }
+
+      if (isExtra) {
+        if (!isVisible) {
+          card.style.transition = '';
+          card.style.opacity = '';
+          card.style.transform = '';
+        }
+      } else if (!isVisible) {
         card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
         card.style.opacity = '0';
         card.style.transform = 'scale(0.97)';
-        setTimeout(function() { card.classList.add('is-hidden'); card.style.opacity = ''; card.style.transform = ''; }, 250);
+        if (!isGovern) {
+          setTimeout(function() { card.classList.add('is-hidden'); card.style.opacity = ''; card.style.transform = ''; }, 250);
+        }
       } else {
         card.classList.remove('is-hidden');
         card.style.opacity = '0';
@@ -670,6 +706,14 @@ function initSetmanaFiltres() {
           });
         });
         setTimeout(function() { card.style.transition = ''; card.style.opacity = ''; card.style.transform = ''; }, 350);
+      }
+
+      // Dins la card de governança, mostra l'assemblea o les comissions segons el filtre.
+      if (isGovern) {
+        var blocAss = card.querySelector('.home-govern__bloc--assemblea');
+        var blocCom = card.querySelector('.home-govern__bloc--comissions');
+        if (blocAss) blocAss.style.display = (filtre === 'comissio') ? 'none' : '';
+        if (blocCom) blocCom.style.display = (filtre === 'assemblea') ? 'none' : '';
       }
     });
   });
