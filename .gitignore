@@ -18,6 +18,9 @@ Thumbs.db
 
 # Time tracking
 .taques/
+
+# Python
+__pycache__/
 graphify-out/
 
 # Konsento — app independent (repo propi: 112books/konsento)
