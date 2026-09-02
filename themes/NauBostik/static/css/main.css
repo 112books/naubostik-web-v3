@@ -1449,6 +1449,68 @@ main.container {
   grid-area: main;
 }
 
+.espai-fitxa {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sharp);
+}
+
+.espai-fitxa-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem;
+}
+
+.espai-fitxa-stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.espai-fitxa-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary);
+}
+
+.espai-fitxa-stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.espai-fitxa-dimensions {
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+}
+
+.espai-fitxa-equipament h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.espai-fitxa-equipament {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.espai-fitxa-disponibilitat {
+  margin: 1.25rem 0 0;
+  font-size: 0.92rem;
+}
+
 .espai-contact {
   grid-area: contact;
   background: var(--color-surface);

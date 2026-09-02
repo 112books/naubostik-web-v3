@@ -22,6 +22,36 @@
       {{ .Content }}
     </div>
 
+    {{ $hasFitxa := or .Params.superficie (or .Params.aforament_assegut (or .Params.aforament_dempeus (or .Params.equipament_tecnic .Params.disponibilitat))) }}
+    {{ if $hasFitxa }}
+    <div class="espai-fitxa">
+      <h2 class="espai-fitxa-title">Fitxa tècnica</h2>
+      {{ if or .Params.superficie (or .Params.aforament_assegut .Params.aforament_dempeus) }}
+      <ul class="espai-fitxa-stats">
+        {{ with .Params.superficie }}<li><span class="espai-fitxa-stat-label">Superfície</span><span class="espai-fitxa-stat-value">{{ . }}</span></li>{{ end }}
+        {{ with .Params.aforament_assegut }}<li><span class="espai-fitxa-stat-label">Aforament assegut</span><span class="espai-fitxa-stat-value">{{ . }} pax</span></li>{{ end }}
+        {{ with .Params.aforament_dempeus }}<li><span class="espai-fitxa-stat-label">Aforament dempeus</span><span class="espai-fitxa-stat-value">{{ . }} pax</span></li>{{ end }}
+      </ul>
+      {{ end }}
+      {{ if or .Params.llargada (or .Params.amplada .Params.alcada) }}
+      <p class="espai-fitxa-dimensions">
+        {{ with .Params.llargada }}Llargada: {{ . }}{{ end }}
+        {{ with .Params.amplada }} · Amplada: {{ . }}{{ end }}
+        {{ with .Params.alcada }} · Alçada: {{ . }}{{ end }}
+      </p>
+      {{ end }}
+      {{ with .Params.equipament_tecnic }}
+      <div class="espai-fitxa-equipament">
+        <h3>Equipament tècnic</h3>
+        {{ . | markdownify }}
+      </div>
+      {{ end }}
+      {{ with .Params.disponibilitat }}
+      <p class="espai-fitxa-disponibilitat"><strong>Disponibilitat:</strong> {{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
     {{ with .Params.fotografies }}
     {{ if gt (len .) 0 }}
     <h2 class="espai-gallery-title">{{ i18n "espai_gallery_title" }}</h2>

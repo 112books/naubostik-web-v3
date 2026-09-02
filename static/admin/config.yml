@@ -115,6 +115,14 @@ collections:
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Ubicacio", name: "ubicacio", widget: "select", options: ["Planta baixa", "Primera planta", "Segona planta", "Terrassa", "Exterior"] }
       - { label: "Cedible", name: "cedible", widget: "boolean", default: false }
+      - { label: "Superficie", name: "superficie", widget: "string", required: false, hint: "Ex: 233 m²" }
+      - { label: "Llargada", name: "llargada", widget: "string", required: false, hint: "Ex: 22,8 m" }
+      - { label: "Amplada", name: "amplada", widget: "string", required: false, hint: "Ex: 13,81 m" }
+      - { label: "Alcada", name: "alcada", widget: "string", required: false, hint: "Ex: 6,10 m" }
+      - { label: "Aforament assegut", name: "aforament_assegut", widget: "number", required: false }
+      - { label: "Aforament dempeus", name: "aforament_dempeus", widget: "number", required: false }
+      - { label: "Equipament tecnic", name: "equipament_tecnic", widget: "markdown", required: false, hint: "Escenari, so, video, il·luminacio, backline, connexions electriques..." }
+      - { label: "Disponibilitat", name: "disponibilitat", widget: "text", required: false, hint: "Com es consulta/reserva, condicions" }
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Fotografies", name: "fotografies", widget: "list", required: false, field: { label: "Imatge", name: "imatge", widget: "image" } }
       - { label: "Plaanol", name: "plano", widget: "image", required: false }

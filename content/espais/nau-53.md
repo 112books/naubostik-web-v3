@@ -4,6 +4,24 @@ date = 2026-08-11
 ubicacio = "Planta baixa"
 cedible = true
 draft = false
+superficie = "262 m²"
+llargada = "22,8 m"
+amplada = "10,2 m / 17,5 m"
+alcada = "4,7 m"
+aforament_assegut = 280
+aforament_dempeus = 300
+equipament_tecnic = """
+**Espai**: nau diàfana industrial, especial per fires, plenàries o activitats amb més aforament.
+
+**Connexions**: Schuko 16A, Cetac 32A+63A. Connexió amb punts de llum.
+
+**Muntatge**: muntatge de tarimes, muntatge d'equip de so, ús de les parets per exhibició.
+
+**Il·luminació**: 4 llums de sala d'alta potència.
+
+**Altres**: 2 ventiladors de sostre.
+"""
+disponibilitat = "Escriviu-nos a info@naubostik.com per consultar disponibilitat i condicions"
 fotografies = [
   "/img/espais/nau-53-1.jpg",
   "/img/espais/nau-53-2.jpg",
@@ -22,16 +40,3 @@ logo = "/img/espais/nau-53-logo.jpg"
 Es duen a terme xerrades, tallers, fires, rodatges i gravacions, etc.
 
 [DESCARREGAR DOSSIER NAU 53](https://drive.google.com/file/d/1wTmWk9HSv_PCek53_iYHdPo9-PUe9SwW/view?usp=sharing)
-
-#### Característiques
-
-* 262 m²
-* Llargada: 22,8 m
-* Alçada: 4,7 m
-* Amplada: 10,2 m / 17,5 m
-* Connexions sala: Schuko16A Cetac 32A+63A
-* Aforament:
-  + 280 persones assegudes
-  + 300 persones dempeus
-
-[Escriviu-nos a info@naubostik.com per a més informació](mailto:info@naubostik.com)
