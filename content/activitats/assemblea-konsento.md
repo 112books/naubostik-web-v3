@@ -2,8 +2,8 @@
 title = "Reunió de la comissió de comunicació"
 date = 2026-09-22
 hora = "16:30"
-comissio = true
+assemblea = true
 draft = false
-descripcio = "Reunió de la comissió de comunicació de la Nau Bostik. Veure detalls a Konsento."
+descripcio = "Assemblea de la Nau Bostik. Veure detalls: https://konsento.naubostik.com/ca/assemblea/2/"
 lloc = "Nau Bostik — sala de comissions"
 +++
