@@ -94,6 +94,13 @@
   {{ $calData = $calData | append (dict "date" (.data | string) "tipus" "assemblea" "tipusLabel" "Assemblees" "title" .titol "url" $assembleaURL) }}
 {{ end }}{{ end }}
 {{ $comissions := index site.Data "comissions" }}
+{{ $comissioFut := false }}
+{{ range $allAct.ByDate }}
+  {{ if and .Params.comissio (not .Params.taller_fix) }}
+    {{ $end := .Params.data_fi | default .Date }}
+    {{ if ge $end $now }}{{ $comissioFut = true }}{{ end }}
+  {{ end }}
+{{ end }}
 <section class="home-setmana section">
   <div class="section-header">
     <h2 class="section-title">Properes activitats</h2>
@@ -192,12 +199,10 @@
         </div>
         <div class="home-govern__bloc home-govern__bloc--comissions">
           <p class="home-act-card__badge home-act-card__badge--comissio">Comissions</p>
-          {{ if $comissions }}{{ with $comissions.comissions }}
-          <p class="home-act-card__desc">{{ len . }} comissions actives. Les reunions es coordinen a Konsento.</p>
+          {{ if $comissioFut }}
+          <p class="home-act-card__desc">Les comissions coordinen les seves activitats a Konsento.</p>
           {{ else }}
-          <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
-          {{ end }}{{ else }}
-          <p class="home-act-card__desc">Les reunions de comissions es coordinen a Konsento.</p>
+          <p class="home-act-card__desc">No hi ha prevista cap activitat pública de les comissions de la Nau Bostik.</p>
           {{ end }}
           <a href="https://konsento.naubostik.com" target="_blank" rel="noopener" class="home-act-card__konsento-link">Veure a Konsento →</a>
         </div>
