@@ -52,7 +52,7 @@ Sempre **Nau Bostik**, mai "la Nau" ni "Bostik" sols.
 
 **Agenda** (renovada, MVP): separació important: Agenda pública (el que el públic veu) ≠ Calendari viu del recinte (eina de l'equip, Fase 3). Filtres MVP: per tipus · per entitat · per espai/planta · per franja horària. Seguiment post-activitat (Fase 2).
 
-> **Pendent d'estudiar (2026-09-02):** com modelar l'origen de cada activitat — *pròpia* (totes menys les dels residents) vs. *d'entitat/resident* (les que envien ells i s'aproven). Estudiar si cal un camp `origen`/`tipus` explícit al frontmatter o si n'hi ha prou inferint-ho del camp `entitat`, i com encaixa amb el flux proposta → aprovació i el CMS. Vegeu `docs/idees-a-implementar.md`.
+> **Resolt (2026-09-03):** model d'origen de cada activitat, 3 categories. **Entitats residents** — `content/activitats-residents/`, secció pròpia, sempre amb `entitat`. **Entitats externes** (cessió/lloguer d'espai; suport de promoció i comunicació) — `content/activitats/` sense `propia = true`; per defecte tota activitat cau aquí, sigui quin sigui el valor d'`entitat`. **Programació pròpia de la Nau Bostik** (la que s'ha de promocionar més) — `content/activitats/` amb `propia = true`, marcat manualment al CMS; és programació curada, no s'infereix. `entitat` és només el nom de l'organitzador (informatiu), no determina la categoria — la determina la secció + el camp `propia`. Etiquetades com a pròpies: totes les edicions de La Juganera. Pendent: calçotada (encara sense fitxa de contingut) i revisar la resta de ~490 activitats històriques importades de Web1 (cap `propia`/`entitat` assignat, no urgent perquè no afecta el filtre en viu, que només mira futures).
 
 **Espais** (millorada, MVP): fitxes completes (superfície, aforament, equipament tècnic, disponibilitat), mapa navegable, indicador d'accés motoritzat, portada aleatòria d'espais especials.
 
@@ -223,6 +223,8 @@ Coordenades: 41.424277, 2.192917
 - Partial Hugo: `{{ end }}` seguit de newline retorna `"\n"` (truthy, URL contaminada). Usar `{{ end -}}`.
 - GH Pages subpath: comparar URLs amb `Permalink` vs `absLangURL`. `RelPermalink` no inclou `/naubostik-web-v3/`.
 - Logos: sempre `| strings.TrimPrefix "/" | relURL`.
+- `{{ if .Params.camp }}` **no** rebind el `.` (a diferència de `with`). Dins l'`if`, `.` continua sent la pàgina — `printf "img/%s" .` hi estringifica la pàgina sencera, no el valor del camp. Amb `if`, cal repetir el camp explícit (`printf "img/%s" .Params.imatge`); si no cal la condició per si mateixa, usar `with` en lloc d'`if`.
+- CSS `[hidden]` per amagar elements via JS (`el.hidden = true`) necessita guanyar l'especificitat de qualsevol regla `display` de la classe de l'element (ex. `.act-item{display:flex}`); com que `[hidden]` de l'UA té la mateixa especificitat (0,1,0) que una classe i el CSS d'autor va després en la cascada, la classe guanya i l'element mai s'amaga. Cal `.classe[hidden]{display:none}` explícit.
 
 ### 7.4 Riscos
 
@@ -291,7 +293,7 @@ Els formularis públics (`/proposa-activitat/`, `/contacte/`) fan `POST` a **Kon
 
 | Col·lecció | Path Hugo | Camps principals |
 |------------|-----------|------------------|
-| Activitats | `content/activitats/` | title, date, data_fi, hora, hora_fi, preu, imatge, descripcio, entitat, planta, link_extern, collectiu, draft |
+| Activitats | `content/activitats/` | title, date, data_fi, hora, hora_fi, preu, imatge, descripcio, entitat, **propia** (§2.2), planta, link_extern, collectiu, draft |
 | Col·lectius | `content/collectius/` | title, date, draft, logo, ambit, web, email, instagram, descripcio |
 | Espais | `content/espais/` | title, date, ubicacio, cedible, draft, fotografies, plano, logo, collectiu, mail, web, xarxes |
 | Notícies | `content/noticies/` | title, date, imatge, destacada, draft |
