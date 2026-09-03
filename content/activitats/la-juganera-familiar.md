@@ -1,6 +1,7 @@
 +++
 title = "La Juganera familiar"
 date = 2026-05-30
+propia = true
 hora = "16:00"
 hora_fi = "18:00"
 preu = "Gratuït / Entrada lliure"

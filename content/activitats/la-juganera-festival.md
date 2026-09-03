@@ -1,6 +1,7 @@
 +++
 title = "LA JUGANERA FESTIVAL"
 date = 2022-07-09
+propia = true
 hora = "18:00"
 hora_fi = "22:30"
 imatge = "activitats/post-1.jpg"

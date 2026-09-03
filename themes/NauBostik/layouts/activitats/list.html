@@ -5,11 +5,11 @@
 {{ $tallersSec := where site.RegularPages "Section" "tallers" }}
 {{ $all := $activitats | union $residents }}
 
-{{/* Tres grups exclusius */}}
+{{/* Dos grups per secció: activitats (pròpies o externes, distingides per Params.propia al Bloc B) / activitats-residents */}}
 {{ $tallers  := $tallersSec }}
 {{ $noTaller := where $all "Params.taller_fix" "!=" true }}
-{{ $propies  := where $noTaller "Params.entitat" nil }}
-{{ $entitats := where (where $noTaller "Params.entitat" "!=" nil) "Params.entitat" "!=" "" }}
+{{ $propies  := where $noTaller "Section" "!=" "activitats-residents" }}
+{{ $entitats := where $noTaller "Section" "activitats-residents" }}
 
 {{/* Build future slices using data_fi fallback (covers multiday events and avisos) */}}
 {{ $propiesFutSlice := slice }}
@@ -177,6 +177,7 @@
       <option value="">Tots els tipus</option>
       <option value="propia">Activitats pròpies</option>
       <option value="entitat">Entitats residents</option>
+      <option value="extern">Entitats externes</option>
       <option value="assemblea">Assemblees</option>
       <option value="comissio">Comissions</option>
     </select>
@@ -213,10 +214,11 @@
     </button>
     <ul class="act-historica-grid act-historica-grid--hscroll" id="act-properes-grid">
       {{ range $properesFut }}
-      {{ $tipus := "propia" }}
+      {{ $tipus := "extern" }}
       {{ if .Params.comissio }}{{ $tipus = "comissio" }}
       {{ else if .Params.assemblea }}{{ $tipus = "assemblea" }}
-      {{ else if .Params.entitat }}{{ $tipus = "entitat" }}
+      {{ else if eq .Section "activitats-residents" }}{{ $tipus = "entitat" }}
+      {{ else if .Params.propia }}{{ $tipus = "propia" }}
       {{ end }}
       {{ $franja := "" }}
       {{ with .Params.hora }}

@@ -1,6 +1,7 @@
 +++
 title = "LA JUGANERA FESTIVAL II"
 date = 2022-07-23
+propia = true
 hora = "06:00"
 hora_fi = "22:30"
 preu = "Gratuït"

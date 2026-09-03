@@ -1,6 +1,7 @@
 +++
 title = "Concerts · La Juganera 2025"
 date = 2025-05-30
+propia = true
 data_fi = 2025-05-31
 hora = "08:00"
 hora_fi = "17:00"

@@ -3,6 +3,7 @@ title = "Festival Ciutat Flamenco"
 date = 2026-10-18
 hora = "18:00"
 hora_fi = "19:00"
+entitat = "Taller de Músics"
 preu = "12€ - 15€"
 imatge = "activitats/261018_CIUTAT-FLAMENCO_p.jpg"
 descripcio = "Esperanza Garrido, presenta Firmamento ESPAI → NAU KM14 El Festival de flamenc de referència a Barcelona, impulsat pel Taller de Músics conjuntament amb altres entitats culturals. Presenta el 18 d’o…"

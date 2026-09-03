@@ -1,6 +1,7 @@
 +++
 title = "Concerts · La juganera 2026"
 date = 2026-05-30
+propia = true
 hora_fi = "23:00"
 preu = "Gratuït / Entrada lliure"
 imatge = "activitats/JUGANERA.26-_p.jpg"

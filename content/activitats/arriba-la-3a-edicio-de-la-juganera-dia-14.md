@@ -1,6 +1,7 @@
 +++
 title = "III Edició de La Juganera 14 juliol"
 date = 2023-07-14
+propia = true
 hora = "18:00"
 hora_fi = "23:00"
 preu = "Gratuït"

@@ -1,6 +1,7 @@
 +++
 title = "Concerts · La Juganera 2024"
 date = 2024-07-19
+propia = true
 data_fi = 2024-07-20
 hora = "18:00"
 hora_fi = "23:00"

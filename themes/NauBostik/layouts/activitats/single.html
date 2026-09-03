@@ -67,7 +67,7 @@
   {{ $esGovernanca := or .Params.assemblea .Params.comissio }}
   {{ if .Params.imatge }}
   <figure class="event-photo">
-    <img src="{{ printf "img/%s" . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+    <img src="{{ printf "img/%s" .Params.imatge | relURL }}" alt="{{ $.Title }}" loading="lazy">
   </figure>
   {{ else if $esGovernanca }}
   <figure class="event-photo event-photo--fallback">

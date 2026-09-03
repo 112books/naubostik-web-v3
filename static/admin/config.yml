@@ -30,7 +30,8 @@ collections:
       - { label: "Preu", name: "preu", widget: "string", required: false }
       - { label: "Imatge", name: "imatge", widget: "image", required: false }
       - { label: "Descripcio", name: "descripcio", widget: "text", required: false }
-      - { label: "Entitat", name: "entitat", widget: "string", required: false }
+      - { label: "Entitat", name: "entitat", widget: "string", required: false, hint: "Nom de l'entitat/empresa organitzadora, si no és programació pròpia" }
+      - { label: "Programació pròpia de la Nau Bostik", name: "propia", widget: "boolean", default: false, hint: "Marca-ho si l'organitza directament la Nau Bostik. Si no es marca, es considera cessió/lloguer d'espai a tercers" }
       - { label: "Planta", name: "planta", widget: "select", required: false, options: ["Planta Baixa", "Primera planta", "Segona planta", "Terrassa"] }
       - { label: "Enllac extern", name: "link_extern", widget: "string", required: false }
       - { label: "Col-lectiu", name: "collectiu", widget: "string", required: false }
