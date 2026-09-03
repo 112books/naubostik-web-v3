@@ -2969,6 +2969,10 @@ main.container {
   gap: 0.5rem;
 }
 
+.act-item[hidden] {
+  display: none;
+}
+
 .act-item__img {
   display: block;
   aspect-ratio: 16/9;

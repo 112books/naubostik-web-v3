@@ -62,7 +62,7 @@
   {{ if not .Params.taller_fix }}
     {{ $end := .Params.data_fi | default .Date }}
     {{ if ge $end $now }}
-      {{ if .Params.entitat }}
+      {{ if eq .Section "activitats-residents" }}
         {{ $entitatsFut = $entitatsFut | append . }}
       {{ else }}
         {{ $propiesFut = $propiesFut | append . }}
@@ -85,7 +85,7 @@
     {{ $label := "Nau Bostik" }}
     {{ if .Params.assemblea }}{{ $grup = "assemblea" }}{{ $label = "Assemblees" }}
     {{ else if .Params.comissio }}{{ $grup = "comissio" }}{{ $label = "Comissions" }}
-    {{ else if .Params.entitat }}{{ $grup = "entitats" }}{{ $label = "Entitats" }}
+    {{ else if eq .Section "activitats-residents" }}{{ $grup = "entitats" }}{{ $label = "Entitats" }}
     {{ end }}
     {{ $calData = $calData | append (dict "date" (.Date | time.Format "2006-01-02") "tipus" $grup "tipusLabel" $label "title" .LinkTitle "url" .RelPermalink) }}
   {{ end }}
@@ -121,7 +121,7 @@
     {{ $grup := "nb" }}
     {{ if .Params.assemblea }}{{ $grup = "assemblea" }}
     {{ else if .Params.comissio }}{{ $grup = "comissio" }}
-    {{ else if .Params.entitat }}{{ $grup = "entitats" }}
+    {{ else if eq .Section "activitats-residents" }}{{ $grup = "entitats" }}
     {{ end }}
     <li class="home-act-card" data-grup="{{ $grup }}">
       {{ if .Params.avis }}
@@ -154,7 +154,7 @@
     {{ $grup := "nb" }}
     {{ if $p.Params.assemblea }}{{ $grup = "assemblea" }}
     {{ else if $p.Params.comissio }}{{ $grup = "comissio" }}
-    {{ else if $p.Params.entitat }}{{ $grup = "entitats" }}
+    {{ else if eq $p.Section "activitats-residents" }}{{ $grup = "entitats" }}
     {{ end }}
     <li class="home-act-card{{ if ge $i 2 }} is-extra{{ end }}" data-grup="{{ $grup }}">
       {{ if $p.Params.avis }}
