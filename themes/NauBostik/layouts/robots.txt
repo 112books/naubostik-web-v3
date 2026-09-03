@@ -1,0 +1,9 @@
+{{ $prod := ne (getenv "HUGO_PRODUCTION") "" }}
+{{ $ai := slice "GPTBot" "ChatGPT-User" "OAI-SearchBot" "ClaudeBot" "anthropic-ai" "Claude-Web" "Google-Extended" "PerplexityBot" "Perplexity-User" "CCBot" "FacebookBot" "Meta-ExternalAgent" "Meta-ExternalFetcher" "Amazonbot" "Bytespider" "Applebot-Extended" "Diffbot" "ImagesiftBot" "OMIGiliBot" "Omgilibot" "SemanticScholarBot" "cohere-ai" }}
+User-agent: *
+{{ if $prod }}Allow: /{{ else }}Disallow: /{{ end }}
+{{ if $prod }}Sitemap: {{ site.BaseURL }}sitemap.xml{{ end }}
+{{ range $agent := $ai }}
+User-agent: {{ $agent }}
+Disallow: /
+{{ end }}

@@ -4,11 +4,16 @@ theme = "NauBostik"
 buildFuture = true
 paginate = 8
 
-# Web de desenvolupament, no indexable enlloc (§8 CLAUDE.md). sitemap.xml
-# i RSS (index.xml) eren superfície innecessària: encara que no s'enllacin,
-# existien com a fitxers accessibles per URL directa. Es desactiva la seva
-# generació del tot en lloc de confiar només en robots.txt/noindex.
-disableKinds = ["sitemap", "RSS"]
+# robots.txt generat des de plantilla (`layouts/robots.txt`) i meta SEO (baseof.html)
+# condicionats a la variable d'entorn `HUGO_PRODUCTION`. Per defecte (staging):
+# robots.txt Disallow / i meta noindex a totes les pàgines. Producció (build Netlify
+# amb `HUGO_PRODUCTION=1`): indexable, amb bloqueig només als bots d'IA.
+#
+# NOTA: s'empra variable d'entorn i no `config/<env>/` perquè l'existència d'un
+# directori `config/production/` fa que Hugo auto-detecti "production" com a
+# environment per defecte i activi el SEO també al staging. La variable d'entorn
+# només s'activa al deploy real de producció.
+enableRobotsTXT = true
 
 [languages]
   [languages.ca]
@@ -79,6 +84,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
   showTicker = true
   # Konsento rep els POST dels formularis (proposta d'activitat, contacte).
   konsento_url = "https://konsento.naubostik.com"
+  # NOTA: el SEO per producció es controla amb la variable d'entorn HUGO_PRODUCTION
+  # (vegeu comentari més amunt), no amb cap paràmetre de config.
 
 [[menu.main]]
   name = "Activitats"

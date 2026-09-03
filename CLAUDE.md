@@ -236,8 +236,8 @@ Coordenades: 41.424277, 2.192917
 
 ```bash
 hugo server --bind 0.0.0.0 --baseURL http://localhost:1313/ --buildDrafts
-hugo --minify --baseURL https://112books.github.io/naubostik-web-v3/
-hugo --minify --baseURL https://naubostik.com/
+hugo --minify --baseURL https://112books.github.io/naubostik-web-v3/           # staging (no-indexable)
+HUGO_PRODUCTION=1 hugo --minify --baseURL https://naubostik.com/              # producció (SEO actiu)
 ```
 
 ### 7.6 Verificació
@@ -322,12 +322,18 @@ Els formularis públics (`/proposa-activitat/`, `/contacte/`) fan `POST` a **Kon
 
 ## 9. Privacitat i indexació
 
-El staging és **públic** però no-indexable:
-- `static/robots.txt` amb `Disallow: /` per a tots els crawlers
-- Meta `noindex, nofollow, noarchive` al `<head>` de `baseof.html`
-- `disableKinds = ["sitemap", "RSS"]` a `hugo.toml`
+El staging és **públic** però no-indexable. El SEO/robots es controlen per **variable d'entorn `HUGO_PRODUCTION`** (mecanisme definit 2026-09-03):
 
-Quan es passi a producció, revertir totes aquestes proteccions explícitament.
+| Moment | `HUGO_PRODUCTION` | robots.txt | Meta a `<head>` | SEO (OG/canonical/schema/sitemap) |
+|--------|-------------------|-----------|-----------------|-----------------------------------|
+| Staging (GH Pages) | no set | `Disallow: /` per a tot | `noindex, nofollow, noarchive, ... noimageai` | inactiu |
+| Producció (Netlify) | `1` | `Allow: /` + bloqueig bots IA | `index, follow, max-image-preview:large` | actiu |
+
+- `themes/NauBostik/layouts/robots.txt` — plantilla condicionada a `getenv "HUGO_PRODUCTION"` (única font de veritat; ja no hi ha `static/robots.txt`).
+- `themes/NauBostik/layouts/baseof.html` — meta robots condicionada + description, OG, canonical, schema.org JSON-LD (Organization a home, Event a `activitats/`).
+- `netlify.toml` — build de producció amb `HUGO_PRODUCTION=1 hugo ...` + **security headers**.
+- **Sitemap/RSS**: es generen sempre; el staging està protegit per `Disallow /` + noindex. (Hugo v0.159 no respecta `disableKinds` via config per-environment — no intentar-ho.)
+- **Limitació**: GH Pages no permet headers HTTP personalitzats; els security headers apliquen només a Netlify (producció).
 
 ---
 

@@ -1,14 +1,44 @@
+{{ $prod := ne (getenv "HUGO_PRODUCTION") "" }}
+{{ $desc := or .Params.description .Params.descripcio .Description site.Params.description }}
+{{ $title := printf "%s | %s" .Title site.Title }}
+{{ $absURL := .Permalink }}
+{{ $ld := "" }}
+{{ if and $prod .IsHome }}
+  {{ $ld = dict "@context" "https://schema.org" "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL "description" (site.Params.description | plainify) "address" (dict "@type" "PostalAddress" "streetAddress" "Ferran Turné, 1-11" "postalCode" "08027" "addressLocality" "Barcelona" "addressCountry" "ES") "geo" (dict "@type" "GeoCoordinates" "latitude" 41.424277 "longitude" 2.192917) }}
+{{ else if and $prod (eq .Section "activitats") }}
+  {{ $day := "" }}{{ with .Params.date }}{{ $day = .Format "2006-01-02" }}{{ end }}
+  {{ $img := printf "%simg/logos/logo-nau-bostik.png" site.BaseURL }}{{ with .Params.imatge }}{{ $img = printf "%simg/%s" site.BaseURL . }}{{ end }}
+  {{ $ld = dict "@context" "https://schema.org" "@type" "Event" "name" .Title "startDate" (printf "%sT%s" $day .Params.hora) "image" $img "description" ($desc | plainify) "location" (dict "@type" "Place" "name" "Nau Bostik" "address" "Ferran Turné, 1-11 · 08027 Barcelona") "organizer" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) }}
+  {{ with .Params.hora_fi }}{{ $ld = merge $ld (dict "endDate" (printf "%sT%s" $day .)) }}{{ end }}
+{{ end }}
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode | default "ca" }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
-  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, noai, noimageai">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ $title }}{{ end }}</title>
+  {{ if $prod }}
+    {{ if $desc }}<meta name="description" content="{{ $desc | plainify | truncate 160 }}">{{ end }}
+    <link rel="canonical" href="{{ $absURL }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ $title }}{{ end }}">
+    <meta property="og:description" content="{{ with $desc }}{{ . | plainify | truncate 160 }}{{ end }}">
+    <meta property="og:url" content="{{ $absURL }}">
+    <meta property="og:site_name" content="{{ site.Title }}">
+    <meta property="og:locale" content="{{ site.Language.LanguageCode | default "ca" }}">
+    {{ with site.Params.social.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    <meta name="twitter:card" content="summary">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+  {{ else }}
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, noai, noimageai">
+  {{ end }}
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  {{ if $prod }}{{ with .Params.imatge }}<meta property="og:image" content="{{ printf "img/%s" . | relURL | absURL }}">{{ end }}
+  {{ if ne $ld "" }}<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>{{ end }}
+  {{ end }}
 </head>
 <body>
   <div class="wrapper">
