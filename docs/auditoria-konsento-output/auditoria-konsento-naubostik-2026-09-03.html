@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="ca"><head><meta charset="utf-8"><style>
+@page {
+  size: Letter; margin: 1in;
+  @top-left { content: "konsento.naubostik.com"; color: #1E293B; font: 9pt Arial; border-bottom: 2px solid #1B2A4A; padding-bottom: 4px; }
+  @top-right { content: "Auditoria Web completa"; color: #1E293B; font: 9pt Arial; border-bottom: 2px solid #1B2A4A; padding-bottom: 4px; }
+  @bottom-left { content: "Nau Bostik · Auditoria administrativa"; color: #94A3B8; font: 8pt Arial; border-top: 1px solid #E2E8F0; padding-top: 4px; }
+  @bottom-right { content: "Pàgina " counter(page); color: #94A3B8; font: 8pt Arial; border-top: 1px solid #E2E8F0; padding-top: 4px; }
+}
+@page cover { margin: 0; @top-left { content: none; } @top-right { content: none; } @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #1E293B; font-size: 10.5pt; line-height: 1.5; margin: 0; }
+.cover { page: cover; width: 100%; height: 100vh; background: #1B2A4A; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1in; }
+.cover .site { font-size: 34pt; font-weight: 700; color: #fff; }
+.cover .sub { font-size: 13pt; color: #93C5FD; margin-top: 12px; }
+.cover .type { font-size: 10pt; margin-top: 24px; letter-spacing: 1px; }
+.cover .scores { display: flex; gap: 10px; margin-top: 40px; width: 100%; justify-content: center; }
+.cover .score { flex: 1; padding: 18px 8px; border-radius: 4px; color: #fff; }
+.cover .score .lbl { font-size: 8pt; font-weight: 700; }
+.cover .score .num { font-size: 30pt; font-weight: 700; margin: 4px 0; }
+.cover .score .st { font-size: 8pt; font-style: italic; }
+.cover .foot { margin-top: 60px; color: #94A3B8; font-size: 8pt; line-height: 1.8; }
+h1 { color: #1B2A4A; font-size: 17pt; border-bottom: 2px solid #1B2A4A; padding-bottom: 4px; margin-top: 28px; }
+h2 { color: #1B2A4A; font-size: 13pt; margin-top: 20px; }
+p { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+th { background: #1B2A4A; color: #fff; text-align: left; padding: 6px 8px; font-weight: 700; }
+td { border-bottom: 1px solid #E2E8F0; padding: 6px 8px; vertical-align: top; }
+tr:nth-child(even) td { background: #F8F9FA; }
+.exec { background: #EFF6FF; padding: 14px 16px; border-left: 4px solid #2563EB; margin: 10px 0; }
+.good { background: #16A34A; color: #fff; font-weight: 700; text-align: center; white-space: nowrap; }
+.amber { background: #D97706; color: #fff; font-weight: 700; text-align: center; white-space: nowrap; }
+.crit { background: #DC2626; color: #fff; font-weight: 700; text-align: center; white-space: nowrap; }
+.scorecell { color: #fff; font-weight: 700; text-align: center; }
+.prio-crit { background: #DC2626; color: #fff; font-weight: 700; }
+.prio-high { background: #EA580C; color: #fff; font-weight: 700; }
+.prio-med { background: #D97706; color: #fff; font-weight: 700; }
+.prio-quick { background: #16A34A; color: #fff; font-weight: 700; }
+ul.pluses li { margin: 4px 0; }
+</style></head><body>
+
+<div class="cover">
+  <div class="site">konsento.naubostik.com</div>
+  <div class="sub">Auditoria de Seguretat · SEO · IA · Accessibilitat · Rendiment</div>
+  <div class="type">AUDITORIA COMPLETA</div>
+  <div class="scores">
+    <div class="score" style="background:#D97706"><div class="lbl">SEGURETAT</div><div class="num">7</div><div class="st">On Track</div></div><div class="score" style="background:#D97706"><div class="lbl">SEO</div><div class="num">7</div><div class="st">On Track</div></div><div class="score" style="background:#D97706"><div class="lbl">IA / GEO</div><div class="num">7</div><div class="st">On Track</div></div><div class="score" style="background:#16A34A"><div class="lbl">ACCESSIBILITAT</div><div class="num">8</div><div class="st">Strong</div></div><div class="score" style="background:#D97706"><div class="lbl">RENDIMENT</div><div class="num">7</div><div class="st">On Track</div></div>
+  </div>
+  <div class="foot">3 de setembre de 2026<br>Auditoria generada per a Nau Bostik</div>
+</div>
+
+<h1>Resum executiu</h1>
+
+<div class="exec">
+Konsento (konsento.naubostik.com) és la plataforma de governança compartida de la Nau Bostik: assemblees, comissions, protocols i documentació. L'auditoria troba una base tècnica i editorial excel·lent: capçaleres de seguretat robustes (CSP, HSTS, X-Frame-Options, nosniff, COOP), contingut factual i transparent (humans.txt, protocols, FAQ en llenguatge natural), accessibilitat estructural bona (lang, skip-link, alt, labels) i un rendiment ràpid i lleuger amb gzip. El problema més urgent és de configuració: el canonical i l'og:url de totes les pàgines apunten a 127.0.0.1:8000 (localhost), cosa que debilita el SEO i l'ús per motors i IA. La gran oportunitat és afegir schema estructurat (Organization, FAQPage, WebSite) i reforçar la seguretat del login (rate-limit) i de /admin/.
+</div>
+
+<table><thead><tr><th>Dimensió</th><th>Puntuació</th><th>Estat</th><th>Conclusió clau</th></tr></thead><tbody><tr><td>Seguretat</td><td><span class="scorecell" style="background:#D97706">7/10</span></td><td>On Track</td><td>Headers excel·lents; /admin/ exposat, TLS 1.0/1.1, sense rate-limit clar.</td></tr><tr><td>SEO</td><td><span class="scorecell" style="background:#D97706">7/10</span></td><td>On Track</td><td>Estructura i sitemap bons; canonical/og:url a localhost (crític), sense schema.</td></tr><tr><td>IA / GEO</td><td><span class="scorecell" style="background:#D97706">7/10</span></td><td>On Track</td><td>E-E-A-T i contingut factual forts; cap schema semàntic per a motors d'IA.</td></tr><tr><td>Accessibilitat</td><td><span class="scorecell" style="background:#16A34A">8/10</span></td><td>Strong</td><td>Pràctiques robustes (lang, alt, labels, skip-link); cal contrast via Lighthouse.</td></tr><tr><td>Rendiment</td><td><span class="scorecell" style="background:#D97706">7/10</span></td><td>On Track</td><td>Ràpid i lleuger amb gzip; cache-control estàtic massa baix (60s).</td></tr><tr><td>Global</td><td><span class="scorecell" style="background:#1B2A4A">36/50</span></td><td>Sòlida</td><td>Base madura amb oportunitats clares de consolidació i schema.</td></tr></tbody></table>
+<h1>Pàgines auditades</h1>
+<table><thead><tr><th>URL</th><th>Tipus</th><th>Notes</th></tr></thead><tbody><tr><td>/</td><td>Portada</td><td>Canonical a localhost; h1 únic; headers de seguretat</td></tr><tr><td>/ca/</td><td>Portada (ca)</td><td>Sense schema; contingut factual de comissions</td></tr><tr><td>/en/</td><td>Portada (en)</td><td>Segon idioma present</td></tr><tr><td>/ca/comissions/economia/</td><td>Comissió</td><td>Canonical a localhost; h1/h2 bons</td></tr><tr><td>/ca/docs/faq/</td><td>FAQ</td><td>Preguntes en llenguatge natural; sense schema FAQPage</td></tr><tr><td>/ca/docs/protocols/espais/normes-espais/</td><td>Protocol interior</td><td>h1 únic; lang ca</td></tr><tr><td>/accounts/login/</td><td>Login</td><td>labels + autocomplete bons; s'ha provat brute-force</td></tr><tr><td>/admin/</td><td>Admin Django</td><td>Exposat públicament (302 a login)</td></tr><tr><td>Docs legals</td><td>Privacitat, avís legal, cookies, accessibilitat</td><td>Totes responen 200</td></tr></tbody></table>
+<h1>Anàlisi de seguretat</h1>
+<h2>Capçaleres i transport</h2>
+<table><thead><tr><th>Signal</th><th>Troballa</th><th>Estat</th></tr></thead><tbody><tr><td><b>HSTS</b></td><td>max-age=31536000; includeSubDomains; preload</td><td class="good">Good</td></tr><tr><td><b>Content-Security-Policy</b></td><td>default-src 'self'; frame-ancestors 'none'; form-action 'self'...</td><td class="good">Good</td></tr><tr><td><b>X-Frame-Options</b></td><td>DENY</td><td class="good">Good</td></tr><tr><td><b>X-Content-Type-Options</b></td><td>nosniff</td><td class="good">Good</td></tr><tr><td><b>Referrer-Policy</b></td><td>strict-origin-when-cross-origin</td><td class="good">Good</td></tr><tr><td><b>Cross-Origin-Opener-Policy</b></td><td>same-origin</td><td class="good">Good</td></tr><tr><td><b>Cookies (CSRF)</b></td><td>Secure; SameSite=Lax (sense HttpOnly, esperable al csrftoken)</td><td class="good">Good</td></tr><tr><td><b>TLS</b></td><td>TLS 1.2 i 1.3 OK, però 1.0/1.1 habilitats (descontinuats)</td><td class="amber">Needs Attention</td></tr><tr><td><b>Redirect inicial</b></td><td>302 de / a http://.../ca/ abans de pujar a https</td><td class="amber">Needs Attention</td></tr><tr><td><b>/admin/</b></td><td>Admin de Django exposat públicament a /admin/</td><td class="amber">Needs Attention</td></tr><tr><td><b>Brute-force login</b></td><td>Cap resposta 429/lockout observada davant intents repetits</td><td class="amber">Needs Attention</td></tr></tbody></table>
+<h1>Anàlisi SEO</h1>
+<h2>Troballes tècniques</h2>
+<table><thead><tr><th>Signal</th><th>Troballa</th><th>Estat</th></tr></thead><tbody><tr><td><b>Canonical</b></td><td>rel=canonical apunta a <b>https://127.0.0.1:8000/ca/</b> a totes les pàgines — CRÍTIC</td><td class="crit">Critical</td></tr><tr><td><b>og:url / meta</b></td><td>og:url també a 127.0.0.1:8000; og:title i og:description correctes</td><td class="amber">Needs Attention</td></tr><tr><td><b>Sitemap</b></td><td>Complet i correcte a konsento.naubostik.com, bilingüe ca/en</td><td class="good">Good</td></tr><tr><td><b>robots.txt</b></td><td>Ben configurat: disallow d'àrees privades, sitemap assenyalat</td><td class="good">Good</td></tr><tr><td><b>Títols i meta description</b></td><td>Únics i descriptius a cada pàgina</td><td class="good">Good</td></tr><tr><td><b>Estructura de URLs</b></td><td>Neta i llegible (ex. /ca/comissions/economia/)</td><td class="good">Good</td></tr><tr><td><b>Schema estructurat</b></td><td>Cap JSON-LD/microdata (Organization, WebSite, FAQ...)</td><td class="crit">Missing</td></tr></tbody></table>
+<h1>Anàlisi IA / GEO</h1>
+<h2>Preparació per a cercadors generatius</h2>
+<table><thead><tr><th>Signal</th><th>Troballa</th><th>Estat</th></tr></thead><tbody><tr><td><b>E-E-A-T</b></td><td>humans.txt detallat, contacte, adreça, autoria clara</td><td class="good">Good</td></tr><tr><td><b>Transparència</b></td><td>privacitat, avís legal, cookies, accessibilitat, estatuts — tot present</td><td class="good">Good</td></tr><tr><td><b>Contingut factual</b></td><td>protocols, assemblees, participació en números, FAQ — dens i citable</td><td class="good">Good</td></tr><tr><td><b>Consistència d&#x27;entitat</b></td><td>nom canònic &quot;Nau Bostik&quot; i enllaços externs coherents</td><td class="good">Good</td></tr><tr><td><b>Crawlability</b></td><td>robots.txt clar, HSTS, gzip; JS mínim (HTML render-it al servidor)</td><td class="good">Good</td></tr><tr><td><b>Schema per a IA</b></td><td>cap Organization/FAQPage/WebSite — els motors d'IA no tenen entitat semàntica clara</td><td class="crit">Missing</td></tr></tbody></table>
+<h1>Anàlisi d'accessibilitat</h1>
+<h2>Estructura i formes</h2>
+<table><thead><tr><th>Signal</th><th>Troballa</th><th>Estat</th></tr></thead><tbody><tr><td><b>lang</b></td><td>lang=&quot;ca&quot; a totes les pàgines revisades</td><td class="good">Good</td></tr><tr><td><b>Landmarks / skip</b></td><td>skip-link a #main-content, &lt;main id=&quot;main-content&quot;&gt;</td><td class="good">Good</td></tr><tr><td><b>Alt text</b></td><td>totes les imatges amb alt descriptiu; decoratives amb alt=&quot;&quot;</td><td class="good">Good</td></tr><tr><td><b>Forms / labels</b></td><td>login amb &lt;label for&gt; + autocomplete + required correctes</td><td class="good">Good</td></tr><tr><td><b>Dimensions d&#x27;imatge</b></td><td>width/height presents (evita CLS); loading=lazy/decoding=async</td><td class="good">Good</td></tr><tr><td><b>autofocus al login</b></td><td>autofocus pot desorientar usuaris de lectors de pantalla (lleu)</td><td class="amber">Needs Attention</td></tr><tr><td><b>Contrast / CWV</b></td><td>requereix verificació amb eina de navegador (Lighthouse/WAVE)</td><td class="amber">Needs Attention</td></tr></tbody></table>
+<h1>Anàlisi de rendiment</h1>
+<h2>Càrrega i caching</h2>
+<table><thead><tr><th>Signal</th><th>Troballa</th><th>Estat</th></tr></thead><tbody><tr><td><b>Temps de resposta</b></td><td>estàtics ~70ms; HTML servit ràpid</td><td class="good">Good</td></tr><tr><td><b>Compressió</b></td><td>gzip habilitat per HTML i estàtics</td><td class="good">Good</td></tr><tr><td><b>Pes de pàgina</b></td><td>home ~98KB d'estàtics; SVG optimitzats; logo 44KB a revisar</td><td class="good">Good</td></tr><tr><td><b>Cache-Control estàtics</b></td><td>max-age=60 (60s) — massa baix per actius immutables</td><td class="amber">Needs Attention</td></tr><tr><td><b>Cache del HTML</b></td><td>Vary: Cookie impedeix caching CDN a la home</td><td class="amber">Needs Attention</td></tr><tr><td><b>Core Web Vitals reals</b></td><td>cal mesurar amb PageSpeed Insights / Lighthouse</td><td class="amber">Needs Attention</td></tr></tbody></table>
+<h1>Matriu de prioritats</h1>
+<table><thead><tr><th>Prioritat</th><th>Problema</th><th>Dimensió</th><th>Esforç</th><th>Impacte</th></tr></thead><tbody><tr><td class="prio-crit"><span class="prio-crit">🔴 Crític</span></td><td>Corregir canonical/og:url que apunten a 127.0.0.1:8000</td><td>SEO / GEO</td><td>Baix</td><td>Molt alt</td></tr><tr><td class="prio-crit"><span class="prio-crit">🔴 Crític</span></td><td>Restringir / desactivar /admin/ públic (Django)</td><td>Seguretat</td><td>Mitjà</td><td>Alt</td></tr><tr><td class="prio-crit"><span class="prio-high">🟠 Alt</span></td><td>Deshabilitar TLS 1.0/1.1 i normalitzar redirect a HTTPS</td><td>Seguretat</td><td>Baix</td><td>Alt</td></tr><tr><td class="prio-crit"><span class="prio-high">🟠 Alt</span></td><td>Afegir schema: Organization, WebSite, FAQPage</td><td>SEO / IA</td><td>Mitjà</td><td>Alt</td></tr><tr><td class="prio-crit"><span class="prio-med">🟡 Mitjà</span></td><td>Implementar rate-limit / lockout al login (django-axes)</td><td>Seguretat</td><td>Mitjà</td><td>Alt</td></tr><tr><td class="prio-crit"><span class="prio-med">🟡 Mitjà</span></td><td>Pujar cache-control d'estàtics immutables (60s → 1y)</td><td>Rendiment</td><td>Baix</td><td>Mitjà</td></tr><tr><td class="prio-crit"><span class="prio-quick">🟢 Quick Win</span></td><td>Mesurar Core Web Vitals amb PageSpeed Insights</td><td>Rendiment</td><td>Baix</td><td>Mitjà</td></tr><tr><td class="prio-crit"><span class="prio-quick">🟢 Quick Win</span></td><td>Revisar contrast i autofocus amb Lighthouse / WAVE</td><td>Accessibilitat</td><td>Baix</td><td>Mitjà</td></tr></tbody></table>
+<h1>Què funciona bé</h1>
+
+<ul class="pluses">
+  <li>Headers de seguretat de primer nivell (CSP, HSTS, XFO, nosniff, COOP).</li>
+  <li>Accessibilitat estructural exemplar: lang, skip-link, alt, labels, dimensions d'imatge.</li>
+  <li>Contingut factual i transparent (humans.txt, protocols, FAQ en llenguatge natural) — gran per a GEO i AEO.</li>
+  <li>URLs netes, sitemap complet i bilingüe, robots.txt ben delimitat.</li>
+  <li>Rendiment lleuger amb gzip i SVGs optimitzats.</li>
+</ul>
+
+<h1>Glossari</h1>
+<p><b>SEO:</b> optimització per a cercadors tradicionals (Google). Aquest informe cobreix títols, meta, heading, canonical, sitemap i schema.</p>
+<p><b>GEO / IA:</b> optimització per a cercadors generatius (Perplexity, AI Overviews, ChatGPT Search, Gemini). Recompensa claredat, autoritat i riquesa factual.</p>
+<p><b>AEO:</b> optimització per a snippets destacats i resposta directa (preguntes com &quot;Què és...?&quot;, &quot;Com puc...?&quot;).</p>
+</body></html>
