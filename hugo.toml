@@ -87,6 +87,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
   # NOTA: el SEO per producció es controla amb la variable d'entorn HUGO_PRODUCTION
   # (vegeu comentari més amunt), no amb cap paràmetre de config.
 
+  [params.social]
+    og_image = "img/logos/logo-nau-bostik-og.png"
+
 [[menu.main]]
   name = "Activitats"
   url = "/activitats/"
