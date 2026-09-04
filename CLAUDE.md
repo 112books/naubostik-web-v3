@@ -183,7 +183,7 @@ No hi ha servidor d'aplicació ni base de dades en runtime. La base de dades és
 **Canvi estratègic (agost 2026):** Wagtail CMS (Django) abandonat. Dinahosting no permet mod_proxy ni proxy nginx sense host addicional (cost 4€/mes). Solució: Decap CMS estàtic, que commita directament al repo GitHub. Zero backend, zero cost addicional.
 
 **Incoherències detectades (agost 2026), pendents de resoldre:**
-- `fetch-territori.yml` desplega a `https://112books.github.io/naubostik-web/` (baseURL Web 2), no al de Web 3 (`/naubostik-web-v3/`). Corregir perquè el cron no sobrescrigui el staging correcte.
+- ~~`fetch-territori.yml` desplega a `https://112books.github.io/naubostik-web/` (baseURL Web 2)~~ — **resolt 2026-09-03**: el workflow ja construeix amb `--baseURL https://112books.github.io/naubostik-web-v3/` (línia 50).
 
 ---
 

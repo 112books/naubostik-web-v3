@@ -2,49 +2,49 @@ treballadors:
   - nom: Jorge Sanchez
     rol: Coordinació
     email: coordinacio@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2022/08/Staff-Jorge-300x300.jpeg
+    foto: img/equip/jorge.jpg
   - nom: Eli Crego
     rol: Dinamització
     email: dinamitzacio@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2025/11/Eli_Perfil-BN-300x300.jpg
+    foto: img/equip/eli.jpg
   - nom: Alex López
     rol: Producció
     email: tecnic@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2026/06/Alex_perfil-300x300.jpg
+    foto: img/equip/alex.jpg
   - nom: Souleymane Bah
     rol: Ajudant de Producció
     email: ""
-    foto: https://naubostik.com/wp-content/uploads/2024/05/Souly_perfil-1024x1024.jpg
+    foto: img/equip/souly.jpg
   - nom: Nora Grijalba
     rol: Comunicació
     email: comunicacio@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2023/07/Nora_Perfil-BN-1-300x300.jpeg
+    foto: img/equip/nora.jpg
   - nom: Laura Ciria
     rol: Projectes
     email: projectes@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2025/07/Laura_perfil_ok-1024x1024.jpg
+    foto: img/equip/laura.jpg
   - nom: Romina Maldonado
     rol: Comptabilitat
     email: comptabilitat@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2023/07/Romina_Perfil-BN-300x300.jpg
+    foto: img/equip/romina.jpg
   - nom: Mabe Briones
     rol: Administració
     email: administracio@naubostik.com
-    foto: https://naubostik.com/wp-content/uploads/2025/11/Mabe-BN_ok-1024x1024.jpg
+    foto: img/equip/mabe.jpg
 colaboradors:
   - nom: Xavier Basiana
     rol: Impulsor / Fundador
     email: ""
-    foto: https://naubostik.com/wp-content/uploads/2022/12/xb-300x300.png
+    foto: img/equip/xavier-basiana.png
   - nom: David Suñol
     rol: Col·laborador
     email: ""
-    foto: https://naubostik.com/wp-content/uploads/2022/12/davidsunyol-300x300.png
+    foto: img/equip/david-sunyol.png
   - nom: Aureli Gandul
     rol: Col·laborador
     email: ""
-    foto: https://naubostik.com/wp-content/uploads/2023/07/aureli-300x300.png
+    foto: img/equip/aureli.png
   - nom: Joan Linux
     rol: Col·laborador
     email: joan@linuxbcn.com
-    foto: https://naubostik.com/wp-content/uploads/2026/07/Joan-linux_new2-300x300.jpg
+    foto: img/equip/joan-linux.jpg

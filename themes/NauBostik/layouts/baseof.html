@@ -5,11 +5,13 @@
 {{ $ld := "" }}
 {{ if and $prod .IsHome }}
   {{ $ld = dict "@context" "https://schema.org" "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL "description" (site.Params.description | plainify) "address" (dict "@type" "PostalAddress" "streetAddress" "Ferran Turné, 1-11" "postalCode" "08027" "addressLocality" "Barcelona" "addressCountry" "ES") "geo" (dict "@type" "GeoCoordinates" "latitude" 41.424277 "longitude" 2.192917) }}
-{{ else if and $prod (eq .Section "activitats") }}
+{{ else if and $prod (or (eq .Section "activitats") (eq .Section "activitats-residents") (eq .Section "tallers")) }}
   {{ $day := "" }}{{ with .Params.date }}{{ $day = .Format "2006-01-02" }}{{ end }}
+  {{ $start := $day }}{{ with .Params.hora }}{{ $start = printf "%sT%s" $day . }}{{ end }}
+  {{ $end := "" }}{{ if .Params.data_fi }}{{ $end = printf "%s" .Params.data_fi }}{{ else if .Params.hora_fi }}{{ $end = printf "%sT%s" $day .Params.hora_fi }}{{ end }}
   {{ $img := printf "%simg/logos/logo-nau-bostik.png" site.BaseURL }}{{ with .Params.imatge }}{{ $img = printf "%simg/%s" site.BaseURL . }}{{ end }}
-  {{ $ld = dict "@context" "https://schema.org" "@type" "Event" "name" .Title "startDate" (printf "%sT%s" $day .Params.hora) "image" $img "description" ($desc | plainify) "location" (dict "@type" "Place" "name" "Nau Bostik" "address" "Ferran Turné, 1-11 · 08027 Barcelona") "organizer" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) }}
-  {{ with .Params.hora_fi }}{{ $ld = merge $ld (dict "endDate" (printf "%sT%s" $day .)) }}{{ end }}
+  {{ $ld = dict "@context" "https://schema.org" "@type" "Event" "name" .Title "startDate" $start "image" $img "description" ($desc | plainify) "location" (dict "@type" "Place" "name" "Nau Bostik" "address" "Ferran Turné, 1-11 · 08027 Barcelona") "organizer" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) }}
+  {{ with $end }}{{ $ld = merge $ld (dict "endDate" .) }}{{ end }}
 {{ end }}
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode | default "ca" }}">
@@ -26,8 +28,10 @@
     <meta property="og:url" content="{{ $absURL }}">
     <meta property="og:site_name" content="{{ site.Title }}">
     <meta property="og:locale" content="{{ site.Language.LanguageCode | default "ca" }}">
-    {{ with site.Params.social.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    {{ $og := "img/logos/logo-nau-bostik.png" }}{{ if .Params.imatge }}{{ $og = printf "img/%s" .Params.imatge }}{{ else if site.Params.social.og_image }}{{ $og = site.Params.social.og_image }}{{ end }}
+    <meta property="og:image" content="{{ $og | relURL | absURL }}">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ $og | relURL | absURL }}">
     <meta name="robots" content="index, follow, max-image-preview:large">
   {{ else }}
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
@@ -36,7 +40,7 @@
     <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, noai, noimageai">
   {{ end }}
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-  {{ if $prod }}{{ with .Params.imatge }}<meta property="og:image" content="{{ printf "img/%s" . | relURL | absURL }}">{{ end }}
+  {{ if $prod }}
   {{ if ne $ld "" }}<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>{{ end }}
   {{ end }}
 </head>
