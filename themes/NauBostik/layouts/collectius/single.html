@@ -10,7 +10,7 @@
 
     {{ if .Params.logo }}
     <div class="col-single__logo">
-      <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="Logotip de {{ .Title }}" loading="lazy">
+      <img src="{{ partial "img.html" .Params.logo }}" alt="Logotip de {{ .Title }}" loading="lazy">
     </div>
     {{ end }}
 

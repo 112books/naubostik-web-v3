@@ -46,6 +46,22 @@ L'escala de valoració:
 - **Observacions:** el partial corromput `_partials/head.html` (+ `head/css.html`, `head/js.html`) és codi mort (no s'invoca des del `baseof`); s'ha deixat tal qual per no fer canvis innecessaris. El nom de secció al Breadcrumb surt sense accent ("Noticies") — millora menor opcional. Combinació de models: aquesta sessió resol l'enquesta de producció.
 - **Valoració:** 4 (feina sòlida i verificada; amb limitació de no poder validar visualment el disseny).
 
+### 2026-09-04 — Fix de previsualització d'imatges al CMS (Decap) per a producció
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Resoldre el problema reportat de 404 d'imatges al CMS (Decap) abans del desplegament a producció (previst en 1-2 setmanes). El `public_folder: "/naubostik-web-v3/img"` (subpath staging) no resolia dins de `admin/`.
+- **Context:** La causa no era el contingut (56 fitxers amb `logo`/`fotografies`/`plano` absoluts `/img/...`), sinó el `public_folder` que, en un subpath de GH Pages, apuntava malament des de l'editor. Estratègia: preparar per a producció (`public_folder: "/img"`), fent les plantilles robustes davant de camins relatius.
+- **Fitxers modificats:**
+  - `static/admin/config.yml` — `public_folder` de `/naubostik-web-v3/img` → `/img` (arrel, correcte per a producció).
+  - `themes/NauBostik/layouts/partials/img.html` — **CREAT** (partial normalitzador de camins d'imatge: treu `/`, afegeix prefix `img/` si no n'hi ha, aplica `relURL`).
+  - `themes/NauBostik/layouts/espais/single.html` i `espais/list.html` — logo/fotografies/plano ara usen `partial "img.html"` (abans `TrimPrefix "/" + relURL`).
+  - `themes/NauBostik/layouts/collectius/single.html` i `collectius/list.html` — idem per al logo.
+- **Mètriques:** builds verificats: producció (`/img/espais/...`) i staging (`/naubostik-web-v3/img/espais/...`), tots correctes. 4 plantilles actualitzades + 1 partial nou.
+- **Verificació:** camins d'imatge correctes a la sortida de producció i staging (amb el subpath adient). El partial és robust davant de `/img/x.jpg` (dades actuals), `img/x.jpg` (relatiu que guarda Decap amb `public_folder: /img`) i `x.jpg` (nom de fitxer nu).
+- **Errors i resolució:** la primera versió del partial, amb newlines dins la plantilla, emetia `%0a%0a` (newlines URL-encodats) dins dels atributs `src`; resolt col·lapsant tots els `{{ }}` a una sola línia.
+- **Observacions:** decisió assumida que la previsualització a l'editor del staging seguirà fallant fins al desplegament a Netlify (on el `public_folder: /img` és correcte). El web staging renderitza bé via `relURL`.
+- **Valoració:** 4 (solució de config + normalització de camins reutilitzable i verificada en els dos entorns).
+
 ---
 
 ## GLM-5.2 (opencode-go/glm-5.2)

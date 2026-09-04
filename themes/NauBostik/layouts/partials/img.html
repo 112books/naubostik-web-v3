@@ -1,0 +1,1 @@
+{{- $p := strings.TrimPrefix "/" . }}{{ if not (hasPrefix $p "img/") }}{{ $p = printf "img/%s" $p }}{{ end }}{{ $p | relURL -}}

@@ -22,7 +22,7 @@
   <a href="{{ .RelPermalink }}" class="col-logo-card" title="{{ .Title }}" data-ambit="{{ $ambitStr }}">
     <div class="col-logo-card__img">
       {{ if .Params.logo }}
-      <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" loading="lazy">
+      <img src="{{ partial "img.html" .Params.logo }}" alt="{{ .Title }}" loading="lazy">
       {{ else }}
       <span class="col-logo-card__fallback">{{ .Title }}</span>
       {{ end }}

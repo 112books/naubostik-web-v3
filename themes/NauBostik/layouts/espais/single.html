@@ -13,7 +13,7 @@
   {{/* TODO→MULTII18N: alt text amb interpolació de .Title, pendent de decidir sintaxi i18n amb dades */}}
   {{ if .Params.logo }}
   <div class="espai-single-logo">
-    <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="Logotip de {{ .Title }}">
+    <img src="{{ partial "img.html" .Params.logo }}" alt="Logotip de {{ .Title }}">
   </div>
   {{ end }}
 
@@ -57,8 +57,8 @@
     <h2 class="espai-gallery-title">{{ i18n "espai_gallery_title" }}</h2>
     <div class="espai-gallery">
       {{ range . }}
-      <a href="{{ . | strings.TrimPrefix "/" | relURL }}" class="espai-gallery-item" data-gallery="{{ $.File.BaseFileName }}">
-        <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="Fotografia de {{ $.Title }}" loading="lazy">
+      <a href="{{ partial "img.html" . }}" class="espai-gallery-item" data-gallery="{{ $.File.BaseFileName }}">
+        <img src="{{ partial "img.html" . }}" alt="Fotografia de {{ $.Title }}" loading="lazy">
       </a>
       {{ end }}
     </div>
@@ -67,7 +67,7 @@
 
     {{ if .Params.plano }}
     <div class="espai-plano">
-      <img src="{{ .Params.plano | strings.TrimPrefix "/" | relURL }}" alt="Plànol d'ubicació de {{ .Title }}" loading="lazy">
+      <img src="{{ partial "img.html" .Params.plano }}" alt="Plànol d'ubicació de {{ .Title }}" loading="lazy">
     </div>
     {{ end }}
   </div>

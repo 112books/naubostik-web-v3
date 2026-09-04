@@ -16,7 +16,7 @@
       {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
       <div class="espai-card-image">
         {{ if .Params.logo }}
-        <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}">
+        <img src="{{ partial "img.html" .Params.logo }}" alt="{{ .Title }}">
         {{ else }}
         <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
         {{ end }}
@@ -41,7 +41,7 @@
         {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
         <div class="espai-card-image">
           {{ if .Params.logo }}
-          <img src="{{ .Params.logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}">
+          <img src="{{ partial "img.html" .Params.logo }}" alt="{{ .Title }}">
           {{ else }}
           <div class="espai-card-placeholder"><img src="{{ "img/logo-nb-taronja.jpg" | relURL }}" alt="Nau Bostik"></div>
           {{ end }}
