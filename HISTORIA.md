@@ -62,6 +62,21 @@ L'escala de valoració:
 - **Observacions:** decisió assumida que la previsualització a l'editor del staging seguirà fallant fins al desplegament a Netlify (on el `public_folder: /img` és correcte). El web staging renderitza bé via `relURL`.
 - **Valoració:** 4 (solució de config + normalització de camins reutilitzable i verificada en els dos entorns).
 
+### 2026-09-04 — Diagnòstic del 404 d'imatges al CMS (Decap): artefacte de subpath, es resol a producció
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Investigar per què el 404 d'imatges al CMS persisteix després del fix de `public_folder` (l'usuari ho reporta des de `.../admin/#/collections/activitats/entries/10-e-aniversari-de-la-nau-bostik`, imatges `10e-ANIVERSARI-NAU-BOSTIK_web.jpg` i `_p.jpg`).
+- **Context:** El fix anterior (Tasca 5) va preparar `public_folder` per a producció, però la previsualització del CMS a staging seguia trencada. Calia aclarir si el 404 era un problema residual de config o una altra cosa.
+- **Diagnòstic (sense canvis de codi):**
+  - Els fitxers existeixen i es construeixen bé (`public/img/activitats/10e-ANIVERSARI-NAU-BOSTIK_{web,p}.jpg`).
+  - El `_web.jpg` està **hardcodejat** al cos del markdown: `content/activitats/10-e-aniversari-de-la-nau-bostik.md:31` → `<img src="/img/activitats/..._web.jpg">`. El `_p.jpg` el demana el **widget d'imatge** del Decap (camp `imatge`).
+  - Tots dos resolen camins **absoluts** `/img/...` contra l'arrel de l'origen. A staging (`112books.github.io/naubostik-web-v3/`) es perd el subpath → 404.
+  - **Són 399 fitxers** amb `src="/img/"` hardcodejats al cos del markdown (problema sistèmic preexistent, no introduït per aquesta sessió).
+  - A **producció** (domini arrel `naubostik.com`), `/img/...` resol correctament tant al web com a la previsualització del CMS.
+- **Decisió:** l'usuari tria **deixar-ho per producció** (es resoldrà sol al desplegament en 1-2 setmanes; cap canvi ara). El `public_folder: /img` de la Tasca 5 és el correcte per a l'arrel.
+- **Observacions:** no hi ha fix de config que faci funcionar els camins absoluts del CMS a un subpath de GH Pages (Decap no coneix el baseURL de subpath). L'única via alternativa seria un `registerPreviewTemplate` a `admin/index.html` (descartada: cost de manteniment, caldria treure-la a producció).
+- **Valoració:** 4 (diagnòstic acurat i decisió correctament orientada a producció, sense rework innecessari).
+
 ---
 
 ## GLM-5.2 (opencode-go/glm-5.2)
