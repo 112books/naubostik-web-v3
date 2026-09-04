@@ -342,3 +342,21 @@
 </script>
 
 {{ end }}
+
+{{ define "extra_ld" }}
+{{ $faq := slice
+  (dict "q" "Quins són els horaris del recinte?" "a" "De dilluns a divendres, de 9h a 21h. Els caps de setmana l'horari varia segons la programació. Consulta l'agenda per saber si hi ha activitats obertes al públic.")
+  (dict "q" "L'entrada és gratuïta?" "a" "Sí, l'accés al recinte és gratuït i obert. Algunes activitats poden tenir preu d'entrada propi — consulta cada activitat a l'agenda.")
+  (dict "q" "On puc aparcar la bicicleta?" "a" "Hi ha aparcament de bicicletes a l'entrada de la Nau Bostik. Les estacions de Bicing més properes són la 250 (Carrer Portugal, 3) i la 391 (Gran de la Sagrera, 74).")
+  (dict "q" "Què ofereix la Nau Bostik per a produccions i esdeveniments?" "a" "Disposem de 6.000 m² de naus amb ambient artístic i industrial al cor de Barcelona. Oferim espais exteriors per a rodatge i shooting, i sales per a producció amb característiques específiques per a cada necessitat.")
+  (dict "q" "Quins espais estan disponibles per a cessió?" "a" "La Nau Andy Warhol, la Nau 53, la Nau Pilar Vers, la Sala Gandul i la sala d'audiovisuals, a més d'espais exteriors. Consulta la pàgina d'Espais per veure capacitats i condicions.")
+  (dict "q" "Qui pot sol·licitar la cessió?" "a" "Projectes culturals, socials, comunitaris i produccions audiovisuals o fotogràfiques alineats amb els valors de la Nau Bostik. No cedim espais per a festes privades de particulars.")
+  (dict "q" "Quant costa cedir un espai?" "a" "Les condicions de cessió depenen del tipus d'activitat i de l'espai. Escriu-nos i t'enviem les tarifes vigents.")
+  (dict "q" "Quin és l'horari màxim d'ús?" "a" "El tancament màxim és a les 22 h tots els dies, sense excepcions.")
+  (dict "q" "Amb quanta antelació cal reservar?" "a" "Recomanem contactar-nos amb un mínim de 3 setmanes d'antelació per a activitats puntuals, i amb més temps per a produccions o esdeveniments de gran format.")
+  (dict "q" "Com puc proposar una activitat?" "a" "Utilitza el formulari de Proposa una activitat. Rebrem la teva proposta i et respondrem en un termini de 2 setmanes.")
+  (dict "q" "Com reporto una incidència tècnica o de manteniment?" "a" "Descriu l'incidència al formulari i l'equip de gestió la rebrà directament. Per a urgències, truca'ns al +34 933 408 350.")
+}}
+{{ $items := slice }}{{ range $i, $f := $faq }}{{ $items = $items | append (dict "@type" "Question" "name" $f.q "acceptedAnswer" (dict "@type" "Answer" "text" $f.a)) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $items | jsonify | safeJS }}</script>
+{{ end }}

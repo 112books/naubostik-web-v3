@@ -20,6 +20,8 @@
   <div class="content noticia-single__content">
     {{ $cos := .Content | replaceRE "/img/noticies/" (printf "%s/img/noticies/" $prefix) }}
     {{ $cos = $cos | replaceRE `<figure class="historia-fig"><img src="([^"]+)"(.*?)</figure>` (printf `<a class="espai-gallery-item noticia-single__galeria-item" data-gallery="%s" href="$1"><figure class="historia-fig"><img src="$1"$2</figure></a>` $gallery) }}
+    {{ $altText := replace $.Title "\"" "" }}
+    {{ $cos = $cos | replaceRE `alt="[A-Za-z0-9_.\-]+"` (printf `alt="%s"` $altText) }}
     {{ $cos | safeHTML }}
   </div>
 
@@ -51,4 +53,10 @@
   </ul>
 </section>
 {{ end }}
+{{ end }}
+
+{{ define "extra_ld" }}
+{{ $desc := or .Params.description .Params.descripcio .Description site.Params.description }}
+{{ $img := printf "%simg/logos/logo-nau-bostik.png" site.BaseURL }}{{ with .Params.imatge }}{{ $img = printf "%simg/%s" site.BaseURL . }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "NewsArticle" "headline" .Title "url" .Permalink "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00") "description" ($desc | plainify | truncate 160) "image" $img "author" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) "publisher" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL "logo" (dict "@type" "ImageObject" "url" (printf "%simg/logos/logo-nau-bostik.png" site.BaseURL))) "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) | jsonify | safeJS }}</script>
 {{ end }}

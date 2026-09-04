@@ -78,6 +78,8 @@
   <div class="event-body content">
     {{ $cos := .Content | replaceRE "/img/activitats/" (printf "%s/img/activitats/" $prefix) }}
     {{ $cos = $cos | replaceRE `<figure class="historia-fig"><img src="([^"]+)"(.*?)</figure>` (printf `<a class="espai-gallery-item event-body__galeria-item" data-gallery="%s" href="$1"><figure class="historia-fig"><img src="$1"$2</figure></a>` $gallery) }}
+    {{ $altText := replace $.Title "\"" "" }}
+    {{ $cos = $cos | replaceRE `alt="[A-Za-z0-9_.\-]+"` (printf `alt="%s"` $altText) }}
     {{ $cos | safeHTML }}
   </div>
 

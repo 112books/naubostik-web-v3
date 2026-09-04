@@ -27,6 +27,27 @@ L'escala de valoració:
 
 ---
 
+## big-pickle (2026-09-04) — Preparació SEO/AEO per al desplegament de producció
+
+### 2026-09-04 — Schemas estructurats + minificació de recursos
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Deixar enllestit el web 3.0 per al desplegament a producció (previst en 1-2 setmanes). Encaixar recomanacions d'auditoria SEO/GEO/AEO prèvia i optimitzar rendiment.
+- **Context:** Auditoria anterior (inici de sessió 2026-09-04) va puntuar Seguretat 8, SEO 8, IA/GEO 6, Accessibilitat 7, Rendiment 6 (global 35/50). Aquesta sessió n'aplica les correccions.
+- **Fitxers modificats:**
+  - `themes/NauBostik/layouts/baseof.html` — BreadcrumbList automàtic (pàgines no-home) + bloc `{{ block "extra_ld" }}` + truncatge description del JSON-LD Event a 160 + minificació CSS/JS amb fingerprint + SRI (integrity).
+  - `themes/NauBostik/layouts/noticies/single.html` — JSON-LD `NewsArticle` (headline, dates, image, author/publisher) + neteja d'alt d'imatge crues.
+  - `themes/NauBostik/layouts/contacte/list.html` — JSON-LD `FAQPage` amb 11 preguntes/respostes rellevants.
+  - `themes/NauBostik/layouts/activitats/single.html` + `activitats-residents/single.html` — neteja d'alt d'imatge crues (reemplaça noms de fitxer per títol descriptiu).
+  - `themes/NauBostik/static/css/main.css` → `assets/css/main.css` (rename)
+  - `themes/NauBostik/static/js/main.js` → `assets/js/main.js` (rename)
+- **Mètriques:** builds: producció (633 pàgines, ~7.2s) i staging (633 pàgines, ~7.2s), tots sense errors ni warnings nous. CSS 128K→100K minificat + SRI. JS minificat + SRI. Estalvi ~30K CSS.
+- **Verificació:** schemas presents a l'HTML de sortida (Organization/Event/NewsArticle/BreadcrumbList/FAQPage), SEO actiu a prod (`index, follow, max-image-preview:large`, canonical per pàgina), staging intacte (`robots.txt` `Disallow: /` + 22 bots d'IA bloquejats + `noindex`), alt d'imatge netejades (ex. `expo-invisibles` → "Exposició (In)visibles").
+- **Observacions:** el partial corromput `_partials/head.html` (+ `head/css.html`, `head/js.html`) és codi mort (no s'invoca des del `baseof`); s'ha deixat tal qual per no fer canvis innecessaris. El nom de secció al Breadcrumb surt sense accent ("Noticies") — millora menor opcional. Combinació de models: aquesta sessió resol l'enquesta de producció.
+- **Valoració:** 4 (feina sòlida i verificada; amb limitació de no poder validar visualment el disseny).
+
+---
+
 ## GLM-5.2 (opencode-go/glm-5.2)
 
 Model inicial a partir del qual encenem la comparativa. Provider: OpenCode amb

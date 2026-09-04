@@ -10,7 +10,7 @@
   {{ $start := $day }}{{ with .Params.hora }}{{ $start = printf "%sT%s" $day . }}{{ end }}
   {{ $end := "" }}{{ if .Params.data_fi }}{{ $end = printf "%s" .Params.data_fi }}{{ else if .Params.hora_fi }}{{ $end = printf "%sT%s" $day .Params.hora_fi }}{{ end }}
   {{ $img := printf "%simg/logos/logo-nau-bostik.png" site.BaseURL }}{{ with .Params.imatge }}{{ $img = printf "%simg/%s" site.BaseURL . }}{{ end }}
-  {{ $ld = dict "@context" "https://schema.org" "@type" "Event" "name" .Title "startDate" $start "image" $img "description" ($desc | plainify) "location" (dict "@type" "Place" "name" "Nau Bostik" "address" "Ferran Turné, 1-11 · 08027 Barcelona") "organizer" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) }}
+  {{ $ld = dict "@context" "https://schema.org" "@type" "Event" "name" .Title "startDate" $start "image" $img "description" ($desc | plainify | truncate 160) "location" (dict "@type" "Place" "name" "Nau Bostik" "address" "Ferran Turné, 1-11 · 08027 Barcelona") "organizer" (dict "@type" "Organization" "name" "Nau Bostik" "url" site.BaseURL) }}
   {{ with $end }}{{ $ld = merge $ld (dict "endDate" .) }}{{ end }}
 {{ end }}
 <!DOCTYPE html>
@@ -39,9 +39,20 @@
     <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     <meta http-equiv="X-Robots-Tag" content="noindex, nofollow, noarchive, noai, noimageai">
   {{ end }}
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  {{- with resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{- end }}
   {{ if $prod }}
   {{ if ne $ld "" }}<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>{{ end }}
+  {{ if not .IsHome }}
+  {{ $items := slice (dict "@type" "ListItem" "position" 1 "name" site.Title "item" site.BaseURL) }}
+  {{ if .Section }}
+    {{ $items = $items | append (dict "@type" "ListItem" "position" 2 "name" (.Section | title) "item" (printf "%s%s/" site.BaseURL .Section)) }}
+  {{ end }}
+  {{ $items = $items | append (dict "@type" "ListItem" "position" (len $items | add 1) "name" .Title "item" .Permalink) }}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items | jsonify | safeJS }}</script>
+  {{ end }}
+  {{ block "extra_ld" . }}{{ end }}
   {{ end }}
 </head>
 <body>
@@ -80,6 +91,8 @@
       <path d="M12 5l7 7h-4v7H9v-7H5z"></path>
     </svg>
   </button>
-  <script src="{{ "js/main.js" | relURL }}"></script>
+  {{- with resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+  {{- end }}
 </body>
 </html>
