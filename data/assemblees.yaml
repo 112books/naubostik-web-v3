@@ -2,11 +2,12 @@
 darrera: ~
 
 propera:
-  data: 2026-09-22
-  hora: "16:30"
-  lloc: "Nau Bostik — sala de comissions"
-  titol: "Reunió de la comissió de comunicació"
-  url: https://konsento.naubostik.com/ca/assemblea/2/
+  data: 2026-09-08
+  hora: "16:00"
+  titol: "Assemblea general de Setembre 2026"
+  url: https://konsento.naubostik.com/ca/assemblea/3/
   ordre_del_dia:
-    - "Pla de difusió de l'assemblea del 15 de setembre"
-    - "Publicació d'actes i acords a Konsento"
+    - "Debat i analisi del document elaborat per SEPRA (informe adjunt) i presentacio de la proposta i la feina de la Comissio de Cures"
+    - "Proposta de caracter general per al curs 2027-2028: avançar en la creacio de documents per a la construccio de l'entitat i coordinadora de segon grau"
+    - "Laura Guiteras i presentacio de l'escola de circ Anomala i possibilitat de Basketbeat"
+    - "Situacio de l'equip de gestio"
