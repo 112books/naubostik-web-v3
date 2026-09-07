@@ -77,6 +77,20 @@ L'escala de valoració:
 - **Observacions:** no hi ha fix de config que faci funcionar els camins absoluts del CMS a un subpath de GH Pages (Decap no coneix el baseURL de subpath). L'única via alternativa seria un `registerPreviewTemplate` a `admin/index.html` (descartada: cost de manteniment, caldria treure-la a producció).
 - **Valoració:** 4 (diagnòstic acurat i decisió correctament orientada a producció, sense rework innecessari).
 
+### 2026-09-07 — Fix del workflow «Actualitza notícies de territori» (CI)
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Resoldre la fallada recurrent del GitHub Action `fetch-territori.yml` (les últimes 3 execucions: 24/8, 31/8, 7/9 fallaven).
+- **Context:** L'usuari reporta «All jobs have failed». El workflow, que s'executa cada dilluns, actualitza `data/noticies-territori.yaml` des de fonts RSS i redeploya a GH Pages.
+- **Diagnòstic:** `ModuleNotFoundError: No module named 'yaml'` al pas `python scripts/fetch-territori.py`. El workflow no instal·lava cap dependència de Python; el runner d'ubuntu-latest havia passat a **Python 3.14** (via `actions/setup-python` amb `3.x`), on el PyYAML del sistema ja no es troba.
+- **Fix:**
+  - `.github/workflows/fetch-territori.yml` — pin de `python-version: '3.x'` → `'3.12'` (estable, evita fluctuacions futures) + pas nou «Install dependencies» (`pip install -r scripts/requirements.txt`) abans d'executar el script.
+  - `scripts/requirements.txt` — **CREAT**, amb `PyYAML>=6.0` (l'única dep que fa servir el script, via `yaml.safe_load` per llegir `data/sources.yaml`).
+- **Fitxers modificats:** `.github/workflows/fetch-territori.yml`, `scripts/requirements.txt` (nou), `data/noticies-territori.yaml` (actualitzat per l'execució local del script — contingut fresc 6-7/9/2026, el que el workflow fallit havia d'haver produït).
+- **Mètriques:** validat localment: script executa correctament (10 items, 3 fonts), build Hugo ok (633 pàgines, només warnings de deprecació preexistents).
+- **Observacions:** el canvi de versió de Python del runner va ser la causa arrel; amb la pin a 3.12 + deps explícites el workflow es torna determinista. Pendent confirmar amb un `workflow_dispatch` a CI.
+- **Valoració:** 4 (fix mínim, declaratiu i verificat localment; resta confirmar a CI).
+
 ---
 
 ## GLM-5.2 (opencode-go/glm-5.2)
