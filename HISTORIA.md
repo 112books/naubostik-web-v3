@@ -101,6 +101,7 @@ L'escala de valoració:
 - **Valoració:** 5 — pàgina editorialment sòlida i navegable, amb fonts verificades i ordenació cronològica explícita.
 
 ### Pendents
+- [ ] **Mapa de xarxes de col·laboració (Fase 1) — AJORNAT** per l'usuari ("seguirem més endavant"). Estudi previ fet: 26 col·lectius + 34 espais; les col·laboracions no estan modelades (no existeix `data/xarxa.yaml`). Opcions plantejades: mapa editorial per àmbits / graf de nodes amb connexions / matriu espais↔col·lectius; ubicació: dins Col·lectius o menú principal.
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
 - [ ] Verificar visualment la pàgina `/territori/` reestructurada (Xarxa comunitària / El nucli històric / La Sagrera en transformació) a 360px/768px/1100px+.
 - [ ] Confirmar que la secció "Del territori" del home/notícies mostra correctament les notícies de la Torre de la Sagrera i La Cinètika (fons RSS noves).
