@@ -82,8 +82,20 @@ L'escala de valoració:
 - **Notes:** Precisa la nomenclatura per evitar confusió entre el **gratacel de Gehry** (*La Núvia*, no construït) i l'**espai comunitari Torre de la Sagrera** (casal de barri de gestió comunitària). Enllaços externs afegits (torrelasagrera.cat, espai30lasagrera.cat, avvlasagrera.com, lasagrerina.com) — tots responen 200. L'enllaç intern relatiu `../noticies/` es manté per al subpath. Build net (635 pàgines; només warnings de deprecació preexistents).
 - **Valoració:** 4 — Reestructuració que mostra la Nau com a part d'una xarxa de gestió comunitària i d'un nucli històric, amb dades verificades.
 
+### 2026-09-08 — Territori: protagonisme de l'Espai 30 + La Cinètika + fonts RSS
+
+- **Tasca:** (1) donar més relleu a l'**Espai 30** (espai històric en remodelació), (2) afegir **La Cinètika** (espai okupat autogestionat als antics cinemes), (3) revisar quines entitats de Territori generen notícies per listar-les a les notícies externes.
+- **Fitxers modificats:**
+  - `content/territori.md` — **Espai 30** passa a primer element de Xarxa comunitària amb detall de la seva remodelació integral (2024, 2,4 M€, reobert maig 2026, manté la memòria de les naus); **La Cinètika** afegida (antics cinemes Lauren Sant Andreu, rambla Fabra i Puig 28, okupada 2016, assembleària: projeccions, biblioteca crítica, gimnàs, buc d'assaig). Corregit l'enllaç de La Cinètika al web canònic `blogs.sindominio.net/lacinetika/` (no wordpress).
+  - `data/sources.yaml` — afegides 2 fonts RSS noves: **Torre de la Sagrera** (`torrelasagrera.cat/feed/`) i **La Cinètika** (`blogs.sindominio.net/lacinetika/feed/`). Generen notícies reals.
+  - `data/noticies-territori.yaml` — regenerat amb les noves fonts.
+- **Notes / decisions:** **Espai 30 NO** s'ha afegit com a font RSS: el seu feed només conté proves ("Prova de NO PUBLICAR", "sdasd", "TESTEANDO") i un missatge de 2022 — contaminaria les notícies. **SAAC** no té web/feed localitzable (sense domini actiu). La Sagrerina i l'AVV ja eren fonts existents. Parser verificat: llegeix correctament els feeds de Torre de la Sagrera i La Cinètika (RSS 2.0). Bots IA no afectats.
+- **Valoració:** 4 — Precisió editorial (enllaç canònic correcte) i valor nou (dues fonts de notícies externes reals), amb criteris sòlids per descartar Espai 30 i SAAC.
+
 ### Pendents
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
+- [ ] Verificar visualment la pàgina `/territori/` reestructurada (Xarxa comunitària / El nucli històric / La Sagrera en transformació) a 360px/768px/1100px+.
+- [ ] Confirmar que la secció "Del territori" del home/notícies mostra correctament les notícies de la Torre de la Sagrera i La Cinètika (fons RSS noves).
 - [ ] Confirmar quin ítem de Fase 1 es fa a continuació (territori, col·lectius com a xarxa, art/murals...).
 
 ---
