@@ -83,6 +83,18 @@
     {{ $cos | safeHTML }}
   </div>
 
+  {{ if or .Params.enllac_resultat .Params.nota_final }}
+  <div class="event-resultat">
+    <h2 class="event-resultat__title">Resultat de l'activitat</h2>
+    {{ with .Params.nota_final }}<div class="event-resultat__nota content">{{ . | markdownify }}</div>{{ end }}
+    {{ with .Params.enllac_resultat }}
+    <a href="{{ . }}" class="btn btn-primary event-resultat__enllac" target="_blank" rel="noopener">
+      Veure resultat &rarr;
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
   <footer class="event-footer">
     {{ with .Params.link_extern }}
     <a href="{{ . }}" class="btn btn-primary event-footer__more" target="_blank" rel="noopener">

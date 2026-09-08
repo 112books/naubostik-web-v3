@@ -6859,3 +6859,34 @@ main.container {
   background: var(--color-surface, #f8f8f8);
   box-sizing: border-box;
 }
+
+/* ── Bloc de resultat post-activitat (camps enllac_resultat / nota_final) ── */
+.event-resultat {
+  margin: 0 0 2.5rem;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-sharp);
+}
+
+.event-resultat__title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+}
+
+.event-resultat__nota {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.event-resultat__nota p:last-child {
+  margin-bottom: 0;
+}
+
+.event-resultat__enllac {
+  margin-top: 0.75rem;
+}

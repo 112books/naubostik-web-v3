@@ -109,6 +109,20 @@ L'escala de valoració:
 - **Observacions:** el camp només es mostra si és `true` explícit; espais sense valor no mostren res (evita falsos negatius). Decisió de plan: no poblar les fitxes existents, que l'equip ho faci des del CMS.
 - **Valoració:** 4 (feina tècnica verifiable; la revisió d'activitats no és automatitzable i queda com a tasca editorial de l'equip).
 
+### 2026-09-08 (II) — Fase 1: seguiment post-activitat (resultat públic)
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Ampliar el model d'activitat amb un seguiment post-activitat, segons la Fase 1 del roadmap.
+- **Decisió de producte:** amb l'usuari es va triar **"Resultat públic (enllaç/nota)"** (davant d'estat intern o enllaç a acta). Els camps mostren el balanç públic d'una activitat ja feta.
+- **Fitxers modificats:**
+  - `static/admin/config.yml` — camps `enllac_resultat` (string) i `nota_final` (text) a les col·leccions `activitats` i `activitats-residents`.
+  - `themes/NauBostik/layouts/activitats/single.html` — bloc `.event-resultat` (`event-resultat__title`, `__nota` amb markdown, `__enllac` botó "Veure resultat"), només si existeix `enllac_resultat` o `nota_final`.
+  - `themes/NauBostik/assets/css/main.css` — estils `.event-resultat*` (border-left accent, fons surface, coherent amb la fitxa tècnica d'espais).
+- **Mètriques:** verificat amb fitxa temporal (bloc present amb camps; absent sense camps); cap activitat real afectada (cap no té els camps encara). Build net sense errors.
+- **Lliçó tècnica:** Hugo no neteja `public/` entre builds; en eliminar una fitxa de prova cal esborrar manualment la seva sortida òrfena (o usar `--cleanDestinationDir`).
+- **Observacions:** pendent que l'equip empleni els camps des del CMS per a activitats passades que tinguin balanç públic.
+- **Valoració:** 4 (implementació neta i verificada; l'ús real depèn de l'equip).
+
 ---
 
 ## GLM-5.2 (opencode-go/glm-5.2)

@@ -39,6 +39,8 @@ collections:
       - { label: "Assemblea", name: "assemblea", widget: "boolean", default: false }
       - { label: "Comissio", name: "comissio", widget: "boolean", default: false }
       - { label: "Avis", name: "avis", widget: "select", required: false, options: ["tancament", "canvi", "important"] }
+      - { label: "Enllac resultat", name: "enllac_resultat", widget: "string", required: false, hint: "URL de la crònica, fotos o notícia després de l'activitat" }
+      - { label: "Nota final", name: "nota_final", widget: "text", required: false, hint: "Breu crònica o balanç públic de l'activitat" }
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
@@ -61,6 +63,8 @@ collections:
       - { label: "Planta", name: "planta", widget: "select", required: false, options: ["Planta Baixa", "Primera planta", "Segona planta", "Terrassa"] }
       - { label: "Enllac extern", name: "link_extern", widget: "string", required: false }
       - { label: "Col-lectiu", name: "collectiu", widget: "string", required: false }
+      - { label: "Enllac resultat", name: "enllac_resultat", widget: "string", required: false, hint: "URL de la crònica, fotos o notícia després de l'activitat" }
+      - { label: "Nota final", name: "nota_final", widget: "text", required: false, hint: "Breu crònica o balanç públic de l'activitat" }
       - { label: "Esborrany (No publicat)", name: "draft", widget: "boolean", default: false }
       - { label: "Cos", name: "body", widget: "markdown", required: false }
 
