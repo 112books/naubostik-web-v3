@@ -5,7 +5,7 @@ draft = false
 description = "La Nau Bostik al seu territori: la xarxa comunitària de La Sagrera, el seu nucli històric i la gran transformació urbana del barri."
 +++
 
-## La Nau al territori
+## La Nau Bostik al territori
 
 La Nau Bostik és un equipament **arrelat al barri de la Sagrera**, a Sant Andreu (Barcelona). No som un espai aïllat sinó part d'una xarxa densa de vida associativa, cultural i veïnal, i d'un procés de transformació urbana que canvia profundament l'entorn.
 
@@ -13,7 +13,7 @@ Des de l'antiga fàbrica de la Bostik, el nostre recinte connecta amb altres esp
 
 ## Xarxa comunitària
 
-La Sagrera té un teixit associatiu molt viu i, sobretot, una manera compartida de fer: la **gestió comunitària**. La Nau no és l'únic equipament del barri que funciona així — en som part d'una xarxa:
+La Sagrera té un teixit associatiu molt viu i, sobretot, una manera compartida de fer: la **gestió comunitària**. La Nau Bostik no és l'únic equipament del barri que funciona així — en som part d'una xarxa:
 
 - **Espai 30 — Ateneu Sagrerenc** — equipament històric de **gestió comunitària**, impulsat fa més de vint anys per veïns de la Sagrera i consolidat el 2016 en la Federació d'Associacions Socioculturals (FASE30). Ocupa les antigues naus industrials *La Guillot, L'Àbaco i La Ion*, al passatge Bofarull (carrer Hondures, 28-30), a tocar del recinte. El seu nom remet al significat originari de «sagrera»: els trenta passos de protecció al voltant de l'església. Ha estat objecte d'una **remodelació integral** (iniciada el 2024, inversió de 2,4 M€) que ha retirat l'amiant, ha obert un accés directe pel carrer d'Hondures i ha creat una gran sala polivalent — i el maig de 2026 ha **reobert les portes** al barri, mantenint la memòria de les naus originals. [espai30lasagrera.cat](https://www.espai30lasagrera.cat/)
 - **Torre de la Sagrera** — casal de barri de **gestió comunitària** (carrer Berenguer de Palou, 64-66), gestionat per la Federació Torre de la Sagrera. Hi conviuen tallers, la Casa de la Festa, un banc de recursos i el refugi antiaeri. També hi ha la seu de l'AVV. [torrelasagrera.cat](https://www.torrelasagrera.cat/)
@@ -41,6 +41,6 @@ La Sagrera viu una de les transformacions urbanes més grans d'Europa: la gran e
 
 Aquesta transformació ha deixat també **projectes que no van ser**: la torre que havia de coronar l'estació —el gratacel de l'arquitecte Frank Gehry, popularment conegut com *La Núvia*—, que va quedar descartada i mai no va passar del paper. La silueta del barri és, així, testimoni de les ambicions i les frustracions de dècades d'urbanisme.
 
-Per a la Nau, aquesta transformació és alhora **oportunitat i repte**: ens connecta amb la ciutat i el país, i al mateix temps ens obliga a vigilar que el creixement no expulsi la vida comunitària que hem construït. Formem part activa de la conversa sobre quin barri volem.
+Per a la Nau Bostik, aquesta transformació és alhora **oportunitat i repte**: ens connecta amb la ciutat i el país, i al mateix temps ens obliga a vigilar que el creixement no expulsi la vida comunitària que hem construït. Formem part activa de la conversa sobre quin barri volem.
 
 Consulta els darrers moviments de l'entorn a la secció **Del territori** de la portada i a [Notícies](../noticies/).
