@@ -74,6 +74,14 @@ L'escala de valoració:
 - **Notes:** La pàgina usa `_default/single.html` (no cal layout propi). Complementa "Visita" (com arribar) i les notícies del barri ja exposades al home/notícies — evita duplicació. **Ampliació posterior:** a instància de l'usuari, afegida la **Torre de la Sagrera** (*La Núvia*, Frank Gehry, mai construïda) al bloc de transformació i la **Torre del Fang** (restaurada) al context urbà; dades verificades amb busca web per distingir correctament els dos edificis i no desinformar (el gratacel no es va aixecar).
 - **Valoració:** 4 — Neta; una decisió de pes de menú (4.5) per ordenar entre Espais i Qui som al menú per defecte sense col·lisions.
 
+### 2026-09-08 — Ampliació Territori amb la xarxa comunitària (Fase 1)
+
+- **Tasca:** Investigar (amb cerca web) els actors i espais del territori de La Sagrera i ampliar `content/territori.md`. Decisió de l'usuari: **reestructurar en 3 blocs** per integrar la investigació sense que la pàgina esdevingui un llistat inabastable.
+- **Fitxers modificats:**
+  - `content/territori.md` — reescrit en 3 blocs: **Xarxa comunitària** (Torre de la Sagrera, Espai 30 — Ateneu Sagrerenc, AVV La Sagrera, SAAC Sagrera Activa, La Sagrerina, Escola 100 Passes; enllaços externs verificats), **El nucli històric** (Plaça Masadas, Parròquia de Crist Rei, La Barraca, Parc de la Pegaso, Pont del Treball), **La Sagrera en transformació** (nus/metro/Rodalies/AVE, La Llotja, Torre del Fang, gratacel de Gehry *La Núvia* mai construït).
+- **Notes:** Precisa la nomenclatura per evitar confusió entre el **gratacel de Gehry** (*La Núvia*, no construït) i l'**espai comunitari Torre de la Sagrera** (casal de barri de gestió comunitària). Enllaços externs afegits (torrelasagrera.cat, espai30lasagrera.cat, avvlasagrera.com, lasagrerina.com) — tots responen 200. L'enllaç intern relatiu `../noticies/` es manté per al subpath. Build net (635 pàgines; només warnings de deprecació preexistents).
+- **Valoració:** 4 — Reestructuració que mostra la Nau com a part d'una xarxa de gestió comunitària i d'un nucli històric, amb dades verificades.
+
 ### Pendents
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
 - [ ] Confirmar quin ítem de Fase 1 es fa a continuació (territori, col·lectius com a xarxa, art/murals...).
