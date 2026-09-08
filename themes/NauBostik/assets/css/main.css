@@ -907,7 +907,7 @@ main.container {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 2rem;
 }
 
@@ -1169,6 +1169,8 @@ main.container {
   .tab-icon { display: block; }
   .tab-label { display: none; }
   .footer-section--nav { display: none; }
+  .footer-section--governanca ul { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
+  .footer-section--governanca li { margin-bottom: 0; }
   .footer-section--social ul { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
   .footer-section--social li { margin-bottom: 0; }
   .footer-section--social a { display: inline-flex; align-items: center; }
@@ -6889,4 +6891,139 @@ main.container {
 
 .event-resultat__enllac {
   margin-top: 0.75rem;
+}
+
+/* ── Registre d'assemblees (Transparència i governança) ── */
+.transparencia-content {
+  max-width: 46rem;
+}
+
+.transparencia-assemblees {
+  margin: 3.5rem 0 0;
+}
+
+.transparencia-assemblees__intro {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.transparencia-assemblees__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .transparencia-assemblees__grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+.assemblea-card {
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sharp);
+}
+
+.assemblea-card__cap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.assemblea-card__etiqueta {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-top: 0.15rem;
+}
+
+.assemblea-card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.assemblea-card__dia {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.assemblea-card__mes {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.assemblea-card__any {
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+}
+
+.assemblea-card__titol {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.assemblea-card__hora {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin: 0 0 1rem;
+}
+
+.assemblea-card__od,
+.assemblea-card__acords {
+  margin: 1rem 0;
+}
+
+.assemblea-card__od h4,
+.assemblea-card__acords h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem;
+}
+
+.assemblea-card__od ul,
+.assemblea-card__acords ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.assemblea-card__od li,
+.assemblea-card__acords li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.transparencia-assemblees__nota {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+.transparencia-recursos {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.transparencia-recursos__llista {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.transparencia-recursos__llista li {
+  margin-bottom: 0.5rem;
 }

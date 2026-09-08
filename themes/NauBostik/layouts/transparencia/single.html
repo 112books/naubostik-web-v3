@@ -1,0 +1,84 @@
+{{ define "main" }}
+<div class="page-header">
+  <h1>{{ .Title }}</h1>
+</div>
+
+<div class="content transparencia-content">
+  {{ .Content }}
+</div>
+
+{{/* ── Registre d'assemblees (font: Konsento, via data/assemblees.yaml) ── */}}
+{{ $assemblees := index site.Data "assemblees" }}
+{{ if $assemblees }}
+<section class="transparencia-assemblees" aria-labelledby="assemblees-title">
+  <h2 id="assemblees-title">Registre d'assemblees</h2>
+  <p class="transparencia-assemblees__intro">Les assemblees generals són l'òrgan superior de decisió de la Nau Bostik. Són obertes a totes les persones i entitats del recinte. Podeu consultar l'ordre del dia i confirmar l'assistència a través de <a href="https://konsento.naubostik.com" target="_blank" rel="noopener">Konsento</a>.</p>
+
+  <div class="transparencia-assemblees__grid">
+    {{ with $assemblees.propera }}
+    <article class="assemblea-card assemblea-card--propera">
+      <div class="assemblea-card__cap">
+        <span class="assemblea-card__etiqueta">Propera assemblea</span>
+        <time class="assemblea-card__data" datetime="{{ .data }}">
+          {{ $d := time.AsTime .data }}
+          <span class="assemblea-card__dia">{{ $d | time.Format "02" }}</span>
+          <span class="assemblea-card__mes">{{ $d | time.Format "January" }}</span>
+          <span class="assemblea-card__any">{{ $d | time.Format "2006" }}</span>
+        </time>
+      </div>
+      <h3 class="assemblea-card__titol">{{ .titol }}</h3>
+      {{ if .hora }}<p class="assemblea-card__hora">Hora: {{ .hora }}</p>{{ end }}
+      {{ if .ordre_del_dia }}
+      <div class="assemblea-card__od">
+        <h4>Ordre del dia</h4>
+        <ul>
+          {{ range .ordre_del_dia }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      <a class="btn btn-primary" href="{{ .url | default "https://konsento.naubostik.com" }}" target="_blank" rel="noopener">Confirmar assistència &rarr;</a>
+    </article>
+    {{ end }}
+
+    {{ with $assemblees.darrera }}
+    <article class="assemblea-card assemblea-card--darrera">
+      <div class="assemblea-card__cap">
+        <span class="assemblea-card__etiqueta">Darrera assemblea</span>
+        <time class="assemblea-card__data" datetime="{{ .data }}">
+          {{ $d := time.AsTime .data }}
+          <span class="assemblea-card__dia">{{ $d | time.Format "02" }}</span>
+          <span class="assemblea-card__mes">{{ $d | time.Format "January" }}</span>
+          <span class="assemblea-card__any">{{ $d | time.Format "2006" }}</span>
+        </time>
+      </div>
+      {{ with .titol }}<h3 class="assemblea-card__titol">{{ . }}</h3>{{ end }}
+      {{ with .acords }}
+      <div class="assemblea-card__acords">
+        <h4>Acords</h4>
+        <ul>
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ if .url }}<a class="btn btn-outline" href="{{ .url }}" target="_blank" rel="noopener">Veure acta a Konsento &rarr;</a>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+  <p class="transparencia-assemblees__nota">Les actes s'aproven a l'assemblea següent i són consultables a <a href="https://konsento.naubostik.com" target="_blank" rel="noopener">Konsento</a>, l'eina de governança assembleària de la Nau Bostik.</p>
+</section>
+{{ end }}
+
+{{/* ── Enllaç a tresors de transparència existents a Qui som ── */}}
+<section class="transparencia-recursos" aria-labelledby="recursos-title">
+  <h2 id="recursos-title">Altres recursos</h2>
+  <ul class="transparencia-recursos__llista">
+    <li><a href="{{ "qui-som/" | relLangURL }}">Equip, col·laboradors i comissions de treball &rarr;</a></li>
+    <li><a href="{{ "qui-som/" | relLangURL }}">Memòries anuals d'activitat i econòmiques &rarr;</a></li>
+  </ul>
+</section>
+{{ end }}

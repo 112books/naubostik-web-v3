@@ -27,6 +27,50 @@ L'escala de valoració:
 
 ---
 
+## big-pickle (2026-09-08) — Fase 1: indicador motoritzat, seguiment post-activitat, transparència
+
+### 2026-09-08 — Indicador d'accés motoritzat per espai (Fase 1)
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** Afegir l'indicador d'accés motoritzat per espai (Fase 1 del roadmap).
+- **Fitxers modificats:**
+  - `static/admin/config.yml` — camp `acces_motoritzat` (boolean) a la colecció espais.
+  - `themes/NauBostik/layouts/espais/single.html` — badge "Accés motoritzat: permès" a la Fitxa tècnica; afegit a la condició `$hasFitxa`.
+  - `themes/NauBostik/layouts/espais/list.html` — dot `.espai-card__motor-dot` a les cards.
+  - `themes/NauBostik/assets/css/main.css` — `.espai-card__motor-dot`, `.espai-fitxa-acces`.
+- **Notes:** Cap de les 35 fitxes existents s'ha tocat (el badge només apareix si el camp és true). Dot blau a baix-esquerra per diferenciar-lo del dot cedible (accent, dalt-dreta). Verificat amb fitxa temporal eliminada després. Build net (633 pàgines).
+- **Valoració:** 4 — Net i aïllat; sense rework.
+- **Commit:** `d3713d1`
+
+### 2026-09-08 — Seguiment post-activitat (Fase 1)
+
+- **Tasca:** Afegir el resultat públic post-activitat a les fitxes d'activitat. Decisió de producte (amb l'usuari): "Resultat públic (enllaç/nota)".
+- **Fitxers modificats:**
+  - `static/admin/config.yml` — camps `enllac_resultat` (string) + `nota_final` (text) a col·leccions `activitats` i `activitats-residents`.
+  - `themes/NauBostik/layouts/activitats/single.html` — bloc `.event-resultat` (títol + nota markdown + botó "Veure resultat"), només si existeix algun camp.
+  - `themes/NauBostik/assets/css/main.css` — `.event-resultat*`.
+  - `HISTORIA.md`.
+- **Notes:** Cap activitat real afectada (el bloc només apareix amb camps). Lecció: Hugo no neteja `public/` entre builds — eliminar la sortida òrfena de fitxes de prova.
+- **Valoració:** 4.
+- **Commit:** `cc831fc`
+
+### 2026-09-08 — Transparència i governança (Fase 1)
+
+- **Tasca:** Implementar la secció "Transparència i governança". Descoberta clau: `qui-som/list.html` ja tenia tabs d'Equip, Comissions i Transparència (memòries anuals). Per no duplicar, la pàgina nova se centra en procés editorial + registre d'assemblees en viu.
+- **Fitxers creats / modificats:**
+  - `content/transparencia.md` (nou) — contingut "Com funcionem", "Com es participa", "D'on surten els recursos", amb enllaços relatius `../qui-som/` (correctes al subpath de staging).
+  - `themes/NauBostik/layouts/transparencia/single.html` (nou) — `.Content` + bloc d'assemblees (consumeix `data/assemblees.yaml`: propera amb data/hora/ordre/increment + enllaç Konsento) + secció "Altres recursos".
+  - `themes/NauBostik/assets/css/main.css` — estils assemblea-card, transparencia-*, grid footer 5 columnes + regla mòbil `--governanca`.
+  - `themes/NauBostik/layouts/_partials/footer.html` — nova secció "Governança" (Transparència, Qui hi participa, Konsento).
+- **Errors comesos / resolts:** Enllaços inicials absoluts `/qui-som/` (trencats al subpath staging) → substituïts per relatius `../qui-som/`. Una edició va deixar un enllaç malmès (`qui-som/dot.md`) corregit a continuació.
+- **Valoració:** 4 — Secció completa; el valor nou (registre d'assemblees) aporta transparència real sense duplicar "Qui som".
+
+### Pendents
+- [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
+- [ ] Confirmar quin ítem de Fase 1 es fa a continuació (territori, col·lectius com a xarxa, art/murals...).
+
+---
+
 ## big-pickle (2026-09-04) — Preparació SEO/AEO per al desplegament de producció
 
 ### 2026-09-04 — Schemas estructurats + minificació de recursos
