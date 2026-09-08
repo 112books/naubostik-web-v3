@@ -100,6 +100,14 @@ L'escala de valoració:
 - **Notes / decisions:** les dates de fundació es van verificar per cercar web (AVV legalitzada 1/07/1972; La Sagrerina presentada oficialment el 20.02.2020; Torre de la Sagrera com a casal de barri el 2017). SAAC finalment sí que té web (`sagrera.es`, no era `saacsagreraactiva.*`) — l'enllaç s'afegeix al títol.
 - **Valoració:** 5 — pàgina editorialment sòlida i navegable, amb fonts verificades i ordenació cronològica explícita.
 
+### 2026-09-08 — Transparència: menció de Konsento (programari lliure de governança) a "Com es participa"
+
+- **Tasca:** presentar el programari de governança desenvolupat per la Nau Bostik a la secció "Com es participa".
+- **Fitxers modificats:**
+  - `content/transparencia.md` — paràgraf nou sota "Com es participa": **Konsento** com a programari lliure de presa de decisions i governança assembleària (convocatòries, ordre del dia, confirmació d'assistència, actes), amb enllaços a `konsento.naubostik.com` i al repositori canònic `codeberg.org/linuxbcn/konsento`. El paràgraf introductori ("...Totes les portes són obertes") queda intacte.
+- **Notes / decisions:** primer esborrany va incloure una etimologia inventada del nom ("consentiment, hijacking") que es va eliminar per una descripció precisa (no inventar dades). Konsento ja s'esmentava al bloc de registre d'assemblees (`transparencia/single.html`); el paràgraf nou ho complementa des de la participació.
+- **Valoració:** 4 — lliga el programari propi amb la manera d'entendre la participació, sense duplicar el bloc d'assemblees.
+
 ### Pendents
 - [ ] **Mapa de xarxes de col·laboració (Fase 1) — AJORNAT** per l'usuari ("seguirem més endavant"). Estudi previ fet: 26 col·lectius + 34 espais; les col·laboracions no estan modelades (no existeix `data/xarxa.yaml`). Opcions plantejades: mapa editorial per àmbits / graf de nodes amb connexions / matriu espais↔col·lectius; ubicació: dins Col·lectius o menú principal.
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
