@@ -14,6 +14,7 @@
     {{ range $destacats }}
     <a href="{{ .RelPermalink }}" class="espai-card{{ if .Params.cedible }} espai-card--cedible{{ end }}">
       {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
+      {{ if .Params.acces_motoritzat }}<span class="espai-card__motor-dot" aria-label="Accés motoritzat" title="Accés motoritzat permès"></span>{{ end }}
       <div class="espai-card-image">
         {{ if .Params.logo }}
         <img src="{{ partial "img.html" .Params.logo }}" alt="{{ .Title }}">
@@ -39,6 +40,7 @@
       {{ range $pages }}
       <a href="{{ .RelPermalink }}" class="espai-card{{ if .Params.cedible }} espai-card--cedible{{ end }}">
         {{ if .Params.cedible }}<span class="espai-card__cedible-dot" aria-label="Espai cedible" title="Disponible per cessió"></span>{{ end }}
+      {{ if .Params.acces_motoritzat }}<span class="espai-card__motor-dot" aria-label="Accés motoritzat" title="Accés motoritzat permès"></span>{{ end }}
         <div class="espai-card-image">
           {{ if .Params.logo }}
           <img src="{{ partial "img.html" .Params.logo }}" alt="{{ .Title }}">

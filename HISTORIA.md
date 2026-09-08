@@ -91,6 +91,24 @@ L'escala de valoració:
 - **Observacions:** el canvi de versió de Python del runner va ser la causa arrel; amb la pin a 3.12 + deps explícites el workflow es torna determinista. Pendent confirmar amb un `workflow_dispatch` a CI.
 - **Valoració:** 4 (fix mínim, declaratiu i verificat localment; resta confirmar a CI).
 
+### 2026-09-08 — Confirmació CI + revisió d'activitats + indicador d'accés motoritzat (Fase 1)
+
+- **Model + provider:** `opencode/big-pickle`
+- **Tasca:** (1) Confirmar a CI el fix del workflow; (2) revisar les ~490 activitats històriques; (3) començar la Fase 1 amb l'indicador d'accés motoritzat per espai.
+- **Context:** Continuació de la sessió del 2026-09-07. L'usuari marcava prioritat: 1) CI, 3) contingut/activitats, 4) roadmap Fase 1.
+- **Feina feta:**
+  - **CI confirmat:** `gh workflow run fetch-territori.yml` → success en 55s. El fix (pin Python 3.12 + install deps) resol la fallada.
+  - **Revisió d'activitats:** inventari complet. 471 fitxes a `activitats/` + 31 a `activitats-residents/`. Només 3 futures (ja correctament classificades: Juganera pròpia, CUP i Flamenco externes). Les 468 passades no afecten el filtre en viu (només mira futures); classificar-les requereix criteris editorials (automatització per patrons insegura). Calçotada ajornada (sense dades).
+  - **Fase 1 — indicador d'accés motoritzat:** camp boolean `acces_motoritzat` nou al CMS i a les plantilles.
+- **Fitxers modificats:**
+  - `static/admin/config.yml` — camp `acces_motoritzat` a la colecció espais (boolean, default false).
+  - `themes/NauBostik/layouts/espais/single.html` — badge "Accés motoritzat: permès" a la Fitxa tècnica + `acces_motoritzat` afegit a `$hasFitxa`.
+  - `themes/NauBostik/layouts/espais/list.html` — dot `.espai-card__motor-dot` a les cards (baix-esquerra).
+  - `themes/NauBostik/assets/css/main.css` — estils `.espai-card__motor-dot` (blau #1a73e8) i `.espai-fitxa-acces`.
+- **Mètriques:** verificat amb fitxa temporal (badge + fitxa + dot renderitzen correctament), després eliminada. Build final net (633 pàgines, cap error). Cap de les 35 fitxes d'espai modificada (cap té el camp → invisible fins que l'equip el valori des del CMS).
+- **Observacions:** el camp només es mostra si és `true` explícit; espais sense valor no mostren res (evita falsos negatius). Decisió de plan: no poblar les fitxes existents, que l'equip ho faci des del CMS.
+- **Valoració:** 4 (feina tècnica verifiable; la revisió d'activitats no és automatitzable i queda com a tasca editorial de l'equip).
+
 ---
 
 ## GLM-5.2 (opencode-go/glm-5.2)

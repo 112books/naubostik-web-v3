@@ -1371,6 +1371,19 @@ main.container {
   display: block;
 }
 
+.espai-card__motor-dot {
+  position: absolute;
+  bottom: 2.1rem;
+  left: 0.5rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.85);
+  z-index: 2;
+  display: block;
+}
+
 .espai-card-image {
   aspect-ratio: 4/3;
   overflow: hidden;
@@ -1493,6 +1506,12 @@ main.container {
   margin: 0 0 1.25rem;
   font-size: 0.85rem;
   color: var(--color-secondary);
+}
+
+.espai-fitxa-acces {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: #1a73e8;
 }
 
 .espai-fitxa-equipament h3 {

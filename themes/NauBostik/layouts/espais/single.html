@@ -22,7 +22,7 @@
       {{ .Content }}
     </div>
 
-    {{ $hasFitxa := or .Params.superficie (or .Params.aforament_assegut (or .Params.aforament_dempeus (or .Params.equipament_tecnic .Params.disponibilitat))) }}
+    {{ $hasFitxa := or .Params.superficie (or .Params.aforament_assegut (or .Params.aforament_dempeus (or .Params.equipament_tecnic (or .Params.disponibilitat .Params.acces_motoritzat)))) }}
     {{ if $hasFitxa }}
     <div class="espai-fitxa">
       <h2 class="espai-fitxa-title">Fitxa tècnica</h2>
@@ -39,6 +39,9 @@
         {{ with .Params.amplada }} · Amplada: {{ . }}{{ end }}
         {{ with .Params.alcada }} · Alçada: {{ . }}{{ end }}
       </p>
+      {{ end }}
+      {{ if .Params.acces_motoritzat }}
+      <p class="espai-fitxa-acces"><strong>Accés motoritzat:</strong> permès</p>
       {{ end }}
       {{ with .Params.equipament_tecnic }}
       <div class="espai-fitxa-equipament">
