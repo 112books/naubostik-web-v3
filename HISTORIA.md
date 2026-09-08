@@ -71,7 +71,7 @@ L'escala de valoració:
 - **Fitxers creats / modificats:**
   - `content/territori.md` (nou) — 4 blocs: La Nau al territori, Entorn veïnal (AVV Sagrera, Escola 100 Passes, La Sagrerina), Context urbà proper (La Llotja, Parc Pegaso, Pont del Treball), La Sagrera en transformació (nus, metro, Rodalies, AVE). Enllaços interns relatius `../noticies/`.
   - `hugo.toml` — "Territori" afegit al menú principal (weight 45 ca / 4.5 default, entre Espais i Qui som), accessible al header a totes les mides.
-- **Notes:** La pàgina usa `_default/single.html` (no cal layout propi). Complementa "Visita" (com arribar) i les notícies del barri ja exposades al home/notícies — evita duplicació.
+- **Notes:** La pàgina usa `_default/single.html` (no cal layout propi). Complementa "Visita" (com arribar) i les notícies del barri ja exposades al home/notícies — evita duplicació. **Ampliació posterior:** a instància de l'usuari, afegida la **Torre de la Sagrera** (*La Núvia*, Frank Gehry, mai construïda) al bloc de transformació i la **Torre del Fang** (restaurada) al context urbà; dades verificades amb busca web per distingir correctament els dos edificis i no desinformar (el gratacel no es va aixecar).
 - **Valoració:** 4 — Neta; una decisió de pes de menú (4.5) per ordenar entre Espais i Qui som al menú per defecte sense col·lisions.
 
 ### Pendents

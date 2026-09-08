@@ -27,11 +27,14 @@ La Nau s'inscriu en un entorn en plena metamorfosi, on conviuen referents histò
 - **La Llotja** — el gran equipament de la Sagrera, referent de la ciutat.
 - **Parc de la Pegaso** — el pulmó verd veí, hereu del passat industrial del districte.
 - **Pont del Treball** — símbol de la memòria obrera i la connectivitat del barri.
+- **Torre del Fang** — l'edifici ja restaurat de l'estació de Sant Andreu Comtal, primer element del nou parc lineal.
 - **Recinte de la Sagrera** i les noves places i carrers que ordenen el territori.
 
 ## La Sagrera en transformació
 
-La Sagrera viu una de les transformacions urbanes més grans d'Europa: la gran estació del **nus de La Sagrera** (metro L1, L5, L9N i L10N; Rodalies; i la futura connexió amb l'AVE) redefineix el barri, els seus accessos i la seva centralitat metropolitana.
+La Sagrera viu una de les transformacions urbanes més grans d'Europa: la gran estació del **nus de La Sagrera** (metro L1, L5, L9N i L10N; Rodalies; i la futura connexió amb l'AVE) redefineix el barri, els seus accessos i la seva centralitat metropolitana. L'obra s'ha anat enllestint a les darreres dècades i, al seu voltant, creix un nou barri amb milers d'habitatges, un gran parc lineal i nous equipaments.
+
+Aquesta transformació ha deixat també **projectes que no van ser**: la icònica **Torre de la Sagrera** —el gratacel de l'arquitecte Frank Gehry, popularment conegut com *La Núvia*—, que s'havia d'aixecar al costat de l'estació, va quedar finalment descartada i mai no va passar del paper. La silueta del barri és, així, testimoni de les ambicions i les frustracions de dècades d'urbanisme.
 
 Per a la Nau, aquesta transformació és alhora **oportunitat i repte**: ens connecta amb la ciutat i el país, i al mateix temps ens obliga a vigilar que el creixement no expulsi la vida comunitària que hem construït. Formem part activa de la conversa sobre quin barri volem.
 
