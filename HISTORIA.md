@@ -27,7 +27,7 @@ L'escala de valoració:
 
 ---
 
-## big-pickle (2026-09-08) — Fase 1: indicador motoritzat, seguiment post-activitat, transparència
+## big-pickle (2026-09-08) — Fase 1: indicador motoritzat, seguiment post-activitat, transparència, territori
 
 ### 2026-09-08 — Indicador d'accés motoritzat per espai (Fase 1)
 
@@ -64,6 +64,15 @@ L'escala de valoració:
   - `themes/NauBostik/layouts/_partials/footer.html` — nova secció "Governança" (Transparència, Qui hi participa, Konsento).
 - **Errors comesos / resolts:** Enllaços inicials absoluts `/qui-som/` (trencats al subpath staging) → substituïts per relatius `../qui-som/`. Una edició va deixar un enllaç malmès (`qui-som/dot.md`) corregit a continuació.
 - **Valoració:** 4 — Secció completa; el valor nou (registre d'assemblees) aporta transparència real sense duplicar "Qui som".
+
+### 2026-09-08 — Secció Territori (Fase 1)
+
+- **Tasca:** Implementar la secció "Territori i transformació urbana". Decisió (amb l'usuari): **editorial estàtica** (no renderitza notícies ingestades).
+- **Fitxers creats / modificats:**
+  - `content/territori.md` (nou) — 4 blocs: La Nau al territori, Entorn veïnal (AVV Sagrera, Escola 100 Passes, La Sagrerina), Context urbà proper (La Llotja, Parc Pegaso, Pont del Treball), La Sagrera en transformació (nus, metro, Rodalies, AVE). Enllaços interns relatius `../noticies/`.
+  - `hugo.toml` — "Territori" afegit al menú principal (weight 45 ca / 4.5 default, entre Espais i Qui som), accessible al header a totes les mides.
+- **Notes:** La pàgina usa `_default/single.html` (no cal layout propi). Complementa "Visita" (com arribar) i les notícies del barri ja exposades al home/notícies — evita duplicació.
+- **Valoració:** 4 — Neta; una decisió de pes de menú (4.5) per ordenar entre Espais i Qui som al menú per defecte sense col·lisions.
 
 ### Pendents
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.

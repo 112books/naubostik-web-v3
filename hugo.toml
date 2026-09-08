@@ -46,6 +46,11 @@ enableRobotsTXT = true
       weight = 40
 
     [[languages.ca.menu.main]]
+      name = "Territori"
+      url = "/territori/"
+      weight = 45
+
+    [[languages.ca.menu.main]]
       name = "Qui som"
       url = "/qui-som/"
       weight = 50
@@ -104,6 +109,11 @@ ignoreLogs = ['warning-goldmark-raw-html']
   name = "Espais"
   url = "/espais/"
   weight = 4
+
+[[menu.main]]
+  name = "Territori"
+  url = "/territori/"
+  weight = 4.5
 
 [[menu.main]]
   name = "Qui som"
