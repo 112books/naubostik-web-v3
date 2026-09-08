@@ -10,3 +10,11 @@ sources:
   - name: "Betevé"
     url: "https://beteve.cat/sant-andreu/la-sagrera/feed/"
     active: true
+
+  - name: "Torre de la Sagrera"
+    url: "https://www.torrelasagrera.cat/feed/"
+    active: true
+
+  - name: "La Cinètika"
+    url: "https://blogs.sindominio.net/lacinetika/feed/"
+    active: true
