@@ -92,6 +92,14 @@ L'escala de valoració:
 - **Notes / decisions:** **Espai 30 NO** s'ha afegit com a font RSS: el seu feed només conté proves ("Prova de NO PUBLICAR", "sdasd", "TESTEANDO") i un missatge de 2022 — contaminaria les notícies. **SAAC** no té web/feed localitzable (sense domini actiu). La Sagrerina i l'AVV ja eren fonts existents. Parser verificat: llegeix correctament els feeds de Torre de la Sagrera i La Cinètika (RSS 2.0). Bots IA no afectats.
 - **Valoració:** 4 — Precisió editorial (enllaç canònic correcte) i valor nou (dues fonts de notícies externes reals), amb criteris sòlids per descartar Espai 30 i SAAC.
 
+### 2026-09-08 — Territori: nomenclatura, títols-enllaç, enllaços profunds, IE Els 30 Passos, missatge de lluita i ordenació per antiguitat
+
+- **Tasca:** seqüència de polits a `content/territori.md` per fer la pàgina precisa i navegable.
+- **Fitxers modificats:**
+  - `content/territori.md` — (1) normativa de nom: totes les ocurrències de "la Nau" passen a **"La Nau Bostik"** (mantingut "la fàbrica de la Bostik", referència correcta a l'empresa històrica); (2) **Xarxa comunitària**: els títols de les entitats ara són l'enllaç al web (Espai 30, Torre de la Sagrera, AVV, La Cinètika, La Sagrerina, IE Els 30 Passos, SAAC → `sagrera.es`, web localitzada i verificada 200); (3) **El nucli històric**: enllaços profunds (Plaça Masadas i Pont del Treball → nomenclàtor `carrers.barcelona`, Parròquia de Crist Rei → `cristrei.cat`, La Barraca → espai de centre cívic de l'Ajuntament, Parc de la Pegaso → Viquipèdia); (4) **La Sagrera en transformació**: Frank Gehry enllaçat a la Viquipèdia + missatge que la Nau Bostik està greument afectada però **no pararà de lluitar**; (5) correcció factual "Escola 100 Passes" → **Institut Escola Els 30 Passos** (`ie30passos.cat`) i (6) **Xarxa comunitària ordenada de més antiga a més nova**: AVV La Sagrera (1972) → Espai 30 (FiS. XX/FASE30 2016) → La Cinètika (2016) → IE Els 30 Passos (2016-17) → Torre de la Sagrera (2017) → La Sagrerina (2020) → SAAC.
+- **Notes / decisions:** les dates de fundació es van verificar per cercar web (AVV legalitzada 1/07/1972; La Sagrerina presentada oficialment el 20.02.2020; Torre de la Sagrera com a casal de barri el 2017). SAAC finalment sí que té web (`sagrera.es`, no era `saacsagreraactiva.*`) — l'enllaç s'afegeix al títol.
+- **Valoració:** 5 — pàgina editorialment sòlida i navegable, amb fonts verificades i ordenació cronològica explícita.
+
 ### Pendents
 - [ ] Verificar visualment la pàgina `/transparencia/` (amb `hugo server`) i el footer a 360px/768px/1100px+.
 - [ ] Verificar visualment la pàgina `/territori/` reestructurada (Xarxa comunitària / El nucli històric / La Sagrera en transformació) a 360px/768px/1100px+.
