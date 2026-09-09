@@ -340,3 +340,14 @@ El staging és **públic** però no-indexable. El SEO/robots es controlen per **
 *Document generat per LinuxBCN.com per a Nau Bostik · Agost 2026*  
 *Basat en el document estratègic d'abril 2026*  
 *Document viu — s'actualitza cada sessió de treball*
+
+
+---
+
+## Control horari
+
+Skill actiu: `gestor-hores` — registra automàticament el temps de treball per sessió.
+
+- Logs a `.taques/naubostik-web-v3/YYYY-MM-DD.md` (creat automàticament)
+- Comandes: `/time-log [tasca] [hores]`, `/time-report [periode]`, `/time-config [hores] [tarifa]`
+- No modificar manualment els fitxers `.taques/` — són append-only
