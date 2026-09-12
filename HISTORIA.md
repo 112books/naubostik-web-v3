@@ -2011,3 +2011,24 @@ reutilitzable via partial.
 - [ ] Estudiar el modelatge de l'origen de l'activitat (pendent registrat).
 - [ ] Actualitzar `CLAUDE.md` §9 i `robots.txt`/`disableKinds` quan es passi a producció.
 
+---
+
+## Sessió bugfix workflow sync-agenda (2026-09-12)
+
+### Resum
+Correcció del workflow `sync-agenda-web.yml` que fallava per timeout de xarxa.
+
+### Problema
+El workflow diari `Sync agenda d'entitats (Konsento)` (#11) fallava amb
+`URLError: urlopen error timed out` en intentar contactar
+`konsento.naubostik.com/api/activitats-agenda/`. L'script no capturava
+l'excepció, propagava exit code 1 i el job apareixia en roig.
+
+### Solució
+`scripts/fetch-agenda-web.py` — afegit `try/except Exception` al bloc
+principal: si l'API no respon, el script imprimeix un avís i surt amb `return`
+(exit 0). El workflow acabarà en verd i no farà cap commit si no hi ha dades.
+
+### Fitxers modificats
+- `scripts/fetch-agenda-web.py`
+
