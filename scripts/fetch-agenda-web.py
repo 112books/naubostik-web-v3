@@ -89,7 +89,11 @@ def genera_fitxer(activitat):
 
 def main():
     ja = ids_ja_existents()
-    activitats = fetch_activitats()
+    try:
+        activitats = fetch_activitats()
+    except Exception as e:
+        print(f"Advertència: no s'ha pogut contactar Konsento ({e}). Cap canvi.")
+        return
     creades = []
     for act in activitats:
         if act.get("id") in ja:
