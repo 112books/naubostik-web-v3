@@ -2032,3 +2032,82 @@ principal: si l'API no respon, el script imprimeix un avís i surt amb `return`
 ### Fitxers modificats
 - `scripts/fetch-agenda-web.py`
 
+---
+
+## Sessió /visita/: plànol, cost hosting, mapa i com arribar (2026-09-14)
+
+### Resum
+Sessió de tarda centrada a la pàgina `/visita/`: correcció del text sobre
+cost d'allotjament al doc de presentació a l'equip, alta del plànol general
+definitiu, correcció del llistat de col·lectius per planta, i extensió de
+`/visita/` amb el mateix bloc de mapa+adreça+contacte que `/contacte/`.
+
+- **Model + provider:** Claude Sonnet 5 (Claude Code)
+- **Tasca:** Múltiples peticions encadenades sobre `/visita/` i el doc
+  `presentacio-equip-2026-09-14.md` (veure detall per commit).
+
+### Fitxers modificats / creats
+- `docs/presentacio-equip-2026-09-14.md` — aclareix que GitHub Pages és
+  només staging i que producció necessita servidor real (com el VPS de
+  Konsento), no gratuït; reformulat per destacar seguretat i velocitat en
+  lloc de rebaixar el cost.
+- `static/img/visita/planol-general-nau-bostik.{svg,png,pdf}` — **CREATS**
+  (aportats per l'usuari). S'usa l'SVG (41KB) com a definitiu, molt més
+  lleuger que el PNG (523KB).
+- `content/visita/_index.md` — substitueix el placeholder del plànol
+  (foto d'oficines), corregeix el llistat de col·lectius per planta amb
+  noms reals (verificats contra `content/espais/*.md` i
+  `naubostik.com/nau-bostik-espais/`), afegeix `Basket Beat` a tercera
+  planta (sense fitxa d'espai encara), mou "Horaris" a la columna dreta,
+  afegeix `map_lat`/`map_lon`/`horari_mescladis`.
+- `themes/NauBostik/layouts/partials/localitzacio.html` — **CREAT**: mapa
+  OSM + adreça + telèfon/email/xarxes/horaris + bloc "Com arribar"
+  (metro/bus/bici/cotxe), extret del que abans estava només a `contacte/`.
+- `themes/NauBostik/layouts/contacte/list.html` — refactoritzat per cridar
+  el partial nou en lloc de tenir el bloc dades+mapa+arribar dur-codificat
+  (−152 línies, una sola font de veritat).
+- `themes/NauBostik/layouts/visita/list.html` — crida el partial nou;
+  renombra el label "Recinte" a "Horaris"; el CTA "Com arribar" ara fa
+  scroll dins la mateixa pàgina (`#contacte-map`) en lloc d'anar a
+  `/contacte/`.
+- `themes/NauBostik/assets/css/main.css` — `.visita-info-card__avis`.
+- `data/entitats-logos.yaml` — afegeix `"L'Anòmala"` (la fitxa i el logo ja
+  existien a `content/collectius/anomala.md` i
+  `static/img/espais/lanomala-logo.jpg`; només faltava el mapatge perquè
+  sortís el logo a l'agenda quan una activitat té `entitat = "L'Anòmala"`).
+
+### Errors comesos i resolts
+- **Ruta d'imatge trencada a staging**: `<img src="/img/visita/...">` a
+  markdown resolia a `112books.github.io/img/...` (404) perquè GH Pages
+  serveix des del subpath `/naubostik-web-v3/` i el projecte no té
+  `canonifyURLs` activat — Hugo no reescriu rutes arrel dins d'HTML cru en
+  markdown. Es va confirmar amb `curl` (404 vs 200) i es va corregir amb
+  una ruta relativa (`../img/visita/...`). **Nota**: el mateix problema
+  afecta imatges preexistents a `content/noticies/` i probablement altres
+  — no s'ha tocat perquè és fora d'abast d'avui i no afecta producció
+  (sense subpath a `naubostik.com`), però caldrà revisar-ho abans del
+  llançament definitiu.
+- Confusió inicial amb el nom "Pocallum" (donat per l'usuari per a tercera
+  planta) — no coincidia amb cap espai a `naubostik.com/nau-bostik-espais/`,
+  però sí existeix com a fitxa de col·lectiu (`content/collectius/pocallum.md`).
+  L'usuari el va substituir finalment per "Basket Beat".
+
+### Commits
+- `4679006` — plànol SVG + doc presentació (cost hosting)
+- `e84fbff` — plantes corregides + logo L'Anòmala
+- `10c62dc` — mapa/contacte a visita + fix imatge + label Horaris
+
+### Valoració subjectiva
+4 — Sessió llarga amb molts canvis incrementals petits ben verificats
+(build Hugo abans de cada commit, curl per confirmar el bug de path). La
+refactorització del bloc de contacte a partial compartit va sortir de la
+petició original però evita duplicar 150 línies i es va decidir sobre la
+marxa en veure la duplicació exacta.
+
+### Pendents
+- [ ] Fitxa d'espai/col·lectiu per **Basket Beat** (no existeix encara).
+- [ ] Revisar sistemàticament rutes `/img/...` a tot `content/` per
+  l'incompatibilitat amb el subpath de GH Pages (staging).
+- [ ] Decidir si cal fitxa d'espai per a col·lectius de `content/collectius/`
+  que no en tenen (Pocallum, Basket Beat...).
+
