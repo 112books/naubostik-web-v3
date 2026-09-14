@@ -169,4 +169,59 @@ Cap d'aquestes fases necessita canviar l'arquitectura. El sistema és estable. E
 
 ---
 
+## 8. Textos a revisar per l'equip gestor
+
+Aquest apartat recull tots els textos del web relacionats amb la **descripció de Nau Bostik, la seva història i el seu relat institucional**. Són continguts que provenen majoritàriament de l'antic WordPress i que caldria que l'equip de gestió revisés abans de la publicació definitiva: dades que poden estar desactualitzades, xifres inconsistents entre pàgines, i contingut d'opinió signat que caldria confirmar que encara representa la posició de la Nau.
+
+### 8.1 Pàgina d'inici — `content/_index.md`
+
+Text de presentació que apareix a la home:
+
+> "Nau Bostik és un equipament sociocultural de gestió comunitària situat a l'antiga fàbrica de la Bostik, al barri de la Sagrera, a Barcelona. Un espai on conviuen projectes artístics, socials i comunitaris."
+
+**A revisar:** és el mateix text, gairebé paraula per paraula, que a `qui-som/_index.md` i que a la plantilla `qui-som/list.html` (amb variacions). Val la pena unificar-lo en un sol lloc i que l'equip validi que la definició ("equipament sociocultural de gestió comunitària") és la que es vol fer servir de manera consistent arreu.
+
+### 8.2 Qui som — `content/qui-som/_index.md`
+
+Pàgina completa de presentació institucional:
+
+- **"La nostra història"** — paràgraf genèric sense dates ni fets concrets ("La Nau Bostik neix de la voluntat de crear un espai obert..."). Caldria decidir si es manté així de genèric o si es reemplaça per un resum amb els fets reals (2015, Xavier Basiana, etc., que sí que apareixen a `historia/passat.md`).
+- **"Els nostres valors"** — llista d'autogestió, accessibilitat, participació, diversitat, transparència. Confirmar que continua reflectint els valors actuals de l'organització.
+- **Dades de contacte** — telèfon `+34 933 408 350` i correu `info@naubostik.com`. **Verificar que segueixen actius.**
+- **"Col·lectius"** — text molt genèric ("des de grups de fotografia fins a colles sardanistes"). Revisar si val la pena esmentar exemples concrets i actuals.
+
+### 8.3 Història — `content/qui-som/historia/`
+
+Sis fitxers, tots importats del WordPress antic (dates `2026-08-13` són de la migració, no de redacció original):
+
+| Fitxer | Contingut | A revisar |
+|---|---|---|
+| `passat.md` | Origen de Bostik (Boston Blacking Co., 1889), arribada a Catalunya (1923), construcció de la nau (anys 60), tancament (2006), cessió (febrer 2015), Xavier Basiana | Verificar totes les dates i fets — són la base factual de tot el relat històric del web |
+| `present.md` | "Un pol aglutinador d'iniciatives de transformació social". Xifres: "una quinzena d'entitats i projectes", "més d'un centenar de persones". Article d'opinió llarg sobre dret a la ciutat i gestió comunitària, **signat per Jorge Sánchez** | Xifres probablement desactualitzades (contrasten amb "25 col·lectius" i "30 entitats residents" que diu el web en altres llocs, veure §8.4). Confirmar si l'article d'opinió signat encara s'ha de publicar tal qual, o si cal actualitzar-lo / despersonalitzar-lo |
+| `barcelona-ciutat-de-fabriques.md` | Assaig llarg sobre patrimoni industrial de Barcelona, **també signat per Jorge Sánchez** | Contingut de context, no específic de la Nau — confirmar que es vol mantenir com a pàgina pròpia i amb autoria signada |
+| `set-anys-dactivitat.md` | Títol "7 anys d'activitat a la Bòstik", amb galeries d'imatges del 2015 al 2022 | **Títol desactualitzat**: som al 2026, ja són més de 10 anys. Cal decidir si es renomena ("X anys d'activitat") o es converteix en una cronologia sense comptador d'anys, i si es completa amb imatges 2023–2026 |
+| `patrimoni-industrial-la-sagrera.md` | Només imatges (Fàbrica Pegaso-Hispano Suiza, Farinera La Esperanza, Nau Ivanow...), sense text ni peus descriptius a la majoria | Afegir peus de foto / context, ja que ara mateix són imatges soltes sense explicació |
+| `altres-recinte-industrials.md` | Només imatges d'altres fàbriques recuperades (Can Batlló, Can Ricart, Fabra i Coats, Palo Alto) | Mateix cas: sense text explicatiu |
+
+### 8.4 Xifres inconsistents sobre la Nau (contingut a la plantilla del tema, no editable des del CMS)
+
+Aquests textos estan escrits directament al codi del tema (`themes/NauBostik/layouts/`), no als fitxers de contingut, per la qual cosa **no es poden editar des del CMS** — caldrà que un tècnic els actualitzi un cop l'equip confirmi les xifres correctes:
+
+| Ubicació | Text | Xifra |
+|---|---|---|
+| `home.html` (hero) | "Des de fa més de 10 anys ecosistema cultural autogestionat" | +10 anys |
+| `home.html` (secció ecosistema) | "Més de 25 col·lectius · Més de 10 naus industrials · Més de 10 anys d'antiguitat" | 25 col·lectius |
+| `proposa-activitat.html` | "equipament sociocultural autogestionat... amb més de 30 entitats residents" | 30 entitats residents |
+| `historia/present.md` (contingut) | "una quinzena d'entitats i projectes" | ~15 entitats |
+
+**A revisar:** quatre xifres diferents per a un concepte semblant (col·lectius/entitats residents): 15, 25 i 30. L'equip gestor hauria de confirmar la xifra real actual perquè es puguin unificar.
+
+### 8.5 Eslògan polític — `data/slogans.yaml`
+
+> "La Sagrera necessita més Cultura i menys estació d'Alta Velocitat"
+
+**A revisar:** és l'únic eslògan configurat i té un posicionament polític explícit (contrari al projecte de l'AVE a la Sagrera). Confirmar amb l'equip gestor que es vol mantenir aquest missatge tal qual al web públic, o si cal afegir-hi alternatives més neutres.
+
+---
+
 *Document preparat per LinuxBCN.com per a la presentació interna de Nau Bostik — 14 de setembre de 2026.*
