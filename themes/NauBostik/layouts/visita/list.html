@@ -23,15 +23,21 @@
         <dd>{{ .Params.horari_recinte }}</dd>
         <dt>Oficines</dt>
         <dd>{{ .Params.horari_oficines }}</dd>
+        <dt>Mescladís Bostik</dt>
+        <dd>{{ .Params.horari_mescladis }}</dd>
         <dt>Entrada</dt>
         <dd>{{ if .Params.acces_gratuit }}Gratuïta i oberta{{ else }}Consulta l'activitat{{ end }}</dd>
       </dl>
+      <p class="visita-info-card__avis">Els horaris poden variar en festius i períodes especials. Consulta l'<a href="{{ "/" | relLangURL }}">estat actual del recinte</a> a la portada.</p>
       <div class="visita-info-card__ctas">
         <a class="btn btn-primary" href="{{ "activitats/" | relLangURL }}">Agenda d'activitats</a>
         <a class="btn btn-secondary" href="{{ "espais/" | relLangURL }}">Espais</a>
-        <a class="btn btn-outline" href="{{ "contacte/" | relLangURL }}">Com arribar</a>
+        <a class="btn btn-outline" href="#contacte-map">Com arribar</a>
       </div>
     </div>
   </aside>
 </div>
+
+<div class="contacte-separator"></div>
+{{ partial "localitzacio.html" . }}
 {{ end }}

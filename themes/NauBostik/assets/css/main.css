@@ -4747,6 +4747,18 @@ main.container {
   color: var(--color-muted);
 }
 
+.visita-info-card__avis {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+  margin: 0 0 1.25rem;
+}
+
+.visita-info-card__avis a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .visita-info-card__ctas {
   display: flex;
   flex-direction: column;
