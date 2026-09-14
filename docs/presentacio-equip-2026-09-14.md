@@ -48,7 +48,7 @@ Per entrar al CMS cal un compte GitHub (gratuït) i que un administrador del sis
 
 | Criteri | WordPress | Nau Bostik Web 3.0 (Hugo) |
 |---|---|---|
-| **Cost d'allotjament** | Servidor PHP + base de dades actius 24/7 | Fitxers estàtics a la CDN — gratis (GitHub Pages) o molt barat (Netlify) |
+| **Cost d'allotjament** | Servidor PHP + base de dades actius 24/7 | Fitxers estàtics a la CDN (Netlify en producció); GitHub Pages és només l'entorn de proves (staging), no de producció |
 | **Seguretat** | Actualitzacions constants de plugins, vulnerabilitats freqüents, atacs brute-force | Sense servidor d'aplicació en producció — superfície d'atac gairebé zero |
 | **Velocitat** | Depèn del servidor i la cache | El web ja és HTML preparat: carrega en menys d'un segon a qualsevol lloc del món |
 | **Fiabilitat** | Cau si el servidor falla o s'omple de memòria | Un CDN global: si un node cau, el resto segueix servint |
@@ -133,7 +133,7 @@ Els dos sistemes són independents però treballen junts. Aquí els punts de con
 
 ### Per a la sostenibilitat del projecte
 
-- **Cost baix.** L'allotjament del web és gratuït (GitHub Pages al staging, Netlify a producció té pla gratuït per a llocs estàtics). L'únic cost és el VPS on corre Konsento, que ja paguem.
+- **Més segur i més ràpid.** GitHub Pages és només l'entorn de proves (staging); en producció el web es serveix des d'un servidor real (com ja tenim per Konsento), preparat per la quantitat d'imatges i contingut del web. El cost d'allotjament es manté similar a l'actual, però guanyem en velocitat de càrrega i en seguretat: sense base de dades ni servidor d'aplicació exposats, la superfície d'atac és gairebé zero.
 - **Sense dependències externes crítiques.** No depenem de WordPress.com, ni de Elementor, ni de cap plugin que pugui deixar de funcionar o de ser mantingut. El codi és nostre.
 - **Portabilitat total.** Tot el contingut és en fitxers de text plans al repositori Git. Si alguna vegada cal canviar d'eina, el contingut no s'ha de migrar: ja és en un format estàndard i llegible per qualsevol sistema.
 - **Seguretat per disseny.** El web no té base de dades, no té servidor d'aplicació, no té usuaris registrats. No hi ha res a hackear. Konsento sí que té servidor, però és un sistema petit, sota el nostre control, sense les vulnerabilitats estructurals d'un WordPress mal actualitzat.
