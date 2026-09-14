@@ -32,6 +32,6 @@ La Nau Bostik ocupa un edifici industrial de principis del segle XX distribuït 
 - **Tercera planta** — Oficines Bostik, El Globus Vermell, Editorial 112 Books, Llumàtics Fotoespai, Basket Beat
 
 <figure class="visita-planol">
-  <img src="/img/visita/planol-general-nau-bostik.svg" alt="Plànol orientatiu de la Nau Bostik" loading="lazy">
+  <img src="../img/visita/planol-general-nau-bostik.svg" alt="Plànol orientatiu de la Nau Bostik" loading="lazy">
   <figcaption>Plànol orientatiu de la Nau Bostik</figcaption>
 </figure>
